@@ -103,18 +103,18 @@ const FilesDropzone = ({ className, ...rest }) => {
             gutterBottom
             variant="h3"
           >
-            Select files
+            Seleccionar Archivos
           </Typography>
           <Box mt={2}>
             <Typography
               color="textPrimary"
               variant="body1"
             >
-              Drop files here or click
+              Arrestre sus archivos aquí o haga click
               {' '}
               <Link underline="always">browse</Link>
               {' '}
-              thorough your machine
+              e importe los mismos desde su máquina
             </Typography>
           </Box>
         </div>

@@ -9,7 +9,9 @@ import {
   Typography,
   makeStyles
 } from '@material-ui/core';
-import QuillEditor from 'src/components/QuillEditor';
+
+
+import FilesDropzone from 'src/components/FilesDropzone';
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -67,27 +69,18 @@ const ProjectDescription = ({
         variant="h3"
         color="textPrimary"
       >
-        Please select one option
+        Agregar documentos
       </Typography>
       <Box mt={2}>
         <Typography
           variant="subtitle1"
           color="textSecondary"
         >
-          Proin tincidunt lacus sed ante efficitur efficitur.
-          Quisque aliquam fringilla velit sit amet euismod.
+          Seleccione los documentos que desea subir
         </Typography>
+        <FilesDropzone/>
       </Box>
-      <Paper
-        className={classes.editorContainer}
-        variant="outlined"
-      >
-        <QuillEditor
-          handleChange={handleChange}
-          value={content}
-          className={classes.editor}
-        />
-      </Paper>
+     
       {error && (
         <Box mt={2}>
           <FormHelperText error>

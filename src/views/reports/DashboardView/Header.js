@@ -73,14 +73,14 @@ const Header = ({ className, ...rest }) => {
             variant="body1"
             color="textPrimary"
           >
-            Reports
+            Registrar
           </Typography>
         </Breadcrumbs>
         <Typography
           variant="h3"
           color="textPrimary"
         >
-          Here&apos;s what&apos;s happening
+          Crear una Campaña
         </Typography>
       </Grid>
       <Grid item>

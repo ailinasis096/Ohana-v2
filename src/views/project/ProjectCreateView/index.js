@@ -36,16 +36,16 @@ import ProjectDescription from './ProjectDescription';
 
 const steps = [
   {
-    label: 'User Details',
+    label: 'Información',
     icon: UserIcon
   },
   {
-    label: 'Project Details',
+    label: 'Objetivo',
     icon: BriefcaseIcon
   },
   {
-    label: 'Project Description',
-    icon: FileIcon
+    label: 'Documentos',
+    icon: BriefcaseIcon
   }
 ];
 
@@ -150,14 +150,14 @@ const ProjectCreateView  = () => {
               variant="body1"
               color="textPrimary"
             >
-              Projects
+              Crear
             </Typography>
           </Breadcrumbs>
           <Typography
             variant="h3"
             color="textPrimary"
           >
-            Create Wizard &amp; Process
+            Crea tus Campañas
           </Typography>
         </Box>
         {!completed ? (

@@ -60,7 +60,15 @@ const sections = [
       {
         title: 'Gestionar Mis Campañas',
         icon: BarChartIcon,
-        href: '/app/reports/dashboard'
+        href: '/app/reports/dashboard',
+        items:[ 
+
+          {
+            title: 'Registrar Campañas',
+            icon: FolderIcon,
+            href: '/app/reports/dashboard-registrar'
+          }
+        ]
       },
       {
         title: 'Mi perfil',

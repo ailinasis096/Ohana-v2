@@ -46,14 +46,14 @@ const ProjectDetails = ({
   return (
     <Formik
       initialValues={{
-        projectName: '',
-        tags: ['Full-Time'],
+        objective: '',
+        tags: ['Ayudar'],
         startDate: new Date(),
         endDate: new Date(),
         submit: null
       }}
       validationSchema={Yup.object().shape({
-        projectName: Yup.string().min(3, 'Must be at least 3 characters').max(255).required('Required'),
+        objective: Yup.string().min(3, 'Must be at least 3 characters').max(255).required('Required'),
         tags: Yup.array(),
         startDate: Yup.date(),
         endDate: Yup.date()
@@ -101,27 +101,26 @@ const ProjectDetails = ({
             variant="h3"
             color="textPrimary"
           >
-            Please select one option
+            Objetivo
           </Typography>
           <Box mt={2}>
             <Typography
               variant="subtitle1"
               color="textSecondary"
             >
-              Proin tincidunt lacus sed ante efficitur efficitur.
-              Quisque aliquam fringilla velit sit amet euismod.
+              ¿Cuál es tu objetivo?
             </Typography>
           </Box>
           <Box mt={2}>
             <TextField
-              error={Boolean(touched.projectName && errors.projectName)}
+              error={Boolean(touched.objective && errors.objective)}
               fullWidth
-              helperText={touched.projectName && errors.projectName}
-              label="Project Name"
-              name="projectName"
+              helperText={touched.objective && errors.objective}
+              label="Objetivo"
+              name="objective"
               onBlur={handleBlur}
               onChange={handleChange}
-              value={values.projectName}
+              value={values.objective}
               variant="outlined"
             />
             <Box
@@ -131,7 +130,7 @@ const ProjectDetails = ({
             >
               <TextField
                 fullWidth
-                label="Tags"
+                label="Objetivos"
                 name="tags"
                 value={tag}
                 onChange={(event) => setTag(event.target.value)}
@@ -178,7 +177,7 @@ const ProjectDetails = ({
             <Box mt={4}>
               <KeyboardDatePicker
                 className={classes.datePicker}
-                label="Start Date"
+                label="Fecha de inicio"
                 format="MM/DD/YYYY"
                 name="startDate"
                 inputVariant="outlined"
@@ -190,7 +189,7 @@ const ProjectDetails = ({
               />
               <KeyboardDatePicker
                 className={classes.datePicker}
-                label="End Date"
+                label="Fecha Fin"
                 format="MM/DD/YYYY"
                 name="endDate"
                 inputVariant="outlined"
@@ -225,7 +224,7 @@ const ProjectDetails = ({
                 onClick={onBack}
                 size="large"
               >
-                Previous
+                Atrás
               </Button>
             )}
             <Box flexGrow={1} />
@@ -236,7 +235,7 @@ const ProjectDetails = ({
               variant="contained"
               size="large"
             >
-              Next
+              Siguiente
             </Button>
           </Box>
         </form>
