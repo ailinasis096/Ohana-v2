@@ -91,7 +91,7 @@ const ProjectCard = ({ className, project, ...rest }) => {
             <Link
               color="textPrimary"
               component={RouterLink}
-              to="#"
+              to={`/app/projects/overview/${project.id}`}
               variant="h5"
             >
               {project.title}

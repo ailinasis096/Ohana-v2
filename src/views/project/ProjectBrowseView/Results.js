@@ -1,16 +1,11 @@
 import React, {
   useState,
-  useRef
 } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import {
   Box,
-  Button,
   Grid,
-  ListItemText,
-  Menu,
-  MenuItem,
   Typography,
   makeStyles
 } from '@material-ui/core';
@@ -20,7 +15,6 @@ import {
   Pagination
 } from '@material-ui/lab';
 import ViewModuleIcon from '@material-ui/icons/ViewModule';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import ProjectCard from 'src/components/ProjectCard';
 
 const useStyles = makeStyles((theme) => ({
@@ -46,23 +40,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Results = ({ className, projects, ...rest }) => {
   const classes = useStyles();
-  const sortRef = useRef(null);
-  const [openSort, setOpenSort] = useState(false);
-  const [selectedSort, setSelectedSort] = useState('Most popular');
   const [mode, setMode] = useState('grid');
-
-  const handleSortOpen = () => {
-    setOpenSort(true);
-  };
-
-  const handleSortClose = () => {
-    setOpenSort(false);
-  };
-
-  const handleSortSelect = (value) => {
-    setSelectedSort(value);
-    setOpenSort(false);
-  };
 
   const handleModeChange = (event, value) => {
     setMode(value);

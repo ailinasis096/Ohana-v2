@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 import {
   Avatar,
   Box,
-  Chip,
   Divider,
   Drawer,
   Hidden,
@@ -17,30 +16,14 @@ import {
   Typography,
   makeStyles
 } from '@material-ui/core';
-import ReceiptIcon from '@material-ui/icons/ReceiptOutlined';
 import {
+  Folder as FolderIcon,
   Star as StarIcon,
   Search as SearchIcon,
-  Calendar as CalendarIcon,
-  ShoppingCart as ShoppingCartIcon,
-  Folder as FolderIcon,
   BarChart as BarChartIcon,
-  Lock as LockIcon,
-  UserPlus as UserPlusIcon,
-  AlertCircle as AlertCircleIcon,
-  Trello as TrelloIcon,
-  User as UserIcon,
-  Layout as LayoutIcon,
-  Edit as EditIcon,
-  DollarSign as DollarSignIcon,
-  Mail as MailIcon,
-  MessageCircle as MessageCircleIcon,
-  PieChart as PieChartIcon,
-  Share2 as ShareIcon,
-  Users as UsersIcon
+  User as UserIcon
 } from 'react-feather';
 import Logo from 'src/components/Logo';
-import useAuth from 'src/hooks/useAuth';
 import NavItem from './NavItem';
 
 const sections = [

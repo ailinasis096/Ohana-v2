@@ -196,7 +196,7 @@ const routes = [
       },
       {
         exact: true,
-        path: '/app/projects/overview',
+        path: '/app/projects/overview/:id',
         component: lazy(() => import('src/views/project/OverviewView'))
       },
       {

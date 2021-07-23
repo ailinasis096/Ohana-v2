@@ -4,10 +4,8 @@ import clsx from 'clsx';
 import {
   Box,
   Card,
-  Checkbox,
   Chip,
   Divider,
-  FormControlLabel,
   Input,
   makeStyles
 } from '@material-ui/core';

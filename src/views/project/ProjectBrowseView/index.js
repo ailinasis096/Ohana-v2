@@ -1,7 +1,5 @@
 import React, {
-  useCallback,
   useState,
-  useEffect
 } from 'react';
 import {
   Box,
@@ -9,11 +7,9 @@ import {
   makeStyles
 } from '@material-ui/core';
 import Page from 'src/components/Page';
-import axios from 'src/utils/axios';
-import useIsMountedRef from 'src/hooks/useIsMountedRef';
-import Header from './Header';
 import Filter from './Filter';
 import Results from './Results';
+import Header from './Header';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
 
 const ProjectBrowseView = () => {
   const classes = useStyles();
-  const isMountedRef = useIsMountedRef();
   const [projects, setProjects] = useState([
     {
       id: 1,
@@ -51,7 +46,7 @@ const ProjectBrowseView = () => {
       title: 'Botox',
       isLiked: true,
       likesCount: 40,
-      updatedAt: [2021,1,6],
+      updatedAt: [2021,7,6],
       image: 'data:image/jpeg;base64,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',
       caption: 'Botox es la marca de uno de los productos que contienen la toxina botulínica altamente venenosa. Se utiliza para aplicaciones médicas y para tratamientos cosméticos. Una pequeña inyección hace que desaparezcan las arrugas faciales. Pero el precio de la "belleza" a corto plazo se paga con el sufrimiento y la muerte, cada año, de centenares de miles de ratones.',
       budget: 500,
@@ -69,7 +64,7 @@ const ProjectBrowseView = () => {
       title: 'Perritos de la calle',
       isLiked: false,
       likesCount: 0,
-      updatedAt: [2021,7,6],
+      updatedAt: [2021,7,20],
       image: 'https://static.guiaongs.org/wp-content/uploads/2015/09/amigos-del-prro-360x336.jpg',
       caption: 'Amigos del Perro, que ahora cumple 20 años, se constituyó en Langreo (Asturias) con el fin de contribuir al bienestar animal. Para ello desarrolla diversas actividades que van desde la recogida de animales abandonados hasta la reinserción de los mismos en nuevas familias a través de la adopción, consulta veterinaria, centro de control de natalidad canina y felina, campañas de divulgación contra el abandono y el maltrato. Al mismo tiempo, la Fundación trabaja en otros campos como la educación de la infancia y la juventud en el respeto a los animales y la colaboración en terapias asistidas con animales de compañía.',
       budget: 350,
@@ -103,7 +98,7 @@ const ProjectBrowseView = () => {
   return (
     <Page
       className={classes.root}
-      title="Project List"
+      title="Explorar campañas | Ohana"
     >
       <Container maxWidth="lg">
         <Header />

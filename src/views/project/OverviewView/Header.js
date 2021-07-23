@@ -2,15 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import {
-  Box,
-  Button,
   Grid,
   Hidden,
   Typography,
   makeStyles
 } from '@material-ui/core';
-import BarChartIcon from '@material-ui/icons/BarChart';
-import useAuth from 'src/hooks/useAuth';
+import { Rating } from '@material-ui/lab';
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -20,18 +17,21 @@ const useStyles = makeStyles((theme) => ({
   image: {
     width: '100%',
     maxHeight: 400
+  },
+  grid: {
+    marginTop: 5,
   }
 }));
 
-const Header = ({ className, ...rest }) => {
+const Header = (event, {className, ...rest }) => {
   const classes = useStyles();
-  const { user } = useAuth();
 
   return (
     <div
       className={clsx(classes.root, className)}
       {...rest}
     >
+      {!!event.event && (
       <Grid
         alignItems="center"
         container
@@ -47,31 +47,64 @@ const Header = ({ className, ...rest }) => {
             variant="overline"
             color="textSecondary"
           >
-            Overview
+            {event.event.category}
           </Typography>
           <Typography
             variant="h3"
             color="textPrimary"
           >
-            Good Morning,
-            {' '}
-            {user.name}
+            {event.event.title}
           </Typography>
           <Typography
             variant="subtitle1"
             color="textPrimary"
           >
-            Here’s what’s happening with your projects today
+            {event.event.caption}
           </Typography>
-          <Box mt={2}>
-            <Button
-              className={classes.action}
-              variant="contained"
-              startIcon={<BarChartIcon />}
-            >
-              View summary
-            </Button>
-          </Box>
+          <Grid
+            alignItems="center"
+            container
+            justify="space-between"
+            spacing={3}
+            className={classes.grid}
+          >
+            <Grid item>
+              <Rating
+                value={event.event.rating}
+                size="small"
+                readOnly
+              />
+              
+            </Grid>
+            <Grid item>
+              <Typography
+                variant="h5"
+                color="textPrimary"
+              >
+                {event.event.location}
+              </Typography>
+              <Typography
+                variant="body2"
+                color="textSecondary"
+              >
+                Ubicación
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography
+                variant="h5"
+                color="textPrimary"
+              >
+                {event.event.type}
+              </Typography>
+              <Typography
+                variant="body2"
+                color="textSecondary"
+              >
+                Tipo
+              </Typography>
+            </Grid>
+          </Grid>
         </Grid>
         <Hidden smDown>
           <Grid
@@ -81,11 +114,12 @@ const Header = ({ className, ...rest }) => {
             <img
               alt="Cover"
               className={classes.image}
-              src="/static/images/undraw_growth_analytics_8btt.svg"
+              src={event.event.image}
             />
           </Grid>
         </Hidden>
       </Grid>
+      )}
     </div>
   );
 };

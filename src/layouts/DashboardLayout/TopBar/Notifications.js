@@ -1,7 +1,6 @@
 import React, {
   useRef,
   useState,
-  useEffect
 } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import {
@@ -25,8 +24,6 @@ import {
   MessageCircle as MessageIcon,
   Truck as TruckIcon
 } from 'react-feather';
-import { useDispatch, useSelector } from 'src/store';
-import { getNotifications } from 'src/slices/notification';
 
 const iconsMap = {
   order_placed: PackageIcon,
@@ -46,10 +43,8 @@ const useStyles = makeStyles((theme) => ({
 
 const Notifications = () => {
   const classes = useStyles();
-  //const { notifications } = useSelector((state) => state.notifications);
   let notifications = [];
   const ref = useRef(null);
-  const dispatch = useDispatch();
   const [isOpen, setOpen] = useState(false);
 
   const handleOpen = () => {
@@ -59,10 +54,6 @@ const Notifications = () => {
   const handleClose = () => {
     setOpen(false);
   };
-
-  /*useEffect(() => {
-    dispatch(getNotifications());
-  }, [dispatch]);*/
 
   return (
     <>

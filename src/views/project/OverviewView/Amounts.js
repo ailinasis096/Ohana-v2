@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {
+  useState,
+  useEffect
+} from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
+import numeral from 'numeral';
 import {
   Card,
   Grid,
   Typography,
-  InputBase,
   makeStyles
 } from '@material-ui/core';
-import { Share2 as ShareIcon, Bell as BellIcon, Heart as HeartIcon, } from 'react-feather';
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -29,11 +31,38 @@ const useStyles = makeStyles((theme) => ({
   label: {
     marginLeft: theme.spacing(1)
   },
+  overline: {
+    marginTop: theme.spacing(1),
+    color: '#5465D1'
+  },
+  recaudado: {
+    marginTop: theme.spacing(1),
+    color: '#4CAF50'
+  },
+  falta: {
+    marginTop: theme.spacing(1),
+    color: '#E7706A'
+  },
 }));
 
 const Statistics = (event, { className, ...rest }) => {
   const classes = useStyles();
+  const [recaudado, setRecaudado] = useState();
+  const [falta, setFalta] = useState();
 
+  useEffect(() => {
+    if(!!event.event) {
+      setRecaudado(event.event.budget - 150);
+      setFalta(event.event.budget - recaudado);
+    }
+  }, [event.event])
+
+  useEffect(() => {
+    if(!!event.event) {
+      setFalta(event.event.budget - recaudado);
+    }
+  }, [recaudado])
+  
   return (
     <Card
       className={clsx(classes.root, className)}
@@ -48,27 +77,22 @@ const Statistics = (event, { className, ...rest }) => {
         <Grid
           className={classes.item}
           item
-          alignItems="center"
           md={4}
           sm={6}
           xs={12}
         >
-          <Grid
-            item
-            container spacing={1} justify="flex-end"
-          >
-            <Grid item>
-              <HeartIcon color='#5465D1'/>
-            </Grid>
-            <Grid item>
-              <InputBase id="input-with-icon-grid" value='50' label="With a grid" />
-            </Grid>
-          </Grid>
           <Typography
-            variant="overline"
+            variant="h2"
             color="textPrimary"
           >
-            Donaciones
+            {numeral(recaudado).format('$0,0.000')}
+          </Typography>
+          <Typography
+            className={classes.recaudado}
+            variant="overline"
+            color="primary"
+          >
+            Recaudado
           </Typography>
         </Grid>
         <Grid
@@ -78,22 +102,18 @@ const Statistics = (event, { className, ...rest }) => {
           sm={6}
           xs={12}
         >
-          <Grid
-            item
-            container spacing={1} justify="flex-end"
-          >
-            <Grid item>
-              <ShareIcon  color='#5465D1'/>
-            </Grid>
-            <Grid item>
-              <InputBase id="input-with-icon-grid" value='7.7K' label="With a grid" />
-            </Grid>
-          </Grid>
           <Typography
+            variant="h2"
+            color="textPrimary"
+          >
+            {numeral(event.event.budget).format('$0,0.000')}
+          </Typography>
+          <Typography
+            className={classes.overline}
             variant="overline"
             color="textSecondary"
           >
-            Veces compartido
+            Objetivo
           </Typography>
         </Grid>
         <Grid
@@ -103,22 +123,18 @@ const Statistics = (event, { className, ...rest }) => {
           sm={6}
           xs={12}
         >
-          <Grid
-            item
-            container spacing={1} justify="flex-end"
-          >
-            <Grid item>
-              <BellIcon color='#5465D1'/>
-            </Grid>
-            <Grid item>
-              <InputBase id="input-with-icon-grid" value='150' label="With a grid" />
-            </Grid>
-          </Grid>
           <Typography
+            variant="h2"
+            color="textPrimary"
+          >
+            {numeral(falta).format('$0,0.000')}
+          </Typography>
+          <Typography
+            className={classes.falta}
             variant="overline"
             color="textSecondary"
           >
-            Suscriptos
+            Faltan
           </Typography>
         </Grid>
       </Grid>
