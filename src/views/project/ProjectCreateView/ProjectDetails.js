@@ -111,13 +111,27 @@ const ProjectDetails = ({
               ¿Cuál es tu objetivo?
             </Typography>
           </Box>
-          <Box mt={2}>
+          <Box mt={4}>
             <TextField
-              error={Boolean(touched.objective && errors.objective)}
+              error={Boolean(touched.typeOfObjective && errors.typeOfObjective)}
               fullWidth
-              helperText={touched.objective && errors.objective}
-              label="Objetivo"
-              name="objective"
+              helperText={touched.typeOfObjective && errors.typeOfObjective}
+              label="Tipo de objetivo"
+              name="typeOfObjective"
+              select
+              onBlur={handleBlur}
+              onChange={handleChange}
+              value={values.typeOfObjective}
+              variant="outlined"
+              style={{ display: 'inline-block' }}
+            />
+            <TextField
+              error={Boolean(touched.descriptionOfObjective && errors.descriptionOfObjective)}
+              fullWidth
+              helperText={touched.descriptionOfObjective && errors.descriptionOfObjective}
+              label="Descripción"
+              name="descriptionOfObjective"
+              className='inline-block'
               onBlur={handleBlur}
               onChange={handleChange}
               value={values.objective}
@@ -130,7 +144,8 @@ const ProjectDetails = ({
             >
               <TextField
                 fullWidth
-                label="Objetivos"
+                label="Tags"
+                type='string'
                 name="tags"
                 value={tag}
                 onChange={(event) => setTag(event.target.value)}
@@ -251,8 +266,8 @@ ProjectDetails.propTypes = {
 };
 
 ProjectDetails.defaultProps = {
-  onNext: () => {},
-  onBack: () => {}
+  onNext: () => { },
+  onBack: () => { }
 };
 
 export default ProjectDetails;
