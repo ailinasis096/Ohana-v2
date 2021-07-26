@@ -17,7 +17,7 @@ import {
 import { KeyboardDatePicker } from '@material-ui/pickers';
 import { Plus as PlusIcon } from 'react-feather';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {},
   addTab: {
     marginLeft: theme.spacing(2)
@@ -34,15 +34,13 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const ProjectDetails = ({
-  className,
-  onBack,
-  onNext,
-  ...rest
-}) => {
+const ProjectDetails = ({ className, onBack, onNext, ...rest }) => {
   const classes = useStyles();
   const [tag, setTag] = useState('');
+  //const [objetiveOption, setObjetiveOption] = useState(objetiveOption[0]);
+  const [objetives, setObjetives] = useState([]);
 
+  const objetiveOption = ['Monto', 'Bienes'];
   return (
     <Formik
       initialValues={{
@@ -53,16 +51,15 @@ const ProjectDetails = ({
         submit: null
       }}
       validationSchema={Yup.object().shape({
-        objective: Yup.string().min(3, 'Must be at least 3 characters').max(255).required('Required'),
+        objective: Yup.string()
+          .min(3, 'Must be at least 3 characters')
+          .max(255)
+          .required('Required'),
         tags: Yup.array(),
         startDate: Yup.date(),
         endDate: Yup.date()
       })}
-      onSubmit={async (values, {
-        setErrors,
-        setStatus,
-        setSubmitting
-      }) => {
+      onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
         try {
           // Call API to store step data in server session
           // It is important to have it on server to be able to reuse it if user
@@ -97,17 +94,11 @@ const ProjectDetails = ({
           className={clsx(classes.root, className)}
           {...rest}
         >
-          <Typography
-            variant="h3"
-            color="textPrimary"
-          >
+          <Typography variant="h3" color="textPrimary">
             Objetivo
           </Typography>
           <Box mt={2}>
-            <Typography
-              variant="subtitle1"
-              color="textSecondary"
-            >
+            <Typography variant="subtitle1" color="textSecondary">
               ¿Cuál es tu objetivo?
             </Typography>
           </Box>
@@ -120,35 +111,46 @@ const ProjectDetails = ({
               name="typeOfObjective"
               select
               onBlur={handleBlur}
+              //onChange={event => setObjetiveOption(event.target.value)}
               onChange={handleChange}
               value={values.typeOfObjective}
               variant="outlined"
+              SelectProps={{ native: true }}
               style={{ display: 'inline-block' }}
-            />
+            >
+              <>
+                <option defaultValue="" disabled />
+                {objetiveOption.map(option => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </>
+            </TextField>
             <TextField
-              error={Boolean(touched.descriptionOfObjective && errors.descriptionOfObjective)}
+              error={Boolean(
+                touched.descriptionOfObjective && errors.descriptionOfObjective
+              )}
               fullWidth
-              helperText={touched.descriptionOfObjective && errors.descriptionOfObjective}
+              helperText={
+                touched.descriptionOfObjective && errors.descriptionOfObjective
+              }
               label="Descripción"
               name="descriptionOfObjective"
-              className='inline-block'
+              className="inline-block"
               onBlur={handleBlur}
               onChange={handleChange}
               value={values.objective}
               variant="outlined"
             />
-            <Box
-              mt={3}
-              display="flex"
-              alignItems="center"
-            >
+            <Box mt={3} display="flex" alignItems="center">
               <TextField
                 fullWidth
                 label="Tags"
-                type='string'
+                type="string"
                 name="tags"
                 value={tag}
-                onChange={(event) => setTag(event.target.value)}
+                onChange={event => setTag(event.target.value)}
                 variant="outlined"
               />
               <IconButton
@@ -175,7 +177,7 @@ const ProjectDetails = ({
                   label={tag}
                   className={classes.tag}
                   onDelete={() => {
-                    const newTags = values.tags.filter((t) => t !== tag);
+                    const newTags = values.tags.filter(t => t !== tag);
 
                     setFieldValue('tags', newTags);
                   }}
@@ -184,9 +186,7 @@ const ProjectDetails = ({
             </Box>
             {Boolean(touched.tags && errors.tags) && (
               <Box mt={2}>
-                <FormHelperText error>
-                  {errors.tags}
-                </FormHelperText>
+                <FormHelperText error>{errors.tags}</FormHelperText>
               </Box>
             )}
             <Box mt={4}>
@@ -200,7 +200,7 @@ const ProjectDetails = ({
                 onBlur={() => setFieldTouched('startDate')}
                 onClose={() => setFieldTouched('startDate')}
                 onAccept={() => setFieldTouched('startDate')}
-                onChange={(date) => setFieldValue('startDate', date)}
+                onChange={date => setFieldValue('startDate', date)}
               />
               <KeyboardDatePicker
                 className={classes.datePicker}
@@ -212,33 +212,23 @@ const ProjectDetails = ({
                 onBlur={() => setFieldTouched('endDate')}
                 onClose={() => setFieldTouched('endDate')}
                 onAccept={() => setFieldTouched('endDate')}
-                onChange={(date) => setFieldValue('endDate', date)}
+                onChange={date => setFieldValue('endDate', date)}
               />
             </Box>
             {Boolean(touched.startDate && errors.startDate) && (
               <Box mt={2}>
-                <FormHelperText error>
-                  {errors.startDate}
-                </FormHelperText>
+                <FormHelperText error>{errors.startDate}</FormHelperText>
               </Box>
             )}
             {Boolean(touched.endDate && errors.endDate) && (
               <Box mt={2}>
-                <FormHelperText error>
-                  {errors.endDate}
-                </FormHelperText>
+                <FormHelperText error>{errors.endDate}</FormHelperText>
               </Box>
             )}
           </Box>
-          <Box
-            mt={6}
-            display="flex"
-          >
+          <Box mt={6} display="flex">
             {onBack && (
-              <Button
-                onClick={onBack}
-                size="large"
-              >
+              <Button onClick={onBack} size="large">
                 Atrás
               </Button>
             )}
@@ -266,8 +256,8 @@ ProjectDetails.propTypes = {
 };
 
 ProjectDetails.defaultProps = {
-  onNext: () => { },
-  onBack: () => { }
+  onNext: () => {},
+  onBack: () => {}
 };
 
 export default ProjectDetails;
