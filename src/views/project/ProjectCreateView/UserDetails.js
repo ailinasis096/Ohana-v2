@@ -37,26 +37,25 @@ const UserDetails = ({ className, onBack, onNext, ...rest }) => {
 
   const [error, setError] = useState(null);
 
-
-
   return (
     <Formik
       initialValues={{
         projectName: '',
         ubication: '',
-        description:'',
+        description: '',
         submit: null
       }}
       validationSchema={Yup.object().shape({
-        projectName: Yup.string().min(3, 'Must be at least 3 characters').max(255).required('Required'),
-        ubication: Yup.string().min(3, 'Must be at least 3 characters').max(255).required('Required'),
-        
+        projectName: Yup.string()
+          .min(3, 'Must be at least 3 characters')
+          .max(255)
+          .required('Required'),
+        ubication: Yup.string()
+          .min(3, 'Must be at least 3 characters')
+          .max(255)
+          .required('Required')
       })}
-      onSubmit={async (values, {
-        setErrors,
-        setStatus,
-        setSubmitting
-      }) => {
+      onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
         try {
           // Call API to store step data in server session
           // It is important to have it on server to be able to reuse it if user

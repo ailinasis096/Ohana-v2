@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import * as Yup from 'yup';
@@ -37,10 +37,17 @@ const useStyles = makeStyles(theme => ({
 const ProjectDetails = ({ className, onBack, onNext, ...rest }) => {
   const classes = useStyles();
   const [tag, setTag] = useState('');
-  //const [objetiveOption, setObjetiveOption] = useState(objetiveOption[0]);
   const [objetives, setObjetives] = useState([]);
+  const [showTextObjetives, setShowTextObjetives] = useState([]);
 
-  const objetiveOption = ['Monto', 'Bienes'];
+  const objetiveOption = ['Monetario', 'Bienes'];
+
+  useEffect(() => {
+    if (objetives === 'Monetario') {
+      setShowTextObjetives(true);
+    }
+  }, [objetives]);
+
   return (
     <Formik
       initialValues={{
@@ -48,16 +55,22 @@ const ProjectDetails = ({ className, onBack, onNext, ...rest }) => {
         tags: ['Ayudar'],
         startDate: new Date(),
         endDate: new Date(),
-        submit: null
+        descriptionOfObjective: ''
       }}
       validationSchema={Yup.object().shape({
-        objective: Yup.string()
-          .min(3, 'Must be at least 3 characters')
-          .max(255)
-          .required('Required'),
-        tags: Yup.array(),
-        startDate: Yup.date(),
-        endDate: Yup.date()
+        typeOfObjective: Yup.string()
+          .required('Selecciona un tipo de objetivo')
+          .oneOf(objetiveOption),
+        tags: Yup.array().notRequired(),
+        startDate: Yup.date().default(() => new Date()),
+        endDate: Yup.date().when(
+          'startDate',
+          (startDate, schema) => startDate && schema.min(startDate)
+        ),
+        descriptionOfObjective: Yup.string()
+          .required('Ingrese una descripción del objetivo')
+          .min(3, 'Debe tener como mínimo 3 caracteres')
+          .max(600)
       })}
       onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
         try {
@@ -102,47 +115,53 @@ const ProjectDetails = ({ className, onBack, onNext, ...rest }) => {
               ¿Cuál es tu objetivo?
             </Typography>
           </Box>
-          <Box mt={4}>
-            <TextField
-              error={Boolean(touched.typeOfObjective && errors.typeOfObjective)}
-              fullWidth
-              helperText={touched.typeOfObjective && errors.typeOfObjective}
-              label="Tipo de objetivo"
-              name="typeOfObjective"
-              select
-              onBlur={handleBlur}
-              //onChange={event => setObjetiveOption(event.target.value)}
-              onChange={handleChange}
-              value={values.typeOfObjective}
-              variant="outlined"
-              SelectProps={{ native: true }}
-              style={{ display: 'inline-block' }}
-            >
-              <>
-                <option defaultValue="" disabled />
-                {objetiveOption.map(option => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </>
-            </TextField>
-            <TextField
-              error={Boolean(
-                touched.descriptionOfObjective && errors.descriptionOfObjective
-              )}
-              fullWidth
-              helperText={
-                touched.descriptionOfObjective && errors.descriptionOfObjective
-              }
-              label="Descripción"
-              name="descriptionOfObjective"
-              className="inline-block"
-              onBlur={handleBlur}
-              onChange={handleChange}
-              value={values.objective}
-              variant="outlined"
-            />
+          <Box mt={3}>
+            <Box mb={2} display="flex" alignItems="center">
+              <TextField
+                error={Boolean(
+                  touched.typeOfObjective && errors.typeOfObjective
+                )}
+                fullWidth
+                helperText={touched.typeOfObjective && errors.typeOfObjective}
+                label="Tipo de objetivo"
+                name="typeOfObjective"
+                select
+                onBlur={handleBlur}
+                onChange={event => setObjetives(event.target.value)}
+                onChange={handleChange}
+                value={values.typeOfObjective}
+                variant="outlined"
+                SelectProps={{ native: true }}
+              >
+                <>
+                  <option defaultValue="" disabled selected />
+                  {objetiveOption.map(option => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </>
+              </TextField>
+            </Box>
+            <Box display="flex" alignItems="center">
+              <TextField
+                error={Boolean(
+                  touched.descriptionOfObjective &&
+                    errors.descriptionOfObjective
+                )}
+                fullWidth
+                helperText={
+                  touched.descriptionOfObjective &&
+                  errors.descriptionOfObjective
+                }
+                label="Descripción"
+                name="descriptionOfObjective"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.descriptionOfObjective}
+                variant="outlined"
+              />
+            </Box>
             <Box mt={3} display="flex" alignItems="center">
               <TextField
                 fullWidth
@@ -189,7 +208,7 @@ const ProjectDetails = ({ className, onBack, onNext, ...rest }) => {
                 <FormHelperText error>{errors.tags}</FormHelperText>
               </Box>
             )}
-            <Box mt={4}>
+            <Box mt={4} display="flex">
               <KeyboardDatePicker
                 className={classes.datePicker}
                 label="Fecha de inicio"
@@ -202,6 +221,7 @@ const ProjectDetails = ({ className, onBack, onNext, ...rest }) => {
                 onAccept={() => setFieldTouched('startDate')}
                 onChange={date => setFieldValue('startDate', date)}
               />
+
               <KeyboardDatePicker
                 className={classes.datePicker}
                 label="Fecha Fin"

@@ -10,10 +10,9 @@ import {
   makeStyles
 } from '@material-ui/core';
 
-
 import FilesDropzone from 'src/components/FilesDropzone';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {},
   editorContainer: {
     marginTop: theme.spacing(3)
@@ -25,22 +24,17 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const ProjectDescription = ({
-  className,
-  onBack,
-  onComplete,
-  ...rest
-}) => {
+const ProjectDescription = ({ className, onBack, onComplete, ...rest }) => {
   const classes = useStyles();
   const [content, setContent] = useState('');
   const [isSubmitting, setSubmitting] = useState(false);
   const [error, setError] = useState(null);
 
-  const handleChange = (value) => {
+  const handleChange = value => {
     setContent(value);
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async event => {
     event.preventDefault();
 
     try {
@@ -65,39 +59,25 @@ const ProjectDescription = ({
       className={clsx(classes.root, className)}
       {...rest}
     >
-      <Typography
-        variant="h3"
-        color="textPrimary"
-      >
+      <Typography variant="h3" color="textPrimary">
         Agregar documentos
       </Typography>
       <Box mt={2}>
-        <Typography
-          variant="subtitle1"
-          color="textSecondary"
-        >
+        <Typography variant="subtitle1" color="textSecondary">
           Seleccione los documentos que desea subir
         </Typography>
-        <FilesDropzone/>
+        <FilesDropzone />
       </Box>
-     
+
       {error && (
         <Box mt={2}>
-          <FormHelperText error>
-            {FormHelperText}
-          </FormHelperText>
+          <FormHelperText error>{FormHelperText}</FormHelperText>
         </Box>
       )}
-      <Box
-        mt={6}
-        display="flex"
-      >
+      <Box mt={6} display="flex">
         {onBack && (
-          <Button
-            onClick={onBack}
-            size="large"
-          >
-            Previous
+          <Button onClick={onBack} size="large">
+            Atrás
           </Button>
         )}
         <Box flexGrow={1} />
@@ -108,7 +88,7 @@ const ProjectDescription = ({
           variant="contained"
           size="large"
         >
-          Complete
+          Listo
         </Button>
       </Box>
     </form>
