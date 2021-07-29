@@ -36,24 +36,29 @@ const UserDetails = ({ className, onBack, onNext, ...rest }) => {
   const classes = useStyles();
 
   const [error, setError] = useState(null);
-
+  const categoryOption = ['Animales', 'Personas'];
+  const [category, setCategory] = useState([]);
   return (
     <Formik
       initialValues={{
         projectName: '',
         ubication: '',
         description: '',
-        submit: null
+        submit: null,
+        category: ''
       }}
       validationSchema={Yup.object().shape({
         projectName: Yup.string()
           .min(3, 'Must be at least 3 characters')
           .max(255)
-          .required('Required'),
+          .required('Detalle un nombre de campaña'),
         ubication: Yup.string()
           .min(3, 'Must be at least 3 characters')
           .max(255)
-          .required('Required')
+          .required('Detalle una ubicación'),
+        category: Yup.string()
+          .required('Selecciona una categoría')
+          .oneOf(categoryOption)
       })}
       onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
         try {
@@ -135,6 +140,33 @@ const UserDetails = ({ className, onBack, onNext, ...rest }) => {
               value={values.ubication}
               variant="outlined"
             />
+          </Box>
+          <Box mt={2} display="flex" alignItems="center">
+            <TextField
+              error={Boolean(touched.category && errors.category)}
+              fullWidth
+              select
+              helperText={touched.category && errors.category}
+              label="Categoría"
+              name="category"
+              onBlur={handleBlur}
+              onChangeCapture={event => {
+                setCategory(event.target.value);
+              }}
+              onChange={handleChange}
+              value={values.category}
+              variant="outlined"
+              SelectProps={{ native: true }}
+            >
+              <>
+                <option defaultValue="" disabled selected />
+                {categoryOption.map(option => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </>
+            </TextField>
           </Box>
           {error && (
             <Box mt={2}>

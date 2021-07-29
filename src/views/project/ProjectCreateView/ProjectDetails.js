@@ -127,7 +127,7 @@ const ProjectDetails = ({ className, onBack, onNext, ...rest }) => {
                 name="typeOfObjective"
                 select
                 onBlur={handleBlur}
-                onChange={event => setObjetives(event.target.value)}
+                onChangeCapture={event => setObjetives(event.target.value)}
                 onChange={handleChange}
                 value={values.typeOfObjective}
                 variant="outlined"
