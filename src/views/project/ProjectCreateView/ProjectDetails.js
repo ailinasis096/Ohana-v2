@@ -55,7 +55,7 @@ const ProjectDetails = ({ className, onBack, onNext, ...rest }) => {
         tags: ['Ayudar'],
         startDate: new Date(),
         endDate: new Date(),
-        descriptionOfObjective: ''
+        descriptionOfObjective: 0
       }}
       validationSchema={Yup.object().shape({
         typeOfObjective: Yup.string()
@@ -67,10 +67,9 @@ const ProjectDetails = ({ className, onBack, onNext, ...rest }) => {
           'startDate',
           (startDate, schema) => startDate && schema.min(startDate)
         ),
-        descriptionOfObjective: Yup.string()
-          .required('Ingrese una descripción del objetivo')
-          .min(3, 'Debe tener como mínimo 3 caracteres')
-          .max(600)
+        money: Yup.number()
+          .max(100000000)
+          .notRequired()
       })}
       onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
         try {
@@ -145,20 +144,19 @@ const ProjectDetails = ({ className, onBack, onNext, ...rest }) => {
             </Box>
             <Box display="flex" alignItems="center">
               <TextField
-                error={Boolean(
-                  touched.descriptionOfObjective &&
-                    errors.descriptionOfObjective
-                )}
+                error={Boolean(touched.money && errors.money)}
                 fullWidth
-                helperText={
-                  touched.descriptionOfObjective &&
-                  errors.descriptionOfObjective
-                }
-                label="Descripción"
-                name="descriptionOfObjective"
+                onKeyPress={event => {
+                  if (!/[0-9,]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                helperText={touched.money && errors.money}
+                label="Monto"
+                name="money"
                 onBlur={handleBlur}
                 onChange={handleChange}
-                value={values.descriptionOfObjective}
+                value={values.money}
                 variant="outlined"
               />
             </Box>

@@ -32,7 +32,7 @@ const slice = createSlice({
     updateEvent(state, action) {
       const { event } = action.payload;
 
-      state.events = _.map(state.events, (_event) => {
+      state.events = _.map(state.events, _event => {
         if (_event.id === event.id) {
           return event;
         }
@@ -67,23 +67,23 @@ const slice = createSlice({
 
 export const reducer = slice.reducer;
 
-export const getEvents = () => async (dispatch) => {
-  const response = await axios.get('/api/calendar/events');
-
+export const getEvents = () => async dispatch => {
+  const response = await axios.get('/api/events/list');
+  console.log('Eventos', dispatch(slice.actions.getEvents(response.data)));
   dispatch(slice.actions.getEvents(response.data));
 };
 
-export const createEvent = (data) => async (dispatch) => {
-  const response = await axios.post('/api/calendar/events/new', data);
+export const createEvent = data => async dispatch => {
+  const response = await axios.post('/api/events/create', data);
 
   dispatch(slice.actions.createEvent(response.data));
 };
 
-export const selectEvent = (eventId) => async (dispatch) => {
+export const selectEvent = eventId => async dispatch => {
   dispatch(slice.actions.selectEvent({ eventId }));
 };
 
-export const updateEvent = (eventId, update) => async (dispatch) => {
+export const updateEvent = (eventId, update) => async dispatch => {
   const response = await axios.post('/api/calendar/events/update', {
     eventId,
     update
@@ -92,7 +92,7 @@ export const updateEvent = (eventId, update) => async (dispatch) => {
   dispatch(slice.actions.updateEvent(response.data));
 };
 
-export const deleteEvent = (eventId) => async (dispatch) => {
+export const deleteEvent = eventId => async dispatch => {
   await axios.post('/api/calendar/events/remove', {
     eventId
   });
@@ -100,18 +100,20 @@ export const deleteEvent = (eventId) => async (dispatch) => {
   dispatch(slice.actions.deleteEvent({ eventId }));
 };
 
-export const selectRange = (start, end) => (dispatch) => {
-  dispatch(slice.actions.selectRange({
-    start: start.getTime(),
-    end: end.getTime()
-  }));
+export const selectRange = (start, end) => dispatch => {
+  dispatch(
+    slice.actions.selectRange({
+      start: start.getTime(),
+      end: end.getTime()
+    })
+  );
 };
 
-export const openModal = () => (dispatch) => {
+export const openModal = () => dispatch => {
   dispatch(slice.actions.openModal());
 };
 
-export const closeModal = () => (dispatch) => {
+export const closeModal = () => dispatch => {
   dispatch(slice.actions.closeModal());
 };
 

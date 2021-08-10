@@ -1,26 +1,26 @@
 import axios from 'axios';
 
-const axiosInstance =  axios.create({
+const axiosInstance = axios.create({
   baseURL: 'http://localhost:8000'
 });
 
 axiosInstance.interceptors.response.use(
-    (response) => response,
-    (err) => {
-      const { response } = err;
-      console.log(response)
-      /*const isLogout = window.location.pathname.includes('logout');
+  response => response,
+  err => {
+    const { response } = err;
+
+    /*const isLogout = window.location.pathname.includes('logout');
       if (!isLogout && response && response.status === 401) {
         API.goToLogin();
       } else if (response && response.status >= 500) {
         // @TODO: show error page or modal
       }*/
-      return Promise.reject(err);
-    }
-); 
+    return Promise.reject(err);
+  }
+);
 
 class API {
-    /*static async initApp() {
+  /*static async initApp() {
       let user = null;
       try {
         user = await API.getUser();
@@ -49,13 +49,20 @@ class API {
       const { data } = await axiosInstance.get(`/user`);
       return data;
     } */
-
-    static async getEvents(page = 1, pageSize = 15) {
-        //let path = `/api/events/list/?page=${page}&page_size=${pageSize}`;
-        let path = '/api/events/list/'
-        const { data } = await axiosInstance.get(path);
-        return data;
-    } 
+  static async createEvent() {
+    let path = `/api/events/create/`;
+    //let path = '/api/events/list/';
+    const { data } = await axiosInstance.post(path);
+    return data;
+  }
+  static async getEvents(page = 1, pageSize = 15) {
+    let path = `/api/events/list/?page=${page}&page_size=${pageSize}`;
+    //let path = '/api/events/list/';
+    console.log(path);
+    const { data } = await axiosInstance.get(path);
+    console.log('DATOSSSSSSSS', data);
+    return data;
+  }
 }
 
 export default API;
