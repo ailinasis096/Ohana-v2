@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import * as Yup from 'yup';
-import { Formik } from 'formik';
+import { Formik, Field, Form, useFormikContext } from "formik";
 import {
   Box,
   Button,
@@ -32,16 +32,25 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const UserDetails = ({ className, onBack, onNext, ...rest }) => {
-  const classes = useStyles();
+const Ottro = () => {
+  const { values } = useFormikContext();
+  console.log('values: ', values)
 
+  return null;
+}
+
+const UserDetails = ({ event, className, onBack, onNext, ...rest }) => {
+  const classes = useStyles();
   const [error, setError] = useState(null);
   const categoryOption = ['Animales', 'Personas'];
   const [category, setCategory] = useState([]);
+
+  console.log('event: ', event)
+  
   return (
     <Formik
       initialValues={{
-        projectName: '',
+        projectName: '' ,
         ubication: '',
         description: '',
         submit: null,
@@ -111,7 +120,7 @@ const UserDetails = ({ className, onBack, onNext, ...rest }) => {
               name="projectName"
               onBlur={handleBlur}
               onChange={handleChange}
-              value={values.projectName}
+              value={!!event ? event.title : values.projectName}
               variant="outlined"
             />
 
@@ -123,7 +132,7 @@ const UserDetails = ({ className, onBack, onNext, ...rest }) => {
             <Paper variant="outlined">
               <QuillEditor
                 className={classes.editor}
-                value={values.description}
+                value={!!event ? event.caption : values.description}
                 onChange={value => setFieldValue('description', value)}
               />
             </Paper>
@@ -137,7 +146,7 @@ const UserDetails = ({ className, onBack, onNext, ...rest }) => {
               name="ubication"
               onBlur={handleBlur}
               onChange={handleChange}
-              value={values.ubication}
+              value={!!event ? event.location : values.ubication}
               variant="outlined"
             />
           </Box>
@@ -154,7 +163,7 @@ const UserDetails = ({ className, onBack, onNext, ...rest }) => {
                 setCategory(event.target.value);
               }}
               onChange={handleChange}
-              value={values.category}
+              value={!!event ? event.category : values.category}
               variant="outlined"
               SelectProps={{ native: true }}
             >
@@ -173,6 +182,7 @@ const UserDetails = ({ className, onBack, onNext, ...rest }) => {
               <FormHelperText error>{error}</FormHelperText>
             </Box>
           )}
+          <Ottro/>
           <Box mt={6} display="flex">
             {onBack && (
               <Button onClick={onBack} size="large">

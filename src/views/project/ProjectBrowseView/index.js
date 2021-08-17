@@ -82,9 +82,9 @@ const ProjectBrowseView = () => {
     }
   ]);
 
-  const getProjects = useCallback(async () => {
+  const getProjects = async () => {
     try {
-      const response = api.getEvents();
+      const response = await api.getEvents();
       console.log('Respuesta', response);
       if (isMountedRef.current) {
         setProjects(response.data);
@@ -92,11 +92,11 @@ const ProjectBrowseView = () => {
     } catch (err) {
       console.error(err);
     }
-  }, [isMountedRef]);
+  };
 
   useEffect(() => {
     getProjects();
-  }, [getProjects]);
+  }, []);
 
   return (
     <Page className={classes.root} title="Explorar campañas | Ohana">

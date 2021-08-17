@@ -200,16 +200,25 @@ const routes = [
         component: lazy(() => import('src/views/project/OverviewView'))
       },
       {
+        //EXPLORAR CAMPAÑAS
         exact: true,
         path: '/app/events/browse',
         component: lazy(() => import('src/views/project/ProjectBrowseView'))
       },
       {
+        //REGISTRAR CAMPAÑA
         exact: true,
         path: '/app/projects/create',
         component: lazy(() => import('src/views/project/ProjectCreateView'))
       },
       {
+        //EDITAR CAMPAÑA
+        exact: true,
+        path: '/app/projects/edit/:id',
+        component: lazy(() => import('src/views/project/ProjectCreateView'))
+      },
+      {
+        //DETALLE CAMPAÑA
         exact: true,
         path: '/app/projects/:id',
         component: lazy(() => import('src/views/project/ProjectDetailsView'))

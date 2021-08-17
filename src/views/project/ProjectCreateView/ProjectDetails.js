@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ProjectDetails = ({ className, onBack, onNext, ...rest }) => {
+const ProjectDetails = ({ event, className, onBack, onNext, ...rest }) => {
   const classes = useStyles();
   const [tag, setTag] = useState('');
   const [objetives, setObjetives] = useState([]);

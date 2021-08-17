@@ -101,16 +101,16 @@ const Account = () => {
           component={RouterLink}
           to="/app/social/profile"
         >
-          Profile
+          Perfil
         </MenuItem>
         <MenuItem
           component={RouterLink}
           to="/app/account"
         >
-          Account
+          Mi cuenta
         </MenuItem>
         <MenuItem onClick={handleLogout}>
-          Logout
+          Cerrar sesión
         </MenuItem>
       </Menu>
     </>

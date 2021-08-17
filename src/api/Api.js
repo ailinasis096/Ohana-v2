@@ -57,10 +57,8 @@ class API {
   }
   static async getEvents(page = 1, pageSize = 15) {
     let path = `/api/events/list/?page=${page}&page_size=${pageSize}`;
-    //let path = '/api/events/list/';
-    console.log(path);
     const { data } = await axiosInstance.get(path);
-    console.log('DATOSSSSSSSS', data);
+    console.log('DATOSSSSSSSS: ', data);
     return data;
   }
 }
