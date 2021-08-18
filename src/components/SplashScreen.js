@@ -1,11 +1,7 @@
+import { Box, LinearProgress, makeStyles } from '@material-ui/core';
 import React from 'react';
-import {
-  Box,
-  LinearProgress,
-  makeStyles
-} from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     alignItems: 'center',
     backgroundColor: theme.palette.background.default,
@@ -32,6 +28,6 @@ const SlashScreen = () => {
       </Box>
     </div>
   );
-}
+};
 
 export default SlashScreen;

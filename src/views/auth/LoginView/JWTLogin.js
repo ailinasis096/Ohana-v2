@@ -1,18 +1,18 @@
-import React from 'react';
-import clsx from 'clsx';
-import * as Yup from 'yup';
-import PropTypes from 'prop-types';
-import { Formik } from 'formik';
 import {
   Box,
   Button,
   FormHelperText,
-  TextField,
-  makeStyles
+  makeStyles,
+  TextField
 } from '@material-ui/core';
 import { Alert } from '@material-ui/lab';
+import clsx from 'clsx';
+import { Formik } from 'formik';
+import PropTypes from 'prop-types';
+import React from 'react';
 import useAuth from 'src/hooks/useAuth';
 import useIsMountedRef from 'src/hooks/useIsMountedRef';
+import * as Yup from 'yup';
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -31,14 +31,15 @@ const JWTLogin = ({ className, ...rest }) => {
         submit: null
       }}
       validationSchema={Yup.object().shape({
-        email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
-        password: Yup.string().max(255).required('Password is required')
+        email: Yup.string()
+          .email('Must be a valid email')
+          .max(255)
+          .required('Email is required'),
+        password: Yup.string()
+          .max(255)
+          .required('Password is required')
       })}
-      onSubmit={async (values, {
-        setErrors,
-        setStatus,
-        setSubmitting
-      }) => {
+      onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
         try {
           await login(values.email, values.password);
 
@@ -76,7 +77,7 @@ const JWTLogin = ({ className, ...rest }) => {
             fullWidth
             autoFocus
             helperText={touched.email && errors.email}
-            label="Email Address"
+            label="Correo Electrónico"
             margin="normal"
             name="email"
             onBlur={handleBlur}
@@ -89,7 +90,7 @@ const JWTLogin = ({ className, ...rest }) => {
             error={Boolean(touched.password && errors.password)}
             fullWidth
             helperText={touched.password && errors.password}
-            label="Password"
+            label="Contraseña"
             margin="normal"
             name="password"
             onBlur={handleBlur}
@@ -100,9 +101,7 @@ const JWTLogin = ({ className, ...rest }) => {
           />
           {errors.submit && (
             <Box mt={3}>
-              <FormHelperText error>
-                {errors.submit}
-              </FormHelperText>
+              <FormHelperText error>{errors.submit}</FormHelperText>
             </Box>
           )}
           <Box mt={2}>
@@ -114,21 +113,13 @@ const JWTLogin = ({ className, ...rest }) => {
               type="submit"
               variant="contained"
             >
-              Log In
+              Ingresar
             </Button>
           </Box>
           <Box mt={2}>
-            <Alert
-              severity="info"
-            >
+            <Alert severity="info">
               <div>
-                Use
-                {' '}
-                <b>demo@devias.io</b>
-                {' '}
-                and password
-                {' '}
-                <b>Password123</b>
+                Usar <b>demo@devias.io</b> y contraseña <b>Password123</b>
               </div>
             </Alert>
           </Box>
@@ -139,7 +130,7 @@ const JWTLogin = ({ className, ...rest }) => {
 };
 
 JWTLogin.propTypes = {
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 export default JWTLogin;

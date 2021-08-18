@@ -1,15 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
 import {
   Box,
   Container,
   Grid,
-  Typography,
-  makeStyles
+  makeStyles,
+  Typography
 } from '@material-ui/core';
+import clsx from 'clsx';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.dark,
     paddingTop: 200,
@@ -50,98 +50,56 @@ const Hero = ({ className, ...rest }) => {
   const classes = useStyles();
 
   return (
-    <div
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
+    <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="lg">
-        <Grid
-          container
-          spacing={3}
-        >
-          <Grid
-            item
-            xs={12}
-            md={5}
-          >
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={5}>
             <Box
               display="flex"
               flexDirection="column"
               justifyContent="center"
               height="100%"
             >
-              <Typography
-                variant="overline"
-                color="secondary"
-              >
+              {/* <Typography variant="overline" color="secondary">
                 Introducing
-              </Typography>
-              <Typography
-                variant="h1"
-                color="textPrimary"
-              >
-                Devias React Material Kit - PRO
+              </Typography> */}
+              <Typography variant="h1" color="textPrimary">
+                ¡Nosotros somos Ohana!
               </Typography>
               <Box mt={3}>
-                <Typography
-                  variant="body1"
-                  color="textSecondary"
-                >
-                  A professional kit that comes with ready-to-use Material-UI© components
-                  developed with one common goal in mind, help you build faster &amp; beautiful
-                  applications. Each component is fully customizable,
-                  responsive and easy to integrate.
+                <Typography variant="body1" color="textSecondary">
+                  Red social solidaria para fomentar la participación ciudadana
+                  en distintas campañas y ayudar a más personas.
                 </Typography>
               </Box>
-              <Box mt={3}>
-                <Grid
-                  container
-                  spacing={3}
-                >
+              {/* <Box mt={3}>
+                <Grid container spacing={3}>
                   <Grid item>
-                    <Typography
-                      variant="h1"
-                      color="secondary"
-                    >
+                    <Typography variant="h1" color="secondary">
                       30+
                     </Typography>
-                    <Typography
-                      variant="overline"
-                      color="textSecondary"
-                    >
+                    <Typography variant="overline" color="textSecondary">
                       Demo Pages
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <Typography
-                      variant="h1"
-                      color="secondary"
-                    >
+                    <Typography variant="h1" color="secondary">
                       UX
                     </Typography>
-                    <Typography
-                      variant="overline"
-                      color="textSecondary"
-                    >
+                    <Typography variant="overline" color="textSecondary">
                       Complete Flows
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <Typography
-                      variant="h1"
-                      color="secondary"
-                    >
+                    <Typography variant="h1" color="secondary">
                       300+
                     </Typography>
-                    <Typography
-                      variant="overline"
-                      color="textSecondary"
-                    >
+                    <Typography variant="overline" color="textSecondary">
                       Components
                     </Typography>
                   </Grid>
                 </Grid>
-              </Box>
+              </Box> */}
               <Box mt={3}>
                 <img
                   alt="Javascript"
@@ -156,23 +114,13 @@ const Hero = ({ className, ...rest }) => {
               </Box>
             </Box>
           </Grid>
-          <Grid
-            item
-            xs={12}
-            md={7}
-          >
+          <Grid item xs={12} md={7}>
             <Box position="relative">
               <div className={classes.shape}>
-                <img
-                  alt="Shapes"
-                  src="/static/home/shapes.svg"
-                />
+                <img alt="Shapes" src="/static/home/shapes.svg" />
               </div>
               <div className={classes.image}>
-                <img
-                  alt="Presentation"
-                  src="/static/home/dark-light.png"
-                />
+                <img alt="Presentation" src="/static/home/dark-light.png" />
               </div>
             </Box>
           </Grid>

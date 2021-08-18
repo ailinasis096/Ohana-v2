@@ -1,20 +1,20 @@
-import React from 'react';
-import clsx from 'clsx';
-import * as Yup from 'yup';
-import PropTypes from 'prop-types';
-import { Formik } from 'formik';
 import {
   Box,
   Button,
   Checkbox,
   FormHelperText,
-  TextField,
-  Typography,
   Link,
-  makeStyles
+  makeStyles,
+  TextField,
+  Typography
 } from '@material-ui/core';
+import clsx from 'clsx';
+import { Formik } from 'formik';
+import PropTypes from 'prop-types';
+import React from 'react';
 import useAuth from 'src/hooks/useAuth';
 import useIsMountedRef from 'src/hooks/useIsMountedRef';
+import * as Yup from 'yup';
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -35,16 +35,20 @@ const JWTRegister = ({ className, ...rest }) => {
         submit: null
       }}
       validationSchema={Yup.object().shape({
-        email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
-        name: Yup.string().max(255).required('Name is required'),
-        password: Yup.string().min(7).max(255).required('Password is required'),
-        policy: Yup.boolean().oneOf([true], 'This field must be checked')
+        email: Yup.string()
+          .email('Debe ingresar un email válido')
+          .max(255)
+          .required('Email es requerido'),
+        name: Yup.string()
+          .max(255)
+          .required('Nombre es requerido'),
+        password: Yup.string()
+          .min(7)
+          .max(255)
+          .required('Contraseña es requerida'),
+        policy: Yup.boolean().oneOf([true], '¡Debe completar todos los campos!')
       })}
-      onSubmit={async (values, {
-        setErrors,
-        setStatus,
-        setSubmitting
-      }) => {
+      onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
         try {
           await register(values.email, values.name, values.password);
 
@@ -79,7 +83,7 @@ const JWTRegister = ({ className, ...rest }) => {
             error={Boolean(touched.name && errors.name)}
             fullWidth
             helperText={touched.name && errors.name}
-            label="Name"
+            label="Nombre"
             margin="normal"
             name="name"
             onBlur={handleBlur}
@@ -91,7 +95,7 @@ const JWTRegister = ({ className, ...rest }) => {
             error={Boolean(touched.email && errors.email)}
             fullWidth
             helperText={touched.email && errors.email}
-            label="Email Address"
+            label="Correo Electrónico"
             margin="normal"
             name="email"
             onBlur={handleBlur}
@@ -104,7 +108,7 @@ const JWTRegister = ({ className, ...rest }) => {
             error={Boolean(touched.password && errors.password)}
             fullWidth
             helperText={touched.password && errors.password}
-            label="Password"
+            label="Contraseña"
             margin="normal"
             name="password"
             onBlur={handleBlur}
@@ -113,42 +117,25 @@ const JWTRegister = ({ className, ...rest }) => {
             value={values.password}
             variant="outlined"
           />
-          <Box
-            alignItems="center"
-            display="flex"
-            mt={2}
-            ml={-1}
-          >
+          <Box alignItems="center" display="flex" mt={2} ml={-1}>
             <Checkbox
               checked={values.policy}
               name="policy"
               onChange={handleChange}
             />
-            <Typography
-              variant="body2"
-              color="textSecondary"
-            >
-              I have read the
-              {' '}
-              <Link
-                component="a"
-                href="#"
-                color="secondary"
-              >
-                Terms and Conditions
+            <Typography variant="body2" color="textSecondary">
+              Debe aceptar los{' '}
+              <Link component="a" href="#" color="secondary">
+                Terminos y Condiciones
               </Link>
             </Typography>
           </Box>
           {Boolean(touched.policy && errors.policy) && (
-            <FormHelperText error>
-              {errors.policy}
-            </FormHelperText>
+            <FormHelperText error>{errors.policy}</FormHelperText>
           )}
           {errors.submit && (
             <Box mt={3}>
-              <FormHelperText error>
-                {errors.submit}
-              </FormHelperText>
+              <FormHelperText error>{errors.submit}</FormHelperText>
             </Box>
           )}
           <Box mt={2}>
@@ -160,7 +147,7 @@ const JWTRegister = ({ className, ...rest }) => {
               type="submit"
               variant="contained"
             >
-              Register
+              Aceptar
             </Button>
           </Box>
         </form>

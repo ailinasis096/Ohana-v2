@@ -1,31 +1,29 @@
-import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 import {
   Box,
   Card,
   CardContent,
-  Chip,
   Container,
   Divider,
   Link,
-  Tooltip,
-  Typography,
-  makeStyles
+  makeStyles,
+  Typography
 } from '@material-ui/core';
-import Page from 'src/components/Page';
+import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import Logo from 'src/components/Logo';
+import Page from 'src/components/Page';
 import useAuth from 'src/hooks/useAuth';
 import Auth0Register from './Auth0Register';
 import FirebaseAuthRegister from './FirebaseAuthRegister';
 import JWTRegister from './JWTRegister';
 
 const methodIcons = {
-  'Auth0': '/static/images/auth0.svg',
-  'FirebaseAuth': '/static/images/firebase.svg',
-  'JWT': '/static/images/jwt.svg'
+  Auth0: '/static/images/auth0.svg',
+  FirebaseAuth: '/static/images/firebase.svg',
+  JWT: '/static/images/jwt.svg'
 };
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.dark,
     display: 'flex',
@@ -48,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContainer: {
     paddingBottom: 80,
-    paddingTop: 80,
+    paddingTop: 80
   },
   cardContent: {
     padding: theme.spacing(4),
@@ -70,40 +68,22 @@ const RegisterView = () => {
   const { method } = useAuth();
 
   return (
-    <Page
-      className={classes.root}
-      title="Register"
-    >
-      <div className={classes.banner}>
+    <Page className={classes.root} title="Register">
+      {/* <div className={classes.banner}>
         <Container maxWidth="md">
-          <Box
-            alignItems="center"
-            display="flex"
-            justifyContent="center"
-          >
+          <Box alignItems="center" display="flex" justifyContent="center">
             <Chip
               color="secondary"
               label="NEW"
               size="small"
               className={classes.bannerChip}
             />
-            <Box
-              alignItems="center"
-              display="flex"
-            >
-              <Typography
-                color="textPrimary"
-                variant="h6"
-              >
-                Visit our
-                {' '}
-                <Link
-                  component={RouterLink}
-                  to="/docs"
-                >
+            <Box alignItems="center" display="flex">
+              <Typography color="textPrimary" variant="h6">
+                Visit our{' '}
+                <Link component={RouterLink} to="/docs">
                   docs
-                </Link>
-                {' '}
+                </Link>{' '}
                 and find out how to switch between
               </Typography>
               <Tooltip title="Auth0">
@@ -130,16 +110,9 @@ const RegisterView = () => {
             </Box>
           </Box>
         </Container>
-      </div>
-      <Container
-        className={classes.cardContainer}
-        maxWidth="sm"
-      >
-        <Box
-          mb={8}
-          display="flex"
-          justifyContent="center"
-        >
+      </div> */}
+      <Container className={classes.cardContainer} maxWidth="sm">
+        <Box mb={1} display="flex" justifyContent="center">
           <RouterLink to="/">
             <Logo />
           </RouterLink>
@@ -153,34 +126,21 @@ const RegisterView = () => {
               mb={3}
             >
               <div>
-                <Typography
-                  color="textPrimary"
-                  gutterBottom
-                  variant="h2"
-                >
-                  Register
+                <Typography color="textPrimary" gutterBottom variant="h2">
+                  Registrar
                 </Typography>
-                <Typography
-                  variant="body2"
-                  color="textSecondary"
-                >
+                {/* <Typography variant="body2" color="textSecondary">
                   Register on the internal platform
-                </Typography>
+                </Typography> */}
               </div>
               <div className={classes.currentMethodIcon}>
-                <img
-                  alt="Auth method"
-                  src={methodIcons[method]}
-                />
+                <img alt="Auth method" src={methodIcons[method]} />
               </div>
             </Box>
-            <Box
-              flexGrow={1}
-              mt={3}
-            >
-              {method === 'Auth0' && <Auth0Register /> }
-              {method === 'FirebaseAuth' && <FirebaseAuthRegister /> }
-              {method === 'JWT' && <JWTRegister /> }
+            <Box flexGrow={1} mt={3}>
+              {method === 'Auth0' && <Auth0Register />}
+              {method === 'FirebaseAuth' && <FirebaseAuthRegister />}
+              {method === 'JWT' && <JWTRegister />}
             </Box>
             <Box my={3}>
               <Divider />
@@ -191,7 +151,7 @@ const RegisterView = () => {
               variant="body2"
               color="textSecondary"
             >
-              Having an account
+              Tengo una cuenta
             </Link>
           </CardContent>
         </Card>

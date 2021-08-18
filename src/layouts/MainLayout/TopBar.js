@@ -1,22 +1,20 @@
-import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
-import clsx from 'clsx';
-import PropTypes from 'prop-types';
 import {
   AppBar,
   Box,
-  Button,
-  Divider,
-  Toolbar,
   Hidden,
-  Typography,
   Link,
-  makeStyles
+  makeStyles,
+  Toolbar,
+  Typography
 } from '@material-ui/core';
-import { APP_VERSION } from 'src/constants';
+import clsx from 'clsx';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import Logo from 'src/components/Logo';
+import { APP_VERSION } from 'src/constants';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.default
   },
@@ -44,37 +42,28 @@ const TopBar = ({ className, ...rest }) => {
   const classes = useStyles();
 
   return (
-    <AppBar
-      className={clsx(classes.root, className)}
-      color="default"
-      {...rest}
-    >
+    <AppBar className={clsx(classes.root, className)} color="default" {...rest}>
       <Toolbar className={classes.toolbar}>
         <RouterLink to="/">
           <Logo className={classes.logo} />
         </RouterLink>
         <Hidden mdDown>
-          <Typography
-            variant="caption"
-            color="textSecondary"
-          >
-            Version
-            {' '}
-            {APP_VERSION}
+          <Typography variant="caption" color="textSecondary">
+            Version {APP_VERSION}
           </Typography>
         </Hidden>
         <Box flexGrow={1} />
         <Link
           className={classes.link}
-          color="textSecondary"
+          color="secondary"
           component={RouterLink}
           to="/app"
           underline="none"
-          variant="body2"
+          variant="button"
         >
-          Dashboard
+          Ingresar
         </Link>
-        <Link
+        {/* <Link
           className={classes.link}
           color="textSecondary"
           component={RouterLink}
@@ -83,8 +72,8 @@ const TopBar = ({ className, ...rest }) => {
           variant="body2"
         >
           Documentation
-        </Link>
-        <Divider className={classes.divider} />
+        </Link> */}
+        {/* <Divider className={classes.divider} />
         <Button
           color="secondary"
           component="a"
@@ -93,7 +82,7 @@ const TopBar = ({ className, ...rest }) => {
           size="small"
         >
           Get the kit
-        </Button>
+        </Button> */}
       </Toolbar>
     </AppBar>
   );
