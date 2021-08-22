@@ -1,23 +1,12 @@
-import React, {
-  useState,
-} from 'react';
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
-import {
-  Box,
-  Grid,
-  Typography,
-  makeStyles
-} from '@material-ui/core';
-import {
-  ToggleButtonGroup,
-  ToggleButton,
-  Pagination
-} from '@material-ui/lab';
+import { Box, Grid, makeStyles, Typography } from '@material-ui/core';
 import ViewModuleIcon from '@material-ui/icons/ViewModule';
-import ProjectCard from 'src/components/ProjectCard';
+import { Pagination, ToggleButton, ToggleButtonGroup } from '@material-ui/lab';
+import clsx from 'clsx';
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import CardEvents from 'src/components/CardEvents';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {},
   title: {
     position: 'relative',
@@ -47,10 +36,7 @@ const Results = ({ className, projects, ...rest }) => {
   };
 
   return (
-    <div
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
+    <div className={clsx(classes.root, className)} {...rest}>
       <Box
         display="flex"
         alignItems="center"
@@ -58,18 +44,10 @@ const Results = ({ className, projects, ...rest }) => {
         flexWrap="wrap"
         mb={2}
       >
-        <Typography
-          className={classes.title}
-          variant="h5"
-          color="textPrimary"
-        >
+        <Typography className={classes.title} variant="h5" color="textPrimary">
           Campañas
         </Typography>
-        <Box
-          display="flex"
-          alignItems="center"
-        >
-          
+        <Box display="flex" alignItems="center">
           <ToggleButtonGroup
             exclusive
             onChange={handleModeChange}
@@ -82,11 +60,8 @@ const Results = ({ className, projects, ...rest }) => {
           </ToggleButtonGroup>
         </Box>
       </Box>
-      <Grid
-        container
-        spacing={3}
-      >
-        {projects.map((project) => (
+      <Grid container spacing={3}>
+        {projects.map(project => (
           <Grid
             item
             key={project.id}
@@ -94,20 +69,16 @@ const Results = ({ className, projects, ...rest }) => {
             sm={mode === 'grid' ? 6 : 12}
             xs={12}
           >
-            <ProjectCard project={project} />
+            <CardEvents project={project} />
           </Grid>
         ))}
       </Grid>
-      <Box
-        mt={6}
-        display="flex"
-        justifyContent="center"
-      >
+      <Box mt={6} display="flex" justifyContent="center">
         <Pagination count={2} />
       </Box>
     </div>
   );
-}
+};
 
 Results.propTypes = {
   className: PropTypes.string,

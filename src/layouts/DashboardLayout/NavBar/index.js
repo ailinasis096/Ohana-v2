@@ -1,9 +1,4 @@
 /* eslint-disable no-use-before-define */
-import React, { useEffect } from 'react';
-import { useLocation, matchPath } from 'react-router-dom';
-import { Link as RouterLink } from 'react-router-dom';
-import PerfectScrollbar from 'react-perfect-scrollbar';
-import PropTypes from 'prop-types';
 import {
   Avatar,
   Box,
@@ -13,16 +8,19 @@ import {
   Link,
   List,
   ListSubheader,
-  Typography,
-  makeStyles
+  makeStyles,
+  Typography
 } from '@material-ui/core';
+import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
 import {
-  Folder as FolderIcon,
-  Star as StarIcon,
-  Search as SearchIcon,
   BarChart as BarChartIcon,
+  Search as SearchIcon,
+  Star as StarIcon,
   User as UserIcon
 } from 'react-feather';
+import PerfectScrollbar from 'react-perfect-scrollbar';
+import { Link as RouterLink, matchPath, useLocation } from 'react-router-dom';
 import Logo from 'src/components/Logo';
 import NavItem from './NavItem';
 
@@ -31,9 +29,9 @@ const sections = [
     subheader: 'Menu',
     items: [
       {
-        title: 'Novedades',
+        title: 'Registrar campañas',
         icon: StarIcon,
-        href: '/app/reports/dashboard'
+        href: '/app/projects/create'
       },
       {
         title: 'Explorar campañas',
@@ -41,17 +39,17 @@ const sections = [
         href: '/app/events/browse'
       },
       {
-        title: 'Gestionar Mis Campañas',
+        title: 'Mis Campañas',
         icon: BarChartIcon,
-        href: '/app/reports/dashboard',
-        items:[ 
+        href: '/app/reports/dashboard'
+        /* items:[ 
 
           {
             title: 'Registrar Campañas',
             icon: FolderIcon,
             href: '/app/reports/dashboard-registrar'
           }
-        ]
+        ] */
       },
       {
         title: 'Mi perfil',
@@ -59,7 +57,7 @@ const sections = [
         href: '/app/reports/dashboard-alternative'
       }
     ]
-  },
+  }
   /*{
     subheader: 'Management',
     items: [
@@ -289,11 +287,7 @@ const sections = [
   }*/
 ];
 
-function renderNavItems({
-  items,
-  pathname,
-  depth = 0
-}) {
+function renderNavItems({ items, pathname, depth = 0 }) {
   return (
     <List disablePadding>
       {items.reduce(
@@ -304,12 +298,7 @@ function renderNavItems({
   );
 }
 
-function reduceChildRoutes({
-  acc,
-  pathname,
-  item,
-  depth
-}) {
+function reduceChildRoutes({ acc, pathname, item, depth }) {
   const key = item.title + depth;
 
   if (item.items) {
@@ -372,8 +361,9 @@ const NavBar = ({ onMobileClose, openMobile }) => {
   //const { user } = useAuth();
   const user = {
     name: 'Florencia Acosta',
-    avatar: 'https://i.pinimg.com/236x/c8/86/72/c886720b5088f74e6907ec908ed14930.jpg',
-  }
+    avatar:
+      'https://i.pinimg.com/236x/c8/86/72/c886720b5088f74e6907ec908ed14930.jpg'
+  };
 
   useEffect(() => {
     if (openMobile && onMobileClose) {
@@ -383,40 +373,22 @@ const NavBar = ({ onMobileClose, openMobile }) => {
   }, [location.pathname]);
 
   const content = (
-    <Box
-      height="100%"
-      display="flex"
-      flexDirection="column"
-    >
+    <Box height="100%" display="flex" flexDirection="column">
       <PerfectScrollbar options={{ suppressScrollX: true }}>
         <Hidden lgUp>
-          <Box
-            p={2}
-            display="flex"
-            justifyContent="center"
-          >
+          <Box p={2} display="flex" justifyContent="center">
             <RouterLink to="/">
               <Logo />
             </RouterLink>
           </Box>
         </Hidden>
         <Box p={2}>
-          <Box
-            display="flex"
-            justifyContent="center"
-          >
+          <Box display="flex" justifyContent="center">
             <RouterLink to="/app/account">
-              <Avatar
-                alt="User"
-                className={classes.avatar}
-                src={user.avatar}
-              />
+              <Avatar alt="User" className={classes.avatar} src={user.avatar} />
             </RouterLink>
           </Box>
-          <Box
-            mt={2}
-            textAlign="center"
-          >
+          <Box mt={2} textAlign="center">
             <Link
               component={RouterLink}
               to="/app/account"
@@ -426,26 +398,19 @@ const NavBar = ({ onMobileClose, openMobile }) => {
             >
               {user.name}
             </Link>
-            <Typography
-              variant="body2"
-              color="textSecondary"
-            >
-            </Typography>
+            <Typography variant="body2" color="textSecondary"></Typography>
           </Box>
         </Box>
         <Divider />
         <Box p={2}>
-          {sections.map((section) => (
+          {sections.map(section => (
             <List
               key={section.subheader}
-              subheader={(
-                <ListSubheader
-                  disableGutters
-                  disableSticky
-                >
+              subheader={
+                <ListSubheader disableGutters disableSticky>
                   {section.subheader}
                 </ListSubheader>
-              )}
+              }
             >
               {renderNavItems({
                 items: section.items,
@@ -456,15 +421,8 @@ const NavBar = ({ onMobileClose, openMobile }) => {
         </Box>
         <Divider />
         <Box p={2}>
-          <Box
-            p={2}
-            borderRadius="borderRadius"
-            bgcolor="background.dark"
-          >
-            <Typography
-              variant="h5"
-              color="textPrimary"
-            >
+          <Box p={2} borderRadius="borderRadius" bgcolor="background.dark">
+            <Typography variant="h5" color="textPrimary">
               Necesita ayuda?
             </Typography>
             <Link
@@ -473,13 +431,9 @@ const NavBar = ({ onMobileClose, openMobile }) => {
               component={RouterLink}
               to="/docs"
             >
-              <Typography
-                variant="body2"
-                color="primary"
-              >
+              <Typography variant="body2" color="primary">
                 Mire nuestra documentación
               </Typography>
-             
             </Link>
           </Box>
         </Box>

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:8000'
+  baseURL: 'https://juanpsenn.pythonanywhere.com/'
 });
 
 axiosInstance.interceptors.response.use(
@@ -51,15 +51,12 @@ class API {
     } */
   static async createEvent() {
     let path = `/api/events/create/`;
-    //let path = '/api/events/list/';
     const { data } = await axiosInstance.post(path);
     return data;
   }
   static async getEvents(page = 1, pageSize = 15) {
     let path = `/api/events/list/?page=${page}&page_size=${pageSize}`;
-    console.log('Path', path);
     const { data } = await axiosInstance.get(path);
-    console.log('DATOSSSSSSSS: ', data);
     return data;
   }
 }

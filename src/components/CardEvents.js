@@ -27,7 +27,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import getInitials from 'src/utils/getInitials';
 
 const useStyles = makeStyles(theme => ({
-  root: {},
+  root: { height: '100%' },
   image: {
     height: 200,
     backgroundColor: theme.palette.background.dark
@@ -51,10 +51,10 @@ const useStyles = makeStyles(theme => ({
 
 moment.locale('es');
 
-const ProjectCard = ({ className, project, ...rest }) => {
+const CardEvents = ({ className, project, ...rest }) => {
   const classes = useStyles();
-  const [isLiked, setLiked] = useState(project.isLiked);
-  const [likesCount, setLikesCount] = useState(project.likesCount);
+  const [isLiked, setLiked] = useState(true);
+  const [likesCount, setLikesCount] = useState(10);
 
   const handleLike = () => {
     setLiked(true);
@@ -69,10 +69,16 @@ const ProjectCard = ({ className, project, ...rest }) => {
   return (
     <Card className={clsx(classes.root, className)} {...rest}>
       <Box p={3}>
-        <CardMedia className={classes.image} image={project.image} />
+        <CardMedia
+          className={classes.image}
+          image="https://cdn4.josefacchin.com/wp-content/uploads/2020/02/como-quitar-el-fondo-de-una-imagen.png"
+        />
         <Box display="flex" alignItems="center" mt={2}>
-          <Avatar alt="Author" src={project.author.avatar}>
-            {getInitials(project.author.name)}
+          <Avatar
+            alt="Author"
+            src="https://static1.abc.es/media/play/2020/09/29/avatar-kE4H--620x349@abc.jpeg"
+          >
+            {getInitials(project.contact.name)}
           </Avatar>
           <Box ml={2}>
             <Link
@@ -81,7 +87,7 @@ const ProjectCard = ({ className, project, ...rest }) => {
               to={`/app/projects/overview/${project.id}`}
               variant="h5"
             >
-              {project.title}
+              {project.name}
             </Link>
             <Typography variant="body2" color="textSecondary">
               Por{' '}
@@ -91,23 +97,23 @@ const ProjectCard = ({ className, project, ...rest }) => {
                 to="#"
                 variant="h6"
               >
-                {project.author.name}
+                {project.contact.name}
               </Link>{' '}
-              | Actualizado {moment(project.updatedAt).fromNow()}
+              | Actualizado {moment([2021, 7, 20]).fromNow()}
             </Typography>
           </Box>
         </Box>
       </Box>
       <Box pb={2} px={3} className={classes.caption}>
         <Typography color="textSecondary" variant="body2">
-          {project.caption}
+          {project.description}
         </Typography>
       </Box>
       <Box py={2} px={3}>
         <Grid alignItems="center" container justify="space-between" spacing={3}>
           <Grid item>
             <Typography variant="h5" color="textPrimary">
-              {numeral(project.budget).format(`${project.currency}0,0.000`)}
+              {numeral(500).format(`$0,0.000`)}
             </Typography>
             <Typography variant="body2" color="textSecondary">
               Objetivo
@@ -115,7 +121,7 @@ const ProjectCard = ({ className, project, ...rest }) => {
           </Grid>
           <Grid item>
             <Typography variant="h5" color="textPrimary">
-              {project.location}
+              {project.location.street}
             </Typography>
             <Typography variant="body2" color="textSecondary">
               Ubicación
@@ -123,7 +129,7 @@ const ProjectCard = ({ className, project, ...rest }) => {
           </Grid>
           <Grid item>
             <Typography variant="h5" color="textPrimary">
-              {project.type}
+              {project.event_type.name}
             </Typography>
             <Typography variant="body2" color="textSecondary">
               Tipo
@@ -132,7 +138,8 @@ const ProjectCard = ({ className, project, ...rest }) => {
         </Grid>
       </Box>
       <Divider />
-      <Box py={2} pl={2} pr={2} display="flex" alignItems="center">
+
+      <Box py={2} pl={2} pr={2} display="flex" alignItems="center" bottom>
         {isLiked ? (
           <Tooltip title="Unlike">
             <IconButton className={classes.likedButton} onClick={handleUnlike}>
@@ -157,15 +164,15 @@ const ProjectCard = ({ className, project, ...rest }) => {
           <ShareIcon />
         </SvgIcon>
         <Box flexGrow={1} />
-        <Rating value={project.rating} size="small" readOnly />
+        <Rating value="4" size="small" readOnly />
       </Box>
     </Card>
   );
 };
 
-ProjectCard.propTypes = {
+CardEvents.propTypes = {
   className: PropTypes.string,
   project: PropTypes.object.isRequired
 };
 
-export default ProjectCard;
+export default CardEvents;

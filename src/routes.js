@@ -224,11 +224,11 @@ const routes = [
         path: '/app/reports/dashboard',
         component: lazy(() => import('src/views/reports/DashboardView'))
       },
-      {
+      /* {
         exact: true,
         path: '/app/reports/dashboard-registrar',
         component: lazy(() => import('src/views/reports/DashboardView'))
-      },
+      }, */
       {
         exact: true,
         path: '/app/reports/dashboard-alternative',
