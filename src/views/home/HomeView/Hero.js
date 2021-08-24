@@ -8,6 +8,7 @@ import {
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import React from 'react';
+import phone from '../../../assets/phone_ohana.jpeg';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -100,7 +101,7 @@ const Hero = ({ className, ...rest }) => {
                   </Grid>
                 </Grid>
               </Box> */}
-              <Box mt={3}>
+              {/* <Box mt={3}>
                 <img
                   alt="Javascript"
                   className={classes.technologyIcon}
@@ -111,16 +112,18 @@ const Hero = ({ className, ...rest }) => {
                   className={classes.technologyIcon}
                   src="/static/images/typescript.svg"
                 />
-              </Box>
+              </Box> */}
             </Box>
           </Grid>
           <Grid item xs={12} md={7}>
             <Box position="relative">
               <div className={classes.shape}>
-                <img alt="Shapes" src="/static/home/shapes.svg" />
+                {/* <img alt="Shapes" src="/static/home/shapes.svg" /> */}
               </div>
-              <div className={classes.image}>
-                <img alt="Presentation" src="/static/home/dark-light.png" />
+              {/* <div className={classes.image}> */}
+              <div>
+                {/* <img alt="Presentation" src="/static/home/dark-light.png" /> */}
+                <img alt="Presentation" src={phone} />
               </div>
             </Box>
           </Grid>
