@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import {
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const Filter = ({ className, ...rest }) => {
+const Filter = ({ className, fetchEvent, ...rest  }) => {
   const classes = useStyles();
   const [inputValue, setInputValue] = useState('');
   const [chips, setChips] = useState([
@@ -81,6 +81,10 @@ const Filter = ({ className, ...rest }) => {
   const handleMultiSelectChange = (value) => {
     setChips(value);
   };
+
+  useEffect(() => {
+    fetchEvent(inputValue);
+  }, [inputValue]);
 
   return (
     <Card

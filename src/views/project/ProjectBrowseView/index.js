@@ -85,10 +85,7 @@ const ProjectBrowseView = () => {
   const getProjects = async () => {
     try {
       const response = await api.getEvents();
-      console.log('Respuesta', response.results);
-      /* if (isMountedRef.current) {
-        setProjects(response.data);
-      } */
+      console.log('Respuesta: ', response.results);
       setProjects(response.results);
     } catch (err) {
       console.error(err);
@@ -99,12 +96,24 @@ const ProjectBrowseView = () => {
     getProjects();
   }, []);
 
+  const fetchEvent = async (data) => {
+    let response;
+    try {
+      response = await api.getEvents(1, 15, data);
+      console.log('Response: ', response);
+      setProjects(response.results);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+  
+
   return (
     <Page className={classes.root} title="Explorar campañas | Ohana">
       <Container maxWidth="lg">
         <Header />
         <Box mt={3}>
-          <Filter />
+          <Filter fetchEvent={fetchEvent}/>
         </Box>
         <Box mt={4}>
           <Results projects={projects} />

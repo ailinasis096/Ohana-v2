@@ -54,8 +54,16 @@ class API {
     const { data } = await axiosInstance.post(path);
     return data;
   }
-  static async getEvents(page = 1, pageSize = 15) {
-    let path = `/api/events/list/?page=${page}&page_size=${pageSize}`;
+  static async getEvents(page = 1, pageSize = 15, search) {
+    let path = !!search 
+      ? `/api/events/list/?page=${page}&page_size=${pageSize}&q=${search}`
+      : `/api/events/list/?page=${page}&page_size=${pageSize}`;
+    const { data } = await axiosInstance.get(path);
+    return data;
+  }
+
+  static async getEventById(id) {
+    let path = `/api/events/get/${id}/`;
     const { data } = await axiosInstance.get(path);
     return data;
   }
