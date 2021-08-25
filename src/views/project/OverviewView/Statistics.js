@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Statistics = (event, { className, ...rest }) => {
+const Statistics = ({event, className, ...rest }) => {
   const classes = useStyles();
 
   return (
@@ -39,7 +39,6 @@ const Statistics = (event, { className, ...rest }) => {
       className={clsx(classes.root, className)}
       {...rest}
     >
-      {!!event.event && (
       <Grid
         alignItems="center"
         container
@@ -122,7 +121,6 @@ const Statistics = (event, { className, ...rest }) => {
           </Typography>
         </Grid>
       </Grid>
-      )}
     </Card>
   );
 };

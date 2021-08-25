@@ -23,15 +23,17 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const Header = (event, {className, ...rest }) => {
+const Header = ({event, className, ...rest }) => {
   const classes = useStyles();
+
+  
+  console.log('event: ', event);
 
   return (
     <div
       className={clsx(classes.root, className)}
       {...rest}
     >
-      {!!event.event && (
       <Grid
         alignItems="center"
         container
@@ -47,19 +49,19 @@ const Header = (event, {className, ...rest }) => {
             variant="overline"
             color="textSecondary"
           >
-            {event.event.category}
+            event.category
           </Typography>
           <Typography
             variant="h3"
             color="textPrimary"
           >
-            {event.event.title}
+            {event.name}
           </Typography>
           <Typography
             variant="subtitle1"
             color="textPrimary"
           >
-            {event.event.caption}
+            {event.description}
           </Typography>
           <Grid
             alignItems="center"
@@ -70,7 +72,7 @@ const Header = (event, {className, ...rest }) => {
           >
             <Grid item>
               <Rating
-                value={event.event.rating}
+                //value={event.event.rating}
                 size="small"
                 readOnly
               />
@@ -81,7 +83,7 @@ const Header = (event, {className, ...rest }) => {
                 variant="h5"
                 color="textPrimary"
               >
-                {event.event.location}
+                {event.location.street}
               </Typography>
               <Typography
                 variant="body2"
@@ -92,10 +94,10 @@ const Header = (event, {className, ...rest }) => {
             </Grid>
             <Grid item>
               <Typography
-                variant="h5"
+                variant="h<5"
                 color="textPrimary"
               >
-                {event.event.type}
+                {event.event_type.name === 'Monetary' ? 'Monetaria' : 'Física'}
               </Typography>
               <Typography
                 variant="body2"
@@ -114,12 +116,11 @@ const Header = (event, {className, ...rest }) => {
             <img
               alt="Cover"
               className={classes.image}
-              src={event.event.image}
+              //src={event.event.image}
             />
           </Grid>
         </Hidden>
       </Grid>
-      )}
     </div>
   );
 };
