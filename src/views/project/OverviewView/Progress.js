@@ -24,16 +24,18 @@ import React, {
       }
   }));
   
-  const Progress = (event, { className, ...rest }) => {
+  const Progress = ({event, className, ...rest }) => {
     const classes = useStyles();
     const [progress, setProgress] = useState();
+
+    useEffect(() => {
+      event.budget = 5000;
+    }, [])
   
     useEffect(() => {
-      if(!!event.event) {
-        const recaudado = event.event.budget - 150;
-        setProgress(recaudado*100/event.event.budget);
-      }
-    }, [event.event])
+      const recaudado = event.budget - 150;
+      setProgress(recaudado*100/event.budget);
+    }, [event])
     
     return (
         <Card

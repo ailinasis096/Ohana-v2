@@ -45,30 +45,30 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Statistics = (event, { className, ...rest }) => {
+const Statistics = ({event, className, ...rest }) => {
   const classes = useStyles();
-  const [recaudado, setRecaudado] = useState();
-  const [falta, setFalta] = useState();
+  const [recaudado, setRecaudado] = useState(1000);
+  const [falta, setFalta] = useState(500);
 
   useEffect(() => {
-    if(!!event.event) {
-      setRecaudado(event.event.budget - 150);
-      setFalta(event.event.budget - recaudado);
-    }
+    setRecaudado(event.budget - 150);
+    setFalta(event.budget - recaudado);
   }, [event.event])
 
   useEffect(() => {
-    if(!!event.event) {
-      setFalta(event.event.budget - recaudado);
-    }
+    setFalta(event.budget - recaudado);
   }, [recaudado])
+
+
+  useEffect(() => {
+    event.budget=5000;
+  }, [])
   
   return (
     <Card
       className={clsx(classes.root, className)}
       {...rest}
     >
-      {!!event.event && (
       <Grid
         alignItems="center"
         container
@@ -106,7 +106,7 @@ const Statistics = (event, { className, ...rest }) => {
             variant="h2"
             color="textPrimary"
           >
-            {numeral(event.event.budget).format('$0,0.000')}
+            {numeral(event.budget).format('$0,0.000')}
           </Typography>
           <Typography
             className={classes.overline}
@@ -138,7 +138,6 @@ const Statistics = (event, { className, ...rest }) => {
           </Typography>
         </Grid>
       </Grid>
-      )}
     </Card>
   );
 };
