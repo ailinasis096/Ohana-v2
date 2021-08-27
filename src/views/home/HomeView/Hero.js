@@ -8,13 +8,14 @@ import {
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import React from 'react';
+import donar from '../../../assets/donar.png';
+import family from '../../../assets/family.png';
 import phone from '../../../assets/phone_ohana.jpeg';
-
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.dark,
-    paddingTop: 200,
-    paddingBottom: 200,
+    paddingTop: 80,
+    paddingBottom: 80,
     [theme.breakpoints.down('md')]: {
       paddingTop: 60,
       paddingBottom: 60
@@ -101,18 +102,18 @@ const Hero = ({ className, ...rest }) => {
                   </Grid>
                 </Grid>
               </Box> */}
-              {/* <Box mt={3}>
+              <Box mt={3}>
                 <img
                   alt="Javascript"
                   className={classes.technologyIcon}
-                  src="/static/images/javascript.svg"
+                  src={donar}
                 />
                 <img
                   alt="Typescript"
                   className={classes.technologyIcon}
-                  src="/static/images/typescript.svg"
+                  src={family}
                 />
-              </Box> */}
+              </Box>
             </Box>
           </Grid>
           <Grid item xs={12} md={7}>
