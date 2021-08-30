@@ -1,17 +1,11 @@
 import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import {
-  Avatar,
-  Box,
-  Card,
-  Typography,
-  makeStyles
-} from '@material-ui/core';
+import { Avatar, Box, Card, makeStyles, Typography } from '@material-ui/core';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import Label from 'src/components/Label';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     padding: theme.spacing(3),
     display: 'flex',
@@ -38,10 +32,7 @@ const TodaysMoney = ({ className, ...rest }) => {
   };
 
   return (
-    <Card
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
+    <Card className={clsx(classes.root, className)} {...rest}>
       <Box flexGrow={1}>
         <Typography
           component="h3"
@@ -49,17 +40,10 @@ const TodaysMoney = ({ className, ...rest }) => {
           variant="overline"
           color="textSecondary"
         >
-          Todays money
+          Ingresos totales
         </Typography>
-        <Box
-          display="flex"
-          alignItems="center"
-          flexWrap="wrap"
-        >
-          <Typography
-            variant="h3"
-            color="textPrimary"
-          >
+        <Box display="flex" alignItems="center" flexWrap="wrap">
+          <Typography variant="h3" color="textPrimary">
             {data.currency}
             {data.value}
           </Typography>
@@ -68,8 +52,7 @@ const TodaysMoney = ({ className, ...rest }) => {
             color={data.difference > 0 ? 'success' : 'error'}
           >
             {data.difference > 0 ? '+' : ''}
-            {data.difference}
-            %
+            {data.difference}%
           </Label>
         </Box>
       </Box>

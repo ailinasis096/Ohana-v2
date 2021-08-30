@@ -5,11 +5,11 @@ import {
   Box,
   Card,
   LinearProgress,
-  Typography,
-  makeStyles
+  makeStyles,
+  Typography
 } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     padding: theme.spacing(3)
   },
@@ -26,29 +26,18 @@ const SystemHealth = ({ className, ...rest }) => {
   };
 
   return (
-    <Card
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
+    <Card className={clsx(classes.root, className)} {...rest}>
       <Typography
         component="h3"
         gutterBottom
         variant="overline"
         color="textSecondary"
       >
-        System Health
+        Progreso
       </Typography>
-      <Box
-        display="flex"
-        alignItems="center"
-        flexWrap="wrap"
-      >
-        <Typography
-          variant="h3"
-          color="textPrimary"
-        >
-          {data.value}
-          %
+      <Box display="flex" alignItems="center" flexWrap="wrap">
+        <Typography variant="h3" color="textPrimary">
+          {data.value}%
         </Typography>
         <LinearProgress
           className={classes.progress}

@@ -3,18 +3,16 @@ import {
   Box,
   Container,
   Divider,
+  makeStyles,
   Tab,
-  Tabs,
-  makeStyles
+  Tabs
 } from '@material-ui/core';
 import Page from 'src/components/Page';
 import Header from './Header';
 import General from './General';
-import Subscription from './Subscription';
-import Notifications from './Notifications';
 import Security from './Security';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.dark,
     minHeight: '100%',
@@ -29,9 +27,9 @@ const AccountView = () => {
 
   const tabs = [
     { value: 'general', label: 'General' },
-    { value: 'subscription', label: 'Subscription' },
-    { value: 'notifications', label: 'Notifications' },
-    { value: 'security', label: 'Security' }
+    /*{ value: 'subscription', label: 'Subscription' },*/
+    /*{ value: 'notifications', label: 'Notificaciones' },*/
+    { value: 'security', label: 'Seguridad' }
   ];
 
   const handleTabsChange = (event, value) => {
@@ -39,10 +37,7 @@ const AccountView = () => {
   };
 
   return (
-    <Page
-      className={classes.root}
-      title="Settings"
-    >
+    <Page className={classes.root} title="Settings">
       <Container maxWidth="lg">
         <Header />
         <Box mt={3}>
@@ -53,20 +48,16 @@ const AccountView = () => {
             variant="scrollable"
             textColor="secondary"
           >
-            {tabs.map((tab) => (
-              <Tab
-                key={tab.value}
-                label={tab.label}
-                value={tab.value}
-              />
+            {tabs.map(tab => (
+              <Tab key={tab.value} label={tab.label} value={tab.value} />
             ))}
           </Tabs>
         </Box>
         <Divider />
         <Box mt={3}>
           {currentTab === 'general' && <General />}
-          {currentTab === 'subscription' && <Subscription />}
-          {currentTab === 'notifications' && <Notifications />}
+          {/*{currentTab === 'subscription' && <Subscription />}*/}
+          {/*{currentTab === 'notifications' && <Notifications />}*/}
           {currentTab === 'security' && <Security />}
         </Box>
       </Container>

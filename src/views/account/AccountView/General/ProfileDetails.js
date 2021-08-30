@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import {
@@ -9,12 +8,11 @@ import {
   Card,
   CardActions,
   CardContent,
-  Link,
-  Typography,
-  makeStyles
+  makeStyles,
+  Typography
 } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {},
   name: {
     marginTop: theme.spacing(1)
@@ -29,10 +27,7 @@ const ProfileDetails = ({ className, user, ...rest }) => {
   const classes = useStyles();
 
   return (
-    <Card
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
+    <Card className={clsx(classes.root, className)} {...rest}>
       <CardContent>
         <Box
           display="flex"
@@ -40,10 +35,7 @@ const ProfileDetails = ({ className, user, ...rest }) => {
           flexDirection="column"
           textAlign="center"
         >
-          <Avatar
-            className={classes.avatar}
-            src={user.avatar}
-          />
+          <Avatar className={classes.avatar} src={user.avatar} />
           <Typography
             className={classes.name}
             color="textPrimary"
@@ -52,27 +44,17 @@ const ProfileDetails = ({ className, user, ...rest }) => {
           >
             {user.name}
           </Typography>
-          <Typography
-            color="textPrimary"
-            variant="body1"
-          >
-            Your tier:
-            {' '}
-            <Link
-              component={RouterLink}
-              to="/pricing"
-            >
+          {/*<Typography color="textPrimary" variant="body1">
+            Tu suscripción:{' '}
+            <Link component={RouterLink} to="/pricing">
               {user.tier}
             </Link>
-          </Typography>
+          </Typography>*/}
         </Box>
       </CardContent>
       <CardActions>
-        <Button
-          fullWidth
-          variant="text"
-        >
-          Remove picture
+        <Button fullWidth variant="text" color={'primary'}>
+          Eliminar imagen
         </Button>
       </CardActions>
     </Card>

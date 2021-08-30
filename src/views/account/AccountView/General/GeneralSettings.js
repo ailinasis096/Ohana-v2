@@ -13,10 +13,8 @@ import {
   Divider,
   FormHelperText,
   Grid,
-  Switch,
-  TextField,
-  Typography,
-  makeStyles
+  makeStyles,
+  TextField
 } from '@material-ui/core';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import wait from 'src/utils/wait';
@@ -48,18 +46,21 @@ const GeneralSettings = ({ className, user, ...rest }) => {
         canHire: Yup.bool(),
         city: Yup.string().max(255),
         country: Yup.string().max(255),
-        email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
+        email: Yup.string()
+          .email('Must be a valid email')
+          .max(255)
+          .required('Email is required'),
         isPublic: Yup.bool(),
-        name: Yup.string().max(255).required('Name is required'),
+        name: Yup.string()
+          .max(255)
+          .required('Name is required'),
         phone: Yup.string(),
         state: Yup.string()
       })}
-      onSubmit={async (values, {
-        resetForm,
-        setErrors,
-        setStatus,
-        setSubmitting
-      }) => {
+      onSubmit={async (
+        values,
+        { resetForm, setErrors, setStatus, setSubmitting }
+      ) => {
         try {
           // NOTE: Make API request
           await wait(200);
@@ -87,27 +88,17 @@ const GeneralSettings = ({ className, user, ...rest }) => {
         values
       }) => (
         <form onSubmit={handleSubmit}>
-          <Card
-            className={clsx(classes.root, className)}
-            {...rest}
-          >
+          <Card className={clsx(classes.root, className)} {...rest}>
             <CardHeader title="Profile" />
             <Divider />
             <CardContent>
-              <Grid
-                container
-                spacing={4}
-              >
-                <Grid
-                  item
-                  md={6}
-                  xs={12}
-                >
+              <Grid container spacing={4}>
+                <Grid item md={6} xs={12}>
                   <TextField
                     error={Boolean(touched.name && errors.name)}
                     fullWidth
                     helperText={touched.name && errors.name}
-                    label="Name"
+                    label="Nombre"
                     name="name"
                     onBlur={handleBlur}
                     onChange={handleChange}
@@ -115,15 +106,15 @@ const GeneralSettings = ({ className, user, ...rest }) => {
                     variant="outlined"
                   />
                 </Grid>
-                <Grid
-                  item
-                  md={6}
-                  xs={12}
-                >
+                <Grid item md={6} xs={12}>
                   <TextField
                     error={Boolean(touched.email && errors.email)}
                     fullWidth
-                    helperText={touched.email && errors.email ? errors.email : 'We will use this email to contact you'}
+                    helperText={
+                      touched.email && errors.email
+                        ? errors.email
+                        : 'Usaremos este correo para comunicarnos contigo'
+                    }
                     label="Email Address"
                     name="email"
                     onBlur={handleBlur}
@@ -134,16 +125,12 @@ const GeneralSettings = ({ className, user, ...rest }) => {
                     variant="outlined"
                   />
                 </Grid>
-                <Grid
-                  item
-                  md={6}
-                  xs={12}
-                >
+                <Grid item md={6} xs={12}>
                   <TextField
                     error={Boolean(touched.phone && errors.phone)}
                     fullWidth
                     helperText={touched.phone && errors.phone}
-                    label="Phone Number"
+                    label="Número de celular"
                     name="phone"
                     onBlur={handleBlur}
                     onChange={handleChange}
@@ -151,18 +138,14 @@ const GeneralSettings = ({ className, user, ...rest }) => {
                     variant="outlined"
                   />
                 </Grid>
-                <Grid
-                  item
-                  md={6}
-                  xs={12}
-                >
+                <Grid item md={6} xs={12}>
                   <Autocomplete
-                    getOptionLabel={(option) => option.text}
+                    getOptionLabel={option => option.text}
                     options={countries}
-                    renderInput={(params) => (
+                    renderInput={params => (
                       <TextField
                         fullWidth
-                        label="Country"
+                        label="País"
                         name="country"
                         onChange={handleChange}
                         variant="outlined"
@@ -171,16 +154,12 @@ const GeneralSettings = ({ className, user, ...rest }) => {
                     )}
                   />
                 </Grid>
-                <Grid
-                  item
-                  md={6}
-                  xs={12}
-                >
+                <Grid item md={6} xs={12}>
                   <TextField
                     error={Boolean(touched.state && errors.state)}
                     fullWidth
                     helperText={touched.state && errors.state}
-                    label="State/Region"
+                    label="Provincia"
                     name="state"
                     onBlur={handleBlur}
                     onChange={handleChange}
@@ -188,16 +167,12 @@ const GeneralSettings = ({ className, user, ...rest }) => {
                     variant="outlined"
                   />
                 </Grid>
-                <Grid
-                  item
-                  md={6}
-                  xs={12}
-                >
+                <Grid item md={6} xs={12}>
                   <TextField
                     error={Boolean(touched.city && errors.city)}
                     fullWidth
                     helperText={touched.city && errors.city}
-                    label="City"
+                    label="Ciudad"
                     name="city"
                     onBlur={handleBlur}
                     onChange={handleChange}
@@ -205,23 +180,21 @@ const GeneralSettings = ({ className, user, ...rest }) => {
                     variant="outlined"
                   />
                 </Grid>
-                <Grid
-                  item
-                  md={6}
-                  xs={12}
-                >
+                {/*<Grid item md={6} xs={12}>
                   <Typography
                     variant="h6"
                     color="textPrimary"
+
                   >
-                    Make Contact Info Public
+                    Hacer pública la cuenta
                   </Typography>
                   <Typography
                     variant="body2"
                     color="textSecondary"
+
                   >
-                    Means that anyone viewing your profile will be able to see your
-                    contacts details
+                    Significa que cualquier usuario que vea su perfil podrá
+                    acceder a su información
                   </Typography>
                   <Switch
                     checked={values.isPublic}
@@ -230,23 +203,13 @@ const GeneralSettings = ({ className, user, ...rest }) => {
                     onChange={handleChange}
                   />
                 </Grid>
-                <Grid
-                  item
-                  md={6}
-                  xs={12}
-                >
-                  <Typography
-                    variant="h6"
-                    color="textPrimary"
-                  >
-                    Available to hire
+                <Grid item md={6} xs={12}>
+                  <Typography variant="h6" color="textPrimary">
+                    Disponible
                   </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                  >
-                    Toggling this will let your teammates know that you are available
-                    for acquiring new projects
+                  <Typography variant="body2" color="textSecondary">
+                    Toggling this will let your teammates know that you are
+                    available for acquiring new projects
                   </Typography>
                   <Switch
                     checked={values.canHire}
@@ -254,29 +217,23 @@ const GeneralSettings = ({ className, user, ...rest }) => {
                     name="canHire"
                     onChange={handleChange}
                   />
-                </Grid>
+                </Grid>*/}
               </Grid>
               {errors.submit && (
                 <Box mt={3}>
-                  <FormHelperText error>
-                    {errors.submit}
-                  </FormHelperText>
+                  <FormHelperText error>{errors.submit}</FormHelperText>
                 </Box>
               )}
             </CardContent>
             <Divider />
-            <Box
-              p={2}
-              display="flex"
-              justifyContent="flex-end"
-            >
+            <Box p={2} display="flex" justifyContent="flex-end">
               <Button
                 color="secondary"
                 disabled={isSubmitting}
                 type="submit"
                 variant="contained"
               >
-                Save Changes
+                Guardar cambios
               </Button>
             </Box>
           </Card>

@@ -13,8 +13,8 @@ import {
   Divider,
   FormHelperText,
   Grid,
-  TextField,
-  makeStyles
+  makeStyles,
+  TextField
 } from '@material-ui/core';
 import wait from 'src/utils/wait';
 
@@ -35,26 +35,24 @@ const Security = ({ className, ...rest }) => {
       }}
       validationSchema={Yup.object().shape({
         password: Yup.string()
-          .min(7, 'Must be at least 7 characters')
+          .min(7, 'Debe tener como mínimo 7 caracteres')
           .max(255)
-          .required('Required'),
+          .required('Obligatorio'),
         passwordConfirm: Yup.string()
-          .oneOf([Yup.ref('password'), null], 'Passwords must match')
-          .required('Required')
+          .oneOf([Yup.ref('password'), null], 'Las contraseñas deben coincidir')
+          .required('Obligatorio')
       })}
-      onSubmit={async (values, {
-        resetForm,
-        setErrors,
-        setStatus,
-        setSubmitting
-      }) => {
+      onSubmit={async (
+        values,
+        { resetForm, setErrors, setStatus, setSubmitting }
+      ) => {
         try {
           // NOTE: Make API request
           await wait(500);
           resetForm();
           setStatus({ success: true });
           setSubmitting(false);
-          enqueueSnackbar('Password updated', {
+          enqueueSnackbar('Actualizar contraseña', {
             variant: 'success'
           });
         } catch (err) {
@@ -75,28 +73,17 @@ const Security = ({ className, ...rest }) => {
         values
       }) => (
         <form onSubmit={handleSubmit}>
-          <Card
-            className={clsx(classes.root, className)}
-            {...rest}
-          >
-            <CardHeader title="Change Password" />
+          <Card className={clsx(classes.root, className)} {...rest}>
+            <CardHeader title="Cambiar Contraseña" />
             <Divider />
             <CardContent>
-              <Grid
-                container
-                spacing={3}
-              >
-                <Grid
-                  item
-                  md={4}
-                  sm={6}
-                  xs={12}
-                >
+              <Grid container spacing={3}>
+                <Grid item md={4} sm={6} xs={12}>
                   <TextField
                     error={Boolean(touched.password && errors.password)}
                     fullWidth
                     helperText={touched.password && errors.password}
-                    label="Password"
+                    label="Contraseña"
                     name="password"
                     onBlur={handleBlur}
                     onChange={handleChange}
@@ -105,17 +92,16 @@ const Security = ({ className, ...rest }) => {
                     variant="outlined"
                   />
                 </Grid>
-                <Grid
-                  item
-                  md={4}
-                  sm={6}
-                  xs={12}
-                >
+                <Grid item md={4} sm={6} xs={12}>
                   <TextField
-                    error={Boolean(touched.passwordConfirm && errors.passwordConfirm)}
+                    error={Boolean(
+                      touched.passwordConfirm && errors.passwordConfirm
+                    )}
                     fullWidth
-                    helperText={touched.passwordConfirm && errors.passwordConfirm}
-                    label="Password Confirmation"
+                    helperText={
+                      touched.passwordConfirm && errors.passwordConfirm
+                    }
+                    label="Repetir contraseña"
                     name="passwordConfirm"
                     onBlur={handleBlur}
                     onChange={handleChange}
@@ -127,25 +113,19 @@ const Security = ({ className, ...rest }) => {
               </Grid>
               {errors.submit && (
                 <Box mt={3}>
-                  <FormHelperText error>
-                    {errors.submit}
-                  </FormHelperText>
+                  <FormHelperText error>{errors.submit}</FormHelperText>
                 </Box>
               )}
             </CardContent>
             <Divider />
-            <Box
-              p={2}
-              display="flex"
-              justifyContent="flex-end"
-            >
+            <Box p={2} display="flex" justifyContent="flex-end">
               <Button
                 color="secondary"
                 disabled={isSubmitting}
                 type="submit"
                 variant="contained"
               >
-                Change Password
+                Guardar
               </Button>
             </Box>
           </Card>

@@ -5,11 +5,11 @@ import {
   Box,
   Button,
   Container,
-  Typography,
-  makeStyles
+  makeStyles,
+  Typography
 } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.default,
     paddingTop: 128,
@@ -24,38 +24,22 @@ const CTA = ({ className, ...rest }) => {
   const classes = useStyles();
 
   return (
-    <div
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
+    <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="lg">
-        <Typography
-          variant="h1"
-          align="center"
-          color="textPrimary"
-        >
-          Ready to start building?
+        <Typography variant="h1" align="center" color="textPrimary">
+          ¿Querés registrar tu campaña?
         </Typography>
-        <Typography
-          variant="h1"
-          align="center"
-          color="secondary"
-        >
-          Download Devias Material Kit today.
+        <Typography variant="h1" align="center" color="secondary">
+          Iniciemos entonces
         </Typography>
-        <Box
-          mt={6}
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-        >
+        <Box mt={2} display="flex" justifyContent="center" alignItems="center">
           <Button
             color="secondary"
             component="a"
-            href="https://material-ui.com/store/items/devias-kit-pro"
+            href="/login"
             variant="contained"
           >
-            Get the kit
+            Vamos!
           </Button>
         </Box>
       </Container>

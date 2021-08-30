@@ -10,7 +10,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import donar from '../../../assets/donar.png';
 import family from '../../../assets/family.png';
-import phone from '../../../assets/phone_ohana.jpeg';
+import phone from '../../../assets/phone_ohana.png';
+
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.dark,
