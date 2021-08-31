@@ -27,10 +27,10 @@ const CTA = ({ className, ...rest }) => {
     <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="lg">
         <Typography variant="h1" align="center" color="textPrimary">
-          ¿Querés registrar tu campaña?
+          ¿Querés donar?
         </Typography>
         <Typography variant="h1" align="center" color="secondary">
-          Iniciemos entonces
+          Lo podes hacer desde acá
         </Typography>
         <Box mt={2} display="flex" justifyContent="center" alignItems="center">
           <Button
@@ -39,7 +39,7 @@ const CTA = ({ className, ...rest }) => {
             href="/login"
             variant="contained"
           >
-            Vamos!
+            Donar!
           </Button>
         </Box>
       </Container>

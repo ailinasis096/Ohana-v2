@@ -1,21 +1,9 @@
 import React from 'react';
-import {
-  Container,
-  Grid,
-  makeStyles
-} from '@material-ui/core';
+import { Container, Grid, makeStyles } from '@material-ui/core';
 import Page from 'src/components/Page';
 import Header from './Header';
-import LatestProjects from './LatestProjects';
-import NewProjects from './NewProjects';
-import PerformanceOverTime from './PerformanceOverTime';
-import RealTime from './RealTime';
-import RoiPerCustomer from './RoiPerCustomer';
-import SystemHealth from './SystemHealth';
-import TeamTasks from './TeamTasks';
-import TodaysMoney from './TodaysMoney';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.dark,
     minHeight: '100%',
@@ -28,17 +16,11 @@ const DashboardView = () => {
   const classes = useStyles();
 
   return (
-    <Page
-      className={classes.root}
-      title="Dashboard"
-    >
+    <Page className={classes.root} title="Dashboard">
       <Container maxWidth={false}>
         <Header />
-        <Grid
-          container
-          spacing={3}
-        >
-          <Grid
+        <Grid container spacing={3}>
+          {/*<Grid
             item
             lg={3}
             sm={6}
@@ -99,7 +81,7 @@ const DashboardView = () => {
             xs={12}
           >
             <LatestProjects />
-          </Grid>
+          </Grid>*/}
         </Grid>
       </Container>
     </Page>

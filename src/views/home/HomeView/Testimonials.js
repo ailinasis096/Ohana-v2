@@ -5,11 +5,11 @@ import {
   Avatar,
   Box,
   Container,
-  Typography,
-  makeStyles
+  makeStyles,
+  Typography
 } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.dark,
     paddingTop: 128,
@@ -24,10 +24,7 @@ const Testimonials = ({ className, ...rest }) => {
   const classes = useStyles();
 
   return (
-    <div
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
+    <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="md">
         <Typography
           variant="h2"
@@ -35,29 +32,21 @@ const Testimonials = ({ className, ...rest }) => {
           color="textPrimary"
           className={classes.title}
         >
-          &quot;Devias builds some of the best templates you can find for React.
+          &quot;Disponete a formar parte del cambio
           <br />
-          They will save you time.&quot;
+          Con Ohana vos también podes.&quot;
         </Typography>
-        <Box
-          mt={6}
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-        >
+        <Box mt={6} display="flex" justifyContent="center" alignItems="center">
           <Avatar src="/static/home/olivier.png" />
           <Box ml={2}>
-            <Typography
-              variant="body1"
-              color="textPrimary"
-            >
-              Olivier Tassinari
+            <Typography variant="body1" color="textPrimary">
+              Delfina Lizarralde
               <Typography
                 color="textSecondary"
                 display="inline"
                 component="span"
               >
-                , co-creator of @MaterialUI
+                , co-creator of @AilínAsis
               </Typography>
             </Typography>
           </Box>

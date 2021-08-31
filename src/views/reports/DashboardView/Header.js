@@ -1,7 +1,4 @@
-import React, {
-  useRef,
-  useState
-} from 'react';
+import React, { useRef, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
@@ -10,11 +7,11 @@ import {
   Button,
   Grid,
   Link,
+  makeStyles,
   Menu,
   MenuItem,
   SvgIcon,
-  Typography,
-  makeStyles
+  Typography
 } from '@material-ui/core';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import { Calendar as CalendarIcon } from 'react-feather';
@@ -22,19 +19,19 @@ import { Calendar as CalendarIcon } from 'react-feather';
 const timeRanges = [
   {
     value: 'today',
-    text: 'Today'
+    text: 'Hoy'
   },
   {
     value: 'yesterday',
-    text: 'Yesterday'
+    text: 'Ayer'
   },
   {
     value: 'last_30_days',
-    text: 'Last 30 days'
+    text: 'Últimos 30 días'
   },
   {
     value: 'last_year',
-    text: 'Last year'
+    text: 'Último año'
   }
 ];
 
@@ -69,18 +66,12 @@ const Header = ({ className, ...rest }) => {
           >
             Dashboard
           </Link>
-          <Typography
-            variant="body1"
-            color="textPrimary"
-          >
-            Registrar
+          <Typography variant="body1" color="textPrimary">
+            Listar
           </Typography>
         </Breadcrumbs>
-        <Typography
-          variant="h3"
-          color="textPrimary"
-        >
-          Crear una Campaña
+        <Typography variant="h3" color="textPrimary">
+          Mis Campañas Activas
         </Typography>
       </Grid>
       <Grid item>
@@ -109,7 +100,7 @@ const Header = ({ className, ...rest }) => {
             horizontal: 'center'
           }}
         >
-          {timeRanges.map((_timeRange) => (
+          {timeRanges.map(_timeRange => (
             <MenuItem
               key={_timeRange.value}
               onClick={() => setTimeRange(_timeRange.text)}

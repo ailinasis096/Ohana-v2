@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import {
   Avatar,
-  Button,
   Box,
+  Button,
   Container,
   Grid,
-  Typography,
-  makeStyles
+  makeStyles,
+  Typography
 } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.default,
     paddingTop: 128,
@@ -27,10 +27,7 @@ const Features = ({ className, ...rest }) => {
   const classes = useStyles();
 
   return (
-    <div
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
+    <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="lg">
         <Typography
           component="p"
@@ -38,98 +35,54 @@ const Features = ({ className, ...rest }) => {
           color="secondary"
           align="center"
         >
-          Explore Devias Kit Pro
+          ¡Explora nuestro sistema de gestión de campañas!
         </Typography>
-        <Typography
-          variant="h1"
-          align="center"
-          color="textPrimary"
-        >
-          Not just a pretty face
+        <Typography variant="h1" align="center" color="textPrimary">
+          ¡Empecemos!
         </Typography>
         <Box mt={8}>
-          <Grid
-            container
-            spacing={3}
-          >
-            <Grid
-              item
-              xs={12}
-              md={4}
-            >
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={4}>
               <Box display="flex">
-                <Avatar className={classes.avatar}>
-                  01
-                </Avatar>
+                <Avatar className={classes.avatar}>01</Avatar>
                 <Box ml={2}>
-                  <Typography
-                    variant="h4"
-                    gutterBottom
-                    color="textPrimary"
-                  >
-                    Complete User Flows
+                  <Typography variant="h4" gutterBottom color="textPrimary">
+                    Crea tu campaña
                   </Typography>
-                  <Typography
-                    variant="body1"
-                    color="textPrimary"
-                  >
-                    Not just a set of tools, the package includes the most common use cases of
-                    user flows like User Management, Second Level Layout.
+                  <Typography variant="body1" color="textPrimary">
+                    Not just a set of tools, the package includes the most
+                    common use cases of user flows like User Management, Second
+                    Level Layout.
                   </Typography>
                 </Box>
               </Box>
             </Grid>
-            <Grid
-              item
-              xs={12}
-              md={4}
-            >
+            <Grid item xs={12} md={4}>
               <Box display="flex">
-                <Avatar className={classes.avatar}>
-                  02
-                </Avatar>
+                <Avatar className={classes.avatar}>02</Avatar>
                 <Box ml={2}>
-                  <Typography
-                    variant="h4"
-                    gutterBottom
-                    color="textPrimary"
-                  >
-                    Support for Plugins
+                  <Typography variant="h4" gutterBottom color="textPrimary">
+                    Dale seguimiento
                   </Typography>
-                  <Typography
-                    variant="body1"
-                    color="textPrimary"
-                  >
-                    The kit provides support for multiple third-party plugins right out of the box
-                    like Chart.js, Dropzone.js, Kanban Plugin and many more.
+                  <Typography variant="body1" color="textPrimary">
+                    The kit provides support for multiple third-party plugins
+                    right out of the box like Chart.js, Dropzone.js, Kanban
+                    Plugin and many more.
                   </Typography>
                 </Box>
               </Box>
             </Grid>
-            <Grid
-              item
-              xs={12}
-              md={4}
-            >
+            <Grid item xs={12} md={4}>
               <Box display="flex">
-                <Avatar className={classes.avatar}>
-                  03
-                </Avatar>
+                <Avatar className={classes.avatar}>03</Avatar>
                 <Box ml={2}>
-                  <Typography
-                    variant="h4"
-                    gutterBottom
-                    color="textPrimary"
-                  >
-                    Designers, we got you
+                  <Typography variant="h4" gutterBottom color="textPrimary">
+                    Obtené reportes e información útil
                   </Typography>
-                  <Typography
-                    variant="body1"
-                    color="textPrimary"
-                    gutterBottom
-                  >
-                    We&apos;ve included the source Sketch &amp; Figma files to Plus &amp;
-                    Extended licenses so you can get creative! Build layouts with confidence.
+                  <Typography variant="body1" color="textPrimary" gutterBottom>
+                    We&apos;ve included the source Sketch &amp; Figma files to
+                    Plus &amp; Extended licenses so you can get creative! Build
+                    layouts with confidence.
                   </Typography>
                   <Button
                     variant="outlined"
@@ -137,7 +90,7 @@ const Features = ({ className, ...rest }) => {
                     href="https://sketch.cloud/s/q4a8e"
                     target="_blank"
                   >
-                    Preview Design
+                    ¿Querés ver cómo gestionarlas?
                   </Button>
                 </Box>
               </Box>

@@ -13,12 +13,7 @@ import {
 } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
-import {
-  BarChart as BarChartIcon,
-  Search as SearchIcon,
-  Star as StarIcon,
-  User as UserIcon
-} from 'react-feather';
+import { BarChart as BarChartIcon, Search as SearchIcon, Star as StarIcon } from 'react-feather';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { Link as RouterLink, matchPath, useLocation } from 'react-router-dom';
 import Logo from 'src/components/Logo';
@@ -29,14 +24,14 @@ const sections = [
     subheader: 'Menu',
     items: [
       {
-        title: 'Registrar campañas',
-        icon: StarIcon,
-        href: '/app/projects/create'
-      },
-      {
         title: 'Explorar campañas',
         icon: SearchIcon,
         href: '/app/events/browse'
+      },
+      {
+        title: 'Registrar campañas',
+        icon: StarIcon,
+        href: '/app/projects/create'
       },
       {
         title: 'Mis Campañas',
@@ -50,12 +45,12 @@ const sections = [
             href: '/app/reports/dashboard-registrar'
           }
         ] */
-      },
-      {
+      }
+      /*{
         title: 'Mi perfil',
         icon: UserIcon,
         href: '/app/reports/dashboard-alternative'
-      }
+      }*/
     ]
   }
   /*{
