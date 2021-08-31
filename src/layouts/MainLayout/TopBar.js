@@ -57,7 +57,7 @@ const TopBar = ({ className, ...rest }) => {
           className={classes.link}
           color="secondary"
           component={RouterLink}
-          to="/app"
+          to="/app/events/browse"
           underline="none"
           variant="button"
         >
