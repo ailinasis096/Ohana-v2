@@ -3,7 +3,7 @@ import ViewModuleIcon from '@material-ui/icons/ViewModule';
 import { Pagination, ToggleButton, ToggleButtonGroup } from '@material-ui/lab';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CardEvents from 'src/components/CardEvents';
 
 const useStyles = makeStyles(theme => ({
@@ -27,15 +27,34 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Results = ({ className, projects, ...rest }) => {
+const Results = ({ className, projects, fetchEvent, ...rest }) => {
   const classes = useStyles();
   const [mode, setMode] = useState('grid');
+  const [pageSize, setPageSize] = useState();
+  const [page, setPage] = useState(1);
 
   const handleModeChange = (event, value) => {
     setMode(value);
   };
 
-  return (
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
+
+  useEffect(() => {
+    fetchEvent(page, 15, '')
+  }, [page]);
+
+  const getPageSize = () => {
+    let page = 1
+    if (!!projects.results) {
+      page = Math.ceil(projects.count / projects.results.length)
+      console.log('page: ', page)
+    }
+    setPageSize(page)
+  }
+
+  return !!projects.results && (
     <div className={clsx(classes.root, className)} {...rest}>
       <Box
         display="flex"
@@ -61,7 +80,7 @@ const Results = ({ className, projects, ...rest }) => {
         </Box>
       </Box>
       <Grid container spacing={3}>
-        {projects.map(project => (
+        {projects.results.map(project => (
           <Grid
             item
             key={project.id}
@@ -74,7 +93,7 @@ const Results = ({ className, projects, ...rest }) => {
         ))}
       </Grid>
       <Box mt={6} display="flex" justifyContent="center">
-        <Pagination count={2} />
+        <Pagination count={2} onChange={handleChange} />
       </Box>
     </div>
   );

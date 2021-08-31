@@ -123,7 +123,7 @@ const CardEvents = ({ className, project, ...rest }) => {
         <Grid alignItems="center" container justify="space-between" spacing={3}>
           <Grid item>
             <Typography variant="h5" color="textPrimary">
-              {numeral(500).format(`$0,0.000`)}
+              {!!project.goal ? numeral(project.goal).format(`$0,0.000`) : numeral(500).format(`$0,0.000`)}
             </Typography>
             <Typography variant="body2" color="textSecondary">
               Objetivo
@@ -142,7 +142,7 @@ const CardEvents = ({ className, project, ...rest }) => {
           </Grid>
           <Grid item>
             <Typography variant="h5" color="textPrimary">
-              {project.event_type.name === 'Monetary' ? 'Monetaria' : 'Física'}
+              {project.event_type.id === 1 ? 'Monetaria' : 'Física'}
             </Typography>
             <Typography variant="body2" color="textSecondary">
               Tipo

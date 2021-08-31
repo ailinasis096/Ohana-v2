@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ProjectDescription = ({ data, className, onBack, onComplete, ...rest }) => {
+const ProjectDescription = ({ eventId, data, className, onBack, onComplete, editMode, ...rest }) => {
   const classes = useStyles();
   const [content, setContent] = useState('');
   const [isSubmitting, setSubmitting] = useState(false);
@@ -34,8 +34,6 @@ const ProjectDescription = ({ data, className, onBack, onComplete, ...rest }) =>
   const handleChange = value => {
     setContent(value);
   };
-
-  console.log('data: ', data)
 
   const arrangeData = () => {
     let form = {
@@ -78,7 +76,12 @@ const ProjectDescription = ({ data, className, onBack, onComplete, ...rest }) =>
     try {
       setSubmitting(true);
       let form = arrangeData()
-      await api.createEvent(form);
+      console.log('form :', form)
+      if (editMode) {
+        await api.updateEvent(eventId, form)
+      } else {
+        await api.createEvent(form);
+      }
       if (onComplete) {
         onComplete();
       }

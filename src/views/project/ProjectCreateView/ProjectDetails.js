@@ -66,9 +66,9 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, ...re
   useEffect(() => {
     if (!!event) {
       const loadValues = {
-        typeOfObjective: event.event_type.name === 'Monetary' ? 'Monetario' : 'Bienes',
+        typeOfObjective: event.event_type.id === 1 ? 'Monetario' : 'Bienes',
         tags: ['Ayudar'],
-        money: '5000',
+        money: event.goal,
         startDate: event.startDate,
         endDate: event.endDate,
         descriptionOfObjective: 0

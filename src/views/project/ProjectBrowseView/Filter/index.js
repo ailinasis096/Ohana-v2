@@ -83,7 +83,7 @@ const Filter = ({ className, fetchEvent, ...rest  }) => {
   };
 
   useEffect(() => {
-    fetchEvent(inputValue);
+    fetchEvent(1, 15, inputValue);
   }, [inputValue]);
 
   return (

@@ -50,11 +50,17 @@ class API {
       return data;
     } */
   static async createEvent(form) {
-    console.log('form: ', form)
     let path = `/api/events/create/`;
     const { data } = await axiosInstance.post(path, form);
     return data;
   }
+
+  static async updateEvent(id, form) {
+    let path = `/api/events/update/${id}/`;
+    const { data } = await axiosInstance.put(path, form);
+    return data;
+  }
+
   static async getEvents(page = 1, pageSize = 15, search) {
     let path = !!search 
       ? `/api/events/list/?page=${page}&page_size=${pageSize}&q=${search}`
