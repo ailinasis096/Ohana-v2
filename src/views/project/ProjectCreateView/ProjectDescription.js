@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
+import api from './../../../api/Api'
 import {
   Box,
   Button,
@@ -24,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ProjectDescription = ({ className, onBack, onComplete, ...rest }) => {
+const ProjectDescription = ({ data, className, onBack, onComplete, ...rest }) => {
   const classes = useStyles();
   const [content, setContent] = useState('');
   const [isSubmitting, setSubmitting] = useState(false);
@@ -34,14 +35,50 @@ const ProjectDescription = ({ className, onBack, onComplete, ...rest }) => {
     setContent(value);
   };
 
+  console.log('data: ', data)
+
+  const arrangeData = () => {
+    let form = {
+      attention_schedule: [
+        {
+            "day": 1,
+            "from_time": "09:00:00",
+            "to_time": "13:00:00"
+        },
+        {
+          "day": 2,
+          "from_time": "09:00:00",
+          "to_time": "13:00:00"
+        },
+      ],
+      name: data.projectName,
+      init_date: data.startDate,
+      end_date: data.endDate,
+      description: data.description,
+      event_type: data.event_type,
+      goal: 25000,
+      image: "https://via.placeholder.com/640",
+      contact: {
+          name: "Elías Gomis Cabeza",
+          phone: "001-321-201-9918x5660",
+          email: "duiliocatalan@hotmail.com"
+      },
+      location: {
+          street: data.ubication,
+          address_line: "Avenida Seve Carmona 128",
+          postal_code: 5000
+      }
+    }
+    return form
+  };
+
   const handleSubmit = async event => {
     event.preventDefault();
 
     try {
       setSubmitting(true);
-
-      // NOTE: Make API request
-
+      let form = arrangeData()
+      await api.createEvent(form);
       if (onComplete) {
         onComplete();
       }

@@ -15,7 +15,9 @@ import {
   makeStyles
 } from '@material-ui/core';
 import { KeyboardDatePicker } from '@material-ui/pickers';
+import { DatePicker } from '@material-ui/pickers';
 import { Plus as PlusIcon } from 'react-feather';
+import dateFnsFormat from 'date-fns/format';
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -34,11 +36,15 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ProjectDetails = ({ event, className, onBack, onNext, ...rest }) => {
+const ProjectDetails = ({ data, setData, event, className, onBack, onNext, ...rest }) => {
   const classes = useStyles();
   const [tag, setTag] = useState('');
   const [objetives, setObjetives] = useState([]);
   const [showTextObjetives, setShowTextObjetives] = useState([]);
+  const [formValues, setFormValues] = useState(null);
+
+  const [startDate, setStartDate] = useState();
+  const [endDate, setEndDate] = useState();
 
   const objetiveOption = ['Monetario', 'Bienes'];
 
@@ -48,15 +54,54 @@ const ProjectDetails = ({ event, className, onBack, onNext, ...rest }) => {
     }
   }, [objetives]);
 
+  const initialValues = {
+    typeOfObjective: '',
+    tags: ['Ayudar'],
+    money: '',
+    startDate: new Date(),
+    endDate: new Date(),
+    descriptionOfObjective: 0
+  }
+
+  useEffect(() => {
+    if (!!event) {
+      const loadValues = {
+        typeOfObjective: event.event_type.name === 'Monetary' ? 'Monetario' : 'Bienes',
+        tags: ['Ayudar'],
+        money: '5000',
+        startDate: event.startDate,
+        endDate: event.endDate,
+        descriptionOfObjective: 0
+      }
+      setFormValues(loadValues)
+    }
+  }, [event])
+
+  const onDateChange = (property) => (value) => {
+    const fixedDate = fixDate(value);
+    const date = dateFnsFormat(fixedDate, 'yyyy-MM-dd');
+
+    if (property === 'startDate') {
+      setStartDate(date)
+    } else {
+      setEndDate(date)
+    }
+  };
+
+  const fixDate = (date) => {
+    let fixedDate = date ? new Date(date) : null;
+    if (fixedDate) {
+      fixedDate = new Date(
+        fixedDate.getTime() + fixedDate.getTimezoneOffset() * 60000
+      );
+    }
+    return fixedDate;
+  };
+  
   return (
     <Formik
-      initialValues={{
-        objective: '',
-        tags: ['Ayudar'],
-        startDate: new Date(),
-        endDate: new Date(),
-        descriptionOfObjective: 0
-      }}
+      enableReinitialize
+      initialValues={formValues || initialValues}
       validationSchema={Yup.object().shape({
         typeOfObjective: Yup.string()
           .required('Selecciona un tipo de objetivo')
@@ -78,7 +123,14 @@ const ProjectDetails = ({ event, className, onBack, onNext, ...rest }) => {
           // decides to continue later.
           setStatus({ success: true });
           setSubmitting(false);
-
+          setData({
+            ...data, 
+            event_type: values.typeOfObjective === 'Monetario' ? 1 : 0,
+            tags: ['Ayudar'],
+            goal: values.money,
+            startDate: startDate,
+            endDate: endDate,
+          })
           if (onNext) {
             onNext();
           }
@@ -207,30 +259,30 @@ const ProjectDetails = ({ event, className, onBack, onNext, ...rest }) => {
               </Box>
             )}
             <Box mt={4} display="flex">
-              <KeyboardDatePicker
+              <DatePicker
                 className={classes.datePicker}
                 label="Fecha de inicio"
-                format="MM/DD/YYYY"
                 name="startDate"
                 inputVariant="outlined"
-                value={values.startDate}
-                onBlur={() => setFieldTouched('startDate')}
-                onClose={() => setFieldTouched('startDate')}
-                onAccept={() => setFieldTouched('startDate')}
-                onChange={date => setFieldValue('startDate', date)}
+                format="DD/MM/YYYY"
+                okLabel='Aceptar'
+                cancelLabel='Cancelar'
+                clearLabel='Limpiar'
+                value={startDate}
+                onChange={onDateChange('startDate')}
               />
 
-              <KeyboardDatePicker
+              <DatePicker
                 className={classes.datePicker}
                 label="Fecha Fin"
-                format="MM/DD/YYYY"
                 name="endDate"
                 inputVariant="outlined"
-                value={values.endDate}
-                onBlur={() => setFieldTouched('endDate')}
-                onClose={() => setFieldTouched('endDate')}
-                onAccept={() => setFieldTouched('endDate')}
-                onChange={date => setFieldValue('endDate', date)}
+                format="DD/MM/YYYY"
+                okLabel='Aceptar'
+                cancelLabel='Cancelar'
+                clearLabel='Limpiar'
+                value={endDate}
+                onChange={onDateChange('endDate')}
               />
             </Box>
             {Boolean(touched.startDate && errors.startDate) && (

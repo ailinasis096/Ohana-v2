@@ -50,6 +50,7 @@
     "change-case": "^4.1.1",
     "chart.js": "^2.9.3",
     "clsx": "^1.1.1",
+    "date-fns": "^2.23.0",
     "draft-js": "^0.11.6",
     "firebase": "^7.17.1",
     "formik": "^2.1.5",
@@ -107,5 +108,6 @@
     "prettier": "^1.19.1",
     "typescript": "^3.9.7"
   },
-  "proxy": "http://localhost:8000"
+  "proxy": "http://127.0.0.1:8000",
+  "secure": false
 }

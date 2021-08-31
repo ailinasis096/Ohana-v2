@@ -115,12 +115,13 @@ const ProjectCreateView  = ({ match }) => {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState(false);
-
+  const [data, setData] = useState();
   const [event, setEvent] = useState();
-
+  
   useEffect(() => {
     if(!!match.params.id) {
-      setEvent(
+      getEvent();
+      /*setEvent(
         {
           id: 1,
           title: 'Homelessfonts',
@@ -143,19 +144,20 @@ const ProjectCreateView  = ({ match }) => {
             name: 'Lady Gaga'
           }
         },
-      )
+      )*/
     }
-    //getEvent();
+    
   }, []);
 
-  /*const getEvent = async () => {
+  const getEvent = async () => {
     try {
       const event = await api.getEventById(match.params.id);
-      setEvent(response.data);
+      console.log('event: ', event)
+      setEvent(event);
     } catch (err) {
       console.error(err);
     }
-  };*/
+  };
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -232,13 +234,15 @@ const ProjectCreateView  = ({ match }) => {
               >
                 <Box p={3}>
                   {activeStep === 0 && (
-                    <UserDetails event={event} onNext={handleNext} />
+                    <UserDetails setData={setData} event={event} onNext={handleNext} />
                   )}
                   {activeStep === 1 && (
                     <ProjectDetails
                       event={event}
                       onBack={handleBack}
                       onNext={handleNext}
+                      setData={setData}
+                      data={data}
                     />
                   )}
                   {activeStep === 2 && (
@@ -246,6 +250,7 @@ const ProjectCreateView  = ({ match }) => {
                       event={event}
                       onBack={handleBack}
                       onComplete={handleComplete}
+                      data={data}
                     />
                   )}
                 </Box>
@@ -273,7 +278,7 @@ const ProjectCreateView  = ({ match }) => {
                     color="textPrimary"
                     align="center"
                   >
-                    You are all done!
+                    Campaña creada!
                   </Typography>
                 </Box>
                 <Box mt={2}>
@@ -282,8 +287,7 @@ const ProjectCreateView  = ({ match }) => {
                     color="textSecondary"
                     align="center"
                   >
-                    Donec ut augue sed nisi ullamcorper posuere sit amet eu mauris.
-                    Ut eget mauris scelerisque.
+                    Tu campaña fue creada exitosamente.
                   </Typography>
                 </Box>
                 <Box
@@ -297,7 +301,7 @@ const ProjectCreateView  = ({ match }) => {
                     component={RouterLink}
                     to="/app/projects/1"
                   >
-                    View your project
+                    Mis campañas
                   </Button>
                 </Box>
               </Box>

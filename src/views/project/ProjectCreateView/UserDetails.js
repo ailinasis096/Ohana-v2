@@ -34,28 +34,41 @@ const useStyles = makeStyles(theme => ({
 
 const Ottro = () => {
   const { values } = useFormikContext();
-  console.log('values: ', values)
-
   return null;
 }
 
-const UserDetails = ({ event, className, onBack, onNext, ...rest }) => {
+const UserDetails = ({ setData, event, className, onBack, onNext, ...rest }) => {
   const classes = useStyles();
   const [error, setError] = useState(null);
   const categoryOption = ['Animales', 'Personas'];
   const [category, setCategory] = useState([]);
+  const [formValues, setFormValues] = useState(null);
 
-  console.log('event: ', event)
-  
+  const initialValues = {
+    projectName: '' ,
+    ubication: '',
+    description: '',
+    submit: null,
+    category: ''
+  }
+
+  useEffect(() => {
+    if (!!event) {
+      const loadValues = {
+        projectName: event.name ,
+        ubication: event.location.street,
+        description: event.description,
+        submit: null,
+        category: 'Animales'
+      }
+      setFormValues(loadValues)
+    }
+  }, [event])
+
   return (
     <Formik
-      initialValues={{
-        projectName: '' ,
-        ubication: '',
-        description: '',
-        submit: null,
-        category: ''
-      }}
+      enableReinitialize
+      initialValues={formValues || initialValues}
       validationSchema={Yup.object().shape({
         projectName: Yup.string()
           .min(3, 'Must be at least 3 characters')
@@ -76,7 +89,7 @@ const UserDetails = ({ event, className, onBack, onNext, ...rest }) => {
           // decides to continue later.
           setStatus({ success: true });
           setSubmitting(false);
-
+          setData(values)
           if (onNext) {
             onNext();
           }
@@ -120,7 +133,7 @@ const UserDetails = ({ event, className, onBack, onNext, ...rest }) => {
               name="projectName"
               onBlur={handleBlur}
               onChange={handleChange}
-              value={!!event ? event.title : values.projectName}
+              value={values.projectName}
               variant="outlined"
             />
 
@@ -132,7 +145,7 @@ const UserDetails = ({ event, className, onBack, onNext, ...rest }) => {
             <Paper variant="outlined">
               <QuillEditor
                 className={classes.editor}
-                value={!!event ? event.caption : values.description}
+                value={values.description}
                 onChange={value => setFieldValue('description', value)}
               />
             </Paper>
@@ -146,7 +159,7 @@ const UserDetails = ({ event, className, onBack, onNext, ...rest }) => {
               name="ubication"
               onBlur={handleBlur}
               onChange={handleChange}
-              value={!!event ? event.location : values.ubication}
+              value={values.ubication}
               variant="outlined"
             />
           </Box>
@@ -163,7 +176,7 @@ const UserDetails = ({ event, className, onBack, onNext, ...rest }) => {
                 setCategory(event.target.value);
               }}
               onChange={handleChange}
-              value={!!event ? event.category : values.category}
+              value={values.category}
               variant="outlined"
               SelectProps={{ native: true }}
             >

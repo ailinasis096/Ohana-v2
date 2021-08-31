@@ -49,9 +49,10 @@ class API {
       const { data } = await axiosInstance.get(`/user`);
       return data;
     } */
-  static async createEvent() {
+  static async createEvent(form) {
+    console.log('form: ', form)
     let path = `/api/events/create/`;
-    const { data } = await axiosInstance.post(path);
+    const { data } = await axiosInstance.post(path, form);
     return data;
   }
   static async getEvents(page = 1, pageSize = 15, search) {
