@@ -27,7 +27,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import getInitials from 'src/utils/getInitials';
 
 const useStyles = makeStyles(theme => ({
-  root: { 
+  root: {
     height: '100%',
     display: 'grid'
   },
@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme => ({
     color: colors.red[600]
   },
   caption: {
-    minHeight:'20px'
+    minHeight: '20px'
     /*display: 'box',
     lineClamp: 7,
     boxOrient: 'vertical',
@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
   membersIcon: {
     marginLeft: theme.spacing(2),
     marginRight: theme.spacing(1)
-  },
+  }
 }));
 
 moment.locale('es');
@@ -75,7 +75,7 @@ const CardEvents = ({ className, project, ...rest }) => {
       <Box p={3}>
         <CardMedia
           className={classes.image}
-          image="https://cdn4.josefacchin.com/wp-content/uploads/2020/02/como-quitar-el-fondo-de-una-imagen.png"
+          image="https://www.argentina.gob.ar/sites/default/files/vinetas_justicia_cerca_04_quiero_donar_mis_organos.png"
         />
         <Box display="flex" alignItems="center" mt={2}>
           <Avatar
@@ -93,8 +93,18 @@ const CardEvents = ({ className, project, ...rest }) => {
             >
               {project.name}
             </Link>
-            <div style={{overflow: "hidden", textOverflow: "ellipsis", width: '18rem'}}>
-              <Tooltip title={`Por ${project.contact.name} | Actualizado ${moment([2021, 7, 20]).fromNow()}`}>
+            <div
+              style={{
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                width: '18rem'
+              }}
+            >
+              <Tooltip
+                title={`Por ${project.contact.name} | Actualizado ${moment(
+                  project.updated_at
+                ).fromNow()}`}
+              >
                 <Typography noWrap variant="body2" color="textSecondary">
                   Por{' '}
                   <Link
@@ -105,40 +115,53 @@ const CardEvents = ({ className, project, ...rest }) => {
                   >
                     {project.contact.name}
                   </Link>{' '}
-                  | Actualizado {moment([2021, 7, 20]).fromNow()}
+                  | Actualizado {moment(project.updated_at).fromNow()}
                 </Typography>
               </Tooltip>
             </div>
           </Box>
         </Box>
       </Box>
-      <Box pb={2} px={3} style={{overflow: "hidden", textOverflow: "ellipsis", width: '24rem'}}>
-      <Tooltip title={project.description}>
-        <Typography noWrap color="textSecondary" variant="body2">
-          {project.description}
-        </Typography>
-      </Tooltip>
+      <Box
+        pb={2}
+        px={3}
+        style={{ overflow: 'hidden', textOverflow: 'ellipsis', width: '24rem' }}
+      >
+        <Tooltip title={project.description}>
+          <Typography noWrap color="textSecondary" variant="body2">
+            {project.description}
+          </Typography>
+        </Tooltip>
       </Box>
       <Box py={2} px={3} className={classes.description}>
         <Grid alignItems="center" container justify="space-between" spacing={3}>
           <Grid item>
             <Typography variant="h5" color="textPrimary">
-              {!!project.goal ? numeral(project.goal).format(`$0,0.000`) : numeral(500).format(`$0,0.000`)}
+              {!!project.goal
+                ? numeral(project.goal).format(`$0,0.000`)
+                : numeral(project.donations_count).format(`0,0.000`)}
             </Typography>
             <Typography variant="body2" color="textSecondary">
               Objetivo
             </Typography>
           </Grid>
           <Grid item>
-          <div style={{overflow: "hidden", textOverflow: "ellipsis", width: '5rem'}}>
-            <Tooltip title={project.location.street}>
-              <Typography noWrap variant="h5" color="textPrimary">
-                {project.location.street}
+            <div
+              style={{
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                width: '5rem'
+              }}
+            >
+              <Tooltip title={project.location.street}>
+                <Typography noWrap variant="h5" color="textPrimary">
+                  {project.location.street}
+                </Typography>
+              </Tooltip>
+              <Typography variant="body2" color="textSecondary">
+                Ubicación
               </Typography>
-            </Tooltip>
-            <Typography variant="body2" color="textSecondary">
-              Ubicación
-            </Typography></div>
+            </div>
           </Grid>
           <Grid item>
             <Typography variant="h5" color="textPrimary">
@@ -150,7 +173,7 @@ const CardEvents = ({ className, project, ...rest }) => {
           </Grid>
         </Grid>
       </Box>
-      <Divider/>
+      <Divider />
       <Box py={2} pl={2} pr={2} display="flex" alignItems="center" bottom>
         {isLiked ? (
           <Tooltip title="Unlike">
