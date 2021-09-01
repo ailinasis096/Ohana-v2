@@ -50,12 +50,14 @@ class API {
       return data;
     } */
   static async createEvent(form) {
+    console.log('form: ', form)
     let path = `/api/events/create/`;
     const { data } = await axiosInstance.post(path, form);
     return data;
   }
 
   static async updateEvent(id, form) {
+    console.log('form: ', form)
     let path = `/api/events/update/${id}/`;
     const { data } = await axiosInstance.put(path, form);
     return data;

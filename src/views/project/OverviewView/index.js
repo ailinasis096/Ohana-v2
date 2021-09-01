@@ -39,8 +39,6 @@ const OverviewView = ({ match, history }) => {
     getEvent()
   }, [])
 
-  console.log('!!selectedEvent: ', !!selectedEvent);
-
   return !!selectedEvent ? (
     <Page
       className={classes.root}

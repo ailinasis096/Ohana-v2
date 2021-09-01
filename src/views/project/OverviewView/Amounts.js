@@ -106,7 +106,7 @@ const Statistics = ({event, className, ...rest }) => {
             variant="h2"
             color="textPrimary"
           >
-            {numeral(event.budget).format('$0,0.000')}
+            {numeral(event.goal).format('$0,0.000')}
           </Typography>
           <Typography
             className={classes.overline}

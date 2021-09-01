@@ -46,12 +46,11 @@ const Results = ({ className, projects, fetchEvent, ...rest }) => {
   }, [page]);
 
   const getPageSize = () => {
-    let page = 1
+    let pageSize = 1
     if (!!projects.results) {
-      page = Math.ceil(projects.count / projects.results.length)
-      console.log('page: ', page)
+      pageSize = Math.ceil(projects.count / 15)
     }
-    setPageSize(page)
+    return pageSize
   }
 
   return !!projects.results && (
@@ -93,7 +92,7 @@ const Results = ({ className, projects, fetchEvent, ...rest }) => {
         ))}
       </Grid>
       <Box mt={6} display="flex" justifyContent="center">
-        <Pagination count={2} onChange={handleChange} />
+        <Pagination count={getPageSize()} onChange={handleChange} />
       </Box>
     </div>
   );

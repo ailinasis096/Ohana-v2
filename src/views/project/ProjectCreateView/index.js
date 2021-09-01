@@ -211,7 +211,7 @@ const ProjectCreateView  = ({ match }) => {
               >
                 <Box p={3}>
                   {activeStep === 0 && (
-                    <UserDetails setData={setData} event={event} onNext={handleNext} />
+                    <UserDetails setData={setData} event={event} onNext={handleNext}/>
                   )}
                   {activeStep === 1 && (
                     <ProjectDetails
@@ -220,11 +220,12 @@ const ProjectCreateView  = ({ match }) => {
                       onNext={handleNext}
                       setData={setData}
                       data={data}
+                      editMode={editMode}
                     />
                   )}
                   {activeStep === 2 && (
                     <ProjectDescription
-                      eventId={event.id}
+                      eventId={!!event ? event.id : ''}
                       onBack={handleBack}
                       onComplete={handleComplete}
                       data={data}
@@ -256,7 +257,7 @@ const ProjectCreateView  = ({ match }) => {
                     color="textPrimary"
                     align="center"
                   >
-                    Campaña creada!
+                    {editMode ? 'Campaña actualizada!' : 'Campaña creada!'}
                   </Typography>
                 </Box>
                 <Box mt={2}>
@@ -265,7 +266,9 @@ const ProjectCreateView  = ({ match }) => {
                     color="textSecondary"
                     align="center"
                   >
-                    Tu campaña fue creada exitosamente.
+                    {editMode ? 'Tu campaña fue modificada exitosamente.' : 'Tu campaña fue creada exitosamente.'}
+                    <br/><br/>
+                    Dirijase a 
                   </Typography>
                 </Box>
                 <Box
@@ -277,7 +280,7 @@ const ProjectCreateView  = ({ match }) => {
                     variant="contained"
                     color="secondary"
                     component={RouterLink}
-                    to="/app/projects/1"
+                    to="/app/reports/dashboard"
                   >
                     Mis campañas
                   </Button>

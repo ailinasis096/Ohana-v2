@@ -36,15 +36,19 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ProjectDetails = ({ data, setData, event, className, onBack, onNext, ...rest }) => {
+const ProjectDetails = ({ data, setData, event, className, onBack, onNext, editMode, ...rest }) => {
   const classes = useStyles();
   const [tag, setTag] = useState('');
   const [objetives, setObjetives] = useState([]);
   const [showTextObjetives, setShowTextObjetives] = useState([]);
   const [formValues, setFormValues] = useState(null);
 
-  const [startDate, setStartDate] = useState();
-  const [endDate, setEndDate] = useState();
+  const today = new Date()
+  const tomorrow = new Date(today)
+  tomorrow.setDate(tomorrow.getDate() + 1)
+
+  const [startDate, setStartDate] = useState(editMode ? event.init_date : dateFnsFormat(today, 'yyyy-MM-dd'));
+  const [endDate, setEndDate] = useState(editMode ? event.end_date : dateFnsFormat(tomorrow, 'yyyy-MM-dd'));
 
   const objetiveOption = ['Monetario', 'Bienes'];
 
@@ -69,8 +73,8 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, ...re
         typeOfObjective: event.event_type.id === 1 ? 'Monetario' : 'Bienes',
         tags: ['Ayudar'],
         money: event.goal,
-        startDate: event.startDate,
-        endDate: event.endDate,
+        startDate: event.init_date,
+        endDate: event.end_date,
         descriptionOfObjective: 0
       }
       setFormValues(loadValues)
@@ -96,6 +100,17 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, ...re
       );
     }
     return fixedDate;
+  };
+
+  const arrangeData = (values) => {
+    setData({
+      ...data, 
+      event_type: values.typeOfObjective === 'Monetario' ? 1 : 0,
+      tags: ['Ayudar'],
+      goal: values.money || event.goal,
+      startDate: startDate || event.init_date,
+      endDate: endDate || event.end_date,
+    })
   };
   
   return (
@@ -123,14 +138,7 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, ...re
           // decides to continue later.
           setStatus({ success: true });
           setSubmitting(false);
-          setData({
-            ...data, 
-            event_type: values.typeOfObjective === 'Monetario' ? 1 : 0,
-            tags: ['Ayudar'],
-            goal: values.money,
-            startDate: startDate,
-            endDate: endDate,
-          })
+          arrangeData(values);
           if (onNext) {
             onNext();
           }
@@ -203,10 +211,12 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, ...re
                     event.preventDefault();
                   }
                 }}
+                type="number"
                 helperText={touched.money && errors.money}
                 label="Monto"
                 name="money"
                 onBlur={handleBlur}
+                disabled={!!editMode}
                 onChange={handleChange}
                 value={values.money}
                 variant="outlined"
@@ -271,7 +281,6 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, ...re
                 value={startDate}
                 onChange={onDateChange('startDate')}
               />
-
               <DatePicker
                 className={classes.datePicker}
                 label="Fecha Fin"

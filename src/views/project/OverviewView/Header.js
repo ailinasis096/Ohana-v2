@@ -46,7 +46,7 @@ const Header = ({event, className, ...rest }) => {
             variant="overline"
             color="textSecondary"
           >
-            event.category
+            {event.category || 'Personas'}
           </Typography>
           <Typography
             variant="h3"
@@ -113,7 +113,7 @@ const Header = ({event, className, ...rest }) => {
             <img
               alt="Cover"
               className={classes.image}
-              //src={event.event.image}
+              src={event.image}
             />
           </Grid>
         </Hidden>

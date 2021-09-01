@@ -62,17 +62,20 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const FilesDropzone = ({ className, ...rest }) => {
+const FilesDropzone = ({ setImage, className, ...rest }) => {
   const classes = useStyles();
   const [files, setFiles] = useState([]);
 
   const handleDrop = useCallback((acceptedFiles) => {
     setFiles((prevFiles) => [...prevFiles].concat(acceptedFiles));
+    //setImage()
   }, []);
 
   const handleRemoveAll = () => {
     setFiles([]);
   };
+
+  console.log('files: ', files)
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop: handleDrop

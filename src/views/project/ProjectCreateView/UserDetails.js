@@ -65,6 +65,21 @@ const UserDetails = ({ setData, event, className, onBack, onNext, ...rest }) => 
     }
   }, [event])
 
+  const arrangeData = (values) => {
+    setData({
+      name: values.projectName || event.name,
+      location: 
+      {
+        address_line: "Avenida Seve Carmona 128",
+        postal_code: 5000,
+        street: values.ubication || event.location.street,
+      },
+      description: values.description.replace(/<\/?[^>]+(>|$)/g, "") || event.description,
+      image: !!event ? event.image : '' ,
+        //category: 'Animales'
+    })
+  };
+
   return (
     <Formik
       enableReinitialize
@@ -89,7 +104,7 @@ const UserDetails = ({ setData, event, className, onBack, onNext, ...rest }) => 
           // decides to continue later.
           setStatus({ success: true });
           setSubmitting(false);
-          setData(values)
+          arrangeData(values)
           if (onNext) {
             onNext();
           }

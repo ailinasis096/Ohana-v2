@@ -75,7 +75,7 @@ const CardEvents = ({ className, project, ...rest }) => {
       <Box p={3}>
         <CardMedia
           className={classes.image}
-          image="https://www.argentina.gob.ar/sites/default/files/vinetas_justicia_cerca_04_quiero_donar_mis_organos.png"
+          image={project.image || 'https://www.argentina.gob.ar/sites/default/files/vinetas_justicia_cerca_04_quiero_donar_mis_organos.png'}
         />
         <Box display="flex" alignItems="center" mt={2}>
           <Avatar

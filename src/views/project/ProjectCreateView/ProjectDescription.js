@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import api from './../../../api/Api'
@@ -6,7 +6,7 @@ import {
   Box,
   Button,
   FormHelperText,
-  Paper,
+  TextField,
   Typography,
   makeStyles
 } from '@material-ui/core';
@@ -27,44 +27,85 @@ const useStyles = makeStyles(theme => ({
 
 const ProjectDescription = ({ eventId, data, className, onBack, onComplete, editMode, ...rest }) => {
   const classes = useStyles();
-  const [content, setContent] = useState('');
   const [isSubmitting, setSubmitting] = useState(false);
   const [error, setError] = useState(null);
+  const [image, setImage] = useState(!!editMode ? data.image : '');
 
-  const handleChange = value => {
-    setContent(value);
+  const handleChange = () => ({ target: { value } }) => {
+    setImage(value);
   };
 
+  console.log('data: ', data)
+  console.log('typeof: ', typeof data.goal)
+
   const arrangeData = () => {
-    let form = {
-      attention_schedule: [
-        {
-            "day": 1,
+    let form = {}
+    if (editMode) {
+      form = {
+        attention_schedule: [
+          {
+              "day": 1,
+              "from_time": "09:00:00",
+              "to_time": "13:00:00"
+          },
+          {
+            "day": 2,
             "from_time": "09:00:00",
             "to_time": "13:00:00"
+          },
+        ],
+        name: data.name,
+        init_date: data.startDate,
+        end_date: data.endDate,
+        description: data.description,
+        event_type: data.event_type,
+        image: image === '' ? "https://www.argentina.gob.ar/sites/default/files/vinetas_justicia_cerca_04_quiero_donar_mis_organos.png" : image,
+        goal: data.goal,
+        contact: {
+            id: eventId,
+            name: "Elías Gomis Cabeza",
+            phone: "001-321-201-9918x5660",
+            email: "duiliocatalan@hotmail.com"
         },
-        {
-          "day": 2,
-          "from_time": "09:00:00",
-          "to_time": "13:00:00"
+        location: {
+            id: eventId,
+            street: data.location.street,
+            address_line: "Avenida Seve Carmona 128",
+            postal_code: 5000
+        }
+      }
+
+    } else {
+      form = {
+        attention_schedule: [
+          {
+              "day": 1,
+              "from_time": "09:00:00",
+              "to_time": "13:00:00"
+          },
+          {
+            "day": 2,
+            "from_time": "09:00:00",
+            "to_time": "13:00:00"
+          },
+        ],
+        name: data.name,
+        init_date: data.startDate,
+        end_date: data.endDate,
+        description: data.description,
+        event_type: data.event_type,
+        goal: data.goal,
+        image: image === '' ? "https://www.argentina.gob.ar/sites/default/files/vinetas_justicia_cerca_04_quiero_donar_mis_organos.png" : image,
+        contact: {
+            name: "Elías Gomis Cabeza",
+            phone: "001-321-201-9918x5660",
+            email: "duiliocatalan@hotmail.com"
         },
-      ],
-      name: data.projectName,
-      init_date: data.startDate,
-      end_date: data.endDate,
-      description: data.description,
-      event_type: data.event_type,
-      goal: 25000,
-      image: "https://via.placeholder.com/640",
-      contact: {
-          name: "Elías Gomis Cabeza",
-          phone: "001-321-201-9918x5660",
-          email: "duiliocatalan@hotmail.com"
-      },
-      location: {
-          street: data.ubication,
-          address_line: "Avenida Seve Carmona 128",
-          postal_code: 5000
+        location: {
+            street: data.location.street,
+            address_line: "Avenida Seve Carmona 128",
+            postal_code: 5000
+        }
       }
     }
     return form
@@ -76,7 +117,6 @@ const ProjectDescription = ({ eventId, data, className, onBack, onComplete, edit
     try {
       setSubmitting(true);
       let form = arrangeData()
-      console.log('form :', form)
       if (editMode) {
         await api.updateEvent(eventId, form)
       } else {
@@ -93,12 +133,7 @@ const ProjectDescription = ({ eventId, data, className, onBack, onComplete, edit
     }
   };
 
-  return (
-    <form
-      onSubmit={handleSubmit}
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
+    /*
       <Typography variant="h3" color="textPrimary">
         Agregar documentos
       </Typography>
@@ -106,7 +141,28 @@ const ProjectDescription = ({ eventId, data, className, onBack, onComplete, edit
         <Typography variant="subtitle1" color="textSecondary">
           Seleccione los documentos que desea subir
         </Typography>
-        <FilesDropzone />
+        <FilesDropzone setImage={setImage} />
+      </Box>
+    */
+
+  return (
+    <form
+      onSubmit={handleSubmit}
+      className={clsx(classes.root, className)}
+      {...rest}
+    >
+      <Typography variant="h3" color="textPrimary">
+        Agregar imagen de la campaña
+      </Typography>
+      <Box mt={2}>
+        <TextField
+          fullWidth
+          label="URL de la imagen"
+          name="image"
+          onChange={handleChange()}
+          value={image}
+          variant="outlined"
+        />
       </Box>
 
       {error && (
