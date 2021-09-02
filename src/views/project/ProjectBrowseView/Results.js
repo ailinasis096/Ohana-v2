@@ -87,7 +87,7 @@ const Results = ({ className, projects, fetchEvent, ...rest }) => {
             sm={mode === 'grid' ? 6 : 12}
             xs={12}
           >
-            <CardEvents project={project} />
+            <CardEvents project={project} userMode={false}/>
           </Grid>
         ))}
       </Grid>

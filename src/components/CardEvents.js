@@ -15,6 +15,8 @@ import {
 } from '@material-ui/core';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import DeleteIcon from '@material-ui/icons/Delete';
+import EditIcon from '@material-ui/icons/Edit';
 import { Rating } from '@material-ui/lab';
 import clsx from 'clsx';
 import moment from 'moment';
@@ -50,12 +52,15 @@ const useStyles = makeStyles(theme => ({
   membersIcon: {
     marginLeft: theme.spacing(2),
     marginRight: theme.spacing(1)
+  },
+  buttonsDiv: {
+    display: 'contents'
   }
 }));
 
 moment.locale('es');
 
-const CardEvents = ({ className, project, ...rest }) => {
+const CardEvents = ({ className, project, userMode, ...rest }) => {
   const classes = useStyles();
   const [isLiked, setLiked] = useState(true);
   const [likesCount, setLikesCount] = useState(10);
@@ -68,6 +73,9 @@ const CardEvents = ({ className, project, ...rest }) => {
   const handleUnlike = () => {
     setLiked(false);
     setLikesCount(prevLikes => prevLikes - 1);
+  };
+
+  const handleEdit = () => {
   };
 
   return (
@@ -175,29 +183,47 @@ const CardEvents = ({ className, project, ...rest }) => {
       </Box>
       <Divider />
       <Box py={2} pl={2} pr={2} display="flex" alignItems="center" bottom>
-        {isLiked ? (
-          <Tooltip title="Unlike">
-            <IconButton className={classes.likedButton} onClick={handleUnlike}>
-              <FavoriteIcon fontSize="small" />
-            </IconButton>
-          </Tooltip>
+        {userMode ? (
+          <div>
+            <Tooltip title="Eliminar campaña">
+              <IconButton>
+                <DeleteIcon fontSize="small" />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="Modificar campaña">
+              <IconButton 
+                component={RouterLink}
+                to={`/app/projects/edit/${project.id}`}>
+                <EditIcon fontSize="small" />
+              </IconButton>
+            </Tooltip>
+          </div>
         ) : (
-          <Tooltip title="Like">
-            <IconButton onClick={handleLike}>
-              <FavoriteBorderIcon fontSize="small" />
-            </IconButton>
-          </Tooltip>
-        )}
-        <Typography variant="subtitle2" color="textSecondary">
-          {likesCount}
-        </Typography>
-        <SvgIcon
-          fontSize="small"
-          color="action"
-          className={classes.membersIcon}
-        >
-          <ShareIcon />
-        </SvgIcon>
+          <div className={classes.buttonsDiv}>
+          {isLiked ? (
+            <Tooltip title="Unlike">
+              <IconButton className={classes.likedButton} onClick={handleUnlike}>
+                <FavoriteIcon fontSize="small"/>
+              </IconButton>
+            </Tooltip>
+          ) : (
+            <Tooltip title="Like">
+              <IconButton onClick={handleLike}>
+                <FavoriteBorderIcon fontSize="small" />
+              </IconButton>
+            </Tooltip>
+          )}
+          <Typography variant="subtitle2" color="textSecondary">
+            {likesCount}
+          </Typography>
+          <SvgIcon
+            fontSize="small"
+            color="action"
+            className={classes.membersIcon}
+          >
+            <ShareIcon />
+          </SvgIcon>
+        </div>)}        
         <Box flexGrow={1} />
         <Rating value="4" size="small" readOnly />
       </Box>

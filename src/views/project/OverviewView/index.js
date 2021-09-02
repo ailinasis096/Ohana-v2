@@ -64,7 +64,7 @@ const OverviewView = ({ match, history }) => {
       </Container>
     </Page>
   ) : (
-    <Typography> ERROR </Typography>
+    <Typography>  </Typography>
   );
 };
 

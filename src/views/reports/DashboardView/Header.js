@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState,useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
@@ -15,6 +15,8 @@ import {
 } from '@material-ui/core';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import { Calendar as CalendarIcon } from 'react-feather';
+import CardEvents from 'src/components/CardEvents';
+import api from './../../../api/Api';
 
 const timeRanges = [
   {
@@ -36,7 +38,11 @@ const timeRanges = [
 ];
 
 const useStyles = makeStyles(() => ({
-  root: {}
+  root: {
+    maxWidth: '1280px',
+    margin: '0 183px',
+    padding: '0 24px'
+  }
 }));
 
 const Header = ({ className, ...rest }) => {
@@ -44,6 +50,22 @@ const Header = ({ className, ...rest }) => {
   const actionRef = useRef(null);
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [timeRange, setTimeRange] = useState(timeRanges[2].text);
+  const [mode, setMode] = useState('grid');
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    getEvents();
+  }, []);
+
+  const getEvents = async () => {
+    try {
+      const response = await api.getEvents(3, 15, '');
+      console.log('response: ', response)
+      setEvents(response);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   return (
     <Grid
@@ -110,7 +132,23 @@ const Header = ({ className, ...rest }) => {
           ))}
         </Menu>
       </Grid>
+      {!!events.results && events.results.length > 0 && (
+        <Grid container spacing={3}>
+          {events.results.map(project => (
+            <Grid
+              item
+              key={project.id}
+              md={mode === 'grid' ? 4 : 12}
+              sm={mode === 'grid' ? 6 : 12}
+              xs={12}
+            >
+              <CardEvents project={project} userMode={true}/>
+            </Grid>
+          ))}
+          </Grid>
+        )}
     </Grid>
+    
   );
 };
 
