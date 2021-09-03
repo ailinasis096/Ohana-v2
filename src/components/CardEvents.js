@@ -135,7 +135,7 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
         px={3}
         style={{ overflow: 'hidden', textOverflow: 'ellipsis', width: '24rem' }}
       >
-        <Tooltip title={project.description}>
+        <Tooltip title={project.description.replace(/<\/?[^>]+(>|$)/g, "")}>
           <Typography noWrap color="textSecondary" variant="body2">
             {project.description.replace(/<\/?[^>]+(>|$)/g, "")}
           </Typography>

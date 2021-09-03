@@ -65,7 +65,7 @@ const Header = ({event, className, ...rest }) => {
             variant="subtitle1"
             color="textPrimary"
           >
-            {event.description}
+            {event.description.replace(/<\/?[^>]+(>|$)/g, "")}
           </Typography></div>
           <Grid
             alignItems="center"
