@@ -85,7 +85,7 @@ const Statistics = ({event, className, ...rest }) => {
             variant="h2"
             color="textPrimary"
           >
-            {numeral(recaudado).format('$0,0.000')}
+            {numeral(recaudado).format('$0.00')}
           </Typography>
           <Typography
             className={classes.recaudado}
@@ -106,7 +106,7 @@ const Statistics = ({event, className, ...rest }) => {
             variant="h2"
             color="textPrimary"
           >
-            {numeral(event.goal).format('$0,0.000')}
+            {numeral(event.goal).format('$0.00')}
           </Typography>
           <Typography
             className={classes.overline}
@@ -127,7 +127,7 @@ const Statistics = ({event, className, ...rest }) => {
             variant="h2"
             color="textPrimary"
           >
-            {numeral(falta).format('$0,0.000')}
+            {numeral(falta).format('$0.00')}
           </Typography>
           <Typography
             className={classes.falta}

@@ -42,14 +42,6 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, editM
   const [objetives, setObjetives] = useState([]);
   const [showTextObjetives, setShowTextObjetives] = useState([]);
   const [formValues, setFormValues] = useState(null);
-
-  const today = new Date()
-  const tomorrow = new Date(today)
-  tomorrow.setDate(tomorrow.getDate() + 1)
-
-  const [startDate, setStartDate] = useState(editMode ? event.init_date : dateFnsFormat(today, 'yyyy-MM-dd'));
-  const [endDate, setEndDate] = useState(editMode ? event.end_date : dateFnsFormat(tomorrow, 'yyyy-MM-dd'));
-
   const objetiveOption = ['Monetario', 'Bienes'];
 
   useEffect(() => {
@@ -81,15 +73,10 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, editM
     }
   }, [event])
 
-  const onDateChange = (property) => (value) => {
+  const onDateChange = (value) => {
     const fixedDate = fixDate(value);
     const date = dateFnsFormat(fixedDate, 'yyyy-MM-dd');
-
-    if (property === 'startDate') {
-      setStartDate(date)
-    } else {
-      setEndDate(date)
-    }
+    return date;
   };
 
   const fixDate = (date) => {
@@ -107,9 +94,9 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, editM
       ...data, 
       event_type: values.typeOfObjective === 'Monetario' ? 1 : 0,
       tags: ['Ayudar'],
-      goal: values.money || event.goal,
-      startDate: startDate || event.init_date,
-      endDate: endDate || event.end_date,
+      goal: !!event ? parseInt(event.goal) : values.money,
+      startDate: onDateChange(values.startDate) || event.init_date,
+      endDate: onDateChange(values.endDate) || event.end_date,
     })
   };
   
@@ -125,7 +112,7 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, editM
         startDate: Yup.date().default(() => new Date()),
         endDate: Yup.date().when(
           'startDate',
-          (startDate, schema) => startDate && schema.min(startDate)
+          (startDate, schema) =>  (startDate && schema.min(startDate, 'Fecha fin debe ser posterior a fecha inicio'))
         ),
         money: Yup.number()
           .max(100000000)
@@ -186,7 +173,6 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, editM
                 name="typeOfObjective"
                 select
                 onBlur={handleBlur}
-                onChangeCapture={event => setObjetives(event.target.value)}
                 onChange={handleChange}
                 value={values.typeOfObjective}
                 variant="outlined"
@@ -271,15 +257,16 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, editM
             <Box mt={4} display="flex">
               <DatePicker
                 className={classes.datePicker}
-                label="Fecha de inicio"
-                name="startDate"
                 inputVariant="outlined"
                 format="DD/MM/YYYY"
+                label="Fecha de inicio"
+                name="startDate"
                 okLabel='Aceptar'
                 cancelLabel='Cancelar'
                 clearLabel='Limpiar'
-                value={startDate}
-                onChange={onDateChange('startDate')}
+                onClick={() => setFieldTouched('startDate')}
+                onChange={(date) => setFieldValue('startDate', date)}
+                value={values.startDate}
               />
               <DatePicker
                 className={classes.datePicker}
@@ -290,8 +277,9 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, editM
                 okLabel='Aceptar'
                 cancelLabel='Cancelar'
                 clearLabel='Limpiar'
-                value={endDate}
-                onChange={onDateChange('endDate')}
+                onClick={() => setFieldTouched('endDate')}
+                onChange={(date) => setFieldValue('endDate', date)}
+                value={values.endDate}
               />
             </Box>
             {Boolean(touched.startDate && errors.startDate) && (

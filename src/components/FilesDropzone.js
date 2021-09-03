@@ -75,8 +75,6 @@ const FilesDropzone = ({ setImage, className, ...rest }) => {
     setFiles([]);
   };
 
-  console.log('files: ', files)
-
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop: handleDrop
   });

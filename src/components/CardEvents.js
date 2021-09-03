@@ -137,7 +137,7 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
       >
         <Tooltip title={project.description}>
           <Typography noWrap color="textSecondary" variant="body2">
-            {project.description}
+            {project.description.replace(/<\/?[^>]+(>|$)/g, "")}
           </Typography>
         </Tooltip>
       </Box>
@@ -146,8 +146,8 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
           <Grid item>
             <Typography variant="h5" color="textPrimary">
               {!!project.goal
-                ? numeral(project.goal).format(`$0,0.000`)
-                : numeral(project.donations_count).format(`0,0.000`)}
+                ? numeral(project.goal).format(`$0.00`)
+                : numeral(project.donations_count).format(`$0.00`)}
             </Typography>
             <Typography variant="body2" color="textSecondary">
               Objetivo

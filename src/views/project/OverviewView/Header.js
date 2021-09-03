@@ -10,16 +10,22 @@ import {
 import { Rating } from '@material-ui/lab';
 
 const useStyles = makeStyles((theme) => ({
-  root: {},
+  root: {
+    padding: '0'
+  },
   action: {
     backgroundColor: theme.palette.common.white
   },
   image: {
-    width: '100%',
-    maxHeight: 400
+    width: '400px',
+    height: 'auto'
   },
   grid: {
     marginTop: 5,
+  },
+  divImage: {
+    display: 'flex',
+    justifyContent: 'flex-end'
   }
 }));
 
@@ -42,6 +48,7 @@ const Header = ({event, className, ...rest }) => {
           md={6}
           xs={12}
         >
+          <div className={classes.firstDiv}>
           <Typography
             variant="overline"
             color="textSecondary"
@@ -59,7 +66,7 @@ const Header = ({event, className, ...rest }) => {
             color="textPrimary"
           >
             {event.description}
-          </Typography>
+          </Typography></div>
           <Grid
             alignItems="center"
             container
@@ -69,7 +76,7 @@ const Header = ({event, className, ...rest }) => {
           >
             <Grid item>
               <Rating
-                //value={event.event.rating}
+                value="4"
                 size="small"
                 readOnly
               />
@@ -91,7 +98,7 @@ const Header = ({event, className, ...rest }) => {
             </Grid>
             <Grid item>
               <Typography
-                variant="h<5"
+                variant="h5"
                 color="textPrimary"
               >
                 {event.event_type.name === 'Monetary' ? 'Monetaria' : 'Física'}
@@ -109,6 +116,7 @@ const Header = ({event, className, ...rest }) => {
           <Grid
             item
             md={6}
+            className={classes.divImage}
           >
             <img
               alt="Cover"

@@ -60,7 +60,6 @@ const Header = ({ className, ...rest }) => {
   const getEvents = async () => {
     try {
       const response = await api.getEvents(3, 15, '');
-      console.log('response: ', response)
       setEvents(response);
     } catch (err) {
       console.error(err);

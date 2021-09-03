@@ -35,9 +35,6 @@ const ProjectDescription = ({ eventId, data, className, onBack, onComplete, edit
     setImage(value);
   };
 
-  console.log('data: ', data)
-  console.log('typeof: ', typeof data.goal)
-
   const arrangeData = () => {
     let form = {}
     if (editMode) {

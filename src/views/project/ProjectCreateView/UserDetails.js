@@ -43,7 +43,7 @@ const UserDetails = ({ setData, event, className, onBack, onNext, ...rest }) => 
   const categoryOption = ['Animales', 'Personas'];
   const [category, setCategory] = useState([]);
   const [formValues, setFormValues] = useState(null);
-
+  
   const initialValues = {
     projectName: '' ,
     ubication: '',
@@ -65,6 +65,12 @@ const UserDetails = ({ setData, event, className, onBack, onNext, ...rest }) => 
     }
   }, [event])
 
+  const updateEvent = (value) => {
+    if(!!event){ 
+      event.description = value;
+    }
+  };
+
   const arrangeData = (values) => {
     setData({
       name: values.projectName || event.name,
@@ -74,7 +80,7 @@ const UserDetails = ({ setData, event, className, onBack, onNext, ...rest }) => 
         postal_code: 5000,
         street: values.ubication || event.location.street,
       },
-      description: values.description.replace(/<\/?[^>]+(>|$)/g, "") || event.description,
+      description: !!event ? event.description : values.description.replace(/<\/?[^>]+(>|$)/g, ""),
       image: !!event ? event.image : '' ,
         //category: 'Animales'
     })
@@ -161,7 +167,7 @@ const UserDetails = ({ setData, event, className, onBack, onNext, ...rest }) => 
               <QuillEditor
                 className={classes.editor}
                 value={values.description}
-                onChange={value => setFieldValue('description', value)}
+                onChange={value => (setFieldValue('description', value), updateEvent(value))}
               />
             </Paper>
           </Box>
