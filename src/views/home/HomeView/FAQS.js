@@ -46,7 +46,7 @@ const FAQS = ({ className, ...rest }) => {
               </dt>
               <dd>
                 <Typography variant="body1" color="textSecondary">
-                  El máximo de campañas activas por usuario son 3.
+                  No! Podes tener activas tantas campañas como desees.
                 </Typography>
               </dd>
             </Box>

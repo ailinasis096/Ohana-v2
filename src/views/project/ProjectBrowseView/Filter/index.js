@@ -1,47 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import {
-  Box,
-  Card,
-  Chip,
-  Divider,
-  Input,
-  makeStyles
-} from '@material-ui/core';
+import { Box, Card, Chip, Divider, Input, makeStyles } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import MultiSelect from './MultiSelect';
+import api from '../../../../api/Api';
 
 const selectOptions = [
   {
-    label: 'Categoria',
-    options: [
-      'Animales',
-      'Salud',
-      'ONGs',
-      'Medio Ambiente',
-      'Otros'
-    ]
-  },
-  {
     label: 'Tipo',
-    options: [
-      'Monetaria',
-      'Fisica',]
+    options: ['Monetaria', 'Fisica']
   },
   {
     label: 'Ubicación',
-    options: [
-      'Córdoba',
-      'Buenos Aires',
-      'Neuquén',
-      'Mendoza',
-      'Salta',
-    ]
-  },
+    options: ['Córdoba', 'Buenos Aires', 'Neuquén', 'Mendoza', 'Salta']
+  }
 ];
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {},
   searchInput: {
     marginLeft: theme.spacing(2)
@@ -51,34 +26,48 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const Filter = ({ className, fetchEvent, ...rest  }) => {
+const Filter = ({ className, fetchEvent, ...rest }) => {
+  let [category, setCategory] = useState([]);
+  const options = [];
   const classes = useStyles();
   const [inputValue, setInputValue] = useState('');
-  const [chips, setChips] = useState([
-    'Monetaria'
-  ]);
+  const [chips, setChips] = useState(['Monetaria']);
 
-  const handleInputChange = (event) => {
+  useEffect(() => {
+    api.getCategories().then(response => {
+      try {
+        setCategory((category = response));
+        category.map(opt => {
+          options.push(opt.name);
+        });
+        selectOptions.push({ label: 'Categoría', options: options });
+      } catch (e) {
+        console.log(e);
+      }
+    });
+  }, []);
+
+  const handleInputChange = event => {
     event.persist();
     setInputValue(event.target.value);
   };
 
-  const handleInputKeyup = (event) => {
+  const handleInputKeyup = event => {
     event.persist();
 
     if (event.keyCode === 13 && inputValue) {
       if (!chips.includes(inputValue)) {
-        setChips((prevChips) => [...prevChips, inputValue]);
+        setChips(prevChips => [...prevChips, inputValue]);
         setInputValue('');
       }
     }
   };
 
-  const handleChipDelete = (chip) => {
-    setChips((prevChips) => prevChips.filter((prevChip) => chip !== prevChip));
+  const handleChipDelete = chip => {
+    setChips(prevChips => prevChips.filter(prevChip => chip !== prevChip));
   };
 
-  const handleMultiSelectChange = (value) => {
+  const handleMultiSelectChange = value => {
     setChips(value);
   };
 
@@ -87,15 +76,8 @@ const Filter = ({ className, fetchEvent, ...rest  }) => {
   }, [inputValue]);
 
   return (
-    <Card
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
-      <Box
-        p={2}
-        display="flex"
-        alignItems="center"
-      >
+    <Card className={clsx(classes.root, className)} {...rest}>
+      <Box p={2} display="flex" alignItems="center">
         <SearchIcon />
         <Input
           disableUnderline
@@ -108,13 +90,8 @@ const Filter = ({ className, fetchEvent, ...rest  }) => {
         />
       </Box>
       <Divider />
-      <Box
-        p={2}
-        display="flex"
-        alignItems="center"
-        flexWrap="wrap"
-      >
-        {chips.map((chip) => (
+      <Box p={2} display="flex" alignItems="center" flexWrap="wrap">
+        {chips.map(chip => (
           <Chip
             className={classes.chip}
             key={chip}
@@ -124,13 +101,8 @@ const Filter = ({ className, fetchEvent, ...rest  }) => {
         ))}
       </Box>
       <Divider />
-      <Box
-        display="flex"
-        alignItems="center"
-        flexWrap="wrap"
-        p={1}
-      >
-        {selectOptions.map((option) => (
+      <Box display="flex" alignItems="center" flexWrap="wrap" p={1}>
+        {selectOptions.map(option => (
           <MultiSelect
             key={option.label}
             label={option.label}

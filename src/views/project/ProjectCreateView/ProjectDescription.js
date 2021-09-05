@@ -1,17 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import api from './../../../api/Api'
+import api from './../../../api/Api';
 import {
   Box,
   Button,
   FormHelperText,
+  makeStyles,
   TextField,
-  Typography,
-  makeStyles
+  Typography
 } from '@material-ui/core';
-
-import FilesDropzone from 'src/components/FilesDropzone';
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -25,7 +23,15 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ProjectDescription = ({ eventId, data, className, onBack, onComplete, editMode, ...rest }) => {
+const ProjectDescription = ({
+  eventId,
+  data,
+  className,
+  onBack,
+  onComplete,
+  editMode,
+  ...rest
+}) => {
   const classes = useStyles();
   const [isSubmitting, setSubmitting] = useState(false);
   const [error, setError] = useState(null);
@@ -36,76 +42,86 @@ const ProjectDescription = ({ eventId, data, className, onBack, onComplete, edit
   };
 
   const arrangeData = () => {
-    let form = {}
+    let form = {};
     if (editMode) {
+      console.log('FORMULARIO A ENVIAR: ', data);
       form = {
         attention_schedule: [
           {
-              "day": 1,
-              "from_time": "09:00:00",
-              "to_time": "13:00:00"
+            day: 1,
+            from_time: '09:00:00',
+            to_time: '13:00:00'
           },
           {
-            "day": 2,
-            "from_time": "09:00:00",
-            "to_time": "13:00:00"
-          },
+            day: 2,
+            from_time: '09:00:00',
+            to_time: '13:00:00'
+          }
         ],
         name: data.name,
+        category: data.category,
         init_date: data.startDate,
         end_date: data.endDate,
         description: data.description,
         event_type: data.event_type,
-        image: image === '' ? "https://www.argentina.gob.ar/sites/default/files/vinetas_justicia_cerca_04_quiero_donar_mis_organos.png" : image,
+        image:
+          image === ''
+            ? 'https://www.argentina.gob.ar/sites/default/files/vinetas_justicia_cerca_04_quiero_donar_mis_organos.png'
+            : image,
         goal: data.goal,
         contact: {
-            id: eventId,
-            name: "Elías Gomis Cabeza",
-            phone: "001-321-201-9918x5660",
-            email: "duiliocatalan@hotmail.com"
+          id: eventId,
+          name: 'Elías Gomis Cabeza',
+          phone: '001-321-201-9918x5660',
+          email: 'duiliocatalan@hotmail.com'
         },
         location: {
-            id: eventId,
-            street: data.location.street,
-            address_line: "Avenida Seve Carmona 128",
-            postal_code: 5000
+          id: eventId,
+          street: data.location.street,
+          address_line: 'Avenida Seve Carmona 128',
+          postal_code: 5000
         }
-      }
-
+      };
     } else {
+      console.log('Else Data: ', data);
       form = {
         attention_schedule: [
           {
-              "day": 1,
-              "from_time": "09:00:00",
-              "to_time": "13:00:00"
+            day: 1,
+            from_time: '09:00:00',
+            to_time: '13:00:00'
           },
           {
-            "day": 2,
-            "from_time": "09:00:00",
-            "to_time": "13:00:00"
-          },
+            day: 2,
+            from_time: '09:00:00',
+            to_time: '13:00:00'
+          }
         ],
         name: data.name,
+        category: data.category,
         init_date: data.startDate,
         end_date: data.endDate,
         description: data.description,
         event_type: data.event_type,
         goal: data.goal,
-        image: image === '' ? "https://www.argentina.gob.ar/sites/default/files/vinetas_justicia_cerca_04_quiero_donar_mis_organos.png" : image,
+        image:
+          image === ''
+            ? 'https://www.argentina.gob.ar/sites/default/files/vinetas_justicia_cerca_04_quiero_donar_mis_organos.png'
+            : image,
         contact: {
-            name: "Elías Gomis Cabeza",
-            phone: "001-321-201-9918x5660",
-            email: "duiliocatalan@hotmail.com"
+          name: 'Elías Gomis Cabeza',
+          phone: '001-321-201-9918x5660',
+          email: 'duiliocatalan@hotmail.com'
         },
         location: {
-            street: data.location.street,
-            address_line: "Avenida Seve Carmona 128",
-            postal_code: 5000
+          street: data.location.street,
+          address_line: 'Avenida Seve Carmona 128',
+          postal_code: 5000
         }
-      }
+      };
     }
-    return form
+    console.log('Formulario a enviar: ', form);
+    return form;
   };
 
   const handleSubmit = async event => {
@@ -113,9 +129,9 @@ const ProjectDescription = ({ eventId, data, className, onBack, onComplete, edit
 
     try {
       setSubmitting(true);
-      let form = arrangeData()
+      let form = arrangeData();
       if (editMode) {
-        await api.updateEvent(eventId, form)
+        await api.updateEvent(eventId, form);
       } else {
         await api.createEvent(form);
       }
@@ -130,17 +146,17 @@ const ProjectDescription = ({ eventId, data, className, onBack, onComplete, edit
     }
   };
 
-    /*
-      <Typography variant="h3" color="textPrimary">
-        Agregar documentos
+  /*
+    <Typography variant="h3" color="textPrimary">
+      Agregar documentos
+    </Typography>
+    <Box mt={2}>
+      <Typography variant="subtitle1" color="textSecondary">
+        Seleccione los documentos que desea subir
       </Typography>
-      <Box mt={2}>
-        <Typography variant="subtitle1" color="textSecondary">
-          Seleccione los documentos que desea subir
-        </Typography>
-        <FilesDropzone setImage={setImage} />
-      </Box>
-    */
+      <FilesDropzone setImage={setImage} />
+    </Box>
+  */
 
   return (
     <form

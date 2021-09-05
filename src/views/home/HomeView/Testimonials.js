@@ -32,9 +32,9 @@ const Testimonials = ({ className, ...rest }) => {
           color="textPrimary"
           className={classes.title}
         >
-          &quot;Disponete a formar parte del cambio
+          &quot;¡Forma parte del cambio!
           <br />
-          Con Ohana vos también podes.&quot;
+          Con Ohana vos también podes&quot;
         </Typography>
         <Box mt={6} display="flex" justifyContent="center" alignItems="center">
           <Avatar src="/static/home/olivier.png" />

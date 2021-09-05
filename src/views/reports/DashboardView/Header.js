@@ -1,4 +1,4 @@
-import React, { useRef, useState,useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
@@ -59,7 +59,8 @@ const Header = ({ className, ...rest }) => {
 
   const getEvents = async () => {
     try {
-      const response = await api.getEvents(3, 15, '');
+      const response = await api.getEvents(2, 15, '');
+
       setEvents(response);
     } catch (err) {
       console.error(err);
@@ -141,13 +142,12 @@ const Header = ({ className, ...rest }) => {
               sm={mode === 'grid' ? 6 : 12}
               xs={12}
             >
-              <CardEvents project={project} userMode={true}/>
+              <CardEvents project={project} userMode={true} />
             </Grid>
           ))}
-          </Grid>
-        )}
+        </Grid>
+      )}
     </Grid>
-    
   );
 };
 

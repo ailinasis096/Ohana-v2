@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import * as Yup from 'yup';
@@ -9,12 +9,11 @@ import {
   Chip,
   FormHelperText,
   IconButton,
+  makeStyles,
   SvgIcon,
   TextField,
-  Typography,
-  makeStyles
+  Typography
 } from '@material-ui/core';
-import { KeyboardDatePicker } from '@material-ui/pickers';
 import { DatePicker } from '@material-ui/pickers';
 import { Plus as PlusIcon } from 'react-feather';
 import dateFnsFormat from 'date-fns/format';
@@ -36,7 +35,16 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ProjectDetails = ({ data, setData, event, className, onBack, onNext, editMode, ...rest }) => {
+const ProjectDetails = ({
+  data,
+  setData,
+  event,
+  className,
+  onBack,
+  onNext,
+  editMode,
+  ...rest
+}) => {
   const classes = useStyles();
   const [tag, setTag] = useState('');
   const [objetives, setObjetives] = useState([]);
@@ -57,10 +65,13 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, editM
     startDate: new Date(),
     endDate: new Date(),
     descriptionOfObjective: 0
-  }
+  };
 
   useEffect(() => {
     if (!!event) {
+      console.log('EVENTO: ', event);
+      console.log('EVENTO MONEY: ', event.goal);
+      console.log('EVENTO INIT_DATE: ', event.init_date);
       const loadValues = {
         typeOfObjective: event.event_type.id === 1 ? 'Monetario' : 'Bienes',
         tags: ['Ayudar'],
@@ -68,18 +79,18 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, editM
         startDate: event.init_date,
         endDate: event.end_date,
         descriptionOfObjective: 0
-      }
-      setFormValues(loadValues)
+      };
+      setFormValues(loadValues);
     }
-  }, [event])
+  }, [event]);
 
-  const onDateChange = (value) => {
+  const onDateChange = value => {
     const fixedDate = fixDate(value);
     const date = dateFnsFormat(fixedDate, 'yyyy-MM-dd');
     return date;
   };
 
-  const fixDate = (date) => {
+  const fixDate = date => {
     let fixedDate = date ? new Date(date) : null;
     if (fixedDate) {
       fixedDate = new Date(
@@ -89,17 +100,19 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, editM
     return fixedDate;
   };
 
-  const arrangeData = (values) => {
+  const arrangeData = values => {
+    console.log('values PROJECT DETAILS: ', values.money);
+    console.log('Evento PROJECT DETAILS: ', event.goal);
     setData({
-      ...data, 
+      ...data,
       event_type: values.typeOfObjective === 'Monetario' ? 1 : 0,
       tags: ['Ayudar'],
-      goal: !!event ? parseInt(event.goal) : values.money,
+      goal: !!event ? parseInt(values.money) : event.goal,
       startDate: onDateChange(values.startDate) || event.init_date,
-      endDate: onDateChange(values.endDate) || event.end_date,
-    })
+      endDate: onDateChange(values.endDate) || event.end_date
+    });
   };
-  
+
   return (
     <Formik
       enableReinitialize
@@ -112,7 +125,9 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, editM
         startDate: Yup.date().default(() => new Date()),
         endDate: Yup.date().when(
           'startDate',
-          (startDate, schema) =>  (startDate && schema.min(startDate, 'Fecha fin debe ser posterior a fecha inicio'))
+          (startDate, schema) =>
+            startDate &&
+            schema.min(startDate, 'Fecha fin debe ser posterior a fecha inicio')
         ),
         money: Yup.number()
           .max(100000000)
@@ -125,6 +140,7 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, editM
           // decides to continue later.
           setStatus({ success: true });
           setSubmitting(false);
+          console.log('VALUES: ', values);
           arrangeData(values);
           if (onNext) {
             onNext();
@@ -261,11 +277,11 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, editM
                 format="DD/MM/YYYY"
                 label="Fecha de inicio"
                 name="startDate"
-                okLabel='Aceptar'
-                cancelLabel='Cancelar'
-                clearLabel='Limpiar'
+                okLabel="Aceptar"
+                cancelLabel="Cancelar"
+                clearLabel="Limpiar"
                 onClick={() => setFieldTouched('startDate')}
-                onChange={(date) => setFieldValue('startDate', date)}
+                onChange={date => setFieldValue('startDate', date)}
                 value={values.startDate}
               />
               <DatePicker
@@ -274,11 +290,11 @@ const ProjectDetails = ({ data, setData, event, className, onBack, onNext, editM
                 name="endDate"
                 inputVariant="outlined"
                 format="DD/MM/YYYY"
-                okLabel='Aceptar'
-                cancelLabel='Cancelar'
-                clearLabel='Limpiar'
+                okLabel="Aceptar"
+                cancelLabel="Cancelar"
+                clearLabel="Limpiar"
                 onClick={() => setFieldTouched('endDate')}
-                onChange={(date) => setFieldValue('endDate', date)}
+                onChange={date => setFieldValue('endDate', date)}
                 value={values.endDate}
               />
             </Box>

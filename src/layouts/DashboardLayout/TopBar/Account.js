@@ -1,23 +1,19 @@
-import React, {
-  useRef,
-  useState
-} from 'react';
-import { Link as RouterLink } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+import React, { useRef, useState } from 'react';
+import { Link as RouterLink, useHistory } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
 import {
   Avatar,
   Box,
   ButtonBase,
   Hidden,
+  makeStyles,
   Menu,
   MenuItem,
-  Typography,
-  makeStyles
+  Typography
 } from '@material-ui/core';
 import useAuth from 'src/hooks/useAuth';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   avatar: {
     height: 32,
     width: 32,
@@ -37,9 +33,10 @@ const Account = () => {
   const [isOpen, setOpen] = useState(false);
 
   const user = {
-    name: 'Florencia Acosta',
-    avatar: 'https://i.pinimg.com/236x/c8/86/72/c886720b5088f74e6907ec908ed14930.jpg',
-  }
+    name: 'Magdalena Jover',
+    avatar:
+      'https://i.pinimg.com/236x/c8/86/72/c886720b5088f74e6907ec908ed14930.jpg'
+  };
 
   const handleOpen = () => {
     setOpen(true);
@@ -71,16 +68,9 @@ const Account = () => {
         onClick={handleOpen}
         ref={ref}
       >
-        <Avatar
-          alt="User"
-          className={classes.avatar}
-          src={user.avatar}
-        />
+        <Avatar alt="User" className={classes.avatar} src={user.avatar} />
         <Hidden smDown>
-          <Typography
-            variant="h6"
-            color="primary"
-          >
+          <Typography variant="h6" color="primary">
             {user.name}
           </Typography>
         </Hidden>
@@ -97,24 +87,16 @@ const Account = () => {
         anchorEl={ref.current}
         open={isOpen}
       >
-        <MenuItem
-          component={RouterLink}
-          to="/app/social/profile"
-        >
+        <MenuItem component={RouterLink} to="/app/social/profile">
           Perfil
         </MenuItem>
-        <MenuItem
-          component={RouterLink}
-          to="/app/account"
-        >
+        <MenuItem component={RouterLink} to="/app/account">
           Mi cuenta
         </MenuItem>
-        <MenuItem onClick={handleLogout}>
-          Cerrar sesión
-        </MenuItem>
+        <MenuItem onClick={handleLogout}>Cerrar sesión</MenuItem>
       </Menu>
     </>
   );
-}
+};
 
 export default Account;

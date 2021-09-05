@@ -10,6 +10,7 @@ import {
   makeStyles,
   Typography
 } from '@material-ui/core';
+import heart from '../../../assets/heart_ohana.png';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,6 +21,16 @@ const useStyles = makeStyles(theme => ({
   avatar: {
     backgroundColor: theme.palette.secondary.main,
     color: theme.palette.secondary.contrastText
+  },
+  heart: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+    alignContent: 'center',
+    textAlign: 'center'
+  },
+  content: {
+    textAlign: 'left'
   }
 }));
 
@@ -28,31 +39,33 @@ const Features = ({ className, ...rest }) => {
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" className={classes.heart}>
         <Typography
           component="p"
           variant="overline"
           color="secondary"
           align="center"
         >
-          ¡Explora nuestro sistema de gestión de campañas!
+          ¡Conoce OHANA!
         </Typography>
-        <Typography variant="h1" align="center" color="textPrimary">
-          ¡Empecemos!
-        </Typography>
-        <Box mt={8}>
+        {/*<Typography variant="h1" align="center" color="textPrimary">
+          Ayudar nunca fue tan fácil
+        </Typography>*/}
+
+        <img src={heart} alt="heart" width="15%" />
+
+        <Box mt={8} className={classes.content}>
           <Grid container spacing={3}>
             <Grid item xs={12} md={4}>
-              <Box display="flex">
+              <Box display="flex" style={{ alignContent: 'flex-start' }}>
                 <Avatar className={classes.avatar}>01</Avatar>
                 <Box ml={2}>
                   <Typography variant="h4" gutterBottom color="textPrimary">
-                    Crea tu campaña
+                    Iniciar una campaña
                   </Typography>
                   <Typography variant="body1" color="textPrimary">
-                    Not just a set of tools, the package includes the most
-                    common use cases of user flows like User Management, Second
-                    Level Layout.
+                    Crea una recaudación de fondos en OHANA en pocos minutos a
+                    través de un procedimiento fácil y rápido.
                   </Typography>
                 </Box>
               </Box>
@@ -62,12 +75,12 @@ const Features = ({ className, ...rest }) => {
                 <Avatar className={classes.avatar}>02</Avatar>
                 <Box ml={2}>
                   <Typography variant="h4" gutterBottom color="textPrimary">
-                    Dale seguimiento
+                    Comparte tu historia
                   </Typography>
                   <Typography variant="body1" color="textPrimary">
-                    The kit provides support for multiple third-party plugins
-                    right out of the box like Chart.js, Dropzone.js, Kanban
-                    Plugin and many more.
+                    Comparte tu recaudación de fondos para obtener apoyo. Los
+                    instrumentos para compartir en redes sociales te ayudarán a
+                    obtener visibilidad y donativos.
                   </Typography>
                 </Box>
               </Box>
@@ -77,17 +90,17 @@ const Features = ({ className, ...rest }) => {
                 <Avatar className={classes.avatar}>03</Avatar>
                 <Box ml={2}>
                   <Typography variant="h4" gutterBottom color="textPrimary">
-                    Obtené reportes e información útil
+                    Gestiona tu campaña
                   </Typography>
                   <Typography variant="body1" color="textPrimary" gutterBottom>
-                    We&apos;ve included the source Sketch &amp; Figma files to
-                    Plus &amp; Extended licenses so you can get creative! Build
-                    layouts with confidence.
+                    Recibe notificaciones sobre los nuevos donativos, mantén
+                    informados a tus donantes, envía agradecimientos y gestiona
+                    las retiradas de fondos.
                   </Typography>
                   <Button
                     variant="outlined"
                     component="a"
-                    href="https://sketch.cloud/s/q4a8e"
+                    href="/app"
                     target="_blank"
                   >
                     ¿Querés ver cómo gestionarlas?

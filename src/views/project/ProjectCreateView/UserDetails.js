@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import * as Yup from 'yup';
-import { Formik, Field, Form, useFormikContext } from "formik";
+import { Formik, useFormikContext } from 'formik';
 import {
   Box,
   Button,
   FormHelperText,
-  TextField,
-  Typography,
   makeStyles,
-  Paper
+  Paper,
+  TextField,
+  Typography
 } from '@material-ui/core';
-
+import api from '../../../api/Api.js';
 import QuillEditor from 'src/components/QuillEditor';
 
 const useStyles = makeStyles(theme => ({
@@ -35,55 +35,75 @@ const useStyles = makeStyles(theme => ({
 const Ottro = () => {
   const { values } = useFormikContext();
   return null;
-}
+};
 
-const UserDetails = ({ setData, event, className, onBack, onNext, ...rest }) => {
+const UserDetails = ({
+  setData,
+  event,
+  className,
+  onBack,
+  onNext,
+  ...rest
+}) => {
   const classes = useStyles();
   const [error, setError] = useState(null);
-  const categoryOption = ['Animales', 'Personas'];
-  const [category, setCategory] = useState([]);
+  let [categoryOption, setCategoryOption] = useState([]); // Me carga el  json con las opciones
+  let [category, setCategory] = useState(1); //Me guarda la opción seleccionada
   const [formValues, setFormValues] = useState(null);
-  
+
   const initialValues = {
-    projectName: '' ,
+    projectName: '',
     ubication: '',
     description: '',
     submit: null,
-    category: ''
-  }
+    category: 1
+  };
+
+  //Obtiene el json con las categorias y las setea en categoryOption
+  useEffect(() => {
+    api.getCategories().then(response => {
+      try {
+        setCategoryOption((categoryOption = response));
+      } catch (e) {
+        console.log(e);
+      }
+    });
+  }, []);
 
   useEffect(() => {
     if (!!event) {
       const loadValues = {
-        projectName: event.name ,
+        projectName: event.name,
         ubication: event.location.street,
         description: event.description,
         submit: null,
-        category: 'Animales'
-      }
-      setFormValues(loadValues)
+        category: event.category.id
+      };
+      setFormValues(loadValues);
     }
-  }, [event])
+  }, [event]);
 
-  const updateEvent = (value) => {
-    if(!!event){ 
+  const updateEvent = value => {
+    if (!!event) {
       event.description = value;
     }
   };
 
-  const arrangeData = (values) => {
+  const arrangeData = values => {
+    console.log('VALORES CAT: ', values.category);
     setData({
       name: values.projectName || event.name,
-      location: 
-      {
-        address_line: "Avenida Seve Carmona 128",
+      location: {
+        address_line: 'Avenida Seve Carmona 128',
         postal_code: 5000,
-        street: values.ubication || event.location.street,
+        street: values.ubication || event.location.street
       },
-      description: !!event ? event.description : values.description.replace(/<\/?[^>]+(>|$)/g, ""),
-      image: !!event ? event.image : '' ,
-        //category: 'Animales'
-    })
+      description: !!event
+        ? event.description
+        : values.description.replace(/<\/?[^>]+(>|$)/g, ''),
+      image: !!event ? event.image : '',
+      category: !!event ? event.category.id : values.category
+    });
   };
 
   return (
@@ -99,9 +119,7 @@ const UserDetails = ({ setData, event, className, onBack, onNext, ...rest }) => 
           .min(3, 'Must be at least 3 characters')
           .max(255)
           .required('Detalle una ubicación'),
-        category: Yup.string()
-          .required('Selecciona una categoría')
-          .oneOf(categoryOption)
+        category: Yup.number()
       })}
       onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
         try {
@@ -110,7 +128,8 @@ const UserDetails = ({ setData, event, className, onBack, onNext, ...rest }) => 
           // decides to continue later.
           setStatus({ success: true });
           setSubmitting(false);
-          arrangeData(values)
+
+          arrangeData(values);
           if (onNext) {
             onNext();
           }
@@ -167,7 +186,9 @@ const UserDetails = ({ setData, event, className, onBack, onNext, ...rest }) => 
               <QuillEditor
                 className={classes.editor}
                 value={values.description}
-                onChange={value => (setFieldValue('description', value), updateEvent(value))}
+                onChange={value => (
+                  setFieldValue('description', value), updateEvent(value)
+                )}
               />
             </Paper>
           </Box>
@@ -194,7 +215,7 @@ const UserDetails = ({ setData, event, className, onBack, onNext, ...rest }) => 
               name="category"
               onBlur={handleBlur}
               onChangeCapture={event => {
-                setCategory(event.target.value);
+                setCategory((category = parseInt(event.target.value)));
               }}
               onChange={handleChange}
               value={values.category}
@@ -204,8 +225,8 @@ const UserDetails = ({ setData, event, className, onBack, onNext, ...rest }) => 
               <>
                 <option defaultValue="" disabled selected />
                 {categoryOption.map(option => (
-                  <option key={option} value={option}>
-                    {option}
+                  <option key={option.id} value={option.id}>
+                    {option.name}
                   </option>
                 ))}
               </>
@@ -216,7 +237,7 @@ const UserDetails = ({ setData, event, className, onBack, onNext, ...rest }) => 
               <FormHelperText error>{error}</FormHelperText>
             </Box>
           )}
-          <Ottro/>
+          <Ottro />
           <Box mt={6} display="flex">
             {onBack && (
               <Button onClick={onBack} size="large">

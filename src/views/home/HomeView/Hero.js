@@ -8,9 +8,8 @@ import {
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import React from 'react';
-import donar from '../../../assets/donar.png';
-import family from '../../../assets/family.png';
 import phone from '../../../assets/phone_ohana.png';
+import logo from '../../../assets/logo.png';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -66,11 +65,13 @@ const Hero = ({ className, ...rest }) => {
               {/* <Typography variant="overline" color="secondary">
                 Introducing
               </Typography> */}
-              <Typography variant="h1" color="textPrimary">
-                ¡Nosotros somos Ohana!
-              </Typography>
+              <img src={logo} alt="Ohana" />
               <Box mt={3}>
-                <Typography variant="body1" color="textSecondary">
+                <Typography
+                  variant="body1"
+                  color="textSecondary"
+                  style={{ textAlign: 'center' }}
+                >
                   Red social solidaria para fomentar la participación ciudadana
                   en distintas campañas y ayudar a más personas.
                 </Typography>
@@ -104,7 +105,7 @@ const Hero = ({ className, ...rest }) => {
                 </Grid>
               </Box> */}
               <Box mt={3}>
-                <img
+                {/*<img
                   alt="Javascript"
                   className={classes.technologyIcon}
                   src={donar}
@@ -113,7 +114,7 @@ const Hero = ({ className, ...rest }) => {
                   alt="Typescript"
                   className={classes.technologyIcon}
                   src={family}
-                />
+                />*/}
               </Box>
             </Box>
           </Grid>

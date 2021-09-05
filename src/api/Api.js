@@ -49,30 +49,41 @@ class API {
       const { data } = await axiosInstance.get(`/user`);
       return data;
     } */
+
+  //Crear campañas
   static async createEvent(form) {
-    console.log('form: ', form)
+    console.log('FORMULARIO API: ', form);
     let path = `/api/events/create/`;
     const { data } = await axiosInstance.post(path, form);
     return data;
   }
 
+  // Actualizar campañas de donaciones
   static async updateEvent(id, form) {
-    console.log('form: ', form)
     let path = `/api/events/update/${id}/`;
     const { data } = await axiosInstance.put(path, form);
     return data;
   }
 
+  //Obtener campañas
   static async getEvents(page = 1, pageSize = 15, search) {
-    let path = !!search 
+    let path = !!search
       ? `/api/events/list/?page=${page}&page_size=${pageSize}&q=${search}`
       : `/api/events/list/?page=${page}&page_size=${pageSize}`;
     const { data } = await axiosInstance.get(path);
     return data;
   }
 
+  //Filtro de campaña por Id
   static async getEventById(id) {
     let path = `/api/events/get/${id}/`;
+    const { data } = await axiosInstance.get(path);
+    return data;
+  }
+
+  //Obtener las categorías posibles de las campañas
+  static async getCategories() {
+    let path = `/api/events/categories/list/`;
     const { data } = await axiosInstance.get(path);
     return data;
   }
