@@ -69,9 +69,6 @@ const ProjectDetails = ({
 
   useEffect(() => {
     if (!!event) {
-      console.log('EVENTO: ', event);
-      console.log('EVENTO MONEY: ', event.goal);
-      console.log('EVENTO INIT_DATE: ', event.init_date);
       const loadValues = {
         typeOfObjective: event.event_type.id === 1 ? 'Monetario' : 'Bienes',
         tags: ['Ayudar'],

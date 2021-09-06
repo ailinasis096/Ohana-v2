@@ -6,16 +6,6 @@ import SearchIcon from '@material-ui/icons/Search';
 import MultiSelect from './MultiSelect';
 import api from '../../../../api/Api';
 
-const selectOptions = [
-  {
-    label: 'Tipo',
-    options: ['Monetaria', 'Fisica']
-  },
-  {
-    label: 'Ubicación',
-    options: ['Córdoba', 'Buenos Aires', 'Neuquén', 'Mendoza', 'Salta']
-  }
-];
 const useStyles = makeStyles(theme => ({
   root: {},
   searchInput: {
@@ -27,26 +17,46 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Filter = ({ className, fetchEvent, ...rest }) => {
-  let [category, setCategory] = useState([]);
-  const options = [];
   const classes = useStyles();
   const [inputValue, setInputValue] = useState('');
+  const [selectOptions, setSelectOptions] = useState([]);
+  const [categoriesNames, setCategoriesNames] = useState([]);
+
   const [chips, setChips] = useState(['Monetaria']);
 
   useEffect(() => {
-    api.getCategories().then(response => {
-      try {
-        setCategory((category = response));
-        category.map(opt => {
-          options.push(opt.name);
-        });
-        selectOptions.push({ label: 'Categoría', options: options });
-      } catch (e) {
-        console.log(e);
-      }
-    });
+    fetchCategories();
   }, []);
 
+  useEffect(() => {
+    setSelectOptions([
+      {
+        label: 'Tipo',
+        options: ['Monetaria', 'Fisica']
+      },
+      {
+        label: 'Ubicación',
+        options: ['Córdoba', 'Buenos Aires', 'Neuquén', 'Mendoza', 'Salta']
+      },
+      {
+        label: 'Categoría',
+        options: categoriesNames
+      }
+    ])
+  }, [categoriesNames]);
+
+  const fetchCategories = async() => {
+    let catNames = [];
+    try {
+      let response = await api.getCategories();
+      response.map((category) => 
+        catNames.push(category.name)
+      )
+      setCategoriesNames(catNames);
+    } catch (e) {
+      console.error(e);
+    }
+  };
   const handleInputChange = event => {
     event.persist();
     setInputValue(event.target.value);
