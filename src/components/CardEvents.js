@@ -54,6 +54,9 @@ const useStyles = makeStyles(theme => ({
   },
   buttonsDiv: {
     display: 'contents'
+  },
+  nameBox: {
+    display:'grid'
   }
 }));
 
@@ -91,7 +94,7 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
           >
             {getInitials(project.contact.name)}
           </Avatar>
-          <Box ml={2}>
+          <Box className={classes.nameBox} ml={2}>
             <Link
               color="textPrimary"
               component={RouterLink}

@@ -33,7 +33,7 @@ const Account = () => {
   const [isOpen, setOpen] = useState(false);
 
   const user = {
-    name: 'Magdalena Jover',
+    name: 'Elías Gomis Cabeza ',
     avatar:
       'https://i.pinimg.com/236x/c8/86/72/c886720b5088f74e6907ec908ed14930.jpg'
   };

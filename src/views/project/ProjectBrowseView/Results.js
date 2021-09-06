@@ -24,6 +24,14 @@ const useStyles = makeStyles(theme => ({
     textTransform: 'none',
     letterSpacing: 0,
     marginRight: theme.spacing(2)
+  },
+  divNoResults: {
+    textAlign: 'center',
+    margin: '55px 20px'
+  },
+  imgNoResults: {
+    width: '50%',
+    paddingTop: '20px'
   }
 }));
 
@@ -54,7 +62,23 @@ const Results = ({ className, projects, fetchEvent, ...rest }) => {
   };
 
   return (
-    !!projects.results && (
+    !!projects.results && projects.results.length === 0 ? (
+      <div className={classes.divNoResults}>
+        <Typography
+        variant="h4"
+        color="textPrimary"
+      >
+        No se encontraron resultados
+      </Typography>
+      
+            <img
+              alt="No se encontraron resultados"
+              className={classes.imgNoResults}
+              src="/static/images/drawkit-grape-pack-illustration-15.svg"
+            />
+        </div>
+    ) : 
+    (!!projects.results && (
       <div className={clsx(classes.root, className)} {...rest}>
         <Box
           display="flex"
@@ -100,7 +124,7 @@ const Results = ({ className, projects, fetchEvent, ...rest }) => {
           <Pagination count={getPageSize()} onChange={handleChange} />
         </Box>
       </div>
-    )
+    ))
   );
 };
 
