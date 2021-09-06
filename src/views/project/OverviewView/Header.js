@@ -53,7 +53,7 @@ const Header = ({event, className, ...rest }) => {
             variant="overline"
             color="textSecondary"
           >
-            {event.category || 'Personas'}
+            {event.category.name || 'Personas'}
           </Typography>
           <Typography
             variant="h3"

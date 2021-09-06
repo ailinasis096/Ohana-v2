@@ -101,13 +101,11 @@ const ProjectDetails = ({
   };
 
   const arrangeData = values => {
-    console.log('values PROJECT DETAILS: ', values.money);
-    console.log('Evento PROJECT DETAILS: ', event.goal);
     setData({
       ...data,
       event_type: values.typeOfObjective === 'Monetario' ? 1 : 0,
       tags: ['Ayudar'],
-      goal: !!event ? parseInt(values.money) : event.goal,
+      goal: !!event ? event.goal : parseInt(values.money), 
       startDate: onDateChange(values.startDate) || event.init_date,
       endDate: onDateChange(values.endDate) || event.end_date
     });

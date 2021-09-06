@@ -79,6 +79,7 @@ const UserDetails = ({
         submit: null,
         category: event.category.id
       };
+      setCategory(event.category.id)
       setFormValues(loadValues);
     }
   }, [event]);
@@ -90,7 +91,6 @@ const UserDetails = ({
   };
 
   const arrangeData = values => {
-    console.log('VALORES CAT: ', values.category);
     setData({
       name: values.projectName || event.name,
       location: {
@@ -102,7 +102,7 @@ const UserDetails = ({
         ? event.description
         : values.description.replace(/<\/?[^>]+(>|$)/g, ''),
       image: !!event ? event.image : '',
-      category: !!event ? event.category.id : values.category
+      category: category
     });
   };
 
