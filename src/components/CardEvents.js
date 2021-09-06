@@ -31,7 +31,6 @@ import getInitials from 'src/utils/getInitials';
 const useStyles = makeStyles(theme => ({
   root: {
     height: '100%',
-    display: 'grid'
   },
   image: {
     height: 200,
@@ -105,7 +104,7 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
               style={{
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
-                width: '18rem'
+                width: '100%'
               }}
             >
               <Tooltip
@@ -133,7 +132,7 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
       <Box
         pb={2}
         px={3}
-        style={{ overflow: 'hidden', textOverflow: 'ellipsis', width: '24rem' }}
+        style={{ overflow: 'hidden', textOverflow: 'ellipsis', width: '100%' }}
       >
         <Tooltip title={project.description.replace(/<\/?[^>]+(>|$)/g, "")}>
           <Typography noWrap color="textSecondary" variant="body2">
