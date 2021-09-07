@@ -60,8 +60,8 @@ const Header = ({ className, ...rest }) => {
   const getEvents = async () => {
     try {
       const response = await api.getEvents(2, 15, '');
-
-      setEvents(response);
+      const result = response.results.filter(event => event.contact.name === 'Elías Gomis Cabeza');
+      setEvents(result);
     } catch (err) {
       console.error(err);
     }
@@ -132,9 +132,9 @@ const Header = ({ className, ...rest }) => {
           ))}
         </Menu>
       </Grid>
-      {!!events.results && events.results.length > 0 && (
+      {!!events && events.length > 0 && (
         <Grid container spacing={3}>
-          {events.results.map(project => (
+          {events.map(project => (
             <Grid
               item
               key={project.id}
