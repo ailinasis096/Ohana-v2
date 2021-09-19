@@ -56,7 +56,6 @@ const UserDetails = ({
     ubication: '',
     description: '',
     submit: null,
-    category: 1
   };
 
   //Obtiene el json con las categorias y las setea en categoryOption
@@ -223,7 +222,7 @@ const UserDetails = ({
               SelectProps={{ native: true }}
             >
               <>
-                <option defaultValue="" disabled selected />
+                <option defaultValue=" " selected />
                 {categoryOption.map(option => (
                   <option key={option.id} value={option.id}>
                     {option.name}

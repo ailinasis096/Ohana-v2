@@ -44,7 +44,6 @@ const ProjectDescription = ({
   const arrangeData = () => {
     let form = {};
     if (editMode) {
-      console.log('FORMULARIO A ENVIAR: ', data);
       form = {
         attention_schedule: [
           {

@@ -1,11 +1,8 @@
-import React, {
-  createContext,
-  useEffect,
-  useReducer
-} from 'react';
+import React, { createContext, useEffect, useReducer } from 'react';
 import jwtDecode from 'jwt-decode';
 import SplashScreen from 'src/components/SplashScreen';
 import axios from 'src/utils/axios';
+import ax from '../api/Api.js';
 
 const initialAuthState = {
   isAuthenticated: false,
@@ -13,23 +10,24 @@ const initialAuthState = {
   user: null
 };
 
-const isValidToken = (accessToken) => {
-  if (!accessToken) {
+const isValidToken = token => {
+  if (!token) {
     return false;
   }
+  console.log('isValid: ', token);
 
-  const decoded = jwtDecode(accessToken);
+  const decoded = jwtDecode(token);
   const currentTime = Date.now() / 1000;
 
   return decoded.exp > currentTime;
 };
 
-const setSession = (accessToken) => {
-  if (accessToken) {
-    localStorage.setItem('accessToken', accessToken);
-    axios.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
+const setSession = token => {
+  if (token) {
+    localStorage.setItem('token', token);
+    axios.defaults.headers.common.Authorization = `Bearer ${token}`;
   } else {
-    localStorage.removeItem('accessToken');
+    localStorage.removeItem('token');
     delete axios.defaults.headers.common.Authorization;
   }
 };
@@ -81,23 +79,25 @@ const AuthContext = createContext({
   ...initialAuthState,
   method: 'JWT',
   login: () => Promise.resolve(),
-  logout: () => { },
+  logout: () => {},
   register: () => Promise.resolve()
 });
 
 export const AuthProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialAuthState);
 
-  const login = async (email, password) => {
-    const response = await axios.post('/api/account/login', { email, password });
-    const { accessToken, user } = response.data;
-
-    setSession(accessToken);
-    dispatch({
-      type: 'LOGIN',
-      payload: {
-        user
-      }
+  const login = async logueo => {
+    ax.login(logueo).then(response => {
+      const user = response.username;
+      const token = response.token;
+      console.log('En logueo', token);
+      setSession(token);
+      dispatch({
+        type: 'LOGIN',
+        payload: {
+          user
+        }
+      });
     });
   };
 
@@ -106,15 +106,14 @@ export const AuthProvider = ({ children }) => {
     dispatch({ type: 'LOGOUT' });
   };
 
-  const register = async (email, name, password) => {
+  const register = async (username, password) => {
     const response = await axios.post('/api/account/register', {
-      email,
-      name,
+      username,
       password
     });
-    const { accessToken, user } = response.data;
+    const { token, user } = response.data;
 
-    window.localStorage.setItem('accessToken', accessToken);
+    window.localStorage.setItem('token', token);
 
     dispatch({
       type: 'REGISTER',
@@ -127,10 +126,9 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const initialise = async () => {
       try {
-        const accessToken = window.localStorage.getItem('accessToken');
-
-        if (accessToken && isValidToken(accessToken)) {
-          setSession(accessToken);
+        const token = window.localStorage.getItem('token');
+        if (token && isValidToken(token)) {
+          setSession(token);
 
           const response = await axios.get('/api/account/me');
           const { user } = response.data;

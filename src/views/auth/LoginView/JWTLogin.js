@@ -9,10 +9,11 @@ import { Alert } from '@material-ui/lab';
 import clsx from 'clsx';
 import { Formik } from 'formik';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import useAuth from 'src/hooks/useAuth';
 import useIsMountedRef from 'src/hooks/useIsMountedRef';
 import * as Yup from 'yup';
+
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -20,29 +21,34 @@ const useStyles = makeStyles(() => ({
 
 const JWTLogin = ({ className, ...rest }) => {
   const classes = useStyles();
+
   const { login } = useAuth();
   const isMountedRef = useIsMountedRef();
 
   return (
     <Formik
       initialValues={{
-        email: 'demo@devias.io',
-        password: 'Password123',
+        username: 'ailink',
+        password: 'ailink',
         submit: null
       }}
       validationSchema={Yup.object().shape({
-        email: Yup.string()
-          .email('Must be a valid email')
+        username: Yup.string()
           .max(255)
-          .required('Email is required'),
+          .required('Username is required'),
         password: Yup.string()
           .max(255)
           .required('Password is required')
       })}
       onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
         try {
-          await login(values.email, values.password);
 
+          let logueo = {};
+          logueo = {
+            'username': values.username,
+            'password': values.password,
+          };
+          await login(logueo);
           if (isMountedRef.current) {
             setStatus({ success: true });
             setSubmitting(false);
@@ -73,17 +79,17 @@ const JWTLogin = ({ className, ...rest }) => {
           {...rest}
         >
           <TextField
-            error={Boolean(touched.email && errors.email)}
+            error={Boolean(touched.username && errors.username)}
             fullWidth
             autoFocus
-            helperText={touched.email && errors.email}
-            label="Correo Electrónico"
+            helperText={touched.username && errors.username}
+            label="Usuario"
             margin="normal"
-            name="email"
+            name="username"
             onBlur={handleBlur}
             onChange={handleChange}
-            type="email"
-            value={values.email}
+            type="text"
+            value={values.username}
             variant="outlined"
           />
           <TextField
@@ -119,7 +125,7 @@ const JWTLogin = ({ className, ...rest }) => {
           <Box mt={2}>
             <Alert severity="info">
               <div>
-                Usar <b>demo@devias.io</b> y contraseña <b>Password123</b>
+                Usar <b>ailink</b> y contraseña <b>ailink</b>
               </div>
             </Alert>
           </Box>

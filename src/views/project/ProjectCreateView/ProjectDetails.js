@@ -60,7 +60,6 @@ const ProjectDetails = ({
 
   const initialValues = {
     typeOfObjective: '',
-    tags: ['Ayudar'],
     money: '',
     startDate: new Date(),
     endDate: new Date(),
@@ -71,7 +70,6 @@ const ProjectDetails = ({
     if (!!event) {
       const loadValues = {
         typeOfObjective: event.event_type.id === 1 ? 'Monetario' : 'Bienes',
-        tags: ['Ayudar'],
         money: event.goal,
         startDate: event.init_date,
         endDate: event.end_date,
@@ -101,8 +99,7 @@ const ProjectDetails = ({
     setData({
       ...data,
       event_type: values.typeOfObjective === 'Monetario' ? 1 : 0,
-      tags: ['Ayudar'],
-      goal: !!event ? event.goal : parseInt(values.money), 
+      goal: !!event ? event.goal : parseInt(values.money),
       startDate: onDateChange(values.startDate) || event.init_date,
       endDate: onDateChange(values.endDate) || event.end_date
     });
@@ -219,52 +216,6 @@ const ProjectDetails = ({
                 variant="outlined"
               />
             </Box>
-            <Box mt={3} display="flex" alignItems="center">
-              <TextField
-                fullWidth
-                label="Tags"
-                type="string"
-                name="tags"
-                value={tag}
-                onChange={event => setTag(event.target.value)}
-                variant="outlined"
-              />
-              <IconButton
-                className={classes.addTab}
-                onClick={() => {
-                  if (!tag) {
-                    return;
-                  }
-
-                  setFieldValue('tags', [...values.tags, tag]);
-                  setTag('');
-                }}
-              >
-                <SvgIcon>
-                  <PlusIcon />
-                </SvgIcon>
-              </IconButton>
-            </Box>
-            <Box mt={2}>
-              {values.tags.map((tag, i) => (
-                <Chip
-                  variant="outlined"
-                  key={i}
-                  label={tag}
-                  className={classes.tag}
-                  onDelete={() => {
-                    const newTags = values.tags.filter(t => t !== tag);
-
-                    setFieldValue('tags', newTags);
-                  }}
-                />
-              ))}
-            </Box>
-            {Boolean(touched.tags && errors.tags) && (
-              <Box mt={2}>
-                <FormHelperText error>{errors.tags}</FormHelperText>
-              </Box>
-            )}
             <Box mt={4} display="flex">
               <DatePicker
                 className={classes.datePicker}

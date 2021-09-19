@@ -52,39 +52,58 @@ class API {
 
   //Crear campañas
   static async createEvent(form) {
-    console.log('FORMULARIO API: ', form);
     let path = `/api/events/create/`;
-    const { data } = await axiosInstance.post(path, form);
+    const config = {headers:{'Authorization':`Token ${localStorage.getItem('token')}`}}
+    const { data } = await axiosInstance.post(path, form, config);
     return data;
   }
 
   // Actualizar campañas de donaciones
   static async updateEvent(id, form) {
     let path = `/api/events/update/${id}/`;
-    const { data } = await axiosInstance.put(path, form);
+    const config = {headers:{'Authorization':`Token ${localStorage.getItem('token')}`}}
+    const { data } = await axiosInstance.put(path, form,config);
     return data;
   }
 
   //Obtener campañas
   static async getEvents(page = 1, pageSize = 15, search) {
+    const config = {headers:{'Authorization':`Token ${localStorage.getItem('token')}`}}
     let path = !!search
       ? `/api/events/list/?page=${page}&page_size=${pageSize}&q=${search}`
       : `/api/events/list/?page=${page}&page_size=${pageSize}`;
-    const { data } = await axiosInstance.get(path);
+    const { data } = await axiosInstance.get(path,config);
     return data;
   }
 
   //Filtro de campaña por Id
   static async getEventById(id) {
     let path = `/api/events/get/${id}/`;
-    const { data } = await axiosInstance.get(path);
+    const config = {headers:{'Authorization':`Token ${localStorage.getItem('token')}`}}
+    const { data } = await axiosInstance.get(path, config);
     return data;
   }
 
   //Obtener las categorías posibles de las campañas
   static async getCategories() {
     let path = `/api/events/categories/list/`;
-    const { data } = await axiosInstance.get(path);
+    const config = {headers:{'Authorization':`Token ${localStorage.getItem('token')}`}}
+    const { data } = await axiosInstance.get(path, config);
+    return data;
+  }
+
+  //login
+  static async login(logueo) {
+    let path = `/api/auth/signin/`;
+    const { data } = await axiosInstance.post(path, logueo);
+    return data;
+  }
+
+  //logout
+  static async logout() {
+    let path = `/api/auth/signup/`;
+
+    const { data } = await axiosInstance.post(path);
     return data;
   }
 }
