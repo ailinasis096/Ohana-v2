@@ -13,7 +13,8 @@ import React, { useEffect, useState } from 'react';
 import useAuth from 'src/hooks/useAuth';
 import useIsMountedRef from 'src/hooks/useIsMountedRef';
 import * as Yup from 'yup';
-
+import ax from '../../../api/Api';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -22,8 +23,18 @@ const useStyles = makeStyles(() => ({
 const JWTLogin = ({ className, ...rest }) => {
   const classes = useStyles();
 
-  const { login } = useAuth();
   const isMountedRef = useIsMountedRef();
+  const history = useHistory();
+
+  const login = async logueo => {
+    ax.login(logueo).then(response => {
+      const user = response.username;
+      const token = response.token;
+      console.log(token);
+      localStorage.setItem('token', token);
+      history.push('/app/events/browse');
+    });
+  };
 
   return (
     <Formik
@@ -41,37 +52,18 @@ const JWTLogin = ({ className, ...rest }) => {
           .required('Password is required')
       })}
       onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
-        try {
-
-          let logueo = {};
-          logueo = {
-            'username': values.username,
-            'password': values.password,
-          };
-          await login(logueo);
-          if (isMountedRef.current) {
-            setStatus({ success: true });
-            setSubmitting(false);
-          }
-        } catch (err) {
-          console.error(err);
-          if (isMountedRef.current) {
-            setStatus({ success: false });
-            setErrors({ submit: err.message });
-            setSubmitting(false);
-          }
-        }
+        await login(values);
       }}
     >
       {({
-        errors,
-        handleBlur,
-        handleChange,
-        handleSubmit,
-        isSubmitting,
-        touched,
-        values
-      }) => (
+          errors,
+          handleBlur,
+          handleChange,
+          handleSubmit,
+          isSubmitting,
+          touched,
+          values
+        }) => (
         <form
           noValidate
           onSubmit={handleSubmit}
@@ -83,27 +75,27 @@ const JWTLogin = ({ className, ...rest }) => {
             fullWidth
             autoFocus
             helperText={touched.username && errors.username}
-            label="Usuario"
-            margin="normal"
-            name="username"
+            label='Usuario'
+            margin='normal'
+            name='username'
             onBlur={handleBlur}
             onChange={handleChange}
-            type="text"
+            type='text'
             value={values.username}
-            variant="outlined"
+            variant='outlined'
           />
           <TextField
             error={Boolean(touched.password && errors.password)}
             fullWidth
             helperText={touched.password && errors.password}
-            label="Contraseña"
-            margin="normal"
-            name="password"
+            label='Contraseña'
+            margin='normal'
+            name='password'
             onBlur={handleBlur}
             onChange={handleChange}
-            type="password"
+            type='password'
             value={values.password}
-            variant="outlined"
+            variant='outlined'
           />
           {errors.submit && (
             <Box mt={3}>
@@ -112,18 +104,18 @@ const JWTLogin = ({ className, ...rest }) => {
           )}
           <Box mt={2}>
             <Button
-              color="secondary"
+              color='secondary'
               disabled={isSubmitting}
               fullWidth
-              size="large"
-              type="submit"
-              variant="contained"
+              size='large'
+              type='submit'
+              variant='contained'
             >
               Ingresar
             </Button>
           </Box>
           <Box mt={2}>
-            <Alert severity="info">
+            <Alert severity='info'>
               <div>
                 Usar <b>ailink</b> y contraseña <b>ailink</b>
               </div>

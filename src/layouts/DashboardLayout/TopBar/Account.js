@@ -49,7 +49,7 @@ const Account = () => {
   const handleLogout = async () => {
     try {
       handleClose();
-      await logout();
+      localStorage.removeItem('token');
       history.push('/');
     } catch (err) {
       console.error(err);
@@ -62,15 +62,15 @@ const Account = () => {
   return (
     <>
       <Box
-        display="flex"
-        alignItems="center"
+        display='flex'
+        alignItems='center'
         component={ButtonBase}
         onClick={handleOpen}
         ref={ref}
       >
-        <Avatar alt="User" className={classes.avatar} src={user.avatar} />
+        <Avatar alt='User' className={classes.avatar} src={user.avatar} />
         <Hidden smDown>
-          <Typography variant="h6" color="primary">
+          <Typography variant='h6' color='primary'>
             {user.name}
           </Typography>
         </Hidden>
@@ -87,10 +87,10 @@ const Account = () => {
         anchorEl={ref.current}
         open={isOpen}
       >
-        <MenuItem component={RouterLink} to="/app/social/profile">
+        <MenuItem component={RouterLink} to='/app/social/profile'>
           Perfil
         </MenuItem>
-        <MenuItem component={RouterLink} to="/app/account">
+        <MenuItem component={RouterLink} to='/app/account'>
           Mi cuenta
         </MenuItem>
         <MenuItem onClick={handleLogout}>Cerrar sesión</MenuItem>

@@ -33,14 +33,12 @@ const App = () => {
         <MuiPickersUtilsProvider utils={MomentUtils}>
           <SnackbarProvider dense maxSnack={3}>
             <Router history={history}>
-              <AuthProvider>
-                <GlobalStyles />
-                <ScrollReset />
-                <GoogleAnalytics />
-                {/* <CookiesNotification /> */}
-                {/*  <SettingsNotification /> */}
-                {renderRoutes(routes)}
-              </AuthProvider>
+              <GlobalStyles />
+              <ScrollReset />
+              <GoogleAnalytics />
+              {/* <CookiesNotification /> */}
+              {/*  <SettingsNotification /> */}
+              {renderRoutes(routes)}
             </Router>
           </SnackbarProvider>
         </MuiPickersUtilsProvider>
