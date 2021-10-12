@@ -12,6 +12,7 @@ import Page from 'src/components/Page';
 import shareSVG from '../../../assets/share-2.svg'
 import bellSVG from '../../../assets/bell.svg'
 import mpImg from '../../../assets/mp2.png'
+import { Link as RouterLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Actions = ({ className, ...rest }) => {
+const Actions = ({event, className, ...rest }) => {
   const classes = useStyles();
 
   return (
@@ -103,6 +104,8 @@ const Actions = ({ className, ...rest }) => {
                         className={classes.button2}
                         color="secondary"
                         variant="contained"
+                        component={RouterLink}
+                        to={`/app/donate/${event.id}`}
                         >
                         Donar
                     </Button>

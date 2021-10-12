@@ -1,0 +1,29 @@
+.NoResultsMessage {
+  text-align: center;
+  font-weight: 500;
+  padding: 25px;
+  border-radius: 4px;
+  color: var(--dark);
+}
+
+.NoResultsMessage h4 {
+    padding-bottom: 5px;
+  position: relative;
+}
+
+.NoResultsMessage::after {
+  left: auto;
+  right: 5px;
+}
+
+.progressContainer {
+  min-height: 200px;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+}
+
+.NoResultsMessage__NoResultsImage {
+    width: 50%
+}

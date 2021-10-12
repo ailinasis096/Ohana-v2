@@ -219,10 +219,23 @@ const routes = [
         path: '/app/events',
         component: () => <Redirect to="/app/events/browse" />
       },
+      //MIS CAMPAÑAS
       {
         exact: true,
         path: '/app/reports/dashboard',
         component: lazy(() => import('src/views/reports/DashboardView'))
+      },
+      //CONFIGURAR CUENTA
+      {
+        exact: true,
+        path: '/app/config-account',
+        component: lazy(() => import('src/views/project/AccountMP'))
+      },
+      //REALIZAR DONACION
+      {
+        exact: true,
+        path: '/app/donate/:id',
+        component: lazy(() => import('src/views/project/Donate'))
       },
       /* {
         exact: true,

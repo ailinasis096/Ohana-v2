@@ -29,6 +29,13 @@ const useStyles = makeStyles(theme => ({
     '& + &': {
       marginLeft: theme.spacing(2)
     }
+  }, 
+  editor: {
+    height: '180px',
+  },
+  descError: {
+    marginLeft: '14px',
+    marginTop: '0'
   }
 }));
 
@@ -50,7 +57,8 @@ const UserDetails = ({
   let [categoryOption, setCategoryOption] = useState([]); // Me carga el  json con las opciones
   let [category, setCategory] = useState(1); //Me guarda la opción seleccionada
   const [formValues, setFormValues] = useState(null);
-
+  const [descriptionBlur, setDescriptionBlur] = useState(false);
+  
   const initialValues = {
     projectName: '',
     ubication: '',
@@ -105,6 +113,10 @@ const UserDetails = ({
     });
   };
 
+  const handleDescBlur = () => {
+    setDescriptionBlur(true)
+  }
+
   return (
     <Formik
       enableReinitialize
@@ -125,13 +137,18 @@ const UserDetails = ({
           // Call API to store step data in server session
           // It is important to have it on server to be able to reuse it if user
           // decides to continue later.
-          setStatus({ success: true });
-          setSubmitting(false);
+          if( !values.description.replace(/<\/?[^>]+(>|$)/g, '') ) {
+            handleDescBlur()
+          } else {
+            setStatus({ success: true });
+            setSubmitting(false);
 
-          arrangeData(values);
-          if (onNext) {
-            onNext();
+            arrangeData(values);
+            if (onNext) {
+              onNext();
+            }
           }
+          
         } catch (err) {
           console.error(err);
           setStatus({ success: false });
@@ -183,13 +200,22 @@ const UserDetails = ({
             </Box>
             <Paper variant="outlined">
               <QuillEditor
+                name="description"
                 className={classes.editor}
                 value={values.description}
+                onBlur={handleDescBlur}
                 onChange={value => (
                   setFieldValue('description', value), updateEvent(value)
                 )}
               />
             </Paper>
+            {(descriptionBlur && !values.description.replace(/<\/?[^>]+(>|$)/g, '')) && (
+                <Box mt={2} className={classes.descError}>
+                  <FormHelperText error>
+                    Ingrese una descprición
+                  </FormHelperText>
+                </Box>
+              )}
           </Box>
           <Box mt={2}>
             <TextField

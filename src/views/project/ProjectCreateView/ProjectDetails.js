@@ -132,7 +132,6 @@ const ProjectDetails = ({
           // decides to continue later.
           setStatus({ success: true });
           setSubmitting(false);
-          console.log('VALUES: ', values);
           arrangeData(values);
           if (onNext) {
             onNext();

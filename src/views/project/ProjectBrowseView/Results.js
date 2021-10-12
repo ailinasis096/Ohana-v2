@@ -1,10 +1,12 @@
-import { Box, Grid, makeStyles, Typography } from '@material-ui/core';
+import { Box, Card, Grid, makeStyles, Typography } from '@material-ui/core';
 import ViewModuleIcon from '@material-ui/icons/ViewModule';
 import { Pagination, ToggleButton, ToggleButtonGroup } from '@material-ui/lab';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import CardEvents from 'src/components/CardEvents';
+import search from '../../../assets/search.png';
+import NoResults from './../../../components/NoResults/NoResults';
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -63,20 +65,8 @@ const Results = ({ className, projects, fetchEvent, ...rest }) => {
 
   return (
     !!projects.results && projects.results.length === 0 ? (
-      <div className={classes.divNoResults}>
-        <Typography
-        variant="h4"
-        color="textPrimary"
-      >
-        No se encontraron resultados
-      </Typography>
-      
-            <img
-              alt="No se encontraron resultados"
-              className={classes.imgNoResults}
-              src="/static/images/drawkit-grape-pack-illustration-15.svg"
-            />
-        </div>
+      <Card>
+      <NoResults title={'No se encontraron resultados'}/></Card>
     ) : 
     (!!projects.results && (
       <div className={clsx(classes.root, className)} {...rest}>

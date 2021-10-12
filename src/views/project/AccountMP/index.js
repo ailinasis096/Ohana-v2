@@ -32,23 +32,19 @@ import {
   File as FileIcon
 } from 'react-feather';
 import Page from 'src/components/Page';
-import UserDetails from './UserDetails';
-import ProjectDetails from './ProjectDetails';
-import ProjectDescription from './ProjectDescription';
+import AccountData from './AccountData';
+import StepByStep from './StepByStep';
+import mp from '../../../assets/mp.png'
 
 const steps = [
   {
-    label: 'Información',
+    label: 'Paso a paso',
     icon: UserIcon
   },
   {
-    label: 'Objetivo',
+    label: 'Datos',
     icon: BriefcaseIcon
   },
-  {
-    label: 'Documentos',
-    icon: BriefcaseIcon
-  }
 ];
 
 const CustomStepConnector = withStyles((theme) => ({
@@ -111,10 +107,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'transparent'
   },
   buttonDiv: {
-    display: 'grid'
+    display: 'grid',
+    marginTop: '30px',
   },
   button: {
-    marginTop: '15px',
+    marginTop: '25px',
     marginBottom: '25px'
   },
   card: {
@@ -143,31 +140,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ProjectCreateView  = ({ match }) => {
+const AccountMP = ({ match }) => {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState(false);
-  const [editMode, setEditMode] = useState(false);
-  const [data, setData] = useState();
-  const [event, setEvent] = useState();
   
-  useEffect(() => {
-    if(!!match.params.id) {
-      getEvent();
-      setEditMode(true);
-    }
-    
-  }, []);
-
-  const getEvent = async () => {
-    try {
-      const event = await api.getEventById(match.params.id);
-      setEvent(event);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
@@ -183,7 +160,7 @@ const ProjectCreateView  = ({ match }) => {
   return (
     <Page
       className={classes.root}
-      title={!!event ? 'Modificar campaña' : 'Crear campaña'}
+      title='Configurar cuenta'
     >
       <Container maxWidth="lg">
         <Box mb={3}>
@@ -203,14 +180,14 @@ const ProjectCreateView  = ({ match }) => {
               variant="body1"
               color="textPrimary"
             >
-              {!!event ? 'Editar' : 'Crear'}
+              Configurar cuenta
             </Typography>
           </Breadcrumbs>
           <Typography
             variant="h3"
             color="textPrimary"
           >
-            {!!event ? 'Modificá tu campaña' : 'Creá tus campañas'}
+            Configurar cuenta
           </Typography>
         </Box>
         {!completed ? (
@@ -243,25 +220,12 @@ const ProjectCreateView  = ({ match }) => {
               >
                 <Box p={3}>
                   {activeStep === 0 && (
-                    <UserDetails setData={setData} event={event} onNext={handleNext}/>
+                    <StepByStep onBack={handleBack} onNext={handleNext}/>
                   )}
                   {activeStep === 1 && (
-                    <ProjectDetails
-                      event={event}
+                    <AccountData
                       onBack={handleBack}
-                      onNext={handleNext}
-                      setData={setData}
-                      data={data}
-                      editMode={editMode}
-                    />
-                  )}
-                  {activeStep === 2 && (
-                    <ProjectDescription
-                      eventId={!!event ? event.id : ''}
-                      onBack={handleBack}
-                      onComplete={handleComplete}
-                      data={data}
-                      editMode={editMode}
+                      onComplete={handleComplete}             
                     />
                   )}
                 </Box>
@@ -282,16 +246,13 @@ const ProjectCreateView  = ({ match }) => {
                   </Avatar>
                 </Box>
                 <Typography component="h4" variant="h4">
-                  {editMode ? '¡Campaña actualizada!' : '¡Campaña creada!'}
-                </Typography>
-                <Typography variant="subtitle1" color="textSecondary">
-                  {editMode ? `Tu campaña ${event.name} fue modificada exitosamente.` : `Tu campaña ${event.name} fue creada exitosamente.`}
+                  Tu campaña se ha vinculado a Mercado Pago con éxito
                 </Typography>
               </CardContent>
             </div>
             <CardMedia
               className={classes.cover}
-              image={event.image}
+              image={mp}
               title="Live from space album cover"
             />
           </Card>
@@ -308,20 +269,20 @@ const ProjectCreateView  = ({ match }) => {
                   className={classes.buttonDiv}
                 >
                   <Typography
-                    variant="subtitle1"
+                    variant="h5"
                     color="textSecondary"
                     align="center"
                   >
-                    Sólo queda configurar tu cuenta de mercado pago
+                    Listo! Tu campaña ya se encuentra activa
                   </Typography>
                   <Button
                     className={classes.button}
                     variant="contained"
                     color="secondary"
                     component={RouterLink}
-                    to="/app/config-account"
+                    to="/app/reports/dashboard"
                   >
-                    Configurar cuenta
+                    Ver camapaña
                   </Button>
                 </Box>
               </Box>
@@ -333,4 +294,4 @@ const ProjectCreateView  = ({ match }) => {
   );
 };
 
-export default ProjectCreateView;
+export default AccountMP;

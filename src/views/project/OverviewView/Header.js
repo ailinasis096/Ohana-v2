@@ -32,6 +32,8 @@ const useStyles = makeStyles((theme) => ({
 const Header = ({event, className, ...rest }) => {
   const classes = useStyles();
 
+  console.log('event: ', event)
+
   return (
     <div
       className={clsx(classes.root, className)}
@@ -53,7 +55,7 @@ const Header = ({event, className, ...rest }) => {
             variant="overline"
             color="textSecondary"
           >
-            {event.category.name || 'Personas'}
+            {!!event.category ? event.category.name : 'Personas'}
           </Typography>
           <Typography
             variant="h3"

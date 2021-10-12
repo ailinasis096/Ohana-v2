@@ -55,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
       }
     },
     '& .ql-container': {
+      height: '77%',
       border: 'none',
       '& .ql-editor': {
         fontFamily: theme.typography.fontFamily,

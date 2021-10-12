@@ -119,7 +119,6 @@ const ProjectDescription = ({
         }
       };
     }
-    console.log('Formulario a enviar: ', form);
     return form;
   };
 

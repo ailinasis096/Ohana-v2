@@ -92,6 +92,36 @@ class API {
     return data;
   }
 
+  // Obtener las donaciones registradas para una campaña
+  static async getDonationsByEvent(id) {
+    let path = `/api/donations/list/by-event/?event=${id}`;
+    const { data } = await axiosInstance.get(path);
+    return data;
+  }
+
+  // Obtener las donaciones realizadas por un usuario
+  static async getDonationsByUser(id) {
+    let path = `/api/donations/list/by-user/?user=${id}`;
+    const { data } = await axiosInstance.get(path);
+    return data;
+  }
+
+    
+  // Obtener las donaciones de forma general
+  static async getDonations() {
+    let path = `/api/donations/list/self/`;
+    const { data } = await axiosInstance.get(path);
+    return data;
+  }
+
+  // Generar una donación
+  static async createDonation(form) {
+    let path = `/api/donations/create/`;
+    const config = {headers:{'Authorization':`Token ${localStorage.getItem('token')}`}}
+    const { data } = await axiosInstance.post(path, config, form);
+    return data;
+  }
+
   //login
   static async login(logueo) {
     let path = `/api/auth/signin/`;
