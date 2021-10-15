@@ -110,10 +110,10 @@ const Donate = ({ match, history }) => {
   };
 
   const handleComplete = (selectedAmount) => {
-    form.amount = parseInt(selectedAmount);
+    form.amount = parseFloat(selectedAmount);
     form.event = event.id;
     form.donation_name = '#' + event.name.replace(/ /g, '');
-    
+
     createDonation(JSON.stringify(form));
     setCompleted(true);
   };

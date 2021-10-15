@@ -55,6 +55,7 @@ const DonateAction = ({
 
   const handleChange = () => ({ target: { value } }) => {
     setSelectedButton(0);
+    console.log('valor ', value);
     setSelectedAmount(value);
     setShownValue(value);
   };
@@ -132,9 +133,6 @@ const DonateAction = ({
               }
             }}
             value={shownValue || ''}
-            //helperText={(touched.publicKey && (!state.formData.publicKey || state.formData.publicKey === '')) ? 'Ingrese la public key' : null}
-            //onFocus={handleTouch('publicKey')}
-            //error={}
           />
         </Box>
         <Box mt={6} display='flex' className={classes.lastDiv}>
