@@ -20,40 +20,12 @@ axiosInstance.interceptors.response.use(
 );
 
 class API {
-  /*static async initApp() {
-      let user = null;
-      try {
-        user = await API.getUser();
-      } catch (e) {
-        if (e.response && e.response.status === 403) {
-          user = {
-            authorities: [],
-          };
-        }
-      }
-      let dataMap = {
-        user,
-      };
-      return dataMap;
-    }
-
-    static goToLogin() {
-        window.location.replace(`http://localhost:3000/login`);
-    }
-
-    static goToLogout() {
-        window.location.replace(`http://localhost:3000/logout`);
-    }
-    
-    static async getUser() {
-      const { data } = await axiosInstance.get(`/user`);
-      return data;
-    } */
 
   //Crear campañas
   static async createEvent(form) {
     let path = `/api/events/create/`;
-    const config = {headers:{'Authorization':`Token ${localStorage.getItem('token')}`}}
+    const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
+
     const { data } = await axiosInstance.post(path, form, config);
     return data;
   }
@@ -61,25 +33,25 @@ class API {
   // Actualizar campañas de donaciones
   static async updateEvent(id, form) {
     let path = `/api/events/update/${id}/`;
-    const config = {headers:{'Authorization':`Token ${localStorage.getItem('token')}`}}
-    const { data } = await axiosInstance.put(path, form,config);
+    const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
+    const { data } = await axiosInstance.put(path, form, config);
     return data;
   }
 
   //Obtener campañas
   static async getEvents(page = 1, pageSize = 15, search) {
-    const config = {headers:{'Authorization':`Token ${localStorage.getItem('token')}`}}
+    const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
     let path = !!search
       ? `/api/events/list/?page=${page}&page_size=${pageSize}&q=${search}`
       : `/api/events/list/?page=${page}&page_size=${pageSize}`;
-    const { data } = await axiosInstance.get(path,config);
+    const { data } = await axiosInstance.get(path, config);
     return data;
   }
 
   //Filtro de campaña por Id
   static async getEventById(id) {
     let path = `/api/events/get/${id}/`;
-    const config = {headers:{'Authorization':`Token ${localStorage.getItem('token')}`}}
+    const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
     const { data } = await axiosInstance.get(path, config);
     return data;
   }
@@ -87,7 +59,7 @@ class API {
   //Obtener las categorías posibles de las campañas
   static async getCategories() {
     let path = `/api/events/categories/list/`;
-    const config = {headers:{'Authorization':`Token ${localStorage.getItem('token')}`}}
+    const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
     const { data } = await axiosInstance.get(path, config);
     return data;
   }
@@ -106,7 +78,7 @@ class API {
     return data;
   }
 
-    
+
   // Obtener las donaciones de forma general
   static async getDonations() {
     let path = `/api/donations/list/self/`;
@@ -116,9 +88,12 @@ class API {
 
   // Generar una donación
   static async createDonation(form) {
+    console.log(form);
     let path = `/api/donations/create/`;
-    const config = {headers:{'Authorization':`Token ${localStorage.getItem('token')}`}}
-    const { data } = await axiosInstance.post(path, config, form);
+    const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
+    const { data } = await axiosInstance.post(path, form, config).then(response => {
+      let myPopup = window.open(response.data, 'Ohana', 'width=800, height=800');
+    });
     return data;
   }
 

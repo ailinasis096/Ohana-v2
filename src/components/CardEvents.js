@@ -1,6 +1,6 @@
 import {
   Avatar,
-  Box,
+  Box, Button,
   Card,
   CardMedia,
   colors,
@@ -16,6 +16,7 @@ import {
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import DeleteIcon from '@material-ui/icons/Delete';
+
 import EditIcon from '@material-ui/icons/Edit';
 import { Rating } from '@material-ui/lab';
 import clsx from 'clsx';
@@ -30,7 +31,7 @@ import getInitials from 'src/utils/getInitials';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: '100%',
+    height: '100%'
   },
   image: {
     height: 200,
@@ -39,14 +40,12 @@ const useStyles = makeStyles(theme => ({
   likedButton: {
     color: colors.red[600]
   },
+  donateButton: {
+    color: colors.amber[600]
+
+  },
   caption: {
     minHeight: '20px'
-    /*display: 'box',
-    lineClamp: 7,
-    boxOrient: 'vertical',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    marginBottom: 5*/
   },
   membersIcon: {
     marginLeft: theme.spacing(2),
@@ -56,7 +55,7 @@ const useStyles = makeStyles(theme => ({
     display: 'contents'
   },
   nameBox: {
-    display:'grid'
+    display: 'grid'
   }
 }));
 
@@ -87,19 +86,19 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
           className={classes.image}
           image={project.image || 'https://www.argentina.gob.ar/sites/default/files/vinetas_justicia_cerca_04_quiero_donar_mis_organos.png'}
         />
-        <Box display="flex" alignItems="center" mt={2}>
+        <Box display='flex' alignItems='center' mt={2}>
           <Avatar
-            alt="Author"
-            src="https://static1.abc.es/media/play/2020/09/29/avatar-kE4H--620x349@abc.jpeg"
+            alt='Author'
+            src='https://static1.abc.es/media/play/2020/09/29/avatar-kE4H--620x349@abc.jpeg'
           >
             {getInitials(project.contact.name)}
           </Avatar>
           <Box className={classes.nameBox} ml={2}>
             <Link
-              color="textPrimary"
+              color='textPrimary'
               component={RouterLink}
               to={`/app/projects/overview/${project.id}`}
-              variant="h5"
+              variant='h5'
             >
               {project.name}
             </Link>
@@ -115,13 +114,13 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
                   project.updated_at
                 ).fromNow()}`}
               >
-                <Typography noWrap variant="body2" color="textSecondary">
+                <Typography noWrap variant='body2' color='textSecondary'>
                   Por{' '}
                   <Link
-                    color="textPrimary"
+                    color='textPrimary'
                     component={RouterLink}
-                    to="#"
-                    variant="h6"
+                    to='#'
+                    variant='h6'
                   >
                     {project.contact.name}
                   </Link>{' '}
@@ -137,21 +136,21 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
         px={3}
         style={{ overflow: 'hidden', textOverflow: 'ellipsis', width: '100%' }}
       >
-        <Tooltip title={project.description.replace(/<\/?[^>]+(>|$)/g, "")}>
-          <Typography noWrap color="textSecondary" variant="body2">
-            {project.description.replace(/<\/?[^>]+(>|$)/g, "")}
+        <Tooltip title={project.description.replace(/<\/?[^>]+(>|$)/g, '')}>
+          <Typography noWrap color='textSecondary' variant='body2'>
+            {project.description.replace(/<\/?[^>]+(>|$)/g, '')}
           </Typography>
         </Tooltip>
       </Box>
       <Box py={2} px={3} className={classes.description}>
-        <Grid alignItems="center" container justify="space-between" spacing={3}>
+        <Grid alignItems='center' container justify='space-between' spacing={3}>
           <Grid item>
-            <Typography variant="h5" color="textPrimary">
+            <Typography variant='h5' color='textPrimary'>
               {!!project.goal
                 ? numeral(project.goal).format(`$0.00`)
                 : numeral(project.donations_count).format(`$0.00`)}
             </Typography>
-            <Typography variant="body2" color="textSecondary">
+            <Typography variant='body2' color='textSecondary'>
               Objetivo
             </Typography>
           </Grid>
@@ -164,70 +163,77 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
               }}
             >
               <Tooltip title={project.location.street}>
-                <Typography noWrap variant="h5" color="textPrimary">
+                <Typography noWrap variant='h5' color='textPrimary'>
                   {project.location.street}
                 </Typography>
               </Tooltip>
-              <Typography variant="body2" color="textSecondary">
+              <Typography variant='body2' color='textSecondary'>
                 Ubicación
               </Typography>
             </div>
           </Grid>
           <Grid item>
-            <Typography variant="h5" color="textPrimary">
+            <Typography variant='h5' color='textPrimary'>
               {project.event_type.id === 1 ? 'Monetaria' : 'Física'}
             </Typography>
-            <Typography variant="body2" color="textSecondary">
+            <Typography variant='body2' color='textSecondary'>
               Tipo
             </Typography>
           </Grid>
         </Grid>
       </Box>
       <Divider />
-      <Box py={2} pl={2} pr={2} display="flex" alignItems="center" bottom>
+      <Box py={2} pl={2} pr={2} display='flex' alignItems='center' bottom>
         {userMode ? (
           <div>
-            <Tooltip title="Eliminar campaña">
+            <Tooltip title='Eliminar campaña'>
               <IconButton>
-                <DeleteIcon fontSize="small" />
+                <DeleteIcon fontSize='small' />
               </IconButton>
             </Tooltip>
-            <Tooltip title="Modificar campaña">
-              <IconButton 
+            <Tooltip title='Modificar campaña'>
+              <IconButton
                 component={RouterLink}
                 to={`/app/projects/edit/${project.id}`}>
-                <EditIcon fontSize="small" />
+                <EditIcon fontSize='small' />
               </IconButton>
             </Tooltip>
           </div>
         ) : (
           <div className={classes.buttonsDiv}>
-          {isLiked ? (
-            <Tooltip title="Unlike">
-              <IconButton className={classes.likedButton} onClick={handleUnlike}>
-                <FavoriteIcon fontSize="small"/>
-              </IconButton>
-            </Tooltip>
-          ) : (
-            <Tooltip title="Like">
-              <IconButton onClick={handleLike}>
-                <FavoriteBorderIcon fontSize="small" />
-              </IconButton>
-            </Tooltip>
-          )}
-          <Typography variant="subtitle2" color="textSecondary">
-            {likesCount}
-          </Typography>
-          <SvgIcon
-            fontSize="small"
-            color="action"
-            className={classes.membersIcon}
-          >
-            <ShareIcon />
-          </SvgIcon>
-        </div>)}        
+            {isLiked ? (
+              <Tooltip title='Unlike'>
+                <IconButton className={classes.likedButton} onClick={handleUnlike}>
+                  <FavoriteIcon fontSize='small' />
+                </IconButton>
+              </Tooltip>
+            ) : (
+              <Tooltip title='Like'>
+                <IconButton onClick={handleLike}>
+                  <FavoriteBorderIcon fontSize='small' />
+                </IconButton>
+              </Tooltip>
+            )}
+            <Typography variant='subtitle2' color='textSecondary'>
+              {likesCount}
+            </Typography>
+            <SvgIcon
+              fontSize='small'
+              color='action'
+              className={classes.membersIcon}
+            >
+              <ShareIcon />
+            </SvgIcon>
+          </div>)}
         <Box flexGrow={1} />
-        <Rating value="4" size="small" readOnly />
+        <Tooltip title='Donar'>
+          <Button className={classes.donateButton} href={`/app/donate/${project.id}`}>
+            <FavoriteIcon />
+            <Typography variant='subtitle1' color='textPrimary' style={{ marginLeft: '5px' }}>
+              Dona!
+            </Typography>
+          </Button>
+        </Tooltip>
       </Box>
     </Card>
   );

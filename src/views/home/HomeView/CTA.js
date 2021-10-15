@@ -25,19 +25,19 @@ const CTA = ({ className, ...rest }) => {
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      <Container maxWidth="lg">
-        <Typography variant="h1" align="center" color="textPrimary">
+      <Container maxWidth='lg'>
+        <Typography variant='h1' align='center' color='textPrimary'>
           ¿Querés donar?
         </Typography>
-        <Typography variant="h1" align="center" color="secondary">
+        <Typography variant='h1' align='center' color='secondary'>
           Lo podes hacer desde acá
         </Typography>
-        <Box mt={2} display="flex" justifyContent="center" alignItems="center">
+        <Box mt={2} display='flex' justifyContent='center' alignItems='center'>
           <Button
-            color="secondary"
-            component="a"
-            href="/login"
-            variant="contained"
+            color='secondary'
+            component='a'
+            href='/app/events/browse'
+            variant='contained'
           >
             Donar!
           </Button>
