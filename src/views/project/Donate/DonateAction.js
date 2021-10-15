@@ -128,7 +128,7 @@ const DonateAction = ({
             onChange={handleChange()}
             variant='outlined'
             onKeyPress={(event) => {
-              if (!/[0-9,]/.test(event.key)) {
+              if (!/[0-9.]/.test(event.key)) {
                 event.preventDefault();
               }
             }}
