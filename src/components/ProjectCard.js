@@ -70,26 +70,26 @@ const ProjectCard = ({ className, project, ...rest }) => {
     <Card className={clsx(classes.root, className)} {...rest}>
       <Box p={3}>
         <CardMedia className={classes.image} image={project.image} />
-        <Box display="flex" alignItems="center" mt={2}>
-          <Avatar alt="Author" src={project.author.avatar}>
+        <Box display='flex' alignItems='center' mt={2}>
+          {/*<Avatar alt="Author" src={project.author.avatar}>
             {getInitials(project.author.name)}
-          </Avatar>
+          </Avatar>*/}
           <Box ml={2}>
             <Link
-              color="textPrimary"
+              color='textPrimary'
               component={RouterLink}
               to={`/app/projects/overview/${project.id}`}
-              variant="h5"
+              variant='h5'
             >
               {project.title}
             </Link>
-            <Typography variant="body2" color="textSecondary">
+            <Typography variant='body2' color='textSecondary'>
               Por{' '}
               <Link
-                color="textPrimary"
+                color='textPrimary'
                 component={RouterLink}
-                to="#"
-                variant="h6"
+                to='#'
+                variant='h6'
               >
                 {project.author.name}
               </Link>{' '}
@@ -99,65 +99,65 @@ const ProjectCard = ({ className, project, ...rest }) => {
         </Box>
       </Box>
       <Box pb={2} px={3} className={classes.caption}>
-        <Typography color="textSecondary" variant="body2">
+        <Typography color='textSecondary' variant='body2'>
           {project.caption}
         </Typography>
       </Box>
       <Box py={2} px={3}>
-        <Grid alignItems="center" container justify="space-between" spacing={3}>
+        <Grid alignItems='center' container justify='space-between' spacing={3}>
           <Grid item>
-            <Typography variant="h5" color="textPrimary">
+            <Typography variant='h5' color='textPrimary'>
               {numeral(project.budget).format(`${project.currency}0,0.000`)}
             </Typography>
-            <Typography variant="body2" color="textSecondary">
+            <Typography variant='body2' color='textSecondary'>
               Objetivo
             </Typography>
           </Grid>
           <Grid item>
-            <Typography variant="h5" color="textPrimary">
+            <Typography variant='h5' color='textPrimary'>
               {project.location}
             </Typography>
-            <Typography variant="body2" color="textSecondary">
+            <Typography variant='body2' color='textSecondary'>
               Ubicación
             </Typography>
           </Grid>
           <Grid item>
-            <Typography variant="h5" color="textPrimary">
+            <Typography variant='h5' color='textPrimary'>
               {project.type}
             </Typography>
-            <Typography variant="body2" color="textSecondary">
+            <Typography variant='body2' color='textSecondary'>
               Tipo
             </Typography>
           </Grid>
         </Grid>
       </Box>
       <Divider />
-      <Box py={2} pl={2} pr={2} display="flex" alignItems="center">
+      <Box py={2} pl={2} pr={2} display='flex' alignItems='center'>
         {isLiked ? (
-          <Tooltip title="Unlike">
+          <Tooltip title='Unlike'>
             <IconButton className={classes.likedButton} onClick={handleUnlike}>
-              <FavoriteIcon fontSize="small" />
+              <FavoriteIcon fontSize='small' />
             </IconButton>
           </Tooltip>
         ) : (
-          <Tooltip title="Like">
+          <Tooltip title='Like'>
             <IconButton onClick={handleLike}>
-              <FavoriteBorderIcon fontSize="small" />
+              <FavoriteBorderIcon fontSize='small' />
             </IconButton>
           </Tooltip>
         )}
-        <Typography variant="subtitle2" color="textSecondary">
+        <Typography variant='subtitle2' color='textSecondary'>
           {likesCount}
         </Typography>
         <SvgIcon
-          fontSize="small"
-          color="action"
+          fontSize='small'
+          color='action'
           className={classes.membersIcon}
         >
           <ShareIcon />
         </SvgIcon>
         <Box flexGrow={1} />
-        <Rating value={project.rating} size="small" readOnly />
+        <Rating value={project.rating} size='small' readOnly />
       </Box>
     </Card>
   );

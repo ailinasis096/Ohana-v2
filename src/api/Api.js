@@ -39,7 +39,7 @@ class API {
   }
 
   //Obtener campañas
-  static async getEvents(page = 1, pageSize = 15, search) {
+  static async getEvents(page = 1, pageSize = 2, search) {
     const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
     let path = !!search
       ? `/api/events/list/?page=${page}&page_size=${pageSize}&q=${search}`

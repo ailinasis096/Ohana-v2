@@ -5,7 +5,6 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import CardEvents from 'src/components/CardEvents';
-import search from '../../../assets/search.png';
 import NoResults from './../../../components/NoResults/NoResults';
 
 const useStyles = makeStyles(theme => ({
@@ -65,56 +64,56 @@ const Results = ({ className, projects, fetchEvent, ...rest }) => {
 
   return (
     !!projects.results && projects.results.length === 0 ? (
-      <Card>
-      <NoResults title={'No se encontraron resultados'}/></Card>
-    ) : 
-    (!!projects.results && (
-      <div className={clsx(classes.root, className)} {...rest}>
-        <Box
-          display="flex"
-          alignItems="center"
-          justifyContent="space-between"
-          flexWrap="wrap"
-          mb={2}
-        >
-          <Typography
-            className={classes.title}
-            variant="h5"
-            color="textPrimary"
+        <Card>
+          <NoResults title={'No se encontraron resultados'} /></Card>
+      ) :
+      (!!projects.results && (
+        <div className={clsx(classes.root, className)} {...rest}>
+          <Box
+            display='flex'
+            alignItems='center'
+            justifyContent='space-between'
+            flexWrap='wrap'
+            mb={2}
           >
-            Campañas
-          </Typography>
-          <Box display="flex" alignItems="center">
-            <ToggleButtonGroup
-              exclusive
-              onChange={handleModeChange}
-              size="small"
-              value={mode}
+            <Typography
+              className={classes.title}
+              variant='h5'
+              color='textPrimary'
             >
-              <ToggleButton value="grid">
-                <ViewModuleIcon />
-              </ToggleButton>
-            </ToggleButtonGroup>
+              Campañas
+            </Typography>
+            <Box display='flex' alignItems='center'>
+              <ToggleButtonGroup
+                exclusive
+                onChange={handleModeChange}
+                size='small'
+                value={mode}
+              >
+                <ToggleButton value='grid'>
+                  <ViewModuleIcon />
+                </ToggleButton>
+              </ToggleButtonGroup>
+            </Box>
           </Box>
-        </Box>
-        <Grid container spacing={3}>
-          {projects.results.map(project => (
-            <Grid
-              item
-              key={project.id}
-              md={mode === 'grid' ? 4 : 12}
-              sm={mode === 'grid' ? 6 : 12}
-              xs={12}
-            >
-              <CardEvents project={project} userMode={false} />
-            </Grid>
-          ))}
-        </Grid>
-        <Box mt={6} display="flex" justifyContent="center">
-          <Pagination count={getPageSize()} onChange={handleChange} />
-        </Box>
-      </div>
-    ))
+          <Grid container spacing={3}>
+            {projects.results.map(project => (
+              <Grid
+                item
+                key={project.id}
+                md={mode === 'grid' ? 4 : 12}
+                sm={mode === 'grid' ? 6 : 12}
+                xs={12}
+              >
+                <CardEvents project={project} userMode={false} />
+              </Grid>
+            ))}
+          </Grid>
+          <Box mt={6} display='flex' justifyContent='center'>
+            <Pagination count={getPageSize()} onChange={handleChange} />
+          </Box>
+        </div>
+      ))
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import api from '../../../api/Api';
 import PropTypes from 'prop-types';
@@ -54,7 +54,7 @@ const steps = [
 const CustomStepConnector = withStyles((theme) => ({
   vertical: {
     marginLeft: 19,
-    padding: 0,
+    padding: 0
   },
   line: {
     borderColor: theme.palette.divider
@@ -86,7 +86,7 @@ const CustomStepIcon = ({ active, completed, icon }) => {
         [classes.completed]: completed
       })}
     >
-      <Icon size="20" />
+      <Icon size='20' />
     </Avatar>
   );
 };
@@ -135,33 +135,35 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   content2: {
-    padding: '30px',
+    padding: '30px'
   },
   cover: {
     width: '40%',
     height: '270px'
-  },
+  }
 }));
 
-const ProjectCreateView  = ({ match }) => {
+const ProjectCreateView = ({ match }) => {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState(false);
   const [editMode, setEditMode] = useState(false);
   const [data, setData] = useState();
   const [event, setEvent] = useState();
-  
+
   useEffect(() => {
-    if(!!match.params.id) {
+    if (!!match.params.id) {
+      
       getEvent();
       setEditMode(true);
     }
-    
+
   }, []);
 
   const getEvent = async () => {
     try {
       const event = await api.getEventById(match.params.id);
+
       setEvent(event);
     } catch (err) {
       console.error(err);
@@ -185,30 +187,30 @@ const ProjectCreateView  = ({ match }) => {
       className={classes.root}
       title={!!event ? 'Modificar campaña' : 'Crear campaña'}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth='lg'>
         <Box mb={3}>
           <Breadcrumbs
-            separator={<NavigateNextIcon fontSize="small" />}
-            aria-label="breadcrumb"
+            separator={<NavigateNextIcon fontSize='small' />}
+            aria-label='breadcrumb'
           >
             <Link
-              variant="body1"
-              color="inherit"
-              to="/app"
+              variant='body1'
+              color='inherit'
+              to='/app'
               component={RouterLink}
             >
               Dashboard
             </Link>
             <Typography
-              variant="body1"
-              color="textPrimary"
+              variant='body1'
+              color='textPrimary'
             >
               {!!event ? 'Editar' : 'Crear'}
             </Typography>
           </Breadcrumbs>
           <Typography
-            variant="h3"
-            color="textPrimary"
+            variant='h3'
+            color='textPrimary'
           >
             {!!event ? 'Modificá tu campaña' : 'Creá tus campañas'}
           </Typography>
@@ -225,7 +227,7 @@ const ProjectCreateView  = ({ match }) => {
                   activeStep={activeStep}
                   className={classes.stepper}
                   connector={<CustomStepConnector />}
-                  orientation="vertical"
+                  orientation='vertical'
                 >
                   {steps.map((step) => (
                     <Step key={step.label}>
@@ -243,7 +245,7 @@ const ProjectCreateView  = ({ match }) => {
               >
                 <Box p={3}>
                   {activeStep === 0 && (
-                    <UserDetails setData={setData} event={event} onNext={handleNext}/>
+                    <UserDetails setData={setData} event={event} onNext={handleNext} />
                   )}
                   {activeStep === 1 && (
                     <ProjectDetails
@@ -270,63 +272,63 @@ const ProjectCreateView  = ({ match }) => {
           </Paper>
         ) : (
           <div>
-          <Card className={classes.card}>
-            <div className={classes.details}>
-              <CardContent className={classes.content}>
+            <Card className={classes.card}>
+              <div className={classes.details}>
+                <CardContent className={classes.content}>
                   <Box
-                    display="flex"
-                    justifyContent="center"
+                    display='flex'
+                    justifyContent='center'
                   >
-                  <Avatar className={classes.avatar}>
-                    <CheckCircleIcon />
-                  </Avatar>
-                </Box>
-                <Typography component="h4" variant="h4">
-                  {editMode ? '¡Campaña actualizada!' : '¡Campaña creada!'}
-                </Typography>
-                <Typography variant="subtitle1" color="textSecondary">
-                  {editMode ? `Tu campaña ${event.name} fue modificada exitosamente.` : `Tu campaña ${event.name} fue creada exitosamente.`}
-                </Typography>
-              </CardContent>
-            </div>
-            <CardMedia
-              className={classes.cover}
-              image={event.image}
-              title="Live from space album cover"
-            />
-          </Card>
-          <Card>
-            <CardContent className={classes.content2}>
-              <Box
-                maxWidth={450}
-                mx="auto"
-              >
-                <Box
-                  mt={2}
-                  display="flex"
-                  justifyContent="center"
-                  className={classes.buttonDiv}
-                >
-                  <Typography
-                    variant="subtitle1"
-                    color="textSecondary"
-                    align="center"
-                  >
-                    Sólo queda configurar tu cuenta de mercado pago
+                    <Avatar className={classes.avatar}>
+                      <CheckCircleIcon />
+                    </Avatar>
+                  </Box>
+                  <Typography component='h4' variant='h4'>
+                    {editMode ? '¡Campaña actualizada!' : '¡Campaña creada!'}
                   </Typography>
-                  <Button
-                    className={classes.button}
-                    variant="contained"
-                    color="secondary"
-                    component={RouterLink}
-                    to="/app/config-account"
+                  <Typography variant='subtitle1' color='textSecondary'>
+                    {editMode ? `Tu campaña ${event.name} fue modificada exitosamente.` : `Tu campaña ${event.name} fue creada exitosamente.`}
+                  </Typography>
+                </CardContent>
+              </div>
+              <CardMedia
+                className={classes.cover}
+                image={event.image}
+                title='Live from space album cover'
+              />
+            </Card>
+            <Card>
+              <CardContent className={classes.content2}>
+                <Box
+                  maxWidth={450}
+                  mx='auto'
+                >
+                  <Box
+                    mt={2}
+                    display='flex'
+                    justifyContent='center'
+                    className={classes.buttonDiv}
                   >
-                    Configurar cuenta
-                  </Button>
+                    <Typography
+                      variant='subtitle1'
+                      color='textSecondary'
+                      align='center'
+                    >
+                      Sólo queda configurar tu cuenta de mercado pago
+                    </Typography>
+                    <Button
+                      className={classes.button}
+                      variant='contained'
+                      color='secondary'
+                      component={RouterLink}
+                      to='/app/config-account'
+                    >
+                      Configurar cuenta
+                    </Button>
+                  </Box>
                 </Box>
-              </Box>
-            </CardContent>
-          </Card></div>
+              </CardContent>
+            </Card></div>
         )}
       </Container>
     </Page>

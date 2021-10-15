@@ -59,7 +59,7 @@ const Header = ({ className, ...rest }) => {
 
   const getEvents = async () => {
     try {
-      const response = await api.getEvents(2, 15, '');
+      const response = await api.getEvents(1, 1, '');
       const result = response.results.filter(event => event.contact.name === 'Elías Gomis Cabeza');
       setEvents(result);
     } catch (err) {
@@ -71,28 +71,28 @@ const Header = ({ className, ...rest }) => {
     <Grid
       container
       spacing={3}
-      justify="space-between"
+      justify='space-between'
       className={clsx(classes.root, className)}
       {...rest}
     >
       <Grid item>
         <Breadcrumbs
-          separator={<NavigateNextIcon fontSize="small" />}
-          aria-label="breadcrumb"
+          separator={<NavigateNextIcon fontSize='small' />}
+          aria-label='breadcrumb'
         >
           <Link
-            variant="body1"
-            color="inherit"
-            to="/app"
+            variant='body1'
+            color='inherit'
+            to='/app'
             component={RouterLink}
           >
             Dashboard
           </Link>
-          <Typography variant="body1" color="textPrimary">
+          <Typography variant='body1' color='textPrimary'>
             Listar
           </Typography>
         </Breadcrumbs>
-        <Typography variant="h3" color="textPrimary">
+        <Typography variant='h3' color='textPrimary'>
           Mis Campañas Activas
         </Typography>
       </Grid>
@@ -101,7 +101,7 @@ const Header = ({ className, ...rest }) => {
           ref={actionRef}
           onClick={() => setMenuOpen(true)}
           startIcon={
-            <SvgIcon fontSize="small">
+            <SvgIcon fontSize='small'>
               <CalendarIcon />
             </SvgIcon>
           }
