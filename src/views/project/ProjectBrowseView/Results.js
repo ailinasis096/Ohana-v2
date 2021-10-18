@@ -65,7 +65,8 @@ const Results = ({ className, projects, fetchEvent, ...rest }) => {
   return (
     !!projects.results && projects.results.length === 0 ? (
         <Card>
-          <NoResults title={'No se encontraron resultados'} /></Card>
+          <NoResults title={'No se encontraron resultados'} />
+        </Card>
       ) :
       (!!projects.results && (
         <div className={clsx(classes.root, className)} {...rest}>
