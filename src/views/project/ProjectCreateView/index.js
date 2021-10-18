@@ -153,17 +153,15 @@ const ProjectCreateView = ({ match }) => {
 
   useEffect(() => {
     if (!!match.params.id) {
-      
       getEvent();
       setEditMode(true);
     }
 
-  }, []);
+  }, [match]);
 
   const getEvent = async () => {
     try {
       const event = await api.getEventById(match.params.id);
-
       setEvent(event);
     } catch (err) {
       console.error(err);
@@ -181,6 +179,9 @@ const ProjectCreateView = ({ match }) => {
   const handleComplete = () => {
     setCompleted(true);
   };
+
+  let sessionName = sessionStorage.getItem('eventName');
+  let sessionImage = sessionStorage.getItem('eventImage');
 
   return (
     <Page
@@ -287,13 +288,13 @@ const ProjectCreateView = ({ match }) => {
                     {editMode ? '¡Campaña actualizada!' : '¡Campaña creada!'}
                   </Typography>
                   <Typography variant='subtitle1' color='textSecondary'>
-                    {editMode ? `Tu campaña ${event.name} fue modificada exitosamente.` : `Tu campaña ${event.name} fue creada exitosamente.`}
+                    {editMode ? `Tu campaña ${event.name} fue modificada exitosamente.` : `Tu campaña ${sessionName} fue creada exitosamente.`}
                   </Typography>
                 </CardContent>
               </div>
               <CardMedia
                 className={classes.cover}
-                image={event.image}
+                image={!!event ? event.image : sessionImage}
                 title='Live from space album cover'
               />
             </Card>

@@ -123,7 +123,7 @@ const ProjectDetails = ({
         ),
         money: Yup.number()
           .max(100000000)
-          .notRequired()
+          .required('Ingrese un monto de dinero')
       })}
       onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
         try {

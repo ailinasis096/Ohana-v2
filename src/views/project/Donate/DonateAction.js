@@ -55,7 +55,6 @@ const DonateAction = ({
 
   const handleChange = () => ({ target: { value } }) => {
     setSelectedButton(0);
-    console.log('valor ', value);
     setSelectedAmount(value);
     setShownValue(value);
   };

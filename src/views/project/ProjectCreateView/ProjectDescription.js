@@ -82,7 +82,6 @@ const ProjectDescription = ({
         }
       };
     } else {
-      console.log('Else Data: ', data);
       form = {
         attention_schedule: [
           {
@@ -119,7 +118,8 @@ const ProjectDescription = ({
         }
       };
     }
-    console.log(form);
+    sessionStorage.setItem('eventName', form.name);
+    sessionStorage.setItem('eventImage', form.image);
     return form;
   };
 

@@ -14,8 +14,6 @@ const isValidToken = token => {
   if (!token) {
     return false;
   }
-  console.log('isValid: ', token);
-
   const decoded = jwtDecode(token);
   const currentTime = Date.now() / 1000;
 
@@ -90,7 +88,6 @@ export const AuthProvider = ({ children }) => {
     ax.login(logueo).then(response => {
       const user = response.username;
       const token = response.token;
-      console.log('En logueo', token);
       setSession(token);
       dispatch({
         type: 'LOGIN',

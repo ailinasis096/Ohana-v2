@@ -32,8 +32,6 @@ const useStyles = makeStyles((theme) => ({
 const Header = ({event, className, ...rest }) => {
   const classes = useStyles();
 
-  console.log('event: ', event)
-
   return (
     <div
       className={clsx(classes.root, className)}
