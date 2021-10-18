@@ -11,12 +11,15 @@ import {
   Menu,
   MenuItem,
   SvgIcon,
-  Typography
+  Typography,
+  Card
 } from '@material-ui/core';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import { Calendar as CalendarIcon } from 'react-feather';
 import CardEvents from 'src/components/CardEvents';
 import api from './../../../api/Api';
+import NoResults from './../../../components/NoResults/NoResults';
+import CircularProgress from './../DashboardAlternativeView/MostProfitableProducts/CircularProgress';
 
 const timeRanges = [
   {
@@ -52,16 +55,19 @@ const Header = ({ className, ...rest }) => {
   const [timeRange, setTimeRange] = useState(timeRanges[2].text);
   const [mode, setMode] = useState('grid');
   const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     getEvents();
   }, []);
 
   const getEvents = async () => {
+    setLoading(true);
     try {
       const response = await api.getEvents(1, 1, '');
       const result = response.results.filter(event => event.contact.name === 'Elías Gomis Cabeza');
       setEvents(result);
+      setLoading(false);
     } catch (err) {
       console.error(err);
     }
@@ -132,21 +138,29 @@ const Header = ({ className, ...rest }) => {
           ))}
         </Menu>
       </Grid>
-      {!!events && events.length > 0 && (
-        <Grid container spacing={3}>
-          {events.map(project => (
-            <Grid
-              item
-              key={project.id}
-              md={mode === 'grid' ? 4 : 12}
-              sm={mode === 'grid' ? 6 : 12}
-              xs={12}
-            >
-              <CardEvents project={project} userMode={true} />
-            </Grid>
-          ))}
-        </Grid>
-      )}
+      {!!loading ? (
+        <CircularProgress color="inherit" size={20} />
+      ) : (
+        !!events && events.length > 0 ? (
+          <Grid container spacing={3}>
+            {events.map(project => (
+              <Grid
+                item
+                key={project.id}
+                md={mode === 'grid' ? 4 : 12}
+                sm={mode === 'grid' ? 6 : 12}
+                xs={12}
+              >
+                <CardEvents project={project} userMode={true} />
+              </Grid>
+            ))}
+          </Grid>
+          ) : (
+            <Card>
+              <NoResults title={'No se encontraron resultados'} />
+            </Card>
+          )
+        )}
     </Grid>
   );
 };
