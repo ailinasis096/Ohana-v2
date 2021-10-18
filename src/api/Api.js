@@ -97,6 +97,14 @@ class API {
     return data;
   }
 
+  // Registrar usuario
+  static async singUp(form) {
+    console.log(form)
+    let path = `/api/auth/signup/`;
+    const { data } = await axiosInstance.post(path, form);
+    return data;
+  }
+
   //login
   static async login(logueo) {
     let path = `/api/auth/signin/`;
@@ -110,6 +118,16 @@ class API {
 
     const { data } = await axiosInstance.post(path);
     return data;
+  }
+
+  // Obtener Paises
+  static async getCountries() {
+    
+    const resp = fetch("https://api.first.org/data/v1/countries")
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+    return resp
   }
 }
 

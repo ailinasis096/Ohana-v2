@@ -6,8 +6,10 @@ import {
   Box,
   Button,
   makeStyles,
-  Typography
+  Typography,
+  Link
 } from '@material-ui/core';
+import { Link as RouterLink } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -24,7 +26,10 @@ const StepByStep = ({
   ...rest
 }) => {
   const classes = useStyles();
-  
+  const handleClick = () => {
+    window.open('https://www.mercadopago.com.ar/developers/', 'Ohana', 'width=1200, height=1200');
+  }
+
   return (
     <Formik
       initialValues
@@ -72,7 +77,7 @@ const StepByStep = ({
           </Box>
 
           <Box mt={2} className={classes.devBtn}>
-            <Button onClick={onBack} size="large" color="secondary" variant="contained" >
+            <Button onClick={handleClick} size="large" color="secondary" variant="contained" >
                 Ingresar a Mercado Pago Dev
             </Button>
           </Box>

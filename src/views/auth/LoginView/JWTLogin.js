@@ -39,8 +39,8 @@ const JWTLogin = ({ className, ...rest }) => {
   return (
     <Formik
       initialValues={{
-        username: 'ailink',
-        password: 'ailink',
+        username: 'user-1',
+        password: 'pass-1',
         submit: null
       }}
       validationSchema={Yup.object().shape({
@@ -52,6 +52,7 @@ const JWTLogin = ({ className, ...rest }) => {
           .required('Password is required')
       })}
       onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
+        console.log('values: ', values)
         await login(values);
       }}
     >
