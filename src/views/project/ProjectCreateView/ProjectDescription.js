@@ -70,7 +70,7 @@ const ProjectDescription = ({
         goal: data.goal,
         contact: {
           id: eventId,
-          name: 'Elías Gomis Cabeza',
+          name:  localStorage.getItem('username'),
           phone: '001-321-201-9918x5660',
           email: 'duiliocatalan@hotmail.com'
         },
@@ -107,7 +107,7 @@ const ProjectDescription = ({
             ? 'https://www.argentina.gob.ar/sites/default/files/vinetas_justicia_cerca_04_quiero_donar_mis_organos.png'
             : image,
         contact: {
-          name: 'Elías Gomis Cabeza',
+          name: localStorage.getItem('username'),
           phone: '001-321-201-9918x5660',
           email: 'duiliocatalan@hotmail.com'
         },

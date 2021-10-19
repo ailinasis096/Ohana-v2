@@ -355,7 +355,7 @@ const NavBar = ({ onMobileClose, openMobile }) => {
   const location = useLocation();
   //const { user } = useAuth();
   const user = {
-    name: 'Elías Gomis Cabeza',
+    name: localStorage.getItem('username'),
     avatar:
       'https://i.pinimg.com/236x/c8/86/72/c886720b5088f74e6907ec908ed14930.jpg'
   };

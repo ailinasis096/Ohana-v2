@@ -63,7 +63,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const RegisterView = () => {
+const RegisterView = ({history}) => {
   const classes = useStyles();
   const { method } = useAuth();
 
@@ -140,7 +140,7 @@ const RegisterView = () => {
             <Box flexGrow={1} mt={3}>
               {method === 'Auth0' && <Auth0Register />}
               {method === 'FirebaseAuth' && <FirebaseAuthRegister />}
-              {method === 'JWT' && <JWTRegister />}
+              {method === 'JWT' && <JWTRegister history={history}/>}
             </Box>
             <Box my={3}>
               <Divider />

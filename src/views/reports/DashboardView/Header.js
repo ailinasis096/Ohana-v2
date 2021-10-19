@@ -65,7 +65,7 @@ const Header = ({ className, ...rest }) => {
     setLoading(true);
     try {
       const response = await api.getEvents(1, 1, '');
-      const result = response.results.filter(event => event.contact.name === 'Elías Gomis Cabeza');
+      const result = response.results.filter(event => event.contact.name ===  localStorage.getItem('username'));
       setEvents(result);
       setLoading(false);
     } catch (err) {

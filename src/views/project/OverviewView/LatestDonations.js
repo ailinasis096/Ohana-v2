@@ -39,8 +39,12 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   msg: {
-    display: 'flex'
-  }
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  nameDiv: {
+    width: '50%'
+  },
 }));
 
 const LatestDonations = ({ event, className, ...rest }) => {
@@ -121,11 +125,10 @@ const LatestDonations = ({ event, className, ...rest }) => {
                           display='flex'
                           alignItems='center'
                         >
-                          <Box ml={1}>
+                          <Box ml={1} className={classes.nameDiv}>
                             <div className={classes.msg}>
-                              <Typography variant='body2'> ¡Gracias </Typography>
                               <Typography variant='subtitle2' color='primary'> {donation.user}</Typography></div>
-                            <Typography variant='body2'> por tu donación!</Typography>
+                            <Typography variant='body2'> ¡Gracias por tu donación!</Typography>
                           </Box>
                         </Box>
                       </TableCell>

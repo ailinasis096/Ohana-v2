@@ -32,7 +32,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-const JWTRegister = ({ className, ...rest }) => {
+const JWTRegister = ({ history, className, ...rest }) => {
   const classes = useStyles();
   const { register } = useAuth();
   const isMountedRef = useIsMountedRef();
@@ -85,13 +85,13 @@ const JWTRegister = ({ className, ...rest }) => {
         //policy: Yup.boolean().oneOf([true], '¡Debe completar todos los campos!')
       })}
       onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
-        console.log('values: ', values)
         values.country = 1;
         try {
           await API.singUp(values);
           if (isMountedRef.current) {
             setStatus({ success: true });
             setSubmitting(false);
+            history.replace('/login');
           }
         } catch (err) {
           console.error(err);
@@ -126,8 +126,7 @@ const JWTRegister = ({ className, ...rest }) => {
             type="email"
             onBlur={handleBlur}
             onChange={handleChange}
-            //value={values.email}
-            value='codob54235@wawue.com'
+            value={values.email}
             variant="outlined"
           />
           <div className={classes.div}>
@@ -140,8 +139,7 @@ const JWTRegister = ({ className, ...rest }) => {
             name="username"
             onBlur={handleBlur}
             onChange={handleChange}
-            //value={values.username}
-            value='codob'
+            value={values.username}
             variant="outlined"
           />
           <span className={classes.span}/>
@@ -156,8 +154,7 @@ const JWTRegister = ({ className, ...rest }) => {
             onBlur={handleBlur}
             onChange={handleChange}
             type="password"
-            //value={values.password}
-            value='codob444'
+            value={values.password}
             variant="outlined"
           />
           </div>
@@ -172,8 +169,7 @@ const JWTRegister = ({ className, ...rest }) => {
             name="first_name"
             onBlur={handleBlur}
             onChange={handleChange}
-            //value={values.first_name}
-            value='Marcos'
+            value={values.first_name}
             variant="outlined"
           />
           <span className={classes.span}/>
@@ -187,8 +183,7 @@ const JWTRegister = ({ className, ...rest }) => {
             name="last_name"
             onBlur={handleBlur}
             onChange={handleChange}
-            //value={values.last_name}
-            value='Sanchez'
+            value={values.last_name}
             variant="outlined"
           />
           </div>
@@ -203,8 +198,7 @@ const JWTRegister = ({ className, ...rest }) => {
             name="phone"
             onBlur={handleBlur}
             onChange={handleChange}
-            //value={values.phone}
-            value='+543513845632'
+            value={values.phone}
             variant="outlined"
           />
           <span className={classes.span}/>
@@ -221,8 +215,7 @@ const JWTRegister = ({ className, ...rest }) => {
             name="province"
             onBlur={handleBlur}
             onChange={handleChange}
-            //value={values.province}
-            value='Córdoba'
+            value={values.province}
             variant="outlined"
           />
           <span className={classes.span}/>
@@ -236,8 +229,7 @@ const JWTRegister = ({ className, ...rest }) => {
             name="city"
             onBlur={handleBlur}
             onChange={handleChange}
-            //value={values.city}
-            value='Córdoba'
+            value={values.city}
             variant="outlined"
           />
           </div>

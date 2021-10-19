@@ -32,6 +32,7 @@ const JWTLogin = ({ className, ...rest }) => {
       const token = response.token;
       console.log(token);
       localStorage.setItem('token', token);
+      localStorage.setItem('username', user);
       history.push('/app/events/browse');
     });
   };
