@@ -92,7 +92,8 @@ class API {
     let path = `/api/donations/create/`;
     const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
     const { data } = await axiosInstance.post(path, form, config).then(response => {
-      let myPopup = window.open(response.data, 'Ohana', 'width=800, height=800');
+      window.location.replace(response.data);
+      //const openedWindow = window.open(response.data, 'Ohana', 'width=800, height=800');
     });
     return data;
   }

@@ -1,27 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 import {
   Box,
   Breadcrumbs,
   Container,
-  Avatar,
-  Card,
-  CardContent,
   Typography,
   colors,
   makeStyles,
   withStyles,
-  CardMedia,
-  Button
+  LinearProgress
 } from '@material-ui/core';
-import {
-  CheckCircle as CheckCircleIcon
-} from 'react-feather';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import Page from 'src/components/Page';
 import API from './../../../api/Api';
 import DonateAction from './DonateAction';
-import celebrate from '../../../assets/celebration.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -90,6 +81,7 @@ const Donate = ({ match, history }) => {
     history.replace(`/app/projects/${event.id}`);
   };
 
+  console.log('holaaaa')
 
   const createDonation = async () => {
     try {
@@ -103,6 +95,7 @@ const Donate = ({ match, history }) => {
   const getEvent = async () => {
     try {
       const event = await API.getEventById(match.params.id);
+      sessionStorage.setItem('donatedEvent', event.name )
       setEvent(event);
     } catch (err) {
       console.error(err);
@@ -152,65 +145,7 @@ const Donate = ({ match, history }) => {
         {!completed ? (
           <DonateAction onBack={handleBack} onComplete={handleComplete} />
         ) : (
-          <div>
-            <Card className={classes.card}>
-              <div className={classes.details}>
-                <CardContent className={classes.content}>
-                  <Box
-                    display='flex'
-                    justifyContent='center'
-                  >
-                    <Avatar className={classes.avatar}>
-                      <CheckCircleIcon />
-                    </Avatar>
-                  </Box>
-                  <Typography component='h3' variant='h3'>
-                    ¡Gracias Elías por ayudar!
-                  </Typography>
-                  <Typography component='h4' variant='h4'>
-                    Tu donación se ha completado con éxito
-                  </Typography>
-                </CardContent>
-              </div>
-              <CardMedia
-                className={classes.cover}
-                image={celebrate}
-                title='Tu donación se ha completado con éxito'
-              />
-            </Card>
-            <Card>
-              <CardContent className={classes.content2}>
-                <Box
-                  maxWidth={450}
-                  mx='auto'
-                >
-                  <Box
-                    mt={2}
-                    display='flex'
-                    justifyContent='center'
-                    className={classes.buttonDiv}
-                  >
-                    <Typography
-                      variant='h5'
-                      color='textSecondary'
-                      align='center'
-                    >
-                      Hay cientos de personas para ayudar
-                    </Typography>
-                    <Button
-                      className={classes.button}
-                      variant='contained'
-                      color='secondary'
-                      component={RouterLink}
-                      to='/app/events/browse'
-                    >
-                      Ver campañas
-                    </Button>
-                  </Box>
-                </Box>
-              </CardContent>
-            </Card>
-          </div>
+          <LinearProgress color="primary" />
         )}
       </Container>
     </Page>

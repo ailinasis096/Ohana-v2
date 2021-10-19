@@ -237,6 +237,12 @@ const routes = [
         path: '/app/donate/:id',
         component: lazy(() => import('src/views/project/Donate'))
       },
+      //MENSAJE POST DONACION
+      {
+        exact: true,
+        path: '/app/donation-success',
+        component: lazy(() => import('src/views/project/Donate/Success'))
+      },
       /* {
         exact: true,
         path: '/app/reports/dashboard-registrar',

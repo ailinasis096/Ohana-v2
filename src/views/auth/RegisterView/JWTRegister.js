@@ -51,8 +51,8 @@ const JWTRegister = ({ history, className, ...rest }) => {
   const [loader, setLoader] = useState(false);
   const [selectedState, setSelectedState] = useState();
 
-  const onStateChange = async (event, setSelectedState) => {
-    setSelectedState(setSelectedState)
+  const onStateChange = async (event, selectedState) => {
+    setSelectedState(selectedState)
     
     /*const data = {
       'country': "nigeria",
@@ -78,7 +78,7 @@ const JWTRegister = ({ history, className, ...rest }) => {
         first_name: '',
         last_name: '',
         phone: '',
-        country: 1,
+        country: '',
         province: '',
         city: '',
         //policy: false,
@@ -108,17 +108,18 @@ const JWTRegister = ({ history, className, ...rest }) => {
         /*country: Yup.string()
           .max(255)
           .required('País es requerido'),*/
-        province: Yup.string()
+        /*province: Yup.string()
           .max(255)
           .required('Provincia es requerido'),
         city: Yup.string()
           .max(255)
-          //.required('Ciudad es requerido'),
+          //.required('Ciudad es requerido'),*/
         //policy: Yup.boolean().oneOf([true], '¡Debe completar todos los campos!')
       })}
       onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
         values.country = 1;
         values.province = selectedState;
+        console.log('values: ', values)
         try {
           await API.singUp(values);
           if (isMountedRef.current) {

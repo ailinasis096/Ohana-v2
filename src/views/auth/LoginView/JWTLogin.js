@@ -30,17 +30,17 @@ const JWTLogin = ({ className, ...rest }) => {
   return (
     <Formik
       initialValues={{
-        username: 'user-1',
-        password: 'pass-1',
+        username: '',
+        password: '',
         submit: null
       }}
       validationSchema={Yup.object().shape({
         username: Yup.string()
           .max(255)
-          .required('Username is required'),
+          .required('Ingrese su username'),
         password: Yup.string()
           .max(255)
-          .required('Password is required')
+          .required('Ingrese su contraseña')
       })}
       onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
         try {
