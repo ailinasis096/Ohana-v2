@@ -2,7 +2,7 @@ import {
   Box,
   Button,
   Checkbox,
-  FormHelperText,
+  LinearProgress,
   Link,
   makeStyles,
   TextField,
@@ -18,19 +18,29 @@ import * as Yup from 'yup';
 import API from '../../../api/Api'
 import Countries from '../../../components/Countries';
 import { useSnackbar } from 'notistack';
+import Autocomplete from '@material-ui/lab/Autocomplete';
+
+const STATES = ["Buenos Aires", "Buenos Aires Capital", "Catamarca", "Chaco", "Chubut", "Cordoba", "Corrientes", "Entre Rios", "Formosa", "Jujuy", "La Pampa", "La Rioja", "Mendoza", "Misiones", "Neuquen", "Rio Negro", "Salta", "San Juan", "San Luis", "Santa Cruz", "Santa Fe", "Santiago del Estero", "Tierra del Fuego", "Tucuman"];
 
 const useStyles = makeStyles(() => ({
   root: {},
   div: {
     display: 'flex',
-    alignContent: 'center'
+    alignItems: 'center'
   },
   textField: {
     width: '90%'
   },
   span: {
     width: '5%'
-  }
+  },
+  progress: {
+    marginTop: '30px'
+  },
+  autocomplete: {
+    width: '90%',
+    marginTop: '8px'
+  },
 }));
 
 const JWTRegister = ({ history, className, ...rest }) => {
@@ -38,8 +48,28 @@ const JWTRegister = ({ history, className, ...rest }) => {
   const { register } = useAuth();
   const isMountedRef = useIsMountedRef();
   const { enqueueSnackbar } = useSnackbar();
+  const [loader, setLoader] = useState(false);
+  const [selectedState, setSelectedState] = useState();
+
+  const onStateChange = async (event, setSelectedState) => {
+    setSelectedState(setSelectedState)
+    
+    /*const data = {
+      'country': "nigeria",
+      'state': 'lagos'
+    };
+    try { 
+      const response = await API.getCities(data);
+      console.log('response: ', response)
+      setCities(response)
+    }
+    catch (e) {
+      console.error(e);
+    }*/
+  }
 
   return (
+    <div>
     <Formik
       initialValues={{
         email: '',
@@ -83,23 +113,25 @@ const JWTRegister = ({ history, className, ...rest }) => {
           .required('Provincia es requerido'),
         city: Yup.string()
           .max(255)
-          .required('Ciudad es requerido'),
+          //.required('Ciudad es requerido'),
         //policy: Yup.boolean().oneOf([true], '¡Debe completar todos los campos!')
       })}
       onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
         values.country = 1;
+        values.province = selectedState;
         try {
           await API.singUp(values);
           if (isMountedRef.current) {
             setStatus({ success: true });
             setSubmitting(false);
           }
-          enqueueSnackbar( 'Usuario creado exitosamente', {
+          setLoader(true)
+          enqueueSnackbar( 'Usuario creado exitosamente.', {
             variant: 'success',
           });
           setTimeout(function() {
             history.replace('/login');
-          }, 5000);
+          }, 3000);
         } catch (err) {
           console.error(err);
           if (err.response && err.response.status) {
@@ -214,22 +246,29 @@ const JWTRegister = ({ history, className, ...rest }) => {
             variant="outlined"
           />
           <span className={classes.span}/>
-          <Countries></Countries>
+            <Countries/>
           </div>
           <div className={classes.div}>
-          <TextField
-            className={classes.textField}
-            error={Boolean(touched.province && errors.province)}
-            fullWidth
-            helperText={touched.province && errors.province}
-            label="Provincia"
-            margin="normal"
-            name="province"
-            onBlur={handleBlur}
-            onChange={handleChange}
-            value={values.province}
-            variant="outlined"
-          />
+            <Autocomplete
+              className={classes.autocomplete}
+              sx={{ width: 300 }}
+              options={STATES}
+              autoHighlight
+              onInputChange={onStateChange}
+              getOptionLabel={(option) => option}
+              renderOption={(option) => option}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  variant="outlined"
+                  label="Seleccione una provincia"
+                  inputProps={{
+                    ...params.inputProps,
+                    autoComplete: 'new-password',
+                  }}
+                />
+              )}
+            />
           <span className={classes.span}/>
           <TextField
             error={Boolean(touched.city && errors.city)}
@@ -281,7 +320,11 @@ const JWTRegister = ({ history, className, ...rest }) => {
           </Box>
         </form>
       )}
-    </Formik>
+    </Formik>    
+    { !!loader &&
+      <LinearProgress className={classes.progress} color="primary" />
+    }
+    </div>
   );
 };
 

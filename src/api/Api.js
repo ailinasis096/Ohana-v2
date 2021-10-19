@@ -120,10 +120,27 @@ class API {
     return data;
   }
 
-  // Obtener Paises
+  // Obtener paises
   static async getCountries() {
     
     const resp = fetch("https://api.first.org/data/v1/countries")
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+    return resp
+  }
+
+  // Obtener ciudades
+  static async getCities(data) {
+    console.log('data: ', data)
+    const resp = fetch("https://countriesnow.space/api/v0.1/countries/state/cities", {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+   })
       .then(response => response.text())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));

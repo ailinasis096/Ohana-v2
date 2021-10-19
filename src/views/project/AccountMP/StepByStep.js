@@ -10,12 +10,14 @@ import {
   Link
 } from '@material-ui/core';
 import { Link as RouterLink } from 'react-router-dom';
+import pasosMP from '../../../assets/pasosMP.mp4'
 
 const useStyles = makeStyles(theme => ({
   root: {},
   devBtn: {
       display: 'grid',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      marginTop: '2%'
   }
 }));
 
@@ -75,7 +77,11 @@ const StepByStep = ({
                 Recomendamos ver el video cuantas veces sea necesario y si tenes dudas contactate con el soporte de Ohana.
             </Typography>
           </Box>
-
+          <Box className={classes.devBtn}>
+            <video width="535" height="300" controls >
+              <source src={pasosMP} type="video/mp4"/>
+            </video>    
+          </Box>      
           <Box mt={2} className={classes.devBtn}>
             <Button onClick={handleClick} size="large" color="secondary" variant="contained" >
                 Ingresar a Mercado Pago Dev

@@ -45,15 +45,15 @@ const NotFoundView = () => {
           variant={mobileDevice ? 'h4' : 'h1'}
           color="textPrimary"
         >
-          404: The page you are looking for isn’t here
+          404: La página que estas buscando no existe
         </Typography>
         <Typography
           align="center"
           variant="subtitle2"
           color="textSecondary"
         >
-          You either tried some shady route or you
-          came here by mistake. Whichever it is, try using the navigation.
+          Ingresaste alguna ruta incorrecta o
+          vino aquí por error. Por favor, intente utilizar la navegación.
         </Typography>
         <Box
           mt={6}
@@ -77,7 +77,7 @@ const NotFoundView = () => {
             to="/"
             variant="outlined"
           >
-            Back to home
+            Volver a Inicio
           </Button>
         </Box>
       </Container>

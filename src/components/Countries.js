@@ -8,7 +8,8 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 
 const useStyles = makeStyles(() => ({
     root: {
-        width: '90%'
+      width: '90%',
+      marginTop: '8px'
     },
   }));
 

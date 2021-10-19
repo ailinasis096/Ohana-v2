@@ -60,6 +60,9 @@ const useStyles = makeStyles(theme => ({
       width: 'auto',
       maxHeight: '100%'
     }
+  },
+  divider: {
+    marginTop: 0,
   }
 }));
 
@@ -142,8 +145,8 @@ const RegisterView = ({history}) => {
               {method === 'FirebaseAuth' && <FirebaseAuthRegister />}
               {method === 'JWT' && <JWTRegister history={history}/>}
             </Box>
-            <Box my={3}>
-              <Divider />
+            <Box mb={3}>
+              <Divider/>
             </Box>
             <Link
               component={RouterLink}
