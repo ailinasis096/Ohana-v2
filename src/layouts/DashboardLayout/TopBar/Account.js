@@ -12,6 +12,7 @@ import {
   Typography
 } from '@material-ui/core';
 import useAuth from 'src/hooks/useAuth';
+import avatar from '../../../assets/avatar.png'
 
 const useStyles = makeStyles(theme => ({
   avatar: {
@@ -34,8 +35,7 @@ const Account = () => {
 
   const user = {
     name:  localStorage.getItem('username'),
-    avatar:
-      'https://i.pinimg.com/236x/c8/86/72/c886720b5088f74e6907ec908ed14930.jpg'
+    avatar: avatar
   };
 
   const handleOpen = () => {

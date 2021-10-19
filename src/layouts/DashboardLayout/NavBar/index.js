@@ -18,6 +18,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 import { Link as RouterLink, matchPath, useLocation } from 'react-router-dom';
 import Logo from 'src/components/Logo';
 import NavItem from './NavItem';
+import avatar from '../../../assets/avatar.png'
 
 const sections = [
   {
@@ -356,8 +357,7 @@ const NavBar = ({ onMobileClose, openMobile }) => {
   //const { user } = useAuth();
   const user = {
     name: localStorage.getItem('username'),
-    avatar:
-      'https://i.pinimg.com/236x/c8/86/72/c886720b5088f74e6907ec908ed14930.jpg'
+    avatar: avatar
   };
 
   useEffect(() => {

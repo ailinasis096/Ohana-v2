@@ -13,8 +13,9 @@ import React, { useEffect, useState } from 'react';
 import useAuth from 'src/hooks/useAuth';
 import useIsMountedRef from 'src/hooks/useIsMountedRef';
 import * as Yup from 'yup';
-import ax from '../../../api/Api';
+import API from '../../../api/Api';
 import { useHistory } from 'react-router-dom';
+import { useSnackbar } from 'notistack';
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -22,20 +23,9 @@ const useStyles = makeStyles(() => ({
 
 const JWTLogin = ({ className, ...rest }) => {
   const classes = useStyles();
-
+  const { enqueueSnackbar } = useSnackbar();
   const isMountedRef = useIsMountedRef();
   const history = useHistory();
-
-  const login = async logueo => {
-    ax.login(logueo).then(response => {
-      const user = response.username;
-      const token = response.token;
-      console.log(token);
-      localStorage.setItem('token', token);
-      localStorage.setItem('username', user);
-      history.push('/app/events/browse');
-    });
-  };
 
   return (
     <Formik
@@ -53,8 +43,22 @@ const JWTLogin = ({ className, ...rest }) => {
           .required('Password is required')
       })}
       onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
-        console.log('values: ', values)
-        await login(values);
+        try {
+          const response = await API.login(values); 
+          localStorage.setItem('token', response.token);
+          localStorage.setItem('username', response.username);
+          history.push('/app/events/browse');
+        } catch (err) {
+          console.error(err);
+          if (err.response && err.response.status === 400) {
+            enqueueSnackbar( 'Usuario y/o contraseña inválidos', {
+              variant: 'error',
+            });
+          }
+          setStatus({ success: false });
+          setErrors({ submit: err.message });
+          setSubmitting(false);
+        }
       }}
     >
       {({
@@ -73,7 +77,7 @@ const JWTLogin = ({ className, ...rest }) => {
           {...rest}
         >
           <TextField
-            error={Boolean(touched.username && errors.username)}
+            error={Boolean((touched.username && errors.username) || errors.submit)}
             fullWidth
             autoFocus
             helperText={touched.username && errors.username}
@@ -87,7 +91,7 @@ const JWTLogin = ({ className, ...rest }) => {
             variant='outlined'
           />
           <TextField
-            error={Boolean(touched.password && errors.password)}
+            error={Boolean((touched.password && errors.password) || errors.submit)}
             fullWidth
             helperText={touched.password && errors.password}
             label='Contraseña'
@@ -99,11 +103,6 @@ const JWTLogin = ({ className, ...rest }) => {
             value={values.password}
             variant='outlined'
           />
-          {errors.submit && (
-            <Box mt={3}>
-              <FormHelperText error>{errors.submit}</FormHelperText>
-            </Box>
-          )}
           <Box mt={2}>
             <Button
               color='secondary'
@@ -115,13 +114,6 @@ const JWTLogin = ({ className, ...rest }) => {
             >
               Ingresar
             </Button>
-          </Box>
-          <Box mt={2}>
-            <Alert severity='info'>
-              <div>
-                Usar <b>ailink</b> y contraseña <b>ailink</b>
-              </div>
-            </Alert>
           </Box>
         </form>
       )}

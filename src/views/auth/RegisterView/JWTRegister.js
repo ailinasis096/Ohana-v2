@@ -17,6 +17,7 @@ import useIsMountedRef from 'src/hooks/useIsMountedRef';
 import * as Yup from 'yup';
 import API from '../../../api/Api'
 import Countries from '../../../components/Countries';
+import { useSnackbar } from 'notistack';
 
 const useStyles = makeStyles(() => ({
   root: {},
@@ -36,7 +37,8 @@ const JWTRegister = ({ history, className, ...rest }) => {
   const classes = useStyles();
   const { register } = useAuth();
   const isMountedRef = useIsMountedRef();
-  
+  const { enqueueSnackbar } = useSnackbar();
+
   return (
     <Formik
       initialValues={{
@@ -91,10 +93,20 @@ const JWTRegister = ({ history, className, ...rest }) => {
           if (isMountedRef.current) {
             setStatus({ success: true });
             setSubmitting(false);
-            history.replace('/login');
           }
+          enqueueSnackbar( 'Usuario creado exitosamente', {
+            variant: 'success',
+          });
+          setTimeout(function() {
+            history.replace('/login');
+          }, 5000);
         } catch (err) {
           console.error(err);
+          if (err.response && err.response.status) {
+            enqueueSnackbar( 'No se pudo crear el usuario, por favor intente nuevamente', {
+              variant: 'error',
+            });
+          }
           setStatus({ success: false });
           setErrors({ submit: err.message });
           setSubmitting(false);
