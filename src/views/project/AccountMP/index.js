@@ -1,6 +1,5 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
-import api from '../../../api/Api';
 import PropTypes from 'prop-types';
 import { Link as RouterLink } from 'react-router-dom';
 import {
@@ -34,7 +33,7 @@ import {
 import Page from 'src/components/Page';
 import AccountData from './AccountData';
 import StepByStep from './StepByStep';
-import mp from '../../../assets/mp.png'
+import mp from '../../../assets/mp.png';
 
 const steps = [
   {
@@ -44,13 +43,13 @@ const steps = [
   {
     label: 'Datos',
     icon: BriefcaseIcon
-  },
+  }
 ];
 
 const CustomStepConnector = withStyles((theme) => ({
   vertical: {
     marginLeft: 19,
-    padding: 0,
+    padding: 0
   },
   line: {
     borderColor: theme.palette.divider
@@ -82,7 +81,7 @@ const CustomStepIcon = ({ active, completed, icon }) => {
         [classes.completed]: completed
       })}
     >
-      <Icon size="20" />
+      <Icon size='20' />
     </Avatar>
   );
 };
@@ -108,7 +107,7 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonDiv: {
     display: 'grid',
-    marginTop: '30px',
+    marginTop: '30px'
   },
   button: {
     marginTop: '25px',
@@ -132,19 +131,19 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   content2: {
-    padding: '30px',
+    padding: '30px'
   },
   cover: {
     width: '40%',
     height: '270px'
-  },
+  }
 }));
 
 const AccountMP = ({ match }) => {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState(false);
-  
+
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
@@ -162,30 +161,30 @@ const AccountMP = ({ match }) => {
       className={classes.root}
       title='Configurar cuenta'
     >
-      <Container maxWidth="lg">
+      <Container maxWidth='lg'>
         <Box mb={3}>
           <Breadcrumbs
-            separator={<NavigateNextIcon fontSize="small" />}
-            aria-label="breadcrumb"
+            separator={<NavigateNextIcon fontSize='small' />}
+            aria-label='breadcrumb'
           >
             <Link
-              variant="body1"
-              color="inherit"
-              to="/app"
+              variant='body1'
+              color='inherit'
+              to='/app'
               component={RouterLink}
             >
               Dashboard
             </Link>
             <Typography
-              variant="body1"
-              color="textPrimary"
+              variant='body1'
+              color='textPrimary'
             >
               Configurar cuenta
             </Typography>
           </Breadcrumbs>
           <Typography
-            variant="h3"
-            color="textPrimary"
+            variant='h3'
+            color='textPrimary'
           >
             Configurar cuenta
           </Typography>
@@ -202,7 +201,7 @@ const AccountMP = ({ match }) => {
                   activeStep={activeStep}
                   className={classes.stepper}
                   connector={<CustomStepConnector />}
-                  orientation="vertical"
+                  orientation='vertical'
                 >
                   {steps.map((step) => (
                     <Step key={step.label}>
@@ -220,12 +219,13 @@ const AccountMP = ({ match }) => {
               >
                 <Box p={3}>
                   {activeStep === 0 && (
-                    <StepByStep onBack={handleBack} onNext={handleNext}/>
+                    <StepByStep onBack={handleBack} onNext={handleNext} />
                   )}
                   {activeStep === 1 && (
                     <AccountData
                       onBack={handleBack}
-                      onComplete={handleComplete}             
+                      onComplete={handleComplete}
+
                     />
                   )}
                 </Box>
@@ -234,60 +234,60 @@ const AccountMP = ({ match }) => {
           </Paper>
         ) : (
           <div>
-          <Card className={classes.card}>
-            <div className={classes.details}>
-              <CardContent className={classes.content}>
+            <Card className={classes.card}>
+              <div className={classes.details}>
+                <CardContent className={classes.content}>
                   <Box
-                    display="flex"
-                    justifyContent="center"
+                    display='flex'
+                    justifyContent='center'
                   >
-                  <Avatar className={classes.avatar}>
-                    <CheckCircleIcon />
-                  </Avatar>
-                </Box>
-                <Typography component="h4" variant="h4">
-                  Tu campaña se ha vinculado a Mercado Pago con éxito
-                </Typography>
-              </CardContent>
-            </div>
-            <CardMedia
-              className={classes.cover}
-              image={mp}
-              title="Live from space album cover"
-            />
-          </Card>
-          <Card>
-            <CardContent className={classes.content2}>
-              <Box
-                maxWidth={450}
-                mx="auto"
-              >
-                <Box
-                  mt={2}
-                  display="flex"
-                  justifyContent="center"
-                  className={classes.buttonDiv}
-                >
-                  <Typography
-                    variant="h5"
-                    color="textSecondary"
-                    align="center"
-                  >
-                    ¡Listo! Tu campaña ya pueden recibir donaciones
+                    <Avatar className={classes.avatar}>
+                      <CheckCircleIcon />
+                    </Avatar>
+                  </Box>
+                  <Typography component='h4' variant='h4'>
+                    Tu campaña se ha vinculado a Mercado Pago con éxito
                   </Typography>
-                  <Button
-                    className={classes.button}
-                    variant="contained"
-                    color="secondary"
-                    component={RouterLink}
-                    to="/app/reports/dashboard"
+                </CardContent>
+              </div>
+              <CardMedia
+                className={classes.cover}
+                image={mp}
+                title='Live from space album cover'
+              />
+            </Card>
+            <Card>
+              <CardContent className={classes.content2}>
+                <Box
+                  maxWidth={450}
+                  mx='auto'
+                >
+                  <Box
+                    mt={2}
+                    display='flex'
+                    justifyContent='center'
+                    className={classes.buttonDiv}
                   >
-                    Ver camapaña
-                  </Button>
+                    <Typography
+                      variant='h5'
+                      color='textSecondary'
+                      align='center'
+                    >
+                      ¡Listo! Tu campaña ya pueden recibir donaciones
+                    </Typography>
+                    <Button
+                      className={classes.button}
+                      variant='contained'
+                      color='secondary'
+                      component={RouterLink}
+                      to='/app/reports/dashboard'
+                    >
+                      Ver campaña
+                    </Button>
+                  </Box>
                 </Box>
-              </Box>
-            </CardContent>
-          </Card></div>
+              </CardContent>
+            </Card></div>
         )}
       </Container>
     </Page>

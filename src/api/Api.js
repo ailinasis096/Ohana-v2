@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const axiosInstance = axios.create({
   baseURL: 'https://juanpsenn.pythonanywhere.com/'
@@ -30,6 +31,7 @@ class API {
     return data;
   }
 
+// http://localhost:3000/app/config-account
   // Actualizar campañas de donaciones
   static async updateEvent(id, form) {
     let path = `/api/events/update/${id}/`;
@@ -100,7 +102,7 @@ class API {
 
   // Registrar usuario
   static async singUp(form) {
-    console.log(form)
+    console.log(form);
     let path = `/api/auth/signup/`;
     const { data } = await axiosInstance.post(path, form);
     return data;
@@ -123,30 +125,56 @@ class API {
 
   // Obtener paises
   static async getCountries() {
-    
-    const resp = fetch("https://api.first.org/data/v1/countries")
+
+    const resp = fetch('https://api.first.org/data/v1/countries')
       .then(response => response.text())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
-    return resp
+    return resp;
   }
 
   // Obtener ciudades
   static async getCities(data) {
-    console.log('data: ', data)
-    const resp = fetch("https://countriesnow.space/api/v0.1/countries/state/cities", {
+    const resp = fetch('https://countriesnow.space/api/v0.1/countries/state/cities', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
-   })
+    })
       .then(response => response.text())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
-    return resp
+    return resp;
   }
+
+  // Registrar cuenta de mercadopago
+  static async createMpAccount(form) {
+    let path = `/api/auth/create-mp-account/`;
+    const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
+    const { data } = await axiosInstance.post(path, form, config).then(response => response).catch(error => {
+      Swal.fire({
+        title: 'Error!',
+        text: 'Ocurrió un error, inténtelo luego!',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      }).then(() => window.location = '/app/config-account');
+      throw error;
+    });
+    return data;
+  }
+
+  // Obtener cuenta de Mercadopago
+
+  static async getMpAccount() {
+    const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
+    let path = `/api/auth/get-mp-account`;
+    const { data } = await axiosInstance.get(path, config);
+    return data;
+  }
+
+
 }
 
 export default API;

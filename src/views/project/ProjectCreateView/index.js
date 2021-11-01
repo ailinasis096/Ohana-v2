@@ -79,6 +79,7 @@ const CustomStepIcon = ({ active, completed, icon }) => {
 
   const Icon = steps[icon - 1].icon;
 
+
   return (
     <Avatar
       className={clsx(classes.root, {
@@ -150,6 +151,7 @@ const ProjectCreateView = ({ match }) => {
   const [editMode, setEditMode] = useState(false);
   const [data, setData] = useState();
   const [event, setEvent] = useState();
+  let [accountMp, setAccountMp] = useState('');
 
   useEffect(() => {
     if (!!match.params.id) {
@@ -175,9 +177,17 @@ const ProjectCreateView = ({ match }) => {
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
+  useEffect(() => {
+    api.getMpAccount()
+      .then(response => {
+        setAccountMp(response);
+      });
+
+  }, []);
 
   const handleComplete = () => {
     setCompleted(true);
+
   };
 
   let sessionName = sessionStorage.getItem('eventName');
@@ -298,38 +308,44 @@ const ProjectCreateView = ({ match }) => {
                 title='Live from space album cover'
               />
             </Card>
-            <Card>
-              <CardContent className={classes.content2}>
-                <Box
-                  maxWidth={450}
-                  mx='auto'
-                >
-                  <Box
-                    mt={2}
-                    display='flex'
-                    justifyContent='center'
-                    className={classes.buttonDiv}
+            {
+              (accountMp.name === '') ?
+                <Card>
+
+                  <CardContent className={classes.content2}
                   >
-                    <Typography
-                      variant='subtitle1'
-                      color='textSecondary'
-                      align='center'
+                    <Box
+                      maxWidth={450}
+                      mx='auto'
                     >
-                      Sólo queda configurar tu cuenta de mercado pago
-                    </Typography>
-                    <Button
-                      className={classes.button}
-                      variant='contained'
-                      color='secondary'
-                      component={RouterLink}
-                      to='/app/config-account'
-                    >
-                      Configurar cuenta
-                    </Button>
-                  </Box>
-                </Box>
-              </CardContent>
-            </Card></div>
+                      <Box
+                        mt={2}
+                        display='flex'
+                        justifyContent='center'
+                        className={classes.buttonDiv}
+                      >
+                        <Typography
+                          variant='subtitle1'
+                          color='textSecondary'
+                          align='center'
+                        >
+                          Sólo queda configurar tu cuenta de mercado pago
+                        </Typography>
+                        <Button
+                          className={classes.button}
+                          variant='contained'
+                          color='secondary'
+                          component={RouterLink}
+                          to='/app/config-account'
+                        >
+                          Configurar cuenta
+                        </Button>
+                      </Box>
+                    </Box>
+                  </CardContent>
+                </Card> : null
+            }
+          </div>
         )}
       </Container>
     </Page>
