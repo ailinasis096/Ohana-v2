@@ -64,8 +64,9 @@ const Header = ({ className, ...rest }) => {
   const getEvents = async () => {
     setLoading(true);
     try {
-      const response = await api.getEvents(1, 1, '');
-      const result = response.results.filter(event => event.contact.name ===  localStorage.getItem('username'));
+      const response = await api.getEvents(1, 99, '');
+      const result = response.results.filter(event => event.contact.name === localStorage.getItem('username'));
+      console.log(response);
       setEvents(result);
       setLoading(false);
     } catch (err) {
@@ -139,11 +140,14 @@ const Header = ({ className, ...rest }) => {
         </Menu>
       </Grid>
       {!!loading ? (
-        <CircularProgress color="inherit" size={20} />
+        <CircularProgress
+          value={5}
+          color='inherit' size={20} />
       ) : (
         !!events && events.length > 0 ? (
           <Grid container spacing={3}>
             {events.map(project => (
+
               <Grid
                 item
                 key={project.id}
@@ -155,12 +159,12 @@ const Header = ({ className, ...rest }) => {
               </Grid>
             ))}
           </Grid>
-          ) : (
-            <Card>
-              <NoResults title={'No se encontraron resultados'} />
-            </Card>
-          )
-        )}
+        ) : (
+          <Card>
+            <NoResults title={'No se encontraron resultados'} />
+          </Card>
+        )
+      )}
     </Grid>
   );
 };

@@ -24,10 +24,11 @@ import moment from 'moment';
 import 'moment/locale/es'; // without this line it didn't work
 import numeral from 'numeral';
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Share2 as ShareIcon } from 'react-feather';
 import { Link as RouterLink } from 'react-router-dom';
 import getInitials from 'src/utils/getInitials';
+import api from '../api/Api';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -65,6 +66,7 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
   const classes = useStyles();
   const [isLiked, setLiked] = useState(true);
   const [likesCount, setLikesCount] = useState(10);
+  const [deleteEvent, setDeleteEvent] = useState('');
 
   const handleLike = () => {
     setLiked(true);
@@ -78,7 +80,15 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
 
   const handleEdit = () => {
   };
+  useEffect(() => {
+    getEvents();
+  }, []);
 
+
+  const deleteCampaign = () => {
+    api.deleteCampaign(project.id).then(response => setDeleteEvent(response));
+    console.log(deleteEvent);
+  };
   return (
     <Card className={clsx(classes.root, className)} {...rest}>
       <Box p={3}>
@@ -187,7 +197,9 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
         {userMode ? (
           <div>
             <Tooltip title='Eliminar campaña'>
-              <IconButton>
+              <IconButton
+                onClick={deleteCampaign}
+              >
                 <DeleteIcon fontSize='small' />
               </IconButton>
             </Tooltip>

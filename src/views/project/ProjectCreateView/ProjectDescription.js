@@ -70,7 +70,7 @@ const ProjectDescription = ({
         goal: data.goal,
         contact: {
           id: eventId,
-          name:  localStorage.getItem('username'),
+          name: localStorage.getItem('username'),
           phone: '001-321-201-9918x5660',
           email: 'duiliocatalan@hotmail.com'
         },
@@ -144,18 +144,6 @@ const ProjectDescription = ({
       setSubmitting(false);
     }
   };
-
-  /*
-    <Typography variant="h3" color="textPrimary">
-      Agregar documentos
-    </Typography>
-    <Box mt={2}>
-      <Typography variant="subtitle1" color="textSecondary">
-        Seleccione los documentos que desea subir
-      </Typography>
-      <FilesDropzone setImage={setImage} />
-    </Box>
-  */
 
   return (
     <form

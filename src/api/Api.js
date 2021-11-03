@@ -26,7 +26,6 @@ class API {
   static async createEvent(form) {
     let path = `/api/events/create/`;
     const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
-
     const { data } = await axiosInstance.post(path, form, config);
     return data;
   }
@@ -41,7 +40,7 @@ class API {
   }
 
   //Obtener campañas
-  static async getEvents(page = 1, pageSize = 2, search) {
+  static async getEvents(page = 1, pageSize = 100, search) {
     const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
     let path = !!search
       ? `/api/events/list/?page=${page}&page_size=${pageSize}&q=${search}`
@@ -90,7 +89,6 @@ class API {
 
   // Generar una donación
   static async createDonation(form) {
-    console.log(form);
     let path = `/api/donations/create/`;
     const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
     const { data } = await axiosInstance.post(path, form, config).then(response => {
@@ -102,7 +100,6 @@ class API {
 
   // Registrar usuario
   static async singUp(form) {
-    console.log(form);
     let path = `/api/auth/signup/`;
     const { data } = await axiosInstance.post(path, form);
     return data;
@@ -172,7 +169,15 @@ class API {
     let path = `/api/auth/get-mp-account`;
     const { data } = await axiosInstance.get(path, config);
     return data;
-  }
+  };
+
+  // Borrar una campaña
+  static async deleteCampaign(id) {
+    const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
+    let path = `/api/events/delete/${id}/`;
+    const { data } = await axiosInstance.put(path, null, config);
+    return data;
+  };
 
 
 }

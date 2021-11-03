@@ -300,6 +300,15 @@ const ProjectCreateView = ({ match }) => {
                   <Typography variant='subtitle1' color='textSecondary'>
                     {editMode ? `Tu campaña ${event.name} fue modificada exitosamente.` : `Tu campaña ${sessionName} fue creada exitosamente.`}
                   </Typography>
+                  <Button
+                    className={classes.button}
+                    variant='contained'
+                    color='secondary'
+                    component={RouterLink}
+                    to='/app/reports/dashboard'
+                  >
+                    Volver
+                  </Button>
                 </CardContent>
               </div>
               <CardMedia
