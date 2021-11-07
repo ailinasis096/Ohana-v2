@@ -4,7 +4,7 @@ import {
   createMuiTheme,
   responsiveFontSizes
 } from '@material-ui/core';
-import { THEMES } from 'src/constants';
+import { THEMES } from 'src/constants/constants';
 import { softShadows, strongShadows } from './shadows';
 import typography from './typography';
 

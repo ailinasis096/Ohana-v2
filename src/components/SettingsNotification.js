@@ -12,7 +12,7 @@ import {
   makeStyles
 } from '@material-ui/core';
 import useSettings from 'src/hooks/useSettings';
-import { THEMES } from 'src/constants';
+import { THEMES } from 'src/constants/constants';
 
 const useStyles = makeStyles((theme) => ({
   root: {

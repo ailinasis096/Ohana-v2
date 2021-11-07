@@ -17,6 +17,7 @@ import SendIcon from '@material-ui/icons/Send';
 import AddPhotoIcon from '@material-ui/icons/AddPhotoAlternate';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 import useAuth from 'src/hooks/useAuth';
+import avatar from '../../assets/avatar.png'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -62,7 +63,7 @@ const CommentAdd = ({ className, ...rest }) => {
     >
       <Avatar
         alt="Person"
-        src={user.avatar}
+        src={avatar}
       />
       <Paper
         className={classes.inputContainer}

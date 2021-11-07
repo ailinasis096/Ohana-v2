@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Donate.css'
 import {
   Box,
   Breadcrumbs,
@@ -7,12 +8,14 @@ import {
   colors,
   makeStyles,
   withStyles,
-  LinearProgress
+  LinearProgress,
+  Card
 } from '@material-ui/core';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import Page from 'src/components/Page';
 import API from './../../../api/Api';
 import DonateAction from './DonateAction';
+import time from '../../../assets/time.svg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -65,6 +68,7 @@ const useStyles = makeStyles((theme) => ({
 const Donate = ({ match, history }) => {
   const classes = useStyles();
   const [event, setEvent] = useState();
+  const [notAllow, setNotAllow] = useState(false);
   const [completed, setCompleted] = useState(false);
   const form = {
     amount: 0,
@@ -81,13 +85,12 @@ const Donate = ({ match, history }) => {
     history.replace(`/app/projects/${event.id}`);
   };
 
-  console.log('holaaaa')
-
   const createDonation = async () => {
     try {
       const event = await API.createDonation(form);
       setEvent(event);
     } catch (err) {
+      if(err.response.status === 500) {setNotAllow(true)}
       console.error(err);
     }
   };
@@ -145,7 +148,19 @@ const Donate = ({ match, history }) => {
         {!completed ? (
           <DonateAction onBack={handleBack} onComplete={handleComplete} />
         ) : (
-          <LinearProgress color="primary" />
+          !!notAllow ? (
+            <Card>
+            <div className="NotAllowMessage">
+              <Typography variant="h5"> Esta campaña no puede recibir donaciones todavía </Typography> 
+              <Typography variant="h5" color='primary'> Por favor, intente de nuevo más tarde </Typography>
+              <img
+                src={time}
+                className="NotAllowMessage__NotAllowImage"
+              />
+            </div></Card>
+          ) : (
+            <LinearProgress color="primary" />
+          )     
         )}
       </Container>
     </Page>

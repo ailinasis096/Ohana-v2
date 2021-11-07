@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import Logo from 'src/components/Logo';
-import { APP_VERSION } from 'src/constants';
+import { APP_VERSION } from 'src/constants/constants';
 
 const useStyles = makeStyles(theme => ({
   root: {

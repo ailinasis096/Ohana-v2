@@ -12,14 +12,17 @@ import {
   MenuItem,
   SvgIcon,
   Typography,
-  Card
+  Card,
+  Box,
+  Container
 } from '@material-ui/core';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import { Calendar as CalendarIcon } from 'react-feather';
 import CardEvents from 'src/components/CardEvents';
 import api from './../../../api/Api';
 import NoResults from './../../../components/NoResults/NoResults';
-import CircularProgress from './../DashboardAlternativeView/MostProfitableProducts/CircularProgress';
+import CircularProgress from "@material-ui/core/CircularProgress";
+import Filter from './../../project/ProjectBrowseView/Filter/index';
 
 const timeRanges = [
   {
@@ -40,11 +43,21 @@ const timeRanges = [
   }
 ];
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: '1280px',
-    margin: '0 183px',
     padding: '0 24px'
+  },
+  container: {
+    padding: '0',
+    marginBottom: '32px'
+  },
+  card: {
+    width: '100%'
+  },
+  progress: {
+    marginTop: '20vh',
+    marginLeft: '32vw'
   }
 }));
 
@@ -58,16 +71,14 @@ const Header = ({ className, ...rest }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    getEvents();
+    fetchEvent(1, 10, '');
   }, []);
 
-  const getEvents = async () => {
+  const fetchEvent = async (pageSize = 1, results = 10, data) => {
     setLoading(true);
     try {
-      const response = await api.getEvents(1, 99, '');
-      const result = response.results.filter(event => event.contact.name === localStorage.getItem('username'));
-      console.log(response);
-      setEvents(result);
+      const response = await api.getMyEvents(pageSize, results, data);
+      setEvents(response.results);
       setLoading(false);
     } catch (err) {
       console.error(err);
@@ -75,97 +86,102 @@ const Header = ({ className, ...rest }) => {
   };
 
   return (
-    <Grid
-      container
-      spacing={3}
-      justify='space-between'
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
-      <Grid item>
-        <Breadcrumbs
-          separator={<NavigateNextIcon fontSize='small' />}
-          aria-label='breadcrumb'
-        >
-          <Link
-            variant='body1'
-            color='inherit'
-            to='/app'
-            component={RouterLink}
+    <Container maxWidth="lg">
+      <Grid
+        container
+        spacing={3}
+        justify='space-between'
+        className={clsx(classes.root, className)}
+        {...rest}
+      >
+        <Grid item>
+          <Breadcrumbs
+            separator={<NavigateNextIcon fontSize='small' />}
+            aria-label='breadcrumb'
           >
-            Dashboard
-          </Link>
-          <Typography variant='body1' color='textPrimary'>
-            Listar
-          </Typography>
-        </Breadcrumbs>
-        <Typography variant='h3' color='textPrimary'>
-          Mis Campañas Activas
-        </Typography>
-      </Grid>
-      <Grid item>
-        <Button
-          ref={actionRef}
-          onClick={() => setMenuOpen(true)}
-          startIcon={
-            <SvgIcon fontSize='small'>
-              <CalendarIcon />
-            </SvgIcon>
-          }
-        >
-          {timeRange}
-        </Button>
-        <Menu
-          anchorEl={actionRef.current}
-          onClose={() => setMenuOpen(false)}
-          open={isMenuOpen}
-          getContentAnchorEl={null}
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'center'
-          }}
-          transformOrigin={{
-            vertical: 'top',
-            horizontal: 'center'
-          }}
-        >
-          {timeRanges.map(_timeRange => (
-            <MenuItem
-              key={_timeRange.value}
-              onClick={() => setTimeRange(_timeRange.text)}
+            <Link
+              variant='body1'
+              color='inherit'
+              to='/app'
+              component={RouterLink}
             >
-              {_timeRange.text}
-            </MenuItem>
-          ))}
-        </Menu>
-      </Grid>
-      {!!loading ? (
-        <CircularProgress
-          value={5}
-          color='inherit' size={20} />
-      ) : (
-        !!events && events.length > 0 ? (
-          <Grid container spacing={3}>
-            {events.map(project => (
-
-              <Grid
-                item
-                key={project.id}
-                md={mode === 'grid' ? 4 : 12}
-                sm={mode === 'grid' ? 6 : 12}
-                xs={12}
+              Dashboard
+            </Link>
+            <Typography variant='body1' color='textPrimary'>
+              Listar
+            </Typography>
+          </Breadcrumbs>
+          <Typography variant='h3' color='textPrimary'>
+            Mis Campañas Activas
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Button
+            ref={actionRef}
+            onClick={() => setMenuOpen(true)}
+            startIcon={
+              <SvgIcon fontSize='small'>
+                <CalendarIcon />
+              </SvgIcon>
+            }
+          >
+            {timeRange}
+          </Button>
+          <Menu
+            anchorEl={actionRef.current}
+            onClose={() => setMenuOpen(false)}
+            open={isMenuOpen}
+            getContentAnchorEl={null}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'center'
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'center'
+            }}
+          >
+            {timeRanges.map(_timeRange => (
+              <MenuItem
+                key={_timeRange.value}
+                onClick={() => setTimeRange(_timeRange.text)}
               >
-                <CardEvents project={project} userMode={true} />
-              </Grid>
+                {_timeRange.text}
+              </MenuItem>
             ))}
-          </Grid>
+          </Menu>
+        </Grid>
+        <Container className={classes.container} maxWidth="lg">
+            <Box mt={3}>
+                <Filter onlyName fetchEvent={fetchEvent}/>
+            </Box>
+          </Container>
+        
+        {!!loading ? (
+          <CircularProgress className={classes.progress} color="primary" size={50} />
         ) : (
-          <Card>
-            <NoResults title={'No se encontraron resultados'} />
-          </Card>
-        )
-      )}
-    </Grid>
+          !!events && events.length > 0 ? (
+            <Grid container spacing={3}>
+              {events.map(project => (
+                <Grid
+                  item
+                  key={project.id}
+                  md={mode === 'grid' ? 4 : 12}
+                  sm={mode === 'grid' ? 6 : 12}
+                  xs={12}
+                >
+                  <CardEvents project={project} userMode={true} />
+                </Grid>
+              ))}
+            </Grid>
+            ) : (
+              <Card className={classes.card}>
+                <NoResults title={'No se encontraron resultados'} />
+              </Card>
+            )
+          )}
+      </Grid>
+    </Container>
   );
 };
 

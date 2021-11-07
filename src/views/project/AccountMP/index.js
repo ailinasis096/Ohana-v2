@@ -273,7 +273,7 @@ const AccountMP = ({ match }) => {
                       color='textSecondary'
                       align='center'
                     >
-                      ¡Listo! Tu campaña ya pueden recibir donaciones
+                      ¡Listo! Tus campañas ya pueden recibir donaciones
                     </Typography>
                     <Button
                       className={classes.button}

@@ -67,6 +67,23 @@ const LatestDonations = ({ event, className, ...rest }) => {
     }
   };
 
+  const handleStatus = (status) => {
+    switch (status) {
+      case 'accredited': {
+        return 'Acreditado';
+      }
+      case 'refunded': {
+        return 'Reintegrado';
+      }
+      case 'rejected': {
+        return 'Rechazado'
+      }      
+      default: {
+        return 'Rechazado';
+      }
+    }
+  }
+
   return (
     <Card
       className={clsx(classes.root, className)}
@@ -137,7 +154,7 @@ const LatestDonations = ({ event, className, ...rest }) => {
                           className={classes.label}
                           color={donation.status_detail === 'accredited' ? 'success' : 'error'}
                         >
-                          {donation.status_detail === 'accredited' ? 'Completo' : 'Rechazado'}
+                          {handleStatus(donation.status_detail)}
                         </Label>
                       </TableCell>
                       <TableCell>

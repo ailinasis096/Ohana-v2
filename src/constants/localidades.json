@@ -1,0 +1,9530 @@
+[
+    {
+        "code": "Buenos Aires", 
+        "name": "25 de Mayo"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "3 de febrero"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "A. Alsina"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "A. Gonzáles Cháves"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Aguas Verdes"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Alberti"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Arrecifes"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Ayacucho"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Azul"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Bahía Blanca"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Balcarce"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Baradero"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Benito Juárez"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Berisso"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Bolívar"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Bragado"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Brandsen"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Campana"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Cañuelas"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Capilla del Señor"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Capitán Sarmiento"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Carapachay"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Carhue"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Cariló"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Carlos Casares"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Carlos Tejedor"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Carmen de Areco"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Carmen de Patagones"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Castelli"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Chacabuco"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Chascomús"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Chivilcoy"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Colón"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Coronel Dorrego"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Coronel Pringles"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Coronel Rosales"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Coronel Suarez"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Costa Azul"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Costa Chica"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Costa del Este"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Costa Esmeralda"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Daireaux"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Darregueira"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Del Viso"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Dolores"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Don Torcuato"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Ensenada"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Escobar"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Exaltación de la Cruz"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Florentino Ameghino"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Garín"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gral. Alvarado"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gral. Alvear"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gral. Arenales"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gral. Belgrano"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gral. Guido"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gral. Lamadrid"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gral. Las Heras"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gral. Lavalle"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gral. Madariaga"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gral. Pacheco"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gral. Paz"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gral. Pinto"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gral. Pueyrredón"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gral. Rodríguez"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gral. Viamonte"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gral. Villegas"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Guaminí"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Guernica"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Hipólito Yrigoyen"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Ing. Maschwitz"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Junín"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "La Plata"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Laprida"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Las Flores"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Las Toninas"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Leandro N. Alem"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Lincoln"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Loberia"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Lobos"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Los Cardales"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Los Toldos"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Lucila del Mar"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Luján"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Magdalena"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Maipú"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Mar Chiquita"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Mar de Ajó"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Mar de las Pampas"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Mar del Plata"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Mar del Tuyú"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Marcos Paz"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Mercedes"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Miramar"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Monte"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Monte Hermoso"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Munro"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Navarro"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Necochea"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Olavarría"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Partido de la Costa"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Pehuajó"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Pellegrini"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Pergamino"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Pigüé"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Pila"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Pilar"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Pinamar"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Pinar del Sol"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Polvorines"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Pte. Perón"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Puán"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Punta Indio"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Ramallo"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Rauch"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Rivadavia"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Rojas"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Roque Pérez"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Saavedra"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Saladillo"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Salliqueló"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Salto"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "San Andrés de Giles"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "San Antonio de Areco"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "San Antonio de Padua"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "San Bernardo"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "San Cayetano"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "San Clemente del Tuyú"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "San Nicolás"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "San Pedro"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "San Vicente"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Santa Teresita"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Suipacha"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Tandil"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Tapalqué"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Tordillo"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Tornquist"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Trenque Lauquen"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Tres Lomas"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Gesell"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villarino"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Zárate"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "11 de Septiembre"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "20 de Junio"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "25 de Mayo"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Acassuso"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Adrogué"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Aldo Bonzi"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Área Reserva Cinturón Ecológico"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Avellaneda"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Banfield"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Barrio Parque"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Barrio Santa Teresita"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Beccar"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Bella Vista"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Berazategui"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Bernal Este"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Bernal Oeste"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Billinghurst"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Boulogne"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Burzaco"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Carapachay"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Caseros"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Castelar"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Churruca"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Ciudad Evita"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Ciudad Madero"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Ciudadela"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Claypole"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Crucecita"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Dock Sud"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Don Bosco"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Don Orione"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "El Jagüel"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "El Libertador"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "El Palomar"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "El Tala"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "El Trébol"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Ezeiza"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Ezpeleta"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Florencio Varela"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Florida"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Francisco Álvarez"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gerli"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Glew"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "González Catán"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gral. Lamadrid"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Grand Bourg"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Gregorio de Laferrere"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Guillermo Enrique Hudson"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Haedo"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Hurlingham"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Ing. Sourdeaux"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Isidro Casanova"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Ituzaingó"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "José C. Paz"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "José Ingenieros"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "José Marmol"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "La Lucila"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "La Reja"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "La Tablada"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Lanús"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Llavallol"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Loma Hermosa"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Lomas de Zamora"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Lomas del Millón"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Lomas del Mirador"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Longchamps"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Los Polvorines"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Luis Guillón"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Malvinas Argentinas"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Martín Coronado"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Martínez"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Merlo"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Ministro Rivadavia"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Monte Chingolo"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Monte Grande"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Moreno"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Morón"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Muñiz"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Olivos"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Pablo Nogués"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Pablo Podestá"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Paso del Rey"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Pereyra"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Piñeiro"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Plátanos"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Pontevedra"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Quilmes"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Rafael Calzada"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Rafael Castillo"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Ramos Mejía"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Ranelagh"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Remedios de Escalada"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Sáenz Peña"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "San Antonio de Padua"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "San Fernando"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "San Francisco Solano"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "San Isidro"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "San José"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "San Justo"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "San Martín"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "San Miguel"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Santos Lugares"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Sarandí"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Sourigues"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Tapiales"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Temperley"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Tigre"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Tortuguitas"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Tristán Suárez"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Trujui"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Turdera"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Valentín Alsina"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Vicente López"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Adelina"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Ballester"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Bosch"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Caraza"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Celina"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Centenario"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa de Mayo"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Diamante"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Domínico"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa España"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Fiorito"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Guillermina"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Insuperable"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa José León Suárez"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa La Florida"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Luzuriaga"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Martelli"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Obrera"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Progreso"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Raffo"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Sarmiento"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Tesei"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Villa Udaondo"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Virrey del Pino"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "Wilde"
+    }, 
+    {
+        "code": "Buenos Aires", 
+        "name": "William Morris"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Agronomía"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Almagro"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Balvanera"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Barracas"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Belgrano"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Boca"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Boedo"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Caballito"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Chacarita"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Coghlan"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Colegiales"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Constitución"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Flores"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Floresta"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "La Paternal"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Liniers"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Mataderos"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Monserrat"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Monte Castro"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Nueva Pompeya"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Núñez"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Palermo"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Parque Avellaneda"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Parque Chacabuco"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Parque Chas"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Parque Patricios"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Puerto Madero"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Recoleta"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Retiro"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Saavedra"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "San Cristóbal"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "San Nicolás"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "San Telmo"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Vélez Sársfield"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Versalles"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Villa Crespo"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Villa del Parque"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Villa Devoto"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Villa Gral. Mitre"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Villa Lugano"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Villa Luro"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Villa Ortúzar"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Villa Pueyrredón"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Villa Real"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Villa Riachuelo"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Villa Santa Rita"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Villa Soldati"
+    }, 
+    {
+        "code": "Buenos Aires Capital", 
+        "name": "Villa Urquiza"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Aconquija"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Ancasti"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Andalgalá"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Antofagasta"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Belén"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Capayán"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Capital"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "4"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Corral Quemado"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "El Alto"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "El Rodeo"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "F.Mamerto Esquiú"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Fiambalá"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Hualfín"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Huillapima"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Icaño"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "La Puerta"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Las Juntas"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Londres"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Los Altos"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Los Varela"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Mutquín"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Paclín"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Poman"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Pozo de La Piedra"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Puerta de Corral"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Puerta San José"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Recreo"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "S.F.V de 4"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "San Fernando"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "San Fernando del Valle"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "San José"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Santa María"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Santa Rosa"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Saujil"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Tapso"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Tinogasta"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Valle Viejo"
+    }, 
+    {
+        "code": "Catamarca", 
+        "name": "Villa Vil"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Aviá Teraí"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Barranqueras"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Basail"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Campo Largo"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Capital"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Capitán Solari"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Charadai"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Charata"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Chorotis"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Ciervo Petiso"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Cnel. Du Graty"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Col. Benítez"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Col. Elisa"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Col. Popular"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Colonias Unidas"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Concepción"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Corzuela"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Cote Lai"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "El Sauzalito"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Enrique Urien"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Fontana"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Fte. Esperanza"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Gancedo"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Gral. Capdevila"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Gral. Pinero"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Gral. San Martín"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Gral. Vedia"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Hermoso Campo"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "I. del Cerrito"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "J.J. Castelli"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "La Clotilde"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "La Eduvigis"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "La Escondida"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "La Leonesa"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "La Tigra"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "La Verde"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Laguna Blanca"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Laguna Limpia"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Lapachito"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Las Breñas"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Las Garcitas"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Las Palmas"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Los Frentones"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Machagai"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Makallé"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Margarita Belén"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Miraflores"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Misión N. Pompeya"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Napenay"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Pampa Almirón"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Pampa del Indio"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Pampa del Infierno"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Pdcia. de La Plaza"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Pdcia. Roca"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Pdcia. Roque Sáenz Peña"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Pto. Bermejo"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Pto. Eva Perón"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Puero Tirol"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Puerto Vilelas"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Quitilipi"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Resistencia"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Sáenz Peña"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Samuhú"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "San Bernardo"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Santa Sylvina"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Taco Pozo"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Tres Isletas"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Villa Ángela"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Villa Berthet"
+    }, 
+    {
+        "code": "Chaco", 
+        "name": "Villa R. Bermejito"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Aldea Apeleg"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Aldea Beleiro"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Aldea Epulef"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Alto Río Sengerr"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Buen Pasto"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Camarones"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Carrenleufú"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Cholila"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Co. Centinela"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Colan Conhué"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Comodoro Rivadavia"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Corcovado"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Cushamen"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Dique F. Ameghino"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Dolavón"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Dr. R. Rojas"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "El Hoyo"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "El Maitén"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Epuyén"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Esquel"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Facundo"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Gaimán"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Gan Gan"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Gastre"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Gdor. Costa"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Gualjaina"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "J. de San Martín"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Lago Blanco"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Lago Puelo"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Lagunita Salada"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Las Plumas"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Los Altares"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Paso de los Indios"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Paso del Sapo"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Pto. Madryn"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Pto. Pirámides"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Rada Tilly"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Rawson"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Río Mayo"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Río Pico"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Sarmiento"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Tecka"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Telsen"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Trelew"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Trevelin"
+    }, 
+    {
+        "code": "Chubut", 
+        "name": "Veintiocho de Julio"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Achiras"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Adelia Maria"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Agua de Oro"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Alcira Gigena"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Aldea Santa Maria"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Alejandro Roca"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Alejo Ledesma"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Alicia"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Almafuerte"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Alpa Corral"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Alta Gracia"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Alto Alegre"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Alto de Los Quebrachos"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Altos de Chipion"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Amboy"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Ambul"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Ana Zumaran"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Anisacate"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Arguello"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Arias"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Arroyito"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Arroyo Algodon"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Arroyo Cabral"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Arroyo Los Patos"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Assunta"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Atahona"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Ausonia"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Avellaneda"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Ballesteros"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Ballesteros Sud"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Balnearia"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Bañado de Soto"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Bell Ville"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Bengolea"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Benjamin Gould"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Berrotaran"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Bialet Masse"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Bouwer"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Brinkmann"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Buchardo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Bulnes"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Cabalango"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Calamuchita"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Calchin"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Calchin Oeste"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Calmayo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Camilo Aldao"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Caminiaga"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Cañada de Luque"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Cañada de Machado"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Cañada de Rio Pinto"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Cañada del Sauce"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Canals"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Candelaria Sud"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Capilla de Remedios"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Capilla de Siton"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Capilla del Carmen"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Capilla del Monte"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Capital"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Capitan Gral B. O´Higgins"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Carnerillo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Carrilobo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Casa Grande"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Cavanagh"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Cerro Colorado"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Chaján"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Chalacea"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Chañar Viejo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Chancaní"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Charbonier"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Charras"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Chazón"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Chilibroste"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Chucul"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Chuña"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Chuña Huasi"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Churqui Cañada"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Cienaga Del Coro"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Cintra"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. Almada"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. Anita"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. Barge"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. Bismark"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. Bremen"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. Caroya"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. Italiana"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. Iturraspe"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. Las Cuatro Esquinas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. Las Pichanas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. Marina"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. Prosperidad"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. San Bartolome"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. San Pedro"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. Tirolesa"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. Vicente Aguero"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. Videla"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. Vignaud"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Col. Waltelina"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Colazo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Comechingones"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Conlara"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Copacabana"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "7"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Coronel Baigorria"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Coronel Moldes"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Corral de Bustos"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Corralito"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Cosquín"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Costa Sacate"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Cruz Alta"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Cruz de Caña"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Cruz del Eje"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Cuesta Blanca"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Dean Funes"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Del Campillo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Despeñaderos"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Devoto"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Diego de Rojas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Dique Chico"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "El Arañado"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "El Brete"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "El Chacho"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "El Crispín"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "El Fortín"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "El Manzano"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "El Rastreador"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "El Rodeo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "El Tío"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Elena"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Embalse"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Esquina"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Estación Gral. Paz"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Estación Juárez Celman"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Estancia de Guadalupe"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Estancia Vieja"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Etruria"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Eufrasio Loza"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Falda del Carmen"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Freyre"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Gral. Baldissera"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Gral. Cabrera"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Gral. Deheza"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Gral. Fotheringham"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Gral. Levalle"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Gral. Roca"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Guanaco Muerto"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Guasapampa"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Guatimozin"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Gutenberg"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Hernando"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Huanchillas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Huerta Grande"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Huinca Renanco"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Idiazabal"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Impira"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Inriville"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Isla Verde"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Italó"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "James Craik"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Jesús María"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Jovita"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Justiniano Posse"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Km 658"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "L. V. Mansilla"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Batea"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Calera"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Carlota"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Carolina"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Cautiva"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Cesira"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Cruz"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Cumbre"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Cumbrecita"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Falda"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Francia"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Granja"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Higuera"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Laguna"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Paisanita"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Palestina"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "12"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Paquita"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Para"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Paz"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Playa"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Playosa"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Población"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Posta"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Puerta"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Quinta"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Rancherita"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Rinconada"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Serranita"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "La Tordilla"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Laborde"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Laboulaye"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Laguna Larga"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Acequias"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Albahacas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Arrias"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Bajadas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Caleras"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Calles"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Cañadas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Gramillas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Higueras"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Isletillas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Junturas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Palmas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Peñas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Peñas Sud"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Perdices"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Playas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Rabonas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Saladas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Tapias"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Varas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Varillas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Las Vertientes"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Leguizamón"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Leones"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Los Cedros"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Los Cerrillos"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Los Chañaritos (C.E)"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Los Chanaritos (R.S)"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Los Cisnes"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Los Cocos"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Los Cóndores"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Los Hornillos"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Los Hoyos"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Los Mistoles"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Los Molinos"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Los Pozos"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Los Reartes"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Los Surgentes"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Los Talares"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Los Zorros"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Lozada"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Luca"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Luque"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Luyaba"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Malagueño"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Malena"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Malvinas Argentinas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Manfredi"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Maquinista Gallini"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Marcos Juárez"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Marull"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Matorrales"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Mattaldi"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Mayu Sumaj"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Media Naranja"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Melo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Mendiolaza"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Mi Granja"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Mina Clavero"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Miramar"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Morrison"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Morteros"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Mte. Buey"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Mte. Cristo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Mte. De Los Gauchos"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Mte. Leña"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Mte. Maíz"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Mte. Ralo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Nicolás Bruzone"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Noetinger"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Nono"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Nueva 7"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Obispo Trejo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Olaeta"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Oliva"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Olivares San Nicolás"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Onagolty"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Oncativo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Ordoñez"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Pacheco De Melo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Pampayasta N."
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Pampayasta S."
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Panaholma"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Pascanas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Pasco"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Paso del Durazno"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Paso Viejo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Pilar"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Pincén"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Piquillín"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Plaza de Mercedes"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Plaza Luxardo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Porteña"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Potrero de Garay"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Pozo del Molle"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Pozo Nuevo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Pueblo Italiano"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Puesto de Castro"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Punta del Agua"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Quebracho Herrado"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Quilino"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Rafael García"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Ranqueles"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Rayo Cortado"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Reducción"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Rincón"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Río Bamba"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Río Ceballos"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Río Cuarto"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Río de Los Sauces"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Río Primero"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Río Segundo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Río Tercero"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Rosales"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Rosario del Saladillo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Sacanta"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Sagrada Familia"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Saira"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Saladillo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Saldán"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Salsacate"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Salsipuedes"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Sampacho"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Agustín"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Antonio de Arredondo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Antonio de Litín"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Basilio"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Carlos Minas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Clemente"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Esteban"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Francisco"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Ignacio"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Javier"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Jerónimo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Joaquín"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San José de La Dormida"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San José de Las Salinas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Lorenzo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Marcos Sierras"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Marcos Sud"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Pedro"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Pedro N."
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Roque"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "San Vicente"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Santa Catalina"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Santa Elena"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Santa Eufemia"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Santa Maria"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Sarmiento"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Saturnino M.Laspiur"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Sauce Arriba"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Sebastián Elcano"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Seeber"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Segunda Usina"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Serrano"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Serrezuela"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Sgo. Temple"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Silvio Pellico"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Simbolar"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Sinsacate"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Sta. Rosa de Calamuchita"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Sta. Rosa de Río Primero"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Suco"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Tala Cañada"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Tala Huasi"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Talaini"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Tancacha"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Tanti"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Ticino"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Tinoco"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Tío Pujio"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Toledo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Toro Pujio"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Tosno"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Tosquita"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Tránsito"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Tuclame"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Tutti"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Ucacha"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Unquillo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Valle de Anisacate"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Valle Hermoso"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Vélez Sarfield"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Viamonte"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Vicuña Mackenna"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Allende"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Amancay"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Ascasubi"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Candelaria N."
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Carlos Paz"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Cerro Azul"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Ciudad de América"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Ciudad Pque Los Reartes"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Concepción del Tío"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Cura Brochero"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa de Las Rosas"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa de María"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa de Pocho"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa de Soto"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa del Dique"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa del Prado"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa del Rosario"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa del Totoral"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Dolores"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa El Chancay"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Elisa"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Flor Serrana"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Fontana"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Giardino"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Gral. Belgrano"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Gutierrez"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Huidobro"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa La Bolsa"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Los Aromos"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Los Patos"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa María"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Nueva"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Pque. Santa Ana"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Pque. Siquiman"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Quillinzo"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Rossi"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Rumipal"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa San Esteban"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa San Isidro"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa 21"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Sarmiento (G.R)"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Sarmiento (S.A)"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Tulumba"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Valeria"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Villa Yacanto"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Washington"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Wenceslao Escalante"
+    }, 
+    {
+        "code": "Cordoba", 
+        "name": "Ycho Cruz Sierras"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Alvear"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Bella Vista"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Berón de Astrada"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Bonpland"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Caá Cati"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Capital"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Chavarría"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Col. C. Pellegrini"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Col. Libertad"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Col. Liebig"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Col. Sta Rosa"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Concepción"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Cruz de Los Milagros"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Curuzú-Cuatiá"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Empedrado"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Esquina"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Estación Torrent"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Felipe Yofré"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Garruchos"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Gdor. Agrónomo"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Gdor. Martínez"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Goya"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Guaviravi"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Herlitzka"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Ita-Ibate"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Itatí"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Ituzaingó"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "José Rafael Gómez"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Juan Pujol"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "La Cruz"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Lavalle"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Lomas de Vallejos"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Loreto"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Mariano I. Loza"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Mburucuyá"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Mercedes"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Mocoretá"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Mte. Caseros"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Nueve de Julio"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Palmar Grande"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Parada Pucheta"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Paso de La Patria"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Paso de Los Libres"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Pedro R. Fernandez"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Perugorría"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Pueblo Libertador"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Ramada Paso"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Riachuelo"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Saladas"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "San Antonio"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "San Carlos"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "San Cosme"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "San Lorenzo"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "20 del Palmar"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "San Miguel"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "San Roque"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Santa Ana"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Santa Lucía"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Santo Tomé"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Sauce"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Tabay"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Tapebicuá"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Tatacua"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Virasoro"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Yapeyú"
+    }, 
+    {
+        "code": "Corrientes", 
+        "name": "Yataití Calle"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Alarcón"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Alcaraz"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Alcaraz N."
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Alcaraz S."
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Aldea Asunción"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Aldea Brasilera"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Aldea Elgenfeld"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Aldea Grapschental"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Aldea Ma. Luisa"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Aldea Protestante"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Aldea Salto"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Aldea San Antonio (G)"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Aldea San Antonio (P)"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Aldea 19"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Aldea San Miguel"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Aldea San Rafael"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Aldea Spatzenkutter"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Aldea Sta. María"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Aldea Sta. Rosa"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Aldea Valle María"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Altamirano Sur"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Antelo"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Antonio Tomás"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Aranguren"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Arroyo Barú"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Arroyo Burgos"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Arroyo Clé"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Arroyo Corralito"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Arroyo del Medio"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Arroyo Maturrango"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Arroyo Palo Seco"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Banderas"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Basavilbaso"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Betbeder"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Bovril"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Caseros"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Ceibas"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Cerrito"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Chajarí"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Chilcas"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Clodomiro Ledesma"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Alemana"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Avellaneda"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Avigdor"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Ayuí"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Baylina"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Carrasco"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Celina"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Cerrito"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Crespo"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Elia"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Ensayo"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Gral. Roca"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. La Argentina"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Merou"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Oficial Nª3"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Oficial Nº13"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Oficial Nº14"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Oficial Nº5"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Reffino"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Tunas"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Col. Viraró"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Colón"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Concepción del Uruguay"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Concordia"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Conscripto Bernardi"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Costa Grande"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Costa San Antonio"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Costa Uruguay N."
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Costa Uruguay S."
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Crespo"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Crucecitas 3ª"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Crucecitas 7ª"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Crucecitas 8ª"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Cuchilla Redonda"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Curtiembre"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Diamante"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Distrito 6º"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Distrito Chañar"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Distrito Chiqueros"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Distrito Cuarto"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Distrito Diego López"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Distrito Pajonal"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Distrito Sauce"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Distrito Tala"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Distrito Talitas"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Don Cristóbal 1ª Sección"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Don Cristóbal 2ª Sección"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Durazno"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "El Cimarrón"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "El Gramillal"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "El Palenque"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "El Pingo"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "El Quebracho"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "El Redomón"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "El Solar"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Enrique Carbo"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "9"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Espinillo N."
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Estación Campos"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Estación Escriña"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Estación Lazo"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Estación Raíces"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Estación Yerúa"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Estancia Grande"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Estancia Líbaros"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Estancia Racedo"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Estancia Solá"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Estancia Yuquerí"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Estaquitas"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Faustino M. Parera"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Febre"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Federación"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Federal"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Gdor. Echagüe"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Gdor. Mansilla"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Gilbert"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "González Calderón"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Gral. Almada"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Gral. Alvear"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Gral. Campos"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Gral. Galarza"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Gral. Ramírez"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Gualeguay"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Gualeguaychú"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Gualeguaycito"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Guardamonte"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Hambis"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Hasenkamp"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Hernandarias"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Hernández"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Herrera"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Hinojal"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Hocker"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Ing. Sajaroff"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Irazusta"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Isletas"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "J.J De Urquiza"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Jubileo"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "La Clarita"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "La Criolla"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "La Esmeralda"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "La Florida"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "La Fraternidad"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "La Hierra"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "La Ollita"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "La Paz"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "La Picada"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "La Providencia"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "La Verbena"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Laguna Benítez"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Larroque"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Las Cuevas"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Las Garzas"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Las Guachas"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Las Mercedes"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Las Moscas"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Las Mulitas"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Las Toscas"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Laurencena"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Libertador San Martín"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Loma Limpia"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Los Ceibos"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Los Charruas"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Los Conquistadores"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Lucas González"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Lucas N."
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Lucas S. 1ª"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Lucas S. 2ª"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Maciá"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "María Grande"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "María Grande 2ª"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Médanos"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Mojones N."
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Mojones S."
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Molino Doll"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Monte Redondo"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Montoya"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Mulas Grandes"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Ñancay"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Nogoyá"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Nueva Escocia"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Nueva Vizcaya"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Ombú"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Oro Verde"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Paraná"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Pasaje Guayaquil"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Pasaje Las Tunas"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Paso de La Arena"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Paso de La Laguna"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Paso de Las Piedras"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Paso Duarte"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Pastor Britos"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Pedernal"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Perdices"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Picada Berón"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Piedras Blancas"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Primer Distrito Cuchilla"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Primero de Mayo"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Pronunciamiento"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Pto. Algarrobo"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Pto. Ibicuy"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Pueblo Brugo"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Pueblo Cazes"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Pueblo Gral. Belgrano"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Pueblo Liebig"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Puerto Yeruá"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Punta del Monte"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Quebracho"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Quinto Distrito"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Raices Oeste"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Rincón de Nogoyá"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Rincón del Cinto"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Rincón del Doll"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Rincón del Gato"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Rocamora"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Rosario del Tala"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "San Benito"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "San Cipriano"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "San Ernesto"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "San Gustavo"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "San Jaime"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "San José"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "San José de Feliciano"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "San Justo"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "San Marcial"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "San Pedro"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "San Ramírez"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "San Ramón"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "San Roque"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "San Salvador"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "San Víctor"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Santa Ana"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Santa Anita"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Santa Elena"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Santa Lucía"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Santa Luisa"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Sauce de Luna"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Sauce Montrull"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Sauce Pinto"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Sauce Sur"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Seguí"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Sir Leonard"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Sosa"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Tabossi"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Tezanos Pinto"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Ubajay"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Urdinarrain"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Veinte de Septiembre"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Viale"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Victoria"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Villa Clara"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Villa del Rosario"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Villa Domínguez"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Villa Elisa"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Villa Fontana"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Villa Gdor. Etchevehere"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Villa Mantero"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Villa Paranacito"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Villa Urquiza"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Villaguay"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Walter Moss"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Yacaré"
+    }, 
+    {
+        "code": "Entre Rios", 
+        "name": "Yeso Oeste"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Buena Vista"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Clorinda"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Col. Pastoril"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Cte. Fontana"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "El Colorado"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "El Espinillo"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Estanislao Del Campo"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "10"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Fortín Lugones"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Gral. Lucio V. Mansilla"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Gral. Manuel Belgrano"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Gral. Mosconi"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Gran Guardia"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Herradura"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Ibarreta"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Ing. Juárez"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Laguna Blanca"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Laguna Naick Neck"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Laguna Yema"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Las Lomitas"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Los Chiriguanos"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Mayor V. Villafañe"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Misión San Fco."
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Palo Santo"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Pirané"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Pozo del Maza"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Riacho He-He"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "San Hilario"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "San Martín II"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Siete Palmas"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Subteniente Perín"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Tres Lagunas"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Villa Dos Trece"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Villa Escolar"
+    }, 
+    {
+        "code": "Formosa", 
+        "name": "Villa Gral. Güemes"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Abdon Castro Tolay"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Abra Pampa"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Abralaite"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Aguas Calientes"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Arrayanal"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Barrios"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Caimancito"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Calilegua"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Cangrejillos"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Caspala"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Catuá"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Cieneguillas"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Coranzulli"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Cusi-Cusi"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "El Aguilar"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "El Carmen"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "El Cóndor"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "El Fuerte"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "El Piquete"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "El Talar"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Fraile Pintado"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Hipólito Yrigoyen"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Huacalera"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Humahuaca"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "La Esperanza"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "La Mendieta"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "La Quiaca"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Ledesma"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Libertador Gral. San Martin"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Maimara"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Mina Pirquitas"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Monterrico"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Palma Sola"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Palpalá"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Pampa Blanca"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Pampichuela"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Perico"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Puesto del Marqués"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Puesto Viejo"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Pumahuasi"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Purmamarca"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Rinconada"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Rodeitos"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Rosario de Río Grande"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "San Antonio"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "San Francisco"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "San Pedro"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "San Rafael"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "San Salvador"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Santa Ana"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Santa Catalina"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Santa Clara"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Susques"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Tilcara"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Tres Cruces"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Tumbaya"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Valle Grande"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Vinalito"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Volcán"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Yala"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Yaví"
+    }, 
+    {
+        "code": "Jujuy", 
+        "name": "Yuto"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Abramo"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Adolfo Van Praet"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Agustoni"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Algarrobo del Aguila"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Alpachiri"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Alta Italia"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Anguil"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Arata"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Ataliva Roca"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Bernardo Larroude"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Bernasconi"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Caleufú"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Carro Quemado"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Catriló"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Ceballos"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Chacharramendi"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Col. Barón"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Col. Santa María"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Conhelo"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Coronel Hilario Lagos"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Cuchillo-Có"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Doblas"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Dorila"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Eduardo Castex"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Embajador Martini"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Falucho"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Gral. Acha"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Gral. Manuel Campos"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Gral. Pico"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Guatraché"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Ing. Luiggi"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Intendente Alvear"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Jacinto Arauz"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "La Adela"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "La Humada"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "La Maruja"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "12"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "La Reforma"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Limay Mahuida"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Lonquimay"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Loventuel"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Luan Toro"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Macachín"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Maisonnave"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Mauricio Mayer"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Metileo"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Miguel Cané"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Miguel Riglos"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Monte Nievas"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Parera"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Perú"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Pichi-Huinca"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Puelches"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Puelén"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Quehue"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Quemú Quemú"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Quetrequén"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Rancul"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Realicó"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Relmo"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Rolón"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Rucanelo"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Sarah"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Speluzzi"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Sta. Isabel"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Sta. Rosa"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Sta. Teresa"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Telén"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Toay"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Tomas M. de Anchorena"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Trenel"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Unanue"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Uriburu"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Veinticinco de Mayo"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Vertiz"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Victorica"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Villa Mirasol"
+    }, 
+    {
+        "code": "La Pampa", 
+        "name": "Winifreda"
+    }, 
+    {
+        "code": "La Rioja", 
+        "name": "Arauco"
+    }, 
+    {
+        "code": "La Rioja", 
+        "name": "Capital"
+    }, 
+    {
+        "code": "La Rioja", 
+        "name": "Castro Barros"
+    }, 
+    {
+        "code": "La Rioja", 
+        "name": "Chamical"
+    }, 
+    {
+        "code": "La Rioja", 
+        "name": "Chilecito"
+    }, 
+    {
+        "code": "La Rioja", 
+        "name": "Coronel F. Varela"
+    }, 
+    {
+        "code": "La Rioja", 
+        "name": "Famatina"
+    }, 
+    {
+        "code": "La Rioja", 
+        "name": "Gral. A.V.Peñaloza"
+    }, 
+    {
+        "code": "La Rioja", 
+        "name": "Gral. Belgrano"
+    }, 
+    {
+        "code": "La Rioja", 
+        "name": "Gral. J.F. Quiroga"
+    }, 
+    {
+        "code": "La Rioja", 
+        "name": "Gral. Lamadrid"
+    }, 
+    {
+        "code": "La Rioja", 
+        "name": "Gral. Ocampo"
+    }, 
+    {
+        "code": "La Rioja", 
+        "name": "Gral. San Martín"
+    }, 
+    {
+        "code": "La Rioja", 
+        "name": "Independencia"
+    }, 
+    {
+        "code": "La Rioja", 
+        "name": "Rosario Penaloza"
+    }, 
+    {
+        "code": "La Rioja", 
+        "name": "San Blas de Los Sauces"
+    }, 
+    {
+        "code": "La Rioja", 
+        "name": "Sanagasta"
+    }, 
+    {
+        "code": "La Rioja", 
+        "name": "Vinchina"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Capital"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Chacras de Coria"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Dorrego"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Gllen"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Godoy Cruz"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Gral. Alvear"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Guaymallén"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Junín"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "La Paz"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Las Heras"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Lavalle"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Luján"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Luján De Cuyo"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Maipú"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Malargüe"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Rivadavia"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "San Carlos"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "San Martín"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "San Rafael"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Sta. Rosa"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Tunuyán"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Tupungato"
+    }, 
+    {
+        "code": "Mendoza", 
+        "name": "Villa Nueva"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Alba Posse"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Almafuerte"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Apóstoles"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Aristóbulo Del Valle"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Arroyo Del Medio"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Azara"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Bdo. De Irigoyen"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Bonpland"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Caá Yari"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Campo Grande"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Campo Ramón"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Campo Viera"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Candelaria"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Capioví"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Caraguatay"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Cdte. Guacurarí"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Cerro Azul"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Cerro Corá"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Col. Alberdi"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Col. Aurora"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Col. Delicia"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Col. Polana"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Col. Victoria"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Col. Wanda"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Concepción De La Sierra"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Corpus"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Dos Arroyos"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Dos de Mayo"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "El Alcázar"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "El Dorado"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "El Soberbio"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Esperanza"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "F. Ameghino"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Fachinal"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Garuhapé"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Garupá"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Gdor. López"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Gdor. Roca"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Gral. Alvear"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Gral. Urquiza"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Guaraní"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "H. Yrigoyen"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Iguazú"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Itacaruaré"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Jardín América"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Leandro N. Alem"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Libertad"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Loreto"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Los Helechos"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Mártires"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "15"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Mojón Grande"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Montecarlo"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Nueve de Julio"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Oberá"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Olegario V. Andrade"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Panambí"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Posadas"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Profundidad"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Pto. Iguazú"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Pto. Leoni"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Pto. Piray"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Pto. Rico"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Ruiz de Montoya"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "San Antonio"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "San Ignacio"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "San Javier"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "San José"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "San Martín"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "San Pedro"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "San Vicente"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Santiago De Liniers"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Santo Pipo"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Sta. Ana"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Sta. María"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Tres Capones"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Veinticinco de Mayo"
+    }, 
+    {
+        "code": "Misiones", 
+        "name": "Wanda"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Aguada San Roque"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Aluminé"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Andacollo"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Añelo"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Bajada del Agrio"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Barrancas"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Buta Ranquil"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Capital"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Caviahué"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Centenario"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Chorriaca"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Chos Malal"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Cipolletti"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Covunco Abajo"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Coyuco Cochico"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Cutral Có"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "El Cholar"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "El Huecú"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "El Sauce"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Guañacos"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Huinganco"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Las Coloradas"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Las Lajas"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Las Ovejas"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Loncopué"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Los Catutos"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Los Chihuidos"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Los Miches"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Manzano Amargo"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "16"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Octavio Pico"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Paso Aguerre"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Picún Leufú"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Piedra del Aguila"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Pilo Lil"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Plaza Huincul"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Plottier"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Quili Malal"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Ramón Castro"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Rincón de Los Sauces"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "San Martín de Los Andes"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "San Patricio del Chañar"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Santo Tomás"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Sauzal Bonito"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Senillosa"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Taquimilán"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Tricao Malal"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Varvarco"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Villa Curí Leuvu"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Villa del Nahueve"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Villa del Puente Picún Leuvú"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Villa El Chocón"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Villa La Angostura"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Villa Pehuenia"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Villa Traful"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Vista Alegre"
+    }, 
+    {
+        "code": "Neuquen", 
+        "name": "Zapala"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Aguada Cecilio"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Aguada de Guerra"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Allén"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Arroyo de La Ventana"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Arroyo Los Berros"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Bariloche"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Calte. Cordero"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Campo Grande"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Catriel"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Cerro Policía"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Cervantes"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Chelforo"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Chimpay"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Chinchinales"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Chipauquil"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Choele Choel"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Cinco Saltos"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Cipolletti"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Clemente Onelli"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Colán Conhue"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Comallo"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Comicó"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Cona Niyeu"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Coronel Belisle"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Cubanea"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Darwin"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Dina Huapi"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "El Bolsón"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "El Caín"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "El Manso"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Gral. Conesa"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Gral. Enrique Godoy"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Gral. Fernandez Oro"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Gral. Roca"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Guardia Mitre"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Ing. Huergo"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Ing. Jacobacci"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Laguna Blanca"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Lamarque"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Las Grutas"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Los Menucos"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Luis Beltrán"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Mainqué"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Mamuel Choique"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Maquinchao"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Mencué"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Mtro. Ramos Mexia"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Nahuel Niyeu"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Naupa Huen"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Ñorquinco"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Ojos de Agua"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Paso de Agua"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Paso Flores"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Peñas Blancas"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Pichi Mahuida"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Pilcaniyeu"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Pomona"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Prahuaniyeu"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Rincón Treneta"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Río Chico"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Río Colorado"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Roca"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "San Antonio Oeste"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "San Javier"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Sierra Colorada"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Sierra Grande"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Sierra Pailemán"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Valcheta"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Valle Azul"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Viedma"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Villa Llanquín"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Villa Mascardi"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Villa Regina"
+    }, 
+    {
+        "code": "Rio Negro", 
+        "name": "Yaminué"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "A. Saravia"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Aguaray"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Angastaco"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Animaná"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Cachi"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Cafayate"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Campo Quijano"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Campo Santo"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Capital"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Cerrillos"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Chicoana"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Col. Sta. Rosa"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Coronel Moldes"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "El Bordo"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "El Carril"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "El Galpón"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "El Jardín"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "El Potrero"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "El Quebrachal"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "El Tala"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Embarcación"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Gral. Ballivian"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Gral. Güemes"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Gral. Mosconi"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Gral. Pizarro"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Guachipas"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Hipólito Yrigoyen"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Iruyá"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Isla De Cañas"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "J. V. Gonzalez"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "La Caldera"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "La Candelaria"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "La Merced"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "La Poma"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "La Viña"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Las Lajitas"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Los Toldos"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Metán"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Molinos"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Nazareno"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Orán"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Payogasta"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Pichanal"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Prof. S. Mazza"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Río Piedras"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Rivadavia Banda Norte"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Rivadavia Banda Sur"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Rosario de La Frontera"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Rosario de Lerma"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Saclantás"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "18"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "San Antonio"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "San Carlos"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "San José De Metán"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "San Ramón"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Santa Victoria E."
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Santa Victoria O."
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Tartagal"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Tolar Grande"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Urundel"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Vaqueros"
+    }, 
+    {
+        "code": "Salta", 
+        "name": "Villa San Lorenzo"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "Albardón"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "Angaco"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "Calingasta"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "Capital"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "Caucete"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "Chimbas"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "Iglesia"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "Jachal"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "Nueve de Julio"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "Pocito"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "Rawson"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "Rivadavia"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "19"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "San Martín"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "Santa Lucía"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "Sarmiento"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "Ullum"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "Valle Fértil"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "Veinticinco de Mayo"
+    }, 
+    {
+        "code": "San Juan", 
+        "name": "Zonda"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Alto Pelado"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Alto Pencoso"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Anchorena"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Arizona"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Bagual"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Balde"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Batavia"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Beazley"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Buena Esperanza"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Candelaria"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Capital"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Carolina"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Carpintería"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Concarán"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Cortaderas"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "El Morro"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "El Trapiche"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "El Volcán"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Fortín El Patria"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Fortuna"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Fraga"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Juan Jorba"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Juan Llerena"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Juana Koslay"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Justo Daract"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "La Calera"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "La Florida"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "La Punilla"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "La Toma"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Lafinur"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Las Aguadas"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Las Chacras"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Las Lagunas"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Las Vertientes"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Lavaisse"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Leandro N. Alem"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Los Molles"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Luján"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Mercedes"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Merlo"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Naschel"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Navia"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Nogolí"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Nueva Galia"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Papagayos"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Paso Grande"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Potrero de Los Funes"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Quines"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Renca"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Saladillo"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "San Francisco"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "San Gerónimo"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "San Martín"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "San Pablo"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Santa Rosa de Conlara"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Talita"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Tilisarao"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Unión"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Villa de La Quebrada"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Villa de Praga"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Villa del Carmen"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Villa Gral. Roca"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Villa Larca"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Villa Mercedes"
+    }, 
+    {
+        "code": "San Luis", 
+        "name": "Zanjitas"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Calafate"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Caleta Olivia"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Cañadón Seco"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Comandante Piedrabuena"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "El Calafate"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "El Chaltén"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Gdor. Gregores"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Hipólito Yrigoyen"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Jaramillo"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Koluel Kaike"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Las Heras"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Los Antiguos"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Perito Moreno"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Pico Truncado"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Pto. Deseado"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Pto. San Julián"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Pto. 21"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Río Cuarto"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Río Gallegos"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Río Turbio"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Tres Lagos"
+    }, 
+    {
+        "code": "Santa Cruz", 
+        "name": "Veintiocho De Noviembre"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Aarón Castellanos"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Acebal"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Aguará Grande"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Albarellos"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Alcorta"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Aldao"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Alejandra"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Álvarez"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Ambrosetti"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Amenábar"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Angélica"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Angeloni"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Arequito"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Arminda"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Armstrong"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Arocena"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Arroyo Aguiar"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Arroyo Ceibal"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Arroyo Leyes"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Arroyo Seco"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Arrufó"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Arteaga"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Ataliva"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Aurelia"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Avellaneda"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Barrancas"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Bauer Y Sigel"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Bella Italia"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Berabevú"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Berna"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Bernardo de Irigoyen"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Bigand"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Bombal"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Bouquet"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Bustinza"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Cabal"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Cacique Ariacaiquin"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Cafferata"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Calchaquí"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Campo Andino"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Campo Piaggio"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Cañada de Gómez"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Cañada del Ucle"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Cañada Rica"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Cañada Rosquín"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Candioti"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Capital"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Capitán Bermúdez"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Capivara"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Carcarañá"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Carlos Pellegrini"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Carmen"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Carmen Del Sauce"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Carreras"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Carrizales"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Casalegno"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Casas"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Casilda"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Castelar"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Castellanos"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Cayastá"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Cayastacito"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Centeno"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Cepeda"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Ceres"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Chabás"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Chañar Ladeado"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Chapuy"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Chovet"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Christophersen"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Classon"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Cnel. Arnold"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Cnel. Bogado"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Cnel. Dominguez"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Cnel. Fraga"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Col. Aldao"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Col. Ana"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Col. Belgrano"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Col. Bicha"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Col. Bigand"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Col. Bossi"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Col. Cavour"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Col. Cello"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Col. Dolores"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Col. Dos Rosas"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Col. Durán"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Col. Iturraspe"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Col. Margarita"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Col. Mascias"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Col. Raquel"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Col. Rosa"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Col. San José"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Constanza"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Coronda"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Correa"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Crispi"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Cululú"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Curupayti"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Desvio Arijón"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Diaz"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Diego de Alvear"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Egusquiza"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "El Arazá"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "El Rabón"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "El Sombrerito"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "El Trébol"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Elisa"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Elortondo"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Emilia"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Empalme San Carlos"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Empalme Villa Constitucion"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Esmeralda"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Esperanza"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Estación Alvear"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Estacion Clucellas"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Esteban Rams"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Esther"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Esustolia"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Eusebia"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Felicia"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Fidela"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Fighiera"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Firmat"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Florencia"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Fortín Olmos"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Franck"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Fray Luis Beltrán"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Frontera"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Fuentes"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Funes"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Gaboto"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Galisteo"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Gálvez"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Garabalto"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Garibaldi"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Gato Colorado"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Gdor. Crespo"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Gessler"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Godoy"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Golondrina"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Gral. Gelly"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Gral. Lagos"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Granadero Baigorria"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Gregoria Perez De Denis"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Grutly"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Guadalupe N."
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Gödeken"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Helvecia"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Hersilia"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Hipatía"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Huanqueros"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Hugentobler"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Hughes"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Humberto 1º"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Humboldt"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Ibarlucea"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Ing. Chanourdie"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Intiyaco"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Ituzaingó"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Jacinto L. Aráuz"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Josefina"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Juan B. Molina"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Juan de Garay"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Juncal"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "La Brava"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "La Cabral"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "La Camila"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "La Chispa"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "La Clara"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "La Criolla"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "La Gallareta"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "La Lucila"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "La Pelada"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "La Penca"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "La Rubia"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "La Sarita"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "La Vanguardia"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Labordeboy"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Laguna Paiva"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Landeta"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Lanteri"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Larrechea"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Las Avispas"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Las Bandurrias"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Las Garzas"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Las Palmeras"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Las Parejas"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Las Petacas"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Las Rosas"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Las Toscas"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Las Tunas"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Lazzarino"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Lehmann"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Llambi Campbell"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Logroño"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Loma Alta"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "López"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Los Amores"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Los Cardos"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Los Laureles"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Los Molinos"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Los Quirquinchos"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Lucio V. Lopez"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Luis Palacios"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Ma. Juana"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Ma. Luisa"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Ma. Susana"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Ma. Teresa"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Maciel"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Maggiolo"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Malabrigo"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Marcelino Escalada"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Margarita"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Matilde"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Mauá"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Máximo Paz"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Melincué"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Miguel Torres"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Moisés Ville"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Monigotes"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Monje"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Monte Obscuridad"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Monte Vera"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Montefiore"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Montes de Oca"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Murphy"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Ñanducita"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Naré"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Nelson"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Nicanor E. Molinas"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Nuevo Torino"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Oliveros"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Palacios"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Pavón"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Pavón Arriba"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Pedro Gómez Cello"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Pérez"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Peyrano"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Piamonte"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Pilar"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Piñero"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Plaza Clucellas"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Portugalete"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Pozo Borrado"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Progreso"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Providencia"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Pte. Roca"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Pueblo Andino"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Pueblo Esther"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Pueblo Gral. San Martín"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Pueblo Irigoyen"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Pueblo Marini"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Pueblo Muñoz"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Pueblo Uranga"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Pujato"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Pujato N."
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Rafaela"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Ramayón"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Ramona"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Reconquista"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Recreo"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Ricardone"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Rivadavia"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Roldán"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Romang"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Rosario"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Rueda"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Rufino"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Sa Pereira"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Saguier"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Saladero M. Cabal"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Salto Grande"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Agustín"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Antonio de Obligado"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Bernardo (N.J.)"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Bernardo (S.J.)"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Carlos Centro"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Carlos N."
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Carlos S."
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Cristóbal"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Eduardo"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Eugenio"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Fabián"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Fco. de Santa Fé"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Genaro"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Genaro N."
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Gregorio"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Guillermo"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Javier"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Jerónimo del Sauce"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Jerónimo N."
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Jerónimo S."
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Jorge"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San José de La Esquina"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San José del Rincón"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Justo"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Lorenzo"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Mariano"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Martín de Las Escobas"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Martín N."
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "San Vicente"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Sancti Spititu"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Sanford"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Santo Domingo"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Santo Tomé"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Santurce"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Sargento Cabral"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Sarmiento"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Sastre"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Sauce Viejo"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Serodino"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Silva"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Soldini"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Soledad"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Soutomayor"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Sta. Clara de Buena Vista"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Sta. Clara de Saguier"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Sta. Isabel"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Sta. Margarita"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Sta. Maria Centro"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Sta. María N."
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Sta. Rosa"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Sta. Teresa"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Suardi"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Sunchales"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Susana"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Tacuarendí"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Tacural"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Tartagal"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Teodelina"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Theobald"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Timbúes"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Toba"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Tortugas"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Tostado"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Totoras"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Traill"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Venado Tuerto"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Vera"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Vera y Pintado"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Videla"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Vila"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Villa Amelia"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Villa Ana"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Villa Cañas"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Villa Constitución"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Villa Eloísa"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Villa Gdor. Gálvez"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Villa Guillermina"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Villa Minetti"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Villa Mugueta"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Villa Ocampo"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Villa San José"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Villa Saralegui"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Villa Trinidad"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Villada"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Virginia"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Wheelwright"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Zavalla"
+    }, 
+    {
+        "code": "Santa Fe", 
+        "name": "Zenón Pereira"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Añatuya"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Árraga"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Bandera"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Bandera Bajada"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Beltrán"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Brea Pozo"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Campo Gallo"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Capital"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Chilca Juliana"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Choya"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Clodomira"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Col. Alpina"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Col. Dora"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Col. El Simbolar Robles"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "El Bobadal"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "El Charco"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "El Mojón"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Estación Atamisqui"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Estación Simbolar"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Fernández"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Fortín Inca"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Frías"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Garza"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Gramilla"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Guardia Escolta"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Herrera"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Icaño"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Ing. Forres"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "La Banda"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "La Cañada"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Laprida"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Lavalle"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Loreto"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Los Juríes"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Los Núñez"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Los Pirpintos"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Los Quiroga"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Los Telares"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Lugones"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Malbrán"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Matara"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Medellín"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Monte Quemado"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Nueva Esperanza"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Nueva Francia"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Palo Negro"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Pampa de Los Guanacos"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Pinto"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Pozo Hondo"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Quimilí"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Real Sayana"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Sachayoj"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "San Pedro de Guasayán"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Selva"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Sol de Julio"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Sumampa"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Suncho Corral"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Taboada"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Tapso"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Termas de Rio Hondo"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Tintina"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Tomas Young"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Vilelas"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Villa Atamisqui"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Villa La Punta"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Villa Ojo de Agua"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Villa Río Hondo"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Villa Salavina"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Villa Unión"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Vilmer"
+    }, 
+    {
+        "code": "Santiago del Estero", 
+        "name": "Weisburd"
+    }, 
+    {
+        "code": "Tierra del Fuego", 
+        "name": "Río Grande"
+    }, 
+    {
+        "code": "Tierra del Fuego", 
+        "name": "Tolhuin"
+    }, 
+    {
+        "code": "Tierra del Fuego", 
+        "name": "Ushuaia"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Acheral"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Agua Dulce"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Aguilares"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Alderetes"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Alpachiri"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Alto Verde"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Amaicha del Valle"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Amberes"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Ancajuli"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Arcadia"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Atahona"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Banda del Río Sali"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Bella Vista"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Buena Vista"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Burruyacú"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Capitán Cáceres"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Cevil Redondo"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Choromoro"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Ciudacita"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Colalao del Valle"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Colombres"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Concepción"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Delfín Gallo"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "El Bracho"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "El Cadillal"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "El Cercado"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "El Chañar"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "El Manantial"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "El Mojón"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "El Mollar"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "El Naranjito"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "El Naranjo"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "El Polear"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "El Puestito"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "El Sacrificio"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "El Timbó"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Escaba"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Esquina"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Estación Aráoz"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Famaillá"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Gastone"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Gdor. Garmendia"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Gdor. Piedrabuena"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Graneros"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Huasa Pampa"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "J. B. Alberdi"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "La Cocha"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "La Esperanza"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "La Florida"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "La Ramada"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "La Trinidad"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Lamadrid"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Las Cejas"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Las Talas"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Las Talitas"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Los Bulacio"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Los Gómez"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Los Nogales"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Los Pereyra"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Los Pérez"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Los Puestos"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Los Ralos"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Los Sarmientos"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Los Sosa"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Lules"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "M. García Fernández"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Manuela Pedraza"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Medinas"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Monte Bello"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Monteagudo"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Monteros"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Padre Monti"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Pampa Mayo"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Quilmes"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Raco"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Ranchillos"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Río Chico"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Río Colorado"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Río Seco"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Rumi Punco"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "San Andrés"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "San Felipe"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "San Ignacio"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "San Javier"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "San José"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "San Miguel de 25"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "San Pedro"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "San Pedro de Colalao"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Santa Rosa de Leales"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Sgto. Moya"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Siete de Abril"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Simoca"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Soldado Maldonado"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Sta. Ana"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Sta. Cruz"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Sta. Lucía"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Taco Ralo"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Tafí del Valle"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Tafí Viejo"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Tapia"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Teniente Berdina"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Trancas"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Villa Belgrano"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Villa Benjamín Araoz"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Villa Chiligasta"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Villa de Leales"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Villa Quinteros"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Yánima"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Yerba Buena"
+    }, 
+    {
+        "code": "Tucuman", 
+        "name": "Yerba Buena (S)"
+    }
+]

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import localidades from '../constants/localidades.json';
 
 const axiosInstance = axios.create({
   baseURL: 'https://juanpsenn.pythonanywhere.com/'
@@ -40,11 +41,15 @@ class API {
   }
 
   //Obtener campañas
-  static async getEvents(page = 1, pageSize = 100, search) {
+  static async getEvents(page = 1, pageSize = 1, search, state) {
     const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
-    let path = !!search
-      ? `/api/events/list/?page=${page}&page_size=${pageSize}&q=${search}`
-      : `/api/events/list/?page=${page}&page_size=${pageSize}`;
+    let path = `/api/events/list/?page=${page}&page_size=${pageSize}`;
+    if (!!search ) {
+      path = `${path}&q=${search}`
+    };
+    if (typeof state === 'boolean') {
+      path =`${path}&cancelled=${state}`
+    };
     const { data } = await axiosInstance.get(path, config);
     return data;
   }
@@ -53,6 +58,16 @@ class API {
   static async getEventById(id) {
     let path = `/api/events/get/${id}/`;
     const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
+    const { data } = await axiosInstance.get(path, config);
+    return data;
+  }
+
+  //Filtro de campaña por Id
+  static async getMyEvents(page = 1, pageSize = 10, search) {
+    const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
+    let path = !!search
+      ? `/api/events/list/self/?page=${page}&page_size=${pageSize}&q=${search}`
+      : `/api/events/list/self/?page=${page}&page_size=${pageSize}`;
     const { data } = await axiosInstance.get(path, config);
     return data;
   }
@@ -115,15 +130,13 @@ class API {
   //logout
   static async logout() {
     let path = `/api/auth/signup/`;
-
     const { data } = await axiosInstance.post(path);
     return data;
   }
 
   // Obtener paises
-  static async getCountries() {
-
-    const resp = fetch('https://api.first.org/data/v1/countries')
+  static async getCountries() {    
+    const resp = fetch("https://api.first.org/data/v1/countries")
       .then(response => response.text())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
@@ -131,19 +144,12 @@ class API {
   }
 
   // Obtener ciudades
-  static async getCities(data) {
-    const resp = fetch('https://countriesnow.space/api/v0.1/countries/state/cities', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-      .then(response => response.text())
-      .then(result => console.log(result))
-      .catch(error => console.log('error', error));
-    return resp;
+  static async getCities(data) {    
+    const response = localidades
+      .filter(city => city.code === data)
+      .map(obj => obj.name);
+
+    return response
   }
 
   // Registrar cuenta de mercadopago

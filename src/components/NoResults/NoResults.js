@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import notResultsFound from '../../assets/search.png';
+import notResultsFound from '../../assets/search2.svg';
 import './NoResults.css';
 import { Typography } from '@material-ui/core';
 

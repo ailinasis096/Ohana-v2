@@ -13,7 +13,7 @@ import React from 'react';
 import { Menu as MenuIcon } from 'react-feather';
 import { Link as RouterLink } from 'react-router-dom';
 import Logo from 'src/components/Logo';
-import { THEMES } from 'src/constants';
+import { THEMES } from 'src/constants/constants';
 import Account from './Account';
 import Notifications from './Notifications';
 import Search from './Search';

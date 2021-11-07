@@ -4,7 +4,7 @@ import React, {
   useState
 } from 'react';
 import _ from 'lodash';
-import { THEMES } from 'src/constants';
+import { THEMES } from 'src/constants/constants';
 
 const defaultSettings = {
   direction: 'ltr',

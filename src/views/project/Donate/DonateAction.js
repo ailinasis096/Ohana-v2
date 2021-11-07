@@ -137,7 +137,7 @@ const DonateAction = ({
         <Box mt={6} display='flex' className={classes.lastDiv}>
           {onBack && (
             <Button onClick={onBack} size='large'>
-              Cancelar
+              Atrás
             </Button>
           )}
           <Box flexGrow={1} />

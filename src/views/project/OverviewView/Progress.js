@@ -11,6 +11,7 @@ import React, {
     LinearProgress,
     makeStyles
   } from '@material-ui/core';
+  import numeral from 'numeral';
 
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -27,16 +28,7 @@ import React, {
   const Progress = ({event, className, ...rest }) => {
     const classes = useStyles();
     const [progress, setProgress] = useState();
-
-    useEffect(() => {
-      event.budget = 5000;
-    }, [])
-  
-    useEffect(() => {
-      const recaudado = event.budget - 150;
-      setProgress(recaudado*100/event.budget);
-    }, [event])
-    
+      
     return (
         <Card
         className={clsx(classes.root, className)}
@@ -59,8 +51,7 @@ import React, {
             variant="h3"
             color="textPrimary"
           >
-            {progress}
-            %
+            {numeral(event.funds_collected*100/event.goal).format('0.000%')}
           </Typography>
           <LinearProgress
             className={classes.progress}

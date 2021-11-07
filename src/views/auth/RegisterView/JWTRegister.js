@@ -50,22 +50,22 @@ const JWTRegister = ({ history, className, ...rest }) => {
   const { enqueueSnackbar } = useSnackbar();
   const [loader, setLoader] = useState(false);
   const [selectedState, setSelectedState] = useState();
+  const [cities, setCities] = useState([]);
+  const [selectedCity, setSelectedCity] = useState();
 
   const onStateChange = async (event, selectedState) => {
     setSelectedState(selectedState)
-    
-    /*const data = {
-      'country': "nigeria",
-      'state': 'lagos'
-    };
     try { 
-      const response = await API.getCities(data);
-      console.log('response: ', response)
+      const response = await API.getCities(selectedState);
       setCities(response)
     }
     catch (e) {
       console.error(e);
-    }*/
+    }
+  }
+
+  const onCityChange = async (event, selectedCity) => {
+    setSelectedCity(selectedCity)
   }
 
   return (
@@ -119,7 +119,8 @@ const JWTRegister = ({ history, className, ...rest }) => {
       onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
         values.country = 1;
         values.province = selectedState;
-        console.log('values: ', values)
+        values.city = selectedCity;
+
         try {
           await API.singUp(values);
           if (isMountedRef.current) {
@@ -271,19 +272,26 @@ const JWTRegister = ({ history, className, ...rest }) => {
               )}
             />
           <span className={classes.span}/>
-          <TextField
-            error={Boolean(touched.city && errors.city)}
-            className={classes.textField}
-            fullWidth
-            helperText={touched.city && errors.city}
-            label="Ciudad"
-            margin="normal"
-            name="city"
-            onBlur={handleBlur}
-            onChange={handleChange}
-            value={values.city}
-            variant="outlined"
-          />
+          <Autocomplete
+              className={classes.autocomplete}
+              sx={{ width: 300 }}
+              options={cities}
+              autoHighlight
+              onInputChange={onCityChange}
+              getOptionLabel={(option) => option}
+              renderOption={(option) => option}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  variant="outlined"
+                  label="Seleccione una ciudad"
+                  inputProps={{
+                    ...params.inputProps,
+                    autoComplete: 'new-password',
+                  }}
+                />
+              )}
+            />
           </div>
           <Box alignItems="center" display="flex" mt={2} ml={-1}>
             <Checkbox

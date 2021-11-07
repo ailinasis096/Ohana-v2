@@ -20,7 +20,7 @@ import {
 } from 'react-feather';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import Page from '../../../../components/Page';
-import celebrate from '../../../../assets/celebration.png';
+import celebrate from '../../../../assets/celebration.svg';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -64,15 +64,13 @@ const useStyles = makeStyles(theme => ({
     padding: '30px'
   },
   cover: {
-    width: '40%',
+    width: '29%',
     height: '270px'
   }
 }));
 
 const Success = () => {
   const classes = useStyles();
-
-  console.log('hola')
 
   return (
     <Page

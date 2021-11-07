@@ -6,7 +6,9 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: 56,
-    height: 56
+    height: 56,
+    marginTop: '10%',
+    marginLeft: '50%',
   },
   circle1: {
     stroke: theme.palette.type === 'dark' ? 'rgba(0,0,0,0.15)' : 'rgba(0,0,0,0.05)',

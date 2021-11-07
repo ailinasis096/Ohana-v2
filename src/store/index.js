@@ -3,7 +3,7 @@ import {
   useSelector as useReduxSelector
 } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
-import { ENABLE_REDUX_DEV_TOOLS } from 'src/constants';
+import { ENABLE_REDUX_DEV_TOOLS } from 'src/constants/constants';
 import rootReducer from './rootReducer';
 
 const store = configureStore({

@@ -71,7 +71,7 @@ const PostAdd = ({ className, ...rest } ) => {
               disableUnderline
               fullWidth
               onChange={handleChange}
-              placeholder={`What's on your mind, ${user.name}`}
+              placeholder={`What's on your mind, ${localStorage.getItem('username')}`}
             />
           </Paper>
           <Tooltip title="Send">
