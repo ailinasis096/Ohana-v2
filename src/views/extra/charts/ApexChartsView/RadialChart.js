@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Chart from 'react-apexcharts';
 import {
   Card,
@@ -6,6 +6,7 @@ import {
   Typography,
   useTheme
 } from '@material-ui/core';
+
 
 const RadialChart = () => {
   const theme = useTheme();
@@ -20,12 +21,12 @@ const RadialChart = () => {
         },
         zoom: false
       },
-      colors: ['#27c6db'],
-      labels: ['System Health'],
+      colors: ['#FF7514'],
+      labels: ['Campañas'],
       plotOptions: {
         radialBar: {
           hollow: {
-            size: '60%',
+            size: '60%'
           },
           dataLabels: {
             name: {
@@ -51,20 +52,20 @@ const RadialChart = () => {
   return (
     <Card>
       <CardContent>
+        <Typography
+          align='center'
+          variant='h4'
+          color='textPrimary'
+        >
+          Porcentaje de Campañas terminadas
+        </Typography>
         <Chart
           options={data.options}
           series={data.series}
-          type="radialBar"
-          height="300"
+          type='radialBar'
+          height='300'
         />
-        <Typography
-          align="center"
-          color="textSecondary"
-          variant="caption"
-          component="p"
-        >
-          This shouldn&apos;t be bellow 80%
-        </Typography>
+
       </CardContent>
     </Card>
   );

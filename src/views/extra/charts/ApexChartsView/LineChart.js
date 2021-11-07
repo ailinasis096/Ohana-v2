@@ -71,7 +71,7 @@ const LineChart = () => {
           show: true,
           color: theme.palette.divider
         },
-        categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan', '06 Jan', '07 Jan', '08 Jan', '09 Jan', '10 Jan', '11 Jan', '12 Jan'],
+        categories: ['Julio', 'Agosto', 'Septiembre', 'Octubre'],
         labels: {
           style: {
             colors: theme.palette.text.secondary
@@ -113,13 +113,13 @@ const LineChart = () => {
       ]
     },
     series: [
-      {
-        name: 'Page Views',
+      /*{
+        name: 'ailink',
         data: [3350, 1840, 2254, 5780, 9349, 5241, 2770, 2051, 3764, 2385, 5912, 8323]
-      },
+      },*/
       {
-        name: 'Session Duration',
-        data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+        name: 'user-2',
+        data: [18, 2, 10, 50]
       }
     ]
   };
@@ -128,14 +128,14 @@ const LineChart = () => {
     <Card>
       <CardContent>
         <Typography
-          variant="h4"
-          color="textPrimary"
+          variant='h4'
+          color='textPrimary'
         >
-          Web Traffic
+          Donaciones por Usuario
         </Typography>
         <Chart
-          type="line"
-          height="300"
+          type='line'
+          height='300'
           {...chart}
         />
       </CardContent>

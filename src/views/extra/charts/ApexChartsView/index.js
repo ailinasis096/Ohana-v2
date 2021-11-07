@@ -26,64 +26,65 @@ const useStyles = makeStyles((theme) => ({
 
 const ApexChartsView = () => {
   const classes = useStyles();
-
   return (
     <Page
       className={classes.root}
-      title="ApexCharts"
+      title='Estadísticas'
     >
-      <Container maxWidth="lg">
+      <Container maxWidth='lg'>
         <Breadcrumbs
-          separator={<NavigateNextIcon fontSize="small" />}
-          aria-label="breadcrumb"
+          separator={<NavigateNextIcon fontSize='small' />}
+          aria-label='breadcrumb'
         >
           <Link
-            variant="body1"
-            color="inherit"
-            to="/app"
+            variant='body1'
+            color='inherit'
+            to='/app'
             component={RouterLink}
           >
             Dashboard
           </Link>
           <Link
-            variant="body1"
-            color="inherit"
-            to="/app/extra"
+            variant='body1'
+            color='inherit'
+            to='/app/extra'
             component={RouterLink}
           >
             Extra
           </Link>
           <Typography
-            variant="body1"
-            color="textPrimary"
+            variant='body1'
+            color='textPrimary'
           >
-            Charts
+            Gráficos
           </Typography>
         </Breadcrumbs>
         <Typography
-          variant="h3"
-          color="textPrimary"
+          variant='h3'
+          color='textPrimary'
         >
-          ApexCharts
+          Estadísticas
         </Typography>
-        <Box mt={3}>
+        <Box mt={3}
+        >
           <Grid
             container
-            spacing={3}
+            spacing={4}
           >
             <Grid
-              item
               xs={12}
+              md={8}
             >
+
               <LineChart />
             </Grid>
-            <Grid
+            {/* <Grid
               item
               xs={12}
               md={8}
             >
               <AreaChart />
-            </Grid>
+            </Grid>*/}
             <Grid
               item
               xs={12}

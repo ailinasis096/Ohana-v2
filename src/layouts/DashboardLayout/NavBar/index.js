@@ -13,12 +13,19 @@ import {
 } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
-import { BarChart as BarChartIcon, Search as SearchIcon, Star as StarIcon } from 'react-feather';
+import {
+  BarChart as BarChartIcon,
+  BatteryCharging,
+  Navigation,
+  Search as SearchIcon,
+  Star as StarIcon
+} from 'react-feather';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { Link as RouterLink, matchPath, useLocation } from 'react-router-dom';
 import Logo from 'src/components/Logo';
 import NavItem from './NavItem';
-import avatar from '../../../assets/avatar.png'
+import avatar from '../../../assets/avatar.png';
+import { EditIcon, LayoutIcon } from '@material-ui/icons/Edit';
 
 const sections = [
   {
@@ -36,21 +43,55 @@ const sections = [
       },
       {
         title: 'Mis Campañas',
-        icon: BarChartIcon,
+        icon: Navigation,
         href: '/app/reports/dashboard'
-        /* items:[ 
-
-          {
-            title: 'Registrar Campañas',
-            icon: FolderIcon,
-            href: '/app/reports/dashboard-registrar'
-          }
-        ] */
-      }
+      },
       /*{
         title: 'Mi perfil',
         icon: UserIcon,
         href: '/app/reports/dashboard-alternative'
+      }*/
+      {
+        title: 'Charts',
+        /*href: '/app/extra/charts',*/
+        icon: BarChartIcon,
+        href: '/app/extra/charts/apex'
+        /*items: [
+          {
+            title: 'Apex Charts',
+            href: '/app/extra/charts/apex'
+          }
+        ]*/
+      }
+      /*{
+        title: 'Forms',
+        href: '/app/extra/forms',
+        icon: EditIcon,
+        items: [
+          {
+            title: 'Formik',
+            href: '/app/extra/forms/formik'
+          },
+          {
+            title: 'Redux Forms',
+            href: '/app/extra/forms/redux'
+          }
+        ]
+      }*/
+      /*{
+        title: 'Editors',
+        href: '/app/extra/editors',
+        icon: LayoutIcon,
+        items: [
+          {
+            title: 'DraftJS Editor',
+            href: '/app/extra/editors/draft-js'
+          },
+          {
+            title: 'Quill Editor',
+            href: '/app/extra/editors/quill'
+          }
+        ]
       }*/
     ]
   }
@@ -234,53 +275,8 @@ const sections = [
         icon: DollarSignIcon
       }
     ]
-  },
-  {
-    subheader: 'Extra',
-    items: [
-      {
-        title: 'Charts',
-        href: '/app/extra/charts',
-        icon: BarChartIcon,
-        items: [
-          {
-            title: 'Apex Charts',
-            href: '/app/extra/charts/apex'
-          }
-        ]
-      },
-      {
-        title: 'Forms',
-        href: '/app/extra/forms',
-        icon: EditIcon,
-        items: [
-          {
-            title: 'Formik',
-            href: '/app/extra/forms/formik'
-          },
-          {
-            title: 'Redux Forms',
-            href: '/app/extra/forms/redux'
-          },
-        ]
-      },
-      {
-        title: 'Editors',
-        href: '/app/extra/editors',
-        icon: LayoutIcon,
-        items: [
-          {
-            title: 'DraftJS Editor',
-            href: '/app/extra/editors/draft-js'
-          },
-          {
-            title: 'Quill Editor',
-            href: '/app/extra/editors/quill'
-          }
-        ]
-      }
-    ]
-  }*/
+  },*/
+
 ];
 
 function renderNavItems({ items, pathname, depth = 0 }) {
@@ -368,32 +364,32 @@ const NavBar = ({ onMobileClose, openMobile }) => {
   }, [location.pathname]);
 
   const content = (
-    <Box height="100%" display="flex" flexDirection="column">
+    <Box height='100%' display='flex' flexDirection='column'>
       <PerfectScrollbar options={{ suppressScrollX: true }}>
         <Hidden lgUp>
-          <Box p={2} display="flex" justifyContent="center">
-            <RouterLink to="/">
+          <Box p={2} display='flex' justifyContent='center'>
+            <RouterLink to='/'>
               <Logo />
             </RouterLink>
           </Box>
         </Hidden>
         <Box p={2}>
-          <Box display="flex" justifyContent="center">
-            <RouterLink to="/app/account">
-              <Avatar alt="User" className={classes.avatar} src={user.avatar} />
+          <Box display='flex' justifyContent='center'>
+            <RouterLink to='/app/account'>
+              <Avatar alt='User' className={classes.avatar} src={user.avatar} />
             </RouterLink>
           </Box>
-          <Box mt={2} textAlign="center">
+          <Box mt={2} textAlign='center'>
             <Link
               component={RouterLink}
-              to="/app/account"
-              variant="h5"
-              color="textPrimary"
-              underline="none"
+              to='/app/account'
+              variant='h5'
+              color='textPrimary'
+              underline='none'
             >
               {user.name}
             </Link>
-            <Typography variant="body2" color="textSecondary"></Typography>
+            <Typography variant='body2' color='textSecondary'></Typography>
           </Box>
         </Box>
         <Divider />
@@ -416,17 +412,17 @@ const NavBar = ({ onMobileClose, openMobile }) => {
         </Box>
         <Divider />
         <Box p={2}>
-          <Box p={2} borderRadius="borderRadius" bgcolor="background.dark">
-            <Typography variant="h5" color="textPrimary">
+          <Box p={2} borderRadius='borderRadius' bgcolor='background.dark'>
+            <Typography variant='h5' color='textPrimary'>
               Necesita ayuda?
             </Typography>
             <Link
-              variant="subtitle1"
-              color="secondary"
+              variant='subtitle1'
+              color='secondary'
               component={RouterLink}
-              to="/docs"
+              to='/docs'
             >
-              <Typography variant="body2" color="primary">
+              <Typography variant='body2' color='primary'>
                 Mire nuestra documentación
               </Typography>
             </Link>
@@ -440,21 +436,21 @@ const NavBar = ({ onMobileClose, openMobile }) => {
     <>
       <Hidden lgUp>
         <Drawer
-          anchor="left"
+          anchor='left'
           classes={{ paper: classes.mobileDrawer }}
           onClose={onMobileClose}
           open={openMobile}
-          variant="temporary"
+          variant='temporary'
         >
           {content}
         </Drawer>
       </Hidden>
       <Hidden mdDown>
         <Drawer
-          anchor="left"
+          anchor='left'
           classes={{ paper: classes.desktopDrawer }}
           open
-          variant="persistent"
+          variant='persistent'
         >
           {content}
         </Drawer>
