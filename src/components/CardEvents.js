@@ -29,6 +29,7 @@ import { Share2 as ShareIcon } from 'react-feather';
 import { Link as RouterLink } from 'react-router-dom';
 import getInitials from 'src/utils/getInitials';
 import api from '../api/Api';
+import Swal from 'sweetalert2';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -66,7 +67,6 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
   const classes = useStyles();
   const [isLiked, setLiked] = useState(true);
   const [likesCount, setLikesCount] = useState(10);
-  const [deleteEvent, setDeleteEvent] = useState('');
 
   const handleLike = () => {
     setLiked(true);
@@ -81,13 +81,40 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
   const handleEdit = () => {
   };
   useEffect(() => {
-    getEvents();
+    api.getEvents();
   }, []);
 
 
   const deleteCampaign = () => {
-    api.deleteCampaign(project.id).then(response => setDeleteEvent(response));
-    console.log(deleteEvent);
+    Swal.fire({
+      title: `Está seguro que desea borrar su campaña ${project.name}?`,
+      text: '¡Esta acción no tiene vuelta atrás!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Aceptar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        api.deleteCampaign(project.id).then(response => {
+          Swal.fire({
+            title: 'Su campaña fue eliminada!',
+            icon: 'success',
+            timer: 2000
+          }).then(resultConf => {
+            if (resultConf.isConfirmed) {
+              window.location.reload();
+            }
+          });
+        }).catch(() => {
+          Swal.fire(
+            'Oops!',
+            'Ha ocurrido un error, inténtelo de nuevo luego',
+            'error'
+          );
+        });
+      }
+    });
   };
   return (
     <Card className={clsx(classes.root, className)} {...rest}>
