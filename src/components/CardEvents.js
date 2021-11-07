@@ -18,6 +18,8 @@ import {
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import DeleteIcon from '@material-ui/icons/Delete';
+import StitchIcon from '../assets/Stitch-heart.svg';
+import StitchDislike from '../assets/Stitch-dislike.png';
 
 import EditIcon from '@material-ui/icons/Edit';
 import { Rating } from '@material-ui/lab';
@@ -38,8 +40,8 @@ import {
   LinkedinShareButton,
   TelegramShareButton,
   TwitterShareButton,
-  WhatsappShareButton,
-} from "react-share";
+  WhatsappShareButton
+} from 'react-share';
 import {
   EmailIcon,
   FacebookIcon,
@@ -47,7 +49,8 @@ import {
   TelegramIcon,
   TwitterIcon,
   WhatsappIcon
-} from "react-share";
+} from 'react-share';
+import { Image } from '@material-ui/icons';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -83,9 +86,9 @@ const useStyles = makeStyles(theme => ({
       alignItems: 'center',
       '& h5': {
         padding: '0 2px'
-      },
-    },
-  },
+      }
+    }
+  }
 }));
 
 moment.locale('es');
@@ -107,7 +110,7 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
   };
 
   const openShareDialog = () => {
-    setOpenShare(true)
+    setOpenShare(true);
   };
 
   const closeShareDialog = () => {
@@ -167,16 +170,16 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
           </Avatar>
           <Box className={classes.nameBox} ml={2}>
             <Tooltip title={project.name}>
-            <Typography noWrap variant='body2' color='textSecondary'>
-            <Link
-              color='textPrimary'
-              component={RouterLink}
-              to={`/app/projects/overview/${project.id}`}
-              variant='h5'
-            >
-              {project.name}
-            </Link>
-            </Typography></Tooltip>
+              <Typography noWrap variant='body2' color='textSecondary'>
+                <Link
+                  color='textPrimary'
+                  component={RouterLink}
+                  to={`/app/projects/overview/${project.id}`}
+                  variant='h5'
+                >
+                  {project.name}
+                </Link>
+              </Typography></Tooltip>
             <div
               style={{
                 overflow: 'hidden',
@@ -234,7 +237,7 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
               style={{
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
-                width: '4rem',
+                width: '4rem'
               }}
             >
               <Tooltip title={project.location.street}>
@@ -281,13 +284,13 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
             {isLiked ? (
               <Tooltip title='Unlike'>
                 <IconButton className={classes.likedButton} onClick={handleUnlike}>
-                  <FavoriteIcon fontSize='small' />
+                  <Avatar src={StitchIcon} />
                 </IconButton>
               </Tooltip>
             ) : (
               <Tooltip title='Like'>
                 <IconButton onClick={handleLike}>
-                  <FavoriteBorderIcon fontSize='small' />
+                  <Avatar src={StitchDislike} />
                 </IconButton>
               </Tooltip>
             )}
@@ -295,11 +298,11 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
               {likesCount}
             </Typography>
             <Tooltip title='Compartir'>
-              <IconButton onClick={openShareDialog} >
+              <IconButton onClick={openShareDialog}>
                 <SvgIcon
-                fontSize='small'
-                color='action'
-                className={classes.membersIcon}
+                  fontSize='small'
+                  color='action'
+                  className={classes.membersIcon}
                 >
                   <ShareIcon />
                 </SvgIcon>
@@ -316,53 +319,53 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
           </Button>
         </Tooltip>
       </Box>
-      {!!openShare && 
-        <Dialog onClose={closeShareDialog} open={openShare}>
-          <DialogTitle className={classes.dialogTitle}>
-            <Typography variant='h5'>Compartir </Typography> 
-            <Typography variant='h5' color='primary'>{project.name}</Typography>
-          </DialogTitle>
-          <Box py={2} px={5} display='flex' justifyContent='center' className={classes.shareBox}>
-            <EmailShareButton
-              subject={`${project.name}`}
-              body={`${project.name} "\n" ${project.description}`}
-              url={`http://www.ohana.com/donate/${project.id}`}
-            >
-              <EmailIcon size={40} round={true}/>
-            </EmailShareButton>
-            <FacebookShareButton 
-              url={`http://www.ohana.com/donate/${project.id}`}
-              quote={`${project.name} \n ${project.description}`}
-            >
-              <FacebookIcon size={40} round={true}/>
-            </FacebookShareButton>
-            <LinkedinShareButton
-              title={`${project.name} \n ${project.description}`}
-              url={`http://www.ohana.com/donate/${project.id}`}
-            >
-              <LinkedinIcon size={40} round={true}/>
-            </LinkedinShareButton>
-            <TelegramShareButton
-              title={`${project.name} \n ${project.description}`}
-              url={`http://www.ohana.com/donate/${project.id}`}
-            >
-              <TelegramIcon size={40} round={true}/>
-            </TelegramShareButton>
-            <TwitterShareButton
-              title={`${project.name} \n ${project.description}`}
-              url={`http://www.ohana.com/donate/${project.id}`}
-              hashtags={[`${project.name.replace(/\s/g, '')}`, 'Doná']}
-            >
-              <TwitterIcon size={40} round={true}/>
-            </TwitterShareButton>
-            <WhatsappShareButton
-              title={`${project.name} \n ${project.description}`}
-              url={`http://www.ohana.com/donate/${project.id}`}
-            >
-              <WhatsappIcon size={40} round={true}/>
-            </WhatsappShareButton>
-          </Box>
-        </Dialog>
+      {!!openShare &&
+      <Dialog onClose={closeShareDialog} open={openShare}>
+        <DialogTitle className={classes.dialogTitle}>
+          <Typography variant='h5'>Compartir </Typography>
+          <Typography variant='h5' color='primary'>{project.name}</Typography>
+        </DialogTitle>
+        <Box py={2} px={5} display='flex' justifyContent='center' className={classes.shareBox}>
+          <EmailShareButton
+            subject={`${project.name}`}
+            body={`${project.name} "\n" ${project.description}`}
+            url={`http://www.ohana.com/donate/${project.id}`}
+          >
+            <EmailIcon size={40} round={true} />
+          </EmailShareButton>
+          <FacebookShareButton
+            url={`http://www.ohana.com/donate/${project.id}`}
+            quote={`${project.name} \n ${project.description}`}
+          >
+            <FacebookIcon size={40} round={true} />
+          </FacebookShareButton>
+          <LinkedinShareButton
+            title={`${project.name} \n ${project.description}`}
+            url={`http://www.ohana.com/donate/${project.id}`}
+          >
+            <LinkedinIcon size={40} round={true} />
+          </LinkedinShareButton>
+          <TelegramShareButton
+            title={`${project.name} \n ${project.description}`}
+            url={`http://www.ohana.com/donate/${project.id}`}
+          >
+            <TelegramIcon size={40} round={true} />
+          </TelegramShareButton>
+          <TwitterShareButton
+            title={`${project.name} \n ${project.description}`}
+            url={`http://www.ohana.com/donate/${project.id}`}
+            hashtags={[`${project.name.replace(/\s/g, '')}`, 'Doná']}
+          >
+            <TwitterIcon size={40} round={true} />
+          </TwitterShareButton>
+          <WhatsappShareButton
+            title={`${project.name} \n ${project.description}`}
+            url={`http://www.ohana.com/donate/${project.id}`}
+          >
+            <WhatsappIcon size={40} round={true} />
+          </WhatsappShareButton>
+        </Box>
+      </Dialog>
       }
     </Card>
   );
