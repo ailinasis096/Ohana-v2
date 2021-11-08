@@ -44,12 +44,14 @@ class API {
   static async getEvents(page = 1, pageSize = 1, search, state) {
     const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
     let path = `/api/events/list/?page=${page}&page_size=${pageSize}`;
-    if (!!search ) {
-      path = `${path}&q=${search}`
-    };
+    if (!!search) {
+      path = `${path}&q=${search}`;
+    }
+
     if (typeof state === 'boolean') {
-      path =`${path}&cancelled=${state}`
-    };
+      path = `${path}&cancelled=${state}`;
+    }
+
     const { data } = await axiosInstance.get(path, config);
     return data;
   }
@@ -135,8 +137,8 @@ class API {
   }
 
   // Obtener paises
-  static async getCountries() {    
-    const resp = fetch("https://api.first.org/data/v1/countries")
+  static async getCountries() {
+    const resp = fetch('https://api.first.org/data/v1/countries')
       .then(response => response.text())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
@@ -144,12 +146,12 @@ class API {
   }
 
   // Obtener ciudades
-  static async getCities(data) {    
+  static async getCities(data) {
     const response = localidades
       .filter(city => city.code === data)
       .map(obj => obj.name);
 
-    return response
+    return response;
   }
 
   // Registrar cuenta de mercadopago
@@ -185,7 +187,13 @@ class API {
     return data;
   };
 
-
+  // Estadística Donaciones por Mes
+  static async getDonationsByMonth() {
+    const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
+    let path = `/api/stats/donations-by-month/`;
+    const { data } = await axiosInstance.get(path, config);
+    return data;
+  };
 }
 
 export default API;

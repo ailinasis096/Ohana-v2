@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Chart from 'react-apexcharts';
+import api from '../../../../api/Api.js';
 import {
   Card,
   CardContent,
@@ -9,7 +10,36 @@ import {
 
 const LineChart = () => {
   const theme = useTheme();
+  const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+  const month = [];
+  const donation = [];
+  let [donations, setDonations] = useState([]);
 
+  useEffect(() => {
+    donar();
+  }, []);
+
+  useEffect(() => {
+    arrayDonations();
+    console.log(month, donation);
+  }, [donations]);
+
+  const donar = async () => {
+    try {
+      const response = await api.getDonationsByMonth();
+      setDonations(donations = response);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const arrayDonations = () => {
+    donations.map(don => {
+      month.push(months[don.month]);
+      donation.push(don.donations);
+    });
+
+  };
   const chart = {
     options: {
       chart: {
@@ -71,7 +101,8 @@ const LineChart = () => {
           show: true,
           color: theme.palette.divider
         },
-        categories: ['Julio', 'Agosto', 'Septiembre', 'Octubre'],
+        categories: ['Agosto', 'Septiembre', 'Octubre', 'Noviembre'],
+        /*categories: month,*/
         labels: {
           style: {
             colors: theme.palette.text.secondary
@@ -113,14 +144,15 @@ const LineChart = () => {
       ]
     },
     series: [
-      /*{
-        name: 'ailink',
-        data: [3350, 1840, 2254, 5780, 9349, 5241, 2770, 2051, 3764, 2385, 5912, 8323]
-      },*/
       {
         name: 'user-2',
-        data: [18, 2, 10, 50]
+        data: [10, 6, 80, 10]
+        /*data: donation*/
       }
+      /* {
+         name: 'user-2',
+         data: donation
+       }*/
     ]
   };
 
@@ -132,6 +164,7 @@ const LineChart = () => {
           color='textPrimary'
         >
           Donaciones por Usuario
+
         </Typography>
         <Chart
           type='line'
@@ -142,5 +175,6 @@ const LineChart = () => {
     </Card>
   );
 };
+
 
 export default LineChart;
