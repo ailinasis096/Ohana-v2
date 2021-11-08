@@ -57,7 +57,7 @@ const RadialChart = () => {
           variant='h4'
           color='textPrimary'
         >
-          Porcentaje de Campañas terminadas
+          Mis campañas finalizadas
         </Typography>
         <Chart
           options={data.options}

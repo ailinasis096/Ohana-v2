@@ -11,8 +11,6 @@ import {
 const LineChart = () => {
   const theme = useTheme();
   const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-  const month = [];
-  const donation = [];
   let [donations, setDonations] = useState([]);
 
   useEffect(() => {
@@ -22,22 +20,14 @@ const LineChart = () => {
   const donar = async () => {
     try {
       const response = await api.getDonationsByMonth();
-      setDonations(donations = response);
-      arrayDonations();
+      setDonations(response);
     } catch (err) {
       console.error(err);
     }
   };
 
-  const arrayDonations = () => {
-    donations.map(don => {
-      month.push(months[don.month]);
-      donation.push(don.donations);
-    });
 
-  };
-
-  const chart = {
+  const chart = () => ({
     options: {
       chart: {
         background: theme.palette.background.paper,
@@ -98,8 +88,7 @@ const LineChart = () => {
           show: true,
           color: theme.palette.divider
         },
-        categories: ['Agosto', 'Septiembre', 'Octubre', 'Noviembre'],
-        /*categories: month,*/
+        categories: donations ? donations.map(d => months[d.month - 1]) : [],
         labels: {
           style: {
             colors: theme.palette.text.secondary
@@ -142,17 +131,13 @@ const LineChart = () => {
     },
     series: [
       {
-        name: 'user-2',
-        /*data: [10, 6, 80, 10]*/
-        data: donation
+        name: 'Cantidad de donaciones',
+        data: donations ? donations.map(d => d.donations) : []
+        // data: donation
       }
-      /* {
-         name: 'user-2',
-         data: donation
-       }*/
     ]
-  };
-
+  })
+  console.log(donations)
   return (
     <Card>
       <CardContent>
@@ -160,13 +145,12 @@ const LineChart = () => {
           variant='h4'
           color='textPrimary'
         >
-          Donaciones por Usuario
-
+          Mis donaciones
         </Typography>
         <Chart
           type='line'
           height='300'
-          {...chart}
+          {...chart()}
         />
       </CardContent>
     </Card>
