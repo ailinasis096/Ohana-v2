@@ -26,7 +26,6 @@ const LineChart = () => {
     }
   };
 
-
   const chart = () => ({
     options: {
       chart: {
@@ -136,8 +135,8 @@ const LineChart = () => {
         // data: donation
       }
     ]
-  })
-  console.log(donations)
+  });
+  console.log(donations);
   return (
     <Card>
       <CardContent>

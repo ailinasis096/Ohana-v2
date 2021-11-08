@@ -15,14 +15,12 @@ import {
   Dialog,
   DialogTitle
 } from '@material-ui/core';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import Heart from '../assets/corazon.png';
 import DeleteIcon from '@material-ui/icons/Delete';
 import StitchIcon from '../assets/Stitch-heart.svg';
 import StitchDislike from '../assets/Stitch-dislike.png';
 
 import EditIcon from '@material-ui/icons/Edit';
-import { Rating } from '@material-ui/lab';
 import clsx from 'clsx';
 import moment from 'moment';
 import 'moment/locale/es'; // without this line it didn't work
@@ -93,14 +91,13 @@ const useStyles = makeStyles(theme => ({
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     '@media (max-width: 1280px)': {
-      width: '4rem',
+      width: '4rem'
     },
     '@media (min-width: 1281px)': {
-      width: '8rem',
-    },
+      width: '8rem'
+    }
   }
 }));
-
 
 
 moment.locale('es');
@@ -320,8 +317,8 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
         <Box flexGrow={1} />
         <Tooltip title='Donar'>
           <Button className={classes.donateButton} href={`/app/donate/${project.id}`}>
-            <FavoriteIcon />
-            <Typography variant='subtitle1' color='textPrimary' style={{ marginLeft: '5px' }}>
+            <Avatar src={Heart}></Avatar>
+            <Typography variant='error' color='textPrimary' style={{ marginLeft: '5px' }}>
               Dona!
             </Typography>
           </Button>

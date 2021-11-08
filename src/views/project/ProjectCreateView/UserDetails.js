@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import * as Yup from 'yup';
 import { Formik, useFormikContext } from 'formik';
+import Swal from 'sweetalert2';
 import {
   Box,
   Button,
@@ -14,6 +15,7 @@ import {
 } from '@material-ui/core';
 import api from '../../../api/Api.js';
 import QuillEditor from 'src/components/QuillEditor';
+import { NavLink as RouterLink } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -29,9 +31,9 @@ const useStyles = makeStyles(theme => ({
     '& + &': {
       marginLeft: theme.spacing(2)
     }
-  }, 
+  },
   editor: {
-    height: '180px',
+    height: '180px'
   },
   descError: {
     marginLeft: '14px',
@@ -45,25 +47,25 @@ const Ottro = () => {
 };
 
 const UserDetails = ({
-  setData,
-  event,
-  className,
-  onBack,
-  onNext,
-  ...rest
-}) => {
+                       setData,
+                       event,
+                       className,
+                       onBack,
+                       onNext,
+                       ...rest
+                     }) => {
   const classes = useStyles();
   const [error, setError] = useState(null);
   let [categoryOption, setCategoryOption] = useState([]); // Me carga el  json con las opciones
   let [category, setCategory] = useState(1); //Me guarda la opción seleccionada
   const [formValues, setFormValues] = useState(null);
   const [descriptionBlur, setDescriptionBlur] = useState(false);
-  
+
   const initialValues = {
     projectName: '',
     ubication: '',
     description: '',
-    submit: null,
+    submit: null
   };
 
   //Obtiene el json con las categorias y las setea en categoryOption
@@ -86,7 +88,7 @@ const UserDetails = ({
         submit: null,
         category: event.category.id
       };
-      setCategory(event.category.id)
+      setCategory(event.category.id);
       setFormValues(loadValues);
     }
   }, [event]);
@@ -112,10 +114,24 @@ const UserDetails = ({
       category: category
     });
   };
+  const handleConfirmationCancel = () => {
+    Swal.fire({
+      title: `Está seguro?`,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Aceptar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.replace('/app/events/browse');
+      }
+    });
+  };
 
   const handleDescBlur = () => {
-    setDescriptionBlur(true)
-  }
+    setDescriptionBlur(true);
+  };
 
   return (
     <Formik
@@ -137,8 +153,8 @@ const UserDetails = ({
           // Call API to store step data in server session
           // It is important to have it on server to be able to reuse it if user
           // decides to continue later.
-          if( !values.description.replace(/<\/?[^>]+(>|$)/g, '') ) {
-            handleDescBlur()
+          if (!values.description.replace(/<\/?[^>]+(>|$)/g, '')) {
+            handleDescBlur();
           } else {
             setStatus({ success: true });
             setSubmitting(false);
@@ -148,7 +164,7 @@ const UserDetails = ({
               onNext();
             }
           }
-          
+
         } catch (err) {
           console.error(err);
           setStatus({ success: false });
@@ -158,25 +174,25 @@ const UserDetails = ({
       }}
     >
       {({
-        errors,
-        handleBlur,
-        handleChange,
-        handleSubmit,
-        setFieldValue,
-        isSubmitting,
-        touched,
-        values
-      }) => (
+          errors,
+          handleBlur,
+          handleChange,
+          handleSubmit,
+          setFieldValue,
+          isSubmitting,
+          touched,
+          values
+        }) => (
         <form
           onSubmit={handleSubmit}
           className={clsx(classes.root, className)}
           {...rest}
         >
-          <Typography variant="h3" color="textPrimary">
+          <Typography variant='h3' color='textPrimary'>
             Información de la Campaña
           </Typography>
           <Box mt={2}>
-            <Typography variant="subtitle1" color="textSecondary">
+            <Typography variant='subtitle1' color='textSecondary'>
               Información básica de la Campaña
             </Typography>
           </Box>
@@ -185,22 +201,22 @@ const UserDetails = ({
               error={Boolean(touched.projectName && errors.projectName)}
               fullWidth
               helperText={touched.projectName && errors.projectName}
-              label="Nombre de la campaña"
-              name="projectName"
+              label='Nombre de la campaña'
+              name='projectName'
               onBlur={handleBlur}
               onChange={handleChange}
               value={values.projectName}
-              variant="outlined"
+              variant='outlined'
             />
 
             <Box mt={3} mb={1}>
-              <Typography variant="subtitle2" color="textSecondary">
+              <Typography variant='subtitle2' color='textSecondary'>
                 Descripción
               </Typography>
             </Box>
-            <Paper variant="outlined">
+            <Paper variant='outlined'>
               <QuillEditor
-                name="description"
+                name='description'
                 className={classes.editor}
                 value={values.description}
                 onBlur={handleDescBlur}
@@ -210,45 +226,45 @@ const UserDetails = ({
               />
             </Paper>
             {(descriptionBlur && !values.description.replace(/<\/?[^>]+(>|$)/g, '')) && (
-                <Box mt={2} className={classes.descError}>
-                  <FormHelperText error>
-                    Ingrese una descprición
-                  </FormHelperText>
-                </Box>
-              )}
+              <Box mt={2} className={classes.descError}>
+                <FormHelperText error>
+                  Ingrese una descprición
+                </FormHelperText>
+              </Box>
+            )}
           </Box>
           <Box mt={2}>
             <TextField
               error={Boolean(touched.ubication && errors.ubication)}
               fullWidth
               helperText={touched.ubication && errors.ubication}
-              label="Ubicación"
-              name="ubication"
+              label='Ubicación'
+              name='ubication'
               onBlur={handleBlur}
               onChange={handleChange}
               value={values.ubication}
-              variant="outlined"
+              variant='outlined'
             />
           </Box>
-          <Box mt={2} display="flex" alignItems="center">
+          <Box mt={2} display='flex' alignItems='center'>
             <TextField
               error={Boolean(touched.category && errors.category)}
               fullWidth
               select
               helperText={touched.category && errors.category}
-              label="Categoría"
-              name="category"
+              label='Categoría'
+              name='category'
               onBlur={handleBlur}
               onChangeCapture={event => {
                 setCategory((category = parseInt(event.target.value)));
               }}
               onChange={handleChange}
               value={values.category}
-              variant="outlined"
+              variant='outlined'
               SelectProps={{ native: true }}
             >
               <>
-                <option defaultValue=" " selected />
+                <option defaultValue=' ' selected />
                 {categoryOption.map(option => (
                   <option key={option.id} value={option.id}>
                     {option.name}
@@ -263,19 +279,19 @@ const UserDetails = ({
             </Box>
           )}
           <Ottro />
-          <Box mt={6} display="flex">
-            {onBack && (
-              <Button onClick={onBack} size="large">
-                Cancelar
-              </Button>
-            )}
+          <Box mt={6} display='flex'>
+            <Button onClick={handleConfirmationCancel} size='large'>
+              Cancelar
+            </Button>
+
+
             <Box flexGrow={1} />
             <Button
-              color="secondary"
+              color='secondary'
               disabled={isSubmitting}
-              type="submit"
-              variant="contained"
-              size="large"
+              type='submit'
+              variant='contained'
+              size='large'
             >
               Siguiente
             </Button>
@@ -293,8 +309,10 @@ UserDetails.propTypes = {
 };
 
 UserDetails.defaultProps = {
-  onNext: () => {},
-  onBack: () => {}
+  onNext: () => {
+  },
+  onBack: () => {
+  }
 };
 
 export default UserDetails;
