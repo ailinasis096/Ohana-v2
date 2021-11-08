@@ -21,9 +21,8 @@ import { Calendar as CalendarIcon } from 'react-feather';
 import CardEvents from 'src/components/CardEvents';
 import api from './../../../api/Api';
 import NoResults from './../../../components/NoResults/NoResults';
-import CircularProgress from "@material-ui/core/CircularProgress";
+import CircularProgress from '@material-ui/core/CircularProgress';
 import Filter from './../../project/ProjectBrowseView/Filter/index';
-import CreateImage from 'src/components/CreateImage.component';
 import { Alert } from '@material-ui/lab';
 
 const timeRanges = [
@@ -62,7 +61,7 @@ const useStyles = makeStyles(theme => ({
     marginLeft: '32vw'
   },
   btnDiv: {
-    display: 'flex', 
+    display: 'flex',
     justifyContent: 'center',
     marginTop: '1%'
   }
@@ -80,7 +79,7 @@ const Header = ({ className, ...rest }) => {
 
   useEffect(() => {
     fetchEvent(1, 10, '');
-    fetchMpAccount()
+    fetchMpAccount();
   }, []);
 
   const fetchEvent = async (pageSize = 1, results = 10, data) => {
@@ -103,11 +102,11 @@ const Header = ({ className, ...rest }) => {
     }
   };
 
-  console.log('accountMp: ', accountMp)
-  console.log('!!accountMp: ', !!accountMp)
+  console.log('accountMp: ', accountMp);
+  console.log('!!accountMp: ', !!accountMp);
 
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth='lg'>
       <Grid
         container
         spacing={3}
@@ -172,23 +171,24 @@ const Header = ({ className, ...rest }) => {
             ))}
           </Menu>
         </Grid>
-        <Container className={classes.container} maxWidth="lg">
-            <Box mt={3}>
-                <Filter onlyName fetchEvent={fetchEvent}/>
-                {!!accountMp && accountMp.name === '' && (
-                  <div className={classes.btnDiv}>
-                    <Alert severity="warning">Tus campañas no pueden recibir donaciones porque no has asociado tu cuenta de mercado pago. Podes hacerlo desde 
-                      <Link href="/app/config-account" underline="hover">
-                        {'este link'}
-                      </Link>
-                    </Alert>
-                  </div>
-                )}
-            </Box>
-          </Container>
-        
+        <Container className={classes.container} maxWidth='lg'>
+          <Box mt={3}>
+            <Filter onlyName fetchEvent={fetchEvent} />
+            {!!accountMp && accountMp.name === '' && (
+              <div className={classes.btnDiv}>
+                <Alert severity='warning'>Tus campañas no pueden recibir donaciones porque no has asociado tu cuenta de
+                  mercado pago. Podes hacerlo desde
+                  <Link href='/app/config-account' underline='hover'>
+                    {'este link'}
+                  </Link>
+                </Alert>
+              </div>
+            )}
+          </Box>
+        </Container>
+
         {!!loading ? (
-          <CircularProgress className={classes.progress} color="primary" size={50} />
+          <CircularProgress className={classes.progress} color='primary' size={50} />
         ) : (
           !!events && events.length > 0 ? (
             <Grid container spacing={3}>
@@ -204,12 +204,12 @@ const Header = ({ className, ...rest }) => {
                 </Grid>
               ))}
             </Grid>
-            ) : (
-              <Card className={classes.card}>
-                <NoResults title={'No se encontraron resultados'} />
-              </Card>
-            )
-          )}
+          ) : (
+            <Card className={classes.card}>
+              <NoResults title={'No se encontraron resultados'} />
+            </Card>
+          )
+        )}
       </Grid>
     </Container>
   );

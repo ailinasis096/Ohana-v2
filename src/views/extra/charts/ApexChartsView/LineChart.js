@@ -19,15 +19,11 @@ const LineChart = () => {
     donar();
   }, []);
 
-  useEffect(() => {
-    arrayDonations();
-    console.log(month, donation);
-  }, [donations]);
-
   const donar = async () => {
     try {
       const response = await api.getDonationsByMonth();
       setDonations(donations = response);
+      arrayDonations();
     } catch (err) {
       console.error(err);
     }
@@ -40,6 +36,7 @@ const LineChart = () => {
     });
 
   };
+
   const chart = {
     options: {
       chart: {
@@ -146,8 +143,8 @@ const LineChart = () => {
     series: [
       {
         name: 'user-2',
-        data: [10, 6, 80, 10]
-        /*data: donation*/
+        /*data: [10, 6, 80, 10]*/
+        data: donation
       }
       /* {
          name: 'user-2',
