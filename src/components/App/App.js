@@ -3,9 +3,10 @@ import React from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import { createTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
-import Home from './../Home/index';
+import Home from '../../views/home/index';
 
 import './App.css';
+import HelmetMetaData from './../HelmetMetaData.component';
 
 const theme = createTheme({
   /** Colors **/
@@ -42,6 +43,7 @@ const App = () => {
           <Router>
             <ThemeProvider theme={theme}>
                   <div className="App__Container">
+                    <HelmetMetaData/>
                       <React.Fragment>
                         <Switch>
                           <Route path="/" component={Home} />

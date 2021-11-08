@@ -23,6 +23,8 @@ import api from './../../../api/Api';
 import NoResults from './../../../components/NoResults/NoResults';
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Filter from './../../project/ProjectBrowseView/Filter/index';
+import CreateImage from 'src/components/CreateImage.component';
+import { Alert } from '@material-ui/lab';
 
 const timeRanges = [
   {
@@ -58,6 +60,11 @@ const useStyles = makeStyles(theme => ({
   progress: {
     marginTop: '20vh',
     marginLeft: '32vw'
+  },
+  btnDiv: {
+    display: 'flex', 
+    justifyContent: 'center',
+    marginTop: '1%'
   }
 }));
 
@@ -68,10 +75,12 @@ const Header = ({ className, ...rest }) => {
   const [timeRange, setTimeRange] = useState(timeRanges[2].text);
   const [mode, setMode] = useState('grid');
   const [events, setEvents] = useState([]);
+  const [accountMp, setAccountMp] = useState();
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetchEvent(1, 10, '');
+    fetchMpAccount()
   }, []);
 
   const fetchEvent = async (pageSize = 1, results = 10, data) => {
@@ -84,6 +93,18 @@ const Header = ({ className, ...rest }) => {
       console.error(err);
     }
   };
+
+  const fetchMpAccount = async () => {
+    try {
+      const response = await api.getMpAccount();
+      setAccountMp(response);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  console.log('accountMp: ', accountMp)
+  console.log('!!accountMp: ', !!accountMp)
 
   return (
     <Container maxWidth="lg">
@@ -154,6 +175,15 @@ const Header = ({ className, ...rest }) => {
         <Container className={classes.container} maxWidth="lg">
             <Box mt={3}>
                 <Filter onlyName fetchEvent={fetchEvent}/>
+                {!!accountMp && accountMp.name === '' && (
+                  <div className={classes.btnDiv}>
+                    <Alert severity="warning">Tus campañas no pueden recibir donaciones porque no has asociado tu cuenta de mercado pago. Podes hacerlo desde 
+                      <Link href="/app/config-account" underline="hover">
+                        {'este link'}
+                      </Link>
+                    </Alert>
+                  </div>
+                )}
             </Box>
           </Container>
         

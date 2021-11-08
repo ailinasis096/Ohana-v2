@@ -88,8 +88,20 @@ const useStyles = makeStyles(theme => ({
         padding: '0 2px'
       }
     }
+  },
+  secondDiv: {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    '@media (max-width: 1280px)': {
+      width: '4rem',
+    },
+    '@media (min-width: 1281px)': {
+      width: '8rem',
+    },
   }
 }));
+
+
 
 moment.locale('es');
 
@@ -234,11 +246,7 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
           </Grid>
           <Grid item>
             <div
-              style={{
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                width: '4rem'
-              }}
+              className={classes.secondDiv}
             >
               <Tooltip title={project.location.street}>
                 <Typography noWrap variant='h5' color='textPrimary'>

@@ -194,6 +194,14 @@ class API {
     const { data } = await axiosInstance.get(path, config);
     return data;
   };
+
+    // Obtener data usuario
+    static async getInfoUser() {
+      const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
+      let path = `/api/users/info/get/`;
+      const { data } = await axiosInstance.get(path, config);
+      return data;
+    };
 }
 
 export default API;
