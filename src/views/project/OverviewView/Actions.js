@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import clsx from 'clsx';
 import {
 Container,
@@ -13,6 +13,7 @@ import shareSVG from '../../../assets/share-2.svg'
 import bellSVG from '../../../assets/bell.svg'
 import mpImg from '../../../assets/mp2.png'
 import { Link as RouterLink } from 'react-router-dom';
+import ShareDialog from './../../../components/ShareDialog';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,6 +44,15 @@ const useStyles = makeStyles((theme) => ({
 
 const Actions = ({event, className, ...rest }) => {
   const classes = useStyles();
+  const [openShare, setOpenShare] = useState(false);
+
+  const openShareDialog = () => {
+    setOpenShare(true);
+  };
+
+  const closeShareDialog = () => {
+    setOpenShare(false);
+  };
 
   return (
     <Page
@@ -76,6 +86,7 @@ const Actions = ({event, className, ...rest }) => {
                       className={classes.button}
                       color="secondary"
                       variant="contained"
+                      onClick={openShareDialog}
                       >
                       Compartir
                     </Button>
@@ -142,6 +153,9 @@ const Actions = ({event, className, ...rest }) => {
           </Grid>
         </Grid>
       </Container>
+      {!!openShare && 
+        <ShareDialog project={event} openShare={openShare} closeDialog={closeShareDialog} />
+      }
     </Page>
   );
 };

@@ -32,23 +32,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import getInitials from 'src/utils/getInitials';
 import api from '../api/Api';
 import Swal from 'sweetalert2';
-import {
-  EmailShareButton,
-  FacebookShareButton,
-  LinkedinShareButton,
-  TelegramShareButton,
-  TwitterShareButton,
-  WhatsappShareButton
-} from 'react-share';
-import {
-  EmailIcon,
-  FacebookIcon,
-  LinkedinIcon,
-  TelegramIcon,
-  TwitterIcon,
-  WhatsappIcon
-} from 'react-share';
-import { Image } from '@material-ui/icons';
+import ShareDialog from './ShareDialog';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -77,15 +61,6 @@ const useStyles = makeStyles(theme => ({
   },
   nameBox: {
     display: 'grid'
-  },
-  dialogTitle: {
-    '& h2': {
-      display: 'flex',
-      alignItems: 'center',
-      '& h5': {
-        padding: '0 2px'
-      }
-    }
   },
   secondDiv: {
     overflow: 'hidden',
@@ -324,53 +299,8 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
           </Button>
         </Tooltip>
       </Box>
-      {!!openShare &&
-      <Dialog onClose={closeShareDialog} open={openShare}>
-        <DialogTitle className={classes.dialogTitle}>
-          <Typography variant='h5'>Compartir </Typography>
-          <Typography variant='h5' color='primary'>{project.name}</Typography>
-        </DialogTitle>
-        <Box py={2} px={5} display='flex' justifyContent='center' className={classes.shareBox}>
-          <EmailShareButton
-            subject={`${project.name}`}
-            body={`${project.name} "\n" ${project.description}`}
-            url={`http://www.ohana.com/donate/${project.id}`}
-          >
-            <EmailIcon size={40} round={true} />
-          </EmailShareButton>
-          <FacebookShareButton
-            url={`http://www.ohana.com/donate/${project.id}`}
-            quote={`${project.name} \n ${project.description}`}
-          >
-            <FacebookIcon size={40} round={true} />
-          </FacebookShareButton>
-          <LinkedinShareButton
-            title={`${project.name} \n ${project.description}`}
-            url={`http://www.ohana.com/donate/${project.id}`}
-          >
-            <LinkedinIcon size={40} round={true} />
-          </LinkedinShareButton>
-          <TelegramShareButton
-            title={`${project.name} \n ${project.description}`}
-            url={`http://www.ohana.com/donate/${project.id}`}
-          >
-            <TelegramIcon size={40} round={true} />
-          </TelegramShareButton>
-          <TwitterShareButton
-            title={`${project.name} \n ${project.description}`}
-            url={`http://www.ohana.com/donate/${project.id}`}
-            hashtags={[`${project.name.replace(/\s/g, '')}`, 'Doná']}
-          >
-            <TwitterIcon size={40} round={true} />
-          </TwitterShareButton>
-          <WhatsappShareButton
-            title={`${project.name} \n ${project.description}`}
-            url={`http://www.ohana.com/donate/${project.id}`}
-          >
-            <WhatsappIcon size={40} round={true} />
-          </WhatsappShareButton>
-        </Box>
-      </Dialog>
+      {!!openShare && 
+        <ShareDialog project={project} openShare={openShare} closeDialog={closeShareDialog} />
       }
     </Card>
   );
