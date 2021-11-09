@@ -1,19 +1,19 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { Grid, makeStyles } from '@material-ui/core';
 import useAuth from 'src/hooks/useAuth';
 import ProfileDetails from './ProfileDetails';
 import GeneralSettings from './GeneralSettings';
+import API from './../../../../api/Api';
 
 const useStyles = makeStyles(() => ({
   root: {}
 }));
 
-const General = ({ className, ...rest }) => {
+const General = ({className, user, ...rest }) => {
   const classes = useStyles();
-  const { user } = useAuth();
-
+  
   return (
     <Grid
       className={clsx(classes.root, className)}

@@ -11,16 +11,21 @@ const useStyles = makeStyles(() => ({
       width: '90%',
       marginTop: '8px'
     },
+    update: {
+      width: '100%',
+    },
   }));
 
-export default function CountrySelect() {
+export default function CountrySelect(params) {
   const classes = useStyles();
+  console.log(params);
   return (
     <Autocomplete
       id="country-select-demo"
-      className={classes.root}
-      sx={{ width: 300 }}
+      className={params.type ==='update' ? classes.update : classes.root}
+      sx={{ width: '100%' }}
       options={countries}
+      inputValue={params.value}
       autoHighlight
       getOptionLabel={(option) => option.label}
       renderOption={(option) => (

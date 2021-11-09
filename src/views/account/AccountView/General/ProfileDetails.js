@@ -11,11 +11,12 @@ import {
   makeStyles,
   Typography
 } from '@material-ui/core';
+import avatar from '../../../../assets/avatar.png';
 
 const useStyles = makeStyles(theme => ({
   root: {},
   name: {
-    marginTop: theme.spacing(1)
+    marginTop: theme.spacing(2)
   },
   avatar: {
     height: 100,
@@ -35,21 +36,17 @@ const ProfileDetails = ({ className, user, ...rest }) => {
           flexDirection="column"
           textAlign="center"
         >
-          <Avatar className={classes.avatar} src={user.avatar} />
+          <Avatar className={classes.avatar} src={avatar} />
           <Typography
             className={classes.name}
-            color="textPrimary"
             gutterBottom
             variant="h3"
           >
-            {user.name}
+           {user.additional_info.first_name + ' ' + user.additional_info.last_name}
           </Typography>
-          {/*<Typography color="textPrimary" variant="body1">
-            Tu suscripción:{' '}
-            <Link component={RouterLink} to="/pricing">
-              {user.tier}
-            </Link>
-          </Typography>*/}
+          <Typography color="textPrimary" variant="body1">
+            {'@'+user.username}
+          </Typography>
         </Box>
       </CardContent>
       <CardActions>

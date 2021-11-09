@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Box,
   Container,
@@ -11,6 +11,7 @@ import Page from 'src/components/Page';
 import Header from './Header';
 import General from './General';
 import Security from './Security';
+import API from '../../../api/Api'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -24,6 +25,22 @@ const useStyles = makeStyles(theme => ({
 const AccountView = () => {
   const classes = useStyles();
   const [currentTab, setCurrentTab] = useState('general');
+  const [userData, setUserData] = useState();
+
+  useEffect(() => {
+    fetchUser();
+  }, []);
+
+  const fetchUser = async () => {
+    try {
+      const response = await API.getInfoUser();
+      setUserData(response);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  console.log('userData: ', userData)
 
   const tabs = [
     { value: 'general', label: 'General' },
@@ -55,7 +72,7 @@ const AccountView = () => {
         </Box>
         <Divider />
         <Box mt={3}>
-          {currentTab === 'general' && <General />}
+          {currentTab === 'general' && userData && <General user={userData}/>}
           {/*{currentTab === 'subscription' && <Subscription />}*/}
           {/*{currentTab === 'notifications' && <Notifications />}*/}
           {currentTab === 'security' && <Security />}

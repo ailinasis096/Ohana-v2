@@ -202,6 +202,14 @@ class API {
       const { data } = await axiosInstance.get(path, config);
       return data;
     };
+
+    // Actulizar data usuario
+    static async updateInfoUser(id, form) {
+      const config = { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } };
+      let path = `/api/users/info/update/${id}/`;
+      const { data } = await axiosInstance.put(path, form, config);
+      return data;
+    };
 }
 
 export default API;

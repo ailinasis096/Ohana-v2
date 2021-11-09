@@ -102,9 +102,6 @@ const Header = ({ className, ...rest }) => {
     }
   };
 
-  console.log('accountMp: ', accountMp);
-  console.log('!!accountMp: ', !!accountMp);
-
   return (
     <Container maxWidth='lg'>
       <Grid
