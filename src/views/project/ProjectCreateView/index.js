@@ -151,6 +151,7 @@ const ProjectCreateView = ({ match }) => {
   const [editMode, setEditMode] = useState(false);
   const [data, setData] = useState();
   const [event, setEvent] = useState();
+  const [newImage, setNewImage] = useState();
   let [accountMp, setAccountMp] = useState('');
 
   useEffect(() => {
@@ -160,6 +161,10 @@ const ProjectCreateView = ({ match }) => {
     }
 
   }, [match]);
+
+  const updateImage = (value) => {
+    setNewImage(value)
+  };
 
   const getEvent = async () => {
     try {
@@ -190,9 +195,8 @@ const ProjectCreateView = ({ match }) => {
 
   };
 
-  let sessionName = sessionStorage.getItem('eventName');
-  let sessionImage = sessionStorage.getItem('eventImage');
-
+  let sessionName = sessionStorage.getItem('eventName')
+  
   return (
     <Page
       className={classes.root}
@@ -275,6 +279,7 @@ const ProjectCreateView = ({ match }) => {
                       onComplete={handleComplete}
                       data={data}
                       editMode={editMode}
+                      updateImage={updateImage}
                     />
                   )}
                 </Box>
@@ -313,7 +318,7 @@ const ProjectCreateView = ({ match }) => {
               </div>
               <CardMedia
                 className={classes.cover}
-                image={!!event ? event.image : sessionImage}
+                image={newImage}
                 title='Live from space album cover'
               />
             </Card>

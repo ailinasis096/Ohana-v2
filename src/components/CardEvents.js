@@ -19,7 +19,7 @@ import Heart from '../assets/corazon.png';
 import DeleteIcon from '@material-ui/icons/Delete';
 import StitchIcon from '../assets/Stitch-heart.svg';
 import StitchDislike from '../assets/Stitch-dislike.png';
-
+import './Components.css'
 import EditIcon from '@material-ui/icons/Edit';
 import clsx from 'clsx';
 import moment from 'moment';
@@ -32,6 +32,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import getInitials from 'src/utils/getInitials';
 import api from '../api/Api';
 import Swal from 'sweetalert2';
+//import Swal from 'sweetalert2/src/sweetalert2.js'
 import ShareDialog from './ShareDialog';
 
 const useStyles = makeStyles(theme => ({
@@ -109,7 +110,7 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
 
   const deleteCampaign = () => {
     Swal.fire({
-      title: `Está seguro que desea borrar su campaña ${project.name}?`,
+      title: `¿Está seguro que desea borrar su campaña ${project.name}?`,
       text: '¡Esta acción no tiene vuelta atrás!',
       icon: 'warning',
       showCancelButton: true,
@@ -120,7 +121,7 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
       if (result.isConfirmed) {
         api.deleteCampaign(project.id).then(response => {
           Swal.fire({
-            title: 'Su campaña fue eliminada!',
+            title: '¡Su campaña fue eliminada!',
             icon: 'success',
             timer: 2000
           }).then(resultConf => {
@@ -130,7 +131,7 @@ const CardEvents = ({ className, project, userMode, ...rest }) => {
           });
         }).catch(() => {
           Swal.fire(
-            'Oops!',
+            '¡Oops!',
             'Ha ocurrido un error, inténtelo de nuevo luego',
             'error'
           );

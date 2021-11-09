@@ -64,6 +64,9 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'center',
     marginTop: '1%'
+  },
+  link: {
+    paddingLeft: '4px',
   }
 }));
 
@@ -171,11 +174,11 @@ const Header = ({ className, ...rest }) => {
         <Container className={classes.container} maxWidth='lg'>
           <Box mt={3}>
             <Filter onlyName fetchEvent={fetchEvent} />
-            {!!accountMp && accountMp.name === '' && (
+            {!!accountMp && accountMp.name === '' && !!events && events.length > 0 && (
               <div className={classes.btnDiv}>
                 <Alert severity='warning'>Tus campañas no pueden recibir donaciones porque no has asociado tu cuenta de
                   mercado pago. Podes hacerlo desde
-                  <Link href='/app/config-account' underline='hover'>
+                  <Link href='/app/config-account' className={classes.link} underline='hover'>
                     {'este link'}
                   </Link>
                 </Alert>

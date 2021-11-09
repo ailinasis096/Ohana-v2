@@ -5,7 +5,6 @@ import api from '../../../api/Api';
 import Filter from './Filter';
 import Header from './Header';
 import Results from './Results';
-//import CircularProgress from './../../reports/DashboardAlternativeView/MostProfitableProducts/CircularProgress';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 const useStyles = makeStyles(theme => ({

@@ -33,9 +33,9 @@ const GeneralSettings = ({ className, user, ...rest }) => {
   const [cities, setCities] = useState([]);
   const [selectedCity, setSelectedCity] = useState(user.additional_info.city);
 
-  const fetchCities = async () => {
+  const fetchCities = async (state) => {
     try {
-      const response = await API.getCities(selectedState);
+      const response = await API.getCities(state);
       setCities(response);
     } catch (e) {
       console.error(e);
@@ -45,7 +45,7 @@ const GeneralSettings = ({ className, user, ...rest }) => {
   const onStateChange = async (event, selectedState) => {
     setSelectedState(selectedState);
     setSelectedCity('');
-    fetchCities();
+    fetchCities(selectedState);
   };
   const onCityChange = async (event, selectedCity) => {
     setSelectedCity(selectedCity);
@@ -54,8 +54,8 @@ const GeneralSettings = ({ className, user, ...rest }) => {
   useEffect(() => {
     setSelectedCity(user.additional_info.city);
     setSelectedState(user.additional_info.province);
-    fetchCities();
-  }, [user]);
+    fetchCities(user.additional_info.province);
+  }, []);
 
   return (
     <Formik
@@ -183,11 +183,7 @@ const GeneralSettings = ({ className, user, ...rest }) => {
                   <TextField
                     error={Boolean(touched.email && errors.email)}
                     fullWidth
-                    helperText={
-                      touched.email && errors.email
-                        ? errors.email
-                        : 'Usaremos este correo para comunicarnos contigo'
-                    }
+                    helperText={ touched.email && errors.email}
                     label='Email'
                     name='email'
                     onBlur={handleBlur}
@@ -201,7 +197,7 @@ const GeneralSettings = ({ className, user, ...rest }) => {
                 <Grid item md={6} xs={12}>
                   <Countries type='update' value={values.country} />
                 </Grid>
-                <Grid item md={6} xs={12} className='lastDiv'>
+                <Grid item md={6} xs={12}>
                   <Autocomplete
                     className='autocomplete'
                     sx={{ width: 300 }}
@@ -223,27 +219,29 @@ const GeneralSettings = ({ className, user, ...rest }) => {
                       />
                     )}
                   />
+                </Grid>
+                <Grid item md={6} xs={12}>
                   <Autocomplete
-                    className='autocomplete'
-                    sx={{ width: 300 }}
-                    options={cities}
-                    autoHighlight
-                    onInputChange={onCityChange}
-                    inputValue={selectedCity}
-                    getOptionLabel={(option) => option}
-                    renderOption={(option) => option}
-                    renderInput={(params) => (
-                      <TextField
-                        {...params}
-                        variant='outlined'
-                        label='Seleccione una ciudad'
-                        inputProps={{
-                          ...params.inputProps,
-                          autoComplete: 'new-password'
-                        }}
-                      />
-                    )}
-                  />
+                      className='autocomplete'
+                      sx={{ width: 300 }}
+                      options={cities}
+                      autoHighlight
+                      onInputChange={onCityChange}
+                      inputValue={selectedCity}
+                      getOptionLabel={(option) => option}
+                      renderOption={(option) => option}
+                      renderInput={(params) => (
+                        <TextField
+                          {...params}
+                          variant='outlined'
+                          label='Seleccione una ciudad'
+                          inputProps={{
+                            ...params.inputProps,
+                            autoComplete: 'new-password'
+                          }}
+                        />
+                      )}
+                    />
                 </Grid>
                 {/*<Grid item md={6} xs={12}>
                   <Typography

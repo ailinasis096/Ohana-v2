@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Filter = ({ className, fetchEvent, ...rest }) => {
+const Filter = ({ className, onlyName, fetchEvent, ...rest }) => {
   const classes = useStyles();
   const [inputValue, setInputValue] = useState('');
   const [selectOptions, setSelectOptions] = useState([]);
@@ -99,29 +99,33 @@ const Filter = ({ className, fetchEvent, ...rest }) => {
           value={inputValue}
         />
       </Box>
-      <Divider />
-      <Box p={2} display="flex" alignItems="center" flexWrap="wrap">
-        {chips.map(chip => (
-          <Chip
-            className={classes.chip}
-            key={chip}
-            label={chip}
-            onDelete={() => handleChipDelete(chip)}
-          />
-        ))}
-      </Box>
-      <Divider />
-      <Box display="flex" alignItems="center" flexWrap="wrap" p={1}>
-        {selectOptions.map(option => (
-          <MultiSelect
-            key={option.label}
-            label={option.label}
-            onChange={handleMultiSelectChange}
-            options={option.options}
-            value={chips}
-          />
-        ))}
-      </Box>
+      { !onlyName && (
+        <div>
+          <Divider />
+          <Box p={2} display="flex" alignItems="center" flexWrap="wrap">
+            {chips.map(chip => (
+              <Chip
+                className={classes.chip}
+                key={chip}
+                label={chip}
+                onDelete={() => handleChipDelete(chip)}
+              />
+            ))}
+          </Box>
+          <Divider />
+          <Box display="flex" alignItems="center" flexWrap="wrap" p={1}>
+            {selectOptions.map(option => (
+              <MultiSelect
+                key={option.label}
+                label={option.label}
+                onChange={handleMultiSelectChange}
+                options={option.options}
+                value={chips}
+              />
+            ))}
+          </Box>
+        </div>
+      )}
     </Card>
   );
 };

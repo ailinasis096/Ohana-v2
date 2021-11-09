@@ -30,6 +30,7 @@ const ProjectDescription = ({
                               onBack,
                               onComplete,
                               editMode,
+                              updateImage,
                               ...rest
                             }) => {
   const classes = useStyles();
@@ -119,7 +120,7 @@ const ProjectDescription = ({
       };
     }
     sessionStorage.setItem('eventName', form.name);
-    sessionStorage.setItem('eventImage', form.image);
+    updateImage(form.image);
     return form;
   };
 
