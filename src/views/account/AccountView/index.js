@@ -11,7 +11,7 @@ import Page from 'src/components/Page';
 import Header from './Header';
 import General from './General';
 import Security from './Security';
-import API from '../../../api/Api'
+import API from '../../../api/Api';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -40,8 +40,6 @@ const AccountView = () => {
     }
   };
 
-  console.log('userData: ', userData)
-
   const tabs = [
     { value: 'general', label: 'General' },
     /*{ value: 'subscription', label: 'Subscription' },*/
@@ -54,16 +52,16 @@ const AccountView = () => {
   };
 
   return (
-    <Page className={classes.root} title="Settings">
-      <Container maxWidth="lg">
+    <Page className={classes.root} title='Settings'>
+      <Container maxWidth='lg'>
         <Header />
         <Box mt={3}>
           <Tabs
             onChange={handleTabsChange}
-            scrollButtons="auto"
+            scrollButtons='auto'
             value={currentTab}
-            variant="scrollable"
-            textColor="secondary"
+            variant='scrollable'
+            textColor='secondary'
           >
             {tabs.map(tab => (
               <Tab key={tab.value} label={tab.label} value={tab.value} />
@@ -72,7 +70,7 @@ const AccountView = () => {
         </Box>
         <Divider />
         <Box mt={3}>
-          {currentTab === 'general' && userData && <General user={userData}/>}
+          {currentTab === 'general' && userData && <General user={userData} />}
           {/*{currentTab === 'subscription' && <Subscription />}*/}
           {/*{currentTab === 'notifications' && <Notifications />}*/}
           {currentTab === 'security' && <Security />}

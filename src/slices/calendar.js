@@ -69,7 +69,6 @@ export const reducer = slice.reducer;
 
 export const getEvents = () => async dispatch => {
   const response = await axios.get('/api/events/list');
-  console.log('Eventos', dispatch(slice.actions.getEvents(response.data)));
   dispatch(slice.actions.getEvents(response.data));
 };
 

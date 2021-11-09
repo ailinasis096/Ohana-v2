@@ -28,34 +28,33 @@ const useStyles = makeStyles(() => ({
 
 const GeneralSettings = ({ className, user, ...rest }) => {
   const classes = useStyles();
-  const { enqueueSnackbar } = useSnackbar();  
+  const { enqueueSnackbar } = useSnackbar();
   const [selectedState, setSelectedState] = useState(user.additional_info.province);
   const [cities, setCities] = useState([]);
   const [selectedCity, setSelectedCity] = useState(user.additional_info.city);
 
   const fetchCities = async () => {
-    try { 
+    try {
       const response = await API.getCities(selectedState);
-      setCities(response)
-    }
-    catch (e) {
+      setCities(response);
+    } catch (e) {
       console.error(e);
     }
-  }
+  };
 
   const onStateChange = async (event, selectedState) => {
-    setSelectedState(selectedState)
-    setSelectedCity('')
-    fetchCities()
-  }
+    setSelectedState(selectedState);
+    setSelectedCity('');
+    fetchCities();
+  };
   const onCityChange = async (event, selectedCity) => {
-    setSelectedCity(selectedCity)
-  }
+    setSelectedCity(selectedCity);
+  };
 
   useEffect(() => {
-    setSelectedCity(user.additional_info.city)
-    setSelectedState(user.additional_info.province)
-    fetchCities()
+    setSelectedCity(user.additional_info.city);
+    setSelectedState(user.additional_info.province);
+    fetchCities();
   }, [user]);
 
   return (
@@ -91,9 +90,9 @@ const GeneralSettings = ({ className, user, ...rest }) => {
         phone: Yup.string()
           .max(255)
           .required('Un teléfono es requerido'),
-        province: Yup.string()  
+        province: Yup.string()
           .max(255)
-          .required('Una provincia es requerida'),
+          .required('Una provincia es requerida')
       })}
       onSubmit={async (
         values,
@@ -102,40 +101,42 @@ const GeneralSettings = ({ className, user, ...rest }) => {
         values.country = 1;
         values.province = selectedState || user.additional_info.province;
         values.city = selectedCity || user.additional_info.city;
-        delete values.email
+        delete values.email;
         try {
           // NOTE: Make API request
           await API.updateInfoUser(user.id, values);
           resetForm();
           setStatus({ success: true });
           setSubmitting(false);
-          enqueueSnackbar('Sus datos han sido actulizados correctamente', {
+          enqueueSnackbar('Sus datos han sido actualizados correctamente', {
             variant: 'success'
           });
-          window.location.reload();
+          setTimeout(() => {
+            window.location.reload();
+          }, 2500);
         } catch (err) {
           console.error(err);
           setStatus({ success: false });
           setErrors({ submit: err.message });
           setSubmitting(false);
-          enqueueSnackbar('Sus datos no se han podido actulizar', {
+          enqueueSnackbar('Sus datos no se han podido actualizar', {
             variant: 'error'
           });
         }
       }}
     >
       {({
-        errors,
-        handleBlur,
-        handleChange,
-        handleSubmit,
-        isSubmitting,
-        touched,
-        values
-      }) => (
+          errors,
+          handleBlur,
+          handleChange,
+          handleSubmit,
+          isSubmitting,
+          touched,
+          values
+        }) => (
         <form onSubmit={handleSubmit}>
           <Card className={clsx(classes.root, className)} {...rest}>
-            <CardHeader title="Perfil" />
+            <CardHeader title='Perfil' />
             <Divider />
             <CardContent>
               <Grid container spacing={4}>
@@ -144,12 +145,12 @@ const GeneralSettings = ({ className, user, ...rest }) => {
                     error={Boolean(touched.first_name && errors.first_name)}
                     fullWidth
                     helperText={touched.first_name && errors.first_name}
-                    label="Nombre"
-                    name="first_name"
+                    label='Nombre'
+                    name='first_name'
                     onBlur={handleBlur}
                     onChange={handleChange}
                     value={values.first_name}
-                    variant="outlined"
+                    variant='outlined'
                   />
                 </Grid>
                 <Grid item md={6} xs={12}>
@@ -157,12 +158,12 @@ const GeneralSettings = ({ className, user, ...rest }) => {
                     error={Boolean(touched.last_name && errors.last_name)}
                     fullWidth
                     helperText={touched.last_name && errors.last_name}
-                    label="Apellido"
-                    name="last_name"
+                    label='Apellido'
+                    name='last_name'
                     onBlur={handleBlur}
                     onChange={handleChange}
                     value={values.last_name}
-                    variant="outlined"
+                    variant='outlined'
                   />
                 </Grid>
                 <Grid item md={6} xs={12}>
@@ -170,12 +171,12 @@ const GeneralSettings = ({ className, user, ...rest }) => {
                     error={Boolean(touched.phone && errors.phone)}
                     fullWidth
                     helperText={touched.phone && errors.phone}
-                    label="Número de celular"
-                    name="phone"
+                    label='Número de celular'
+                    name='phone'
                     onBlur={handleBlur}
                     onChange={handleChange}
                     value={values.phone}
-                    variant="outlined"
+                    variant='outlined'
                   />
                 </Grid>
                 <Grid item md={6} xs={12}>
@@ -187,18 +188,18 @@ const GeneralSettings = ({ className, user, ...rest }) => {
                         ? errors.email
                         : 'Usaremos este correo para comunicarnos contigo'
                     }
-                    label="Email"
-                    name="email"
+                    label='Email'
+                    name='email'
                     onBlur={handleBlur}
                     onChange={handleChange}
                     required
-                    type="email"
+                    type='email'
                     value={values.email}
-                    variant="outlined"
+                    variant='outlined'
                   />
                 </Grid>
                 <Grid item md={6} xs={12}>
-                    <Countries type='update' value={values.country}/>
+                  <Countries type='update' value={values.country} />
                 </Grid>
                 <Grid item md={6} xs={12} className='lastDiv'>
                   <Autocomplete
@@ -213,11 +214,11 @@ const GeneralSettings = ({ className, user, ...rest }) => {
                     renderInput={(params) => (
                       <TextField
                         {...params}
-                        variant="outlined"
-                        label="Seleccione una provincia"
+                        variant='outlined'
+                        label='Seleccione una provincia'
                         inputProps={{
                           ...params.inputProps,
-                          autoComplete: 'new-password',
+                          autoComplete: 'new-password'
                         }}
                       />
                     )}
@@ -234,11 +235,11 @@ const GeneralSettings = ({ className, user, ...rest }) => {
                     renderInput={(params) => (
                       <TextField
                         {...params}
-                        variant="outlined"
-                        label="Seleccione una ciudad"
+                        variant='outlined'
+                        label='Seleccione una ciudad'
                         inputProps={{
                           ...params.inputProps,
-                          autoComplete: 'new-password',
+                          autoComplete: 'new-password'
                         }}
                       />
                     )}
@@ -290,12 +291,12 @@ const GeneralSettings = ({ className, user, ...rest }) => {
               )}
             </CardContent>
             <Divider />
-            <Box p={2} display="flex" justifyContent="flex-end">
+            <Box p={2} display='flex' justifyContent='flex-end'>
               <Button
-                color="secondary"
+                color='secondary'
                 disabled={isSubmitting}
-                type="submit"
-                variant="contained"
+                type='submit'
+                variant='contained'
               >
                 Guardar cambios
               </Button>

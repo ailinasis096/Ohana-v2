@@ -6,7 +6,7 @@ import Filter from './Filter';
 import Header from './Header';
 import Results from './Results';
 //import CircularProgress from './../../reports/DashboardAlternativeView/MostProfitableProducts/CircularProgress';
-import CircularProgress from "@material-ui/core/CircularProgress";
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -45,7 +45,6 @@ const ProjectBrowseView = () => {
     let response;
     try {
       response = await api.getEvents(pageSize, results, data, state);
-      console.log('response: ', response)
       setEvents(response);
     } catch (e) {
       console.error(e);
@@ -53,17 +52,17 @@ const ProjectBrowseView = () => {
   };
 
   return (
-    <Page className={classes.root} title="Explorar campañas | Ohana">
-      <Container maxWidth="lg">
+    <Page className={classes.root} title='Explorar campañas | Ohana'>
+      <Container maxWidth='lg'>
         <Header />
         <Box mt={3}>
-          <Filter fetchEvent={fetchEvent}/>
+          <Filter fetchEvent={fetchEvent} />
         </Box>
         {!!loading ? (
-          <CircularProgress className={classes.progress} color="primary" size={50} />
+          <CircularProgress className={classes.progress} color='primary' size={50} />
         ) : (
           <Box mt={4}>
-            <Results projects={events} fetchEvent={fetchEvent}/>
+            <Results projects={events} fetchEvent={fetchEvent} />
           </Box>
         )}
       </Container>

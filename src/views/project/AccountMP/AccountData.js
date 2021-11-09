@@ -63,7 +63,6 @@ const AccountData = ({
         'name': localStorage.getItem('username')
       };
       const response = await api.createMpAccount(form);
-      console.log(response);
       if (onComplete) {
         onComplete();
       }

@@ -136,7 +136,6 @@ const LineChart = () => {
       }
     ]
   });
-  console.log(donations);
   return (
     <Card>
       <CardContent>
