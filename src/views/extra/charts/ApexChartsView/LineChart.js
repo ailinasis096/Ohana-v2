@@ -87,7 +87,7 @@ const LineChart = () => {
           show: true,
           color: theme.palette.divider
         },
-        categories: donations ? donations.map(d => months[d.month - 1]) : [],
+        categories: donations ? donations.map(d => months[d.month - 1]).reverse() : [],
         labels: {
           style: {
             colors: theme.palette.text.secondary
